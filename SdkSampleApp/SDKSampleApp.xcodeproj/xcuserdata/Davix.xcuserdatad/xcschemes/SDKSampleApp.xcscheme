@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F3263FF717C7CDE90043754D"
-               BuildableName = "Captiva Demo.app"
+               BuildableName = "SDKSampleApp.app"
                BlueprintName = "SDKSampleApp"
                ReferencedContainer = "container:SDKSampleApp.xcodeproj">
             </BuildableReference>
@@ -28,12 +28,32 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "225DD2DF1D95E9970042A852"
+               BuildableName = "CaptivaDemoTests.xctest"
+               BlueprintName = "CaptivaDemoTests"
+               ReferencedContainer = "container:SDKSampleApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "222A930E1D95FB7300F33087"
+               BuildableName = "SDKSampleAppTests.xctest"
+               BlueprintName = "SDKSampleAppTests"
+               ReferencedContainer = "container:SDKSampleApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F3263FF717C7CDE90043754D"
-            BuildableName = "Captiva Demo.app"
+            BuildableName = "SDKSampleApp.app"
             BlueprintName = "SDKSampleApp"
             ReferencedContainer = "container:SDKSampleApp.xcodeproj">
          </BuildableReference>
@@ -56,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F3263FF717C7CDE90043754D"
-            BuildableName = "Captiva Demo.app"
+            BuildableName = "SDKSampleApp.app"
             BlueprintName = "SDKSampleApp"
             ReferencedContainer = "container:SDKSampleApp.xcodeproj">
          </BuildableReference>
@@ -75,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F3263FF717C7CDE90043754D"
-            BuildableName = "Captiva Demo.app"
+            BuildableName = "SDKSampleApp.app"
             BlueprintName = "SDKSampleApp"
             ReferencedContainer = "container:SDKSampleApp.xcodeproj">
          </BuildableReference>

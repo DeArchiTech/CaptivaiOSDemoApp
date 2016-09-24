@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222A93121D95FB7300F33087 /* SDKSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A93111D95FB7300F33087 /* SDKSampleAppTests.swift */; };
+		222A931B1D95FDB100F33087 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A931A1D95FDB100F33087 /* NetworkManager.swift */; };
 		8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8504CB861AD5EB4500591B99 /* CSSCustomWindow.mm */; };
 		85412BF41C18FA5300DB256A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85412BF31C18FA5300DB256A /* Security.framework */; };
 		85412BF61C18FB3100DB256A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F326404E17C7FCFC0043754D /* CoreVideo.framework */; };
@@ -52,10 +54,25 @@
 		F36288AF17DFB1F4001799D8 /* MainScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F36288AE17DFB1F4001799D8 /* MainScreen@2x.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		222A93141D95FB7300F33087 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3263FF017C7CDE90043754D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3263FF717C7CDE90043754D;
+			remoteInfo = SDKSampleApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		222A930F1D95FB7300F33087 /* SDKSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		222A93111D95FB7300F33087 /* SDKSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSampleAppTests.swift; sourceTree = "<group>"; };
+		222A93131D95FB7300F33087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDKSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		222A931A1D95FDB100F33087 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8504CB851AD5EB2700591B99 /* CSSCustomWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSSCustomWindow.h; sourceTree = "<group>"; };
 		8504CB861AD5EB4500591B99 /* CSSCustomWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CSSCustomWindow.mm; sourceTree = "<group>"; };
-		8504CB891AD5EC9500591B99 /* CMSCaptureWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMSCaptureWindow.h; path = ../../iOS/SDK/include/CMSCaptureWindow.h; sourceTree = "<group>"; };
+		8504CB891AD5EC9500591B99 /* include */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = include; path = ../Sdk/include; sourceTree = "<group>"; };
 		85412BF31C18FA5300DB256A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		858F23A91AC4B7E5008AC2D2 /* quality.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quality.png; sourceTree = "<group>"; };
 		B50D996F17DFCB47006DDEE2 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -73,7 +90,7 @@
 		F31AC87F17D800F0002D06EB /* CSSEnhancePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSEnhancePictureViewController.m; sourceTree = "<group>"; };
 		F31AC88117D80282002D06EB /* CSSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSUtils.h; sourceTree = "<group>"; };
 		F31AC88217D80282002D06EB /* CSSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSUtils.m; sourceTree = "<group>"; };
-		F3263FF817C7CDE90043754D /* Captiva Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Captiva Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3263FF817C7CDE90043754D /* SDKSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3263FFB17C7CDE90043754D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F3263FFD17C7CDE90043754D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F3263FFF17C7CDE90043754D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,6 +130,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		222A930C1D95FB7300F33087 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3263FF517C7CDE90043754D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +163,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		222A93101D95FB7300F33087 /* SDKSampleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				222A93111D95FB7300F33087 /* SDKSampleAppTests.swift */,
+				222A93131D95FB7300F33087 /* Info.plist */,
+			);
+			path = SDKSampleAppTests;
+			sourceTree = "<group>";
+		};
 		B50D996E17DFCB47006DDEE2 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				F326400317C7CDE90043754D /* SDKSampleApp */,
+				222A93101D95FB7300F33087 /* SDKSampleAppTests */,
 				F3263FFA17C7CDE90043754D /* Frameworks */,
 				F3263FF917C7CDE90043754D /* Products */,
 			);
@@ -166,7 +200,8 @@
 		F3263FF917C7CDE90043754D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3263FF817C7CDE90043754D /* Captiva Demo.app */,
+				F3263FF817C7CDE90043754D /* SDKSampleApp.app */,
+				222A930F1D95FB7300F33087 /* SDKSampleAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +252,8 @@
 				F326400417C7CDE90043754D /* Supporting Files */,
 				8504CB851AD5EB2700591B99 /* CSSCustomWindow.h */,
 				8504CB861AD5EB4500591B99 /* CSSCustomWindow.mm */,
+				222A931A1D95FDB100F33087 /* NetworkManager.swift */,
+				222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */,
 			);
 			name = SDKSampleApp;
 			path = /Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleApp;
@@ -261,7 +298,7 @@
 		F36288A817DFACAB001799D8 /* SDK Include */ = {
 			isa = PBXGroup;
 			children = (
-				8504CB891AD5EC9500591B99 /* CMSCaptureWindow.h */,
+				8504CB891AD5EC9500591B99 /* include */,
 				F36288A917DFACAB001799D8 /* CMSCaptureImage.h */,
 				F36288AA17DFACAB001799D8 /* CMSConstants.h */,
 				F36288AB17DFACAB001799D8 /* CMSImageDelegate.h */,
@@ -273,6 +310,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		222A930E1D95FB7300F33087 /* SDKSampleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 222A93181D95FB7300F33087 /* Build configuration list for PBXNativeTarget "SDKSampleAppTests" */;
+			buildPhases = (
+				222A930B1D95FB7300F33087 /* Sources */,
+				222A930C1D95FB7300F33087 /* Frameworks */,
+				222A930D1D95FB7300F33087 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				222A93151D95FB7300F33087 /* PBXTargetDependency */,
+			);
+			name = SDKSampleAppTests;
+			productName = SDKSampleAppTests;
+			productReference = 222A930F1D95FB7300F33087 /* SDKSampleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F3263FF717C7CDE90043754D /* SDKSampleApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F326403017C7CDE90043754D /* Build configuration list for PBXNativeTarget "SDKSampleApp" */;
@@ -287,7 +342,7 @@
 			);
 			name = SDKSampleApp;
 			productName = "SDK Sample App";
-			productReference = F3263FF817C7CDE90043754D /* Captiva Demo.app */;
+			productReference = F3263FF817C7CDE90043754D /* SDKSampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -297,12 +352,20 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CSS;
+				LastSwiftUpdateCheck = 0800;
 				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "EMC Captiva";
 				TargetAttributes = {
+					222A930E1D95FB7300F33087 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = J9T57DG7T3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F3263FF717C7CDE90043754D;
+					};
 					F3263FF717C7CDE90043754D = {
 						DevelopmentTeam = J9T57DG7T3;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -319,11 +382,19 @@
 			projectRoot = "";
 			targets = (
 				F3263FF717C7CDE90043754D /* SDKSampleApp */,
+				222A930E1D95FB7300F33087 /* SDKSampleAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		222A930D1D95FB7300F33087 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3263FF617C7CDE90043754D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,10 +424,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		222A930B1D95FB7300F33087 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				222A93121D95FB7300F33087 /* SDKSampleAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3263FF417C7CDE90043754D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222A931B1D95FDB100F33087 /* NetworkManager.swift in Sources */,
 				8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */,
 				F326400A17C7CDE90043754D /* main.m in Sources */,
 				F326400E17C7CDE90043754D /* CSSAppDelegate.m in Sources */,
@@ -370,6 +450,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		222A93151D95FB7300F33087 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3263FF717C7CDE90043754D /* SDKSampleApp */;
+			targetProxy = 222A93141D95FB7300F33087 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F326400617C7CDE90043754D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -382,6 +470,82 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		222A93161D95FB7300F33087 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = J9T57DG7T3;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = SDKSampleAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.gml.io.SDKSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDKSampleApp.app/SDKSampleApp";
+			};
+			name = Debug;
+		};
+		222A93171D95FB7300F33087 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = J9T57DG7T3;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = SDKSampleAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = org.gml.io.SDKSampleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDKSampleApp.app/SDKSampleApp";
+			};
+			name = Release;
+		};
 		F326402E17C7CDE90043754D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -446,22 +610,28 @@
 		F326403117C7CDE90043754D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = J9T57DG7T3;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../SDK\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SDKSampleApp/SDKSampleApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../SDK/include\"";
 				INFOPLIST_FILE = "SDKSampleApp/SDKSampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../SDK/libs\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = "Captiva Demo";
+				PRODUCT_NAME = SDKSampleApp;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SDKSampleApp/SDKSampleApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -469,23 +639,28 @@
 		F326403217C7CDE90043754D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = J9T57DG7T3;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../SDK\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SDKSampleApp/SDKSampleApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../SDK/include\"";
 				INFOPLIST_FILE = "SDKSampleApp/SDKSampleApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../SDK/libs\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = "Captiva Demo";
+				PRODUCT_NAME = SDKSampleApp;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SDKSampleApp/SDKSampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -493,6 +668,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		222A93181D95FB7300F33087 /* Build configuration list for PBXNativeTarget "SDKSampleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222A93161D95FB7300F33087 /* Debug */,
+				222A93171D95FB7300F33087 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F3263FF317C7CDE90043754D /* Build configuration list for PBXProject "SDKSampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
