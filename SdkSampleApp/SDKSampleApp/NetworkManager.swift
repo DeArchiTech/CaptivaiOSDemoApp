@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//import Alamofire
+import Alamofire
 
 class NetworkManager{
     
@@ -16,11 +16,14 @@ class NetworkManager{
     }
     
     var endPoint: String {
+        ß
         get {
             return "http://104.209.39.82:8090"
         }
         set {
         }
     }
+    
+    
     
 }
