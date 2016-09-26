@@ -48,6 +48,16 @@
                ReferencedContainer = "container:SDKSampleApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22F8E4971D9992BB009E68F1"
+               BuildableName = "SDKSampleAppUITests.xctest"
+               BlueprintName = "SDKSampleAppUITests"
+               ReferencedContainer = "container:SDKSampleApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

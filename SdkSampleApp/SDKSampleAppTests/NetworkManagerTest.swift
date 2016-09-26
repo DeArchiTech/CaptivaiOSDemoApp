@@ -7,9 +7,10 @@
 //
 
 import XCTest
-@testable import SDKSampleApp
+//@testable import SDKSampleApp
 
-class SDKSampleAppTests: XCTestCase {
+class NetworkManagerTest: XCTestCase {
+
     
     override func setUp() {
         super.setUp()
@@ -21,15 +22,23 @@ class SDKSampleAppTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testGetEndPoint() {
         
-        //var manager :
-        var manager : NetworkManager = NetworkManager.init()
-        var endpoint : String = "http://104.209.39.82:8090"
-        var managerEndPt : String = manager.endPoint
-        XCTAssertEqual(endpoint , managerEndPt)
+//        var manager : NetworkManager = NetworkManager.init();
+//        var endpoint : String = "http://104.209.39.82:8090"
+//        var managerEndPt : String = self.manager.endPoint
+//        XCTAssertEqual(endpoint , managerEndPt)
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+    }
+    
+    func testLogin() {
+        
+        //1)Mock Up Objects
+        
+        //2)Call Function
+        //3)Assert
     }
     
     func testPerformanceExample() {

@@ -1,0 +1,6 @@
+framework module Pods_SDKSampleAppUITests {
+  umbrella header "Pods-SDKSampleAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
