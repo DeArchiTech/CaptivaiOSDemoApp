@@ -66,8 +66,7 @@ class NetworkManagerTest: XCTestCase {
             XCTAssertEqual("Reva12#$", key)
         }else{
             XCTAssertTrue(false)
-        }
-        
+        }
     }
     
     func testLoginEndPt(){
@@ -78,14 +77,28 @@ class NetworkManagerTest: XCTestCase {
         
     }
     
+    func testGetCookieFromLoginResponse(){
+        
+        let manager : NetworkManager = NetworkManager.init()
+        let params: NSDictionary = [
+            "returnStatus": "LICE075-D09A-64E3",
+            "ticket": "SK22>>>>*!9839908084640907461/pedn3xK0Yw7TVPt+oLguhB/TQkr9CZEOoN5F3WvKcx75JaQaZ+pnqj6V/iGCRdQ1acNZuQyMx0reNZ5BIqU0lx9s4lmwPdOmf95riSEqkz6MDJfrUYV/6XBbw0XvSqTCULNg3+YonCW+ETH+H/9ux78Ngn3TTSPGWeFW0fBN2maM4XSaJrpWMLg9zB+A7X/AL6QXeMcF7VbKoRCRYtFTJp1g51s4rB/+a8SlEbgdrRF46VLxQJvvVNs0ixV8ijPeOmXkQasrne113jXhKVvDOcAlmPpLyiGKF3XISKFV3LYnyg==*>>>>"
+        ]
+        let result = manager.getcookieFromLoginResponse(response: params)
+        XCTAssertEqual(params["ticket"] as! String, result)
+        
+    }
+    
     func testLogin() {
         
-        //1)Mock Up Objects
-        
-        //2)Call Function
+        //1)Call Function
         let manager : NetworkManager = NetworkManager.init();
-        let response = manager.login()
-        //3)Assert
+        manager.login() { (dictionary,error) -> () in
+            print(dictionary)
+            print(error)
+            XCTAssertTrue(true)
+        }
+        
     }
     
     

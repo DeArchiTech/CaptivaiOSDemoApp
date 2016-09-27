@@ -43,20 +43,36 @@ import Alamofire
         
     }
     
+    func getcookieFromLoginResponse(response : NSDictionary) -> String{
+        
+        return response["ticket"] as! String
+        
+    }
+    
     func getLoginEndpoint() -> String{
         
         return endPoint + "/cp-rest/session"
     }
     
 
-    func login() -> Void {
+    func login(completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void {
         
-        Alamofire.request(getLoginEndpoint()).responseJSON{ (response) -> Void in
-            if let JSON = response.result.value{
-                print(JSON)
-            }
-        }
-    
+        Alamofire.request(getLoginEndpoint(), method: .post, parameters: createLoginParam(), encoding: JSONEncoding.default)
+            .validate()
+            .responseJSON{ response in
+                    switch response.result{
+                    case .success(let result):
+                        if let result = response.result.value {
+                            let json = result as! NSDictionary
+                            print(json)
+                            completion(json, nil)
+                        }
+                        print("Login success")
+                    case .failure(let error):
+                        completion(nil, error as NSError?)
+                        print("Login failed")
+                    }
+                }
     }
     
 }

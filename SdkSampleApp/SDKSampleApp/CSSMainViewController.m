@@ -51,9 +51,13 @@
     [CSSSettings registerDefaults];
     
     //Call Network Manager Login
+
     NetworkManager *manager = [[NetworkManager alloc] init];
-    [manager login];
-    //*manager.login();
+    [manager loginWithCompletion:^(NSDictionary * _Nullable param1, NSError * _Nullable param2){
+        NSLog(@"%@","completed");
+        NSLog(@"%@", param1);
+        NSLog(@"%@", param2);
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
