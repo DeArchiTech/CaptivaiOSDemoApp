@@ -15,19 +15,27 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (5.2.1)
   - OHHTTPStubs/Swift (5.2.1):
     - OHHTTPStubs/Core
+  - Realm (1.1.0):
+    - Realm/Headers (= 1.1.0)
+  - Realm/Headers (1.1.0)
+  - RealmSwift (1.1.0):
+    - Realm (= 1.1.0)
   - SwiftyJSON (3.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - OHHTTPStubs
   - OHHTTPStubs/Swift
+  - RealmSwift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
+  Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
+  RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
 
-PODFILE CHECKSUM: 85a77e28992c8b2f00a1ffdb2301bb44f9d25356
+PODFILE CHECKSUM: ad8e46d32f93548de83208e006f9dc1540ae1a6b
 
 COCOAPODS: 1.1.0.rc.2

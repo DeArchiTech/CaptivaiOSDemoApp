@@ -54,9 +54,10 @@
 
     NetworkManager *manager = [[NetworkManager alloc] init];
     [manager loginWithCompletion:^(NSDictionary * _Nullable param1, NSError * _Nullable param2){
-        NSLog(@"%@","completed");
-        NSLog(@"%@", param1);
-        NSLog(@"%@", param2);
+            NSLog(@"Dictionary: %@", [param1 description]);
+            NSLog(@"%@", param2.description);
+            NSString *cookie = [manager getcookieFromLoginResponseWithResponse:param1];
+            NSLog(@"%@", cookie);
     }];
 }
 

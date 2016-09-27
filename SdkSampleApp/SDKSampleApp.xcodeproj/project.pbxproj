@@ -13,9 +13,12 @@
 		223013431D99C12B00D7BB7E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F8E4A21D99AD1F009E68F1 /* Alamofire.framework */; };
 		223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */; };
 		223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013481D99C9B900D7BB7E /* LoginResponseObj.swift */; };
+		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
+		22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */; };
+		22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */; };
 		22F8E49B1D9992BB009E68F1 /* SDKSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */; };
-		47785AA182022786B1A7D4A0 /* Pods_SDKSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41679CB9D44BE90377FB82B /* Pods_SDKSampleAppTests.framework */; };
-		7CB79886A5AA6588B83198E6 /* Pods_SDKSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F104F397710D0B79046E692 /* Pods_SDKSampleAppUITests.framework */; };
+		64ECA85AE51B90464C997F81 /* Pods_SDKSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A804635F97D1371BFD115 /* Pods_SDKSampleAppTests.framework */; };
+		682E05548B6057445B70F7BF /* Pods_SDKSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A722BC9C92C12D7C49916DA5 /* Pods_SDKSampleAppUITests.framework */; };
 		8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8504CB861AD5EB4500591B99 /* CSSCustomWindow.mm */; };
 		85412BF41C18FA5300DB256A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85412BF31C18FA5300DB256A /* Security.framework */; };
 		85412BF61C18FB3100DB256A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F326404E17C7FCFC0043754D /* CoreVideo.framework */; };
@@ -87,11 +90,13 @@
 		222A931A1D95FDB100F33087 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestObj.swift; sourceTree = "<group>"; };
 		223013481D99C9B900D7BB7E /* LoginResponseObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseObj.swift; sourceTree = "<group>"; };
+		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
+		22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManager.swift; sourceTree = "<group>"; };
+		22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManagerUnitTest.swift; sourceTree = "<group>"; };
 		22F8E4981D9992BB009E68F1 /* SDKSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSampleAppUITests.swift; sourceTree = "<group>"; };
 		22F8E49C1D9992BB009E68F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F8E4A21D99AD1F009E68F1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/SDKSampleApp-gdadgtpsoexxvnbejhdmmafavxoj/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
-		2F104F397710D0B79046E692 /* Pods_SDKSampleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKSampleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		564F42703B2A55C8AF768B6F /* Pods-SDKSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKSampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDKSampleApp/Pods-SDKSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		78E798BA95BD7A35546DCE00 /* Pods_SDKSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8504CB851AD5EB2700591B99 /* CSSCustomWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSSCustomWindow.h; sourceTree = "<group>"; };
@@ -101,6 +106,8 @@
 		858F23A91AC4B7E5008AC2D2 /* quality.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quality.png; sourceTree = "<group>"; };
 		A22F475B6ED9F6ABD891DCFF /* Pods-SDKSampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKSampleAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKSampleAppTests/Pods-SDKSampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2A613A7E696E2C9AF7A920D /* Pods-SDKSampleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKSampleAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKSampleAppUITests/Pods-SDKSampleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A722BC9C92C12D7C49916DA5 /* Pods_SDKSampleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKSampleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5A804635F97D1371BFD115 /* Pods_SDKSampleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKSampleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B485F7D423D1B034A639C117 /* Pods-SDKSampleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKSampleAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDKSampleAppUITests/Pods-SDKSampleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B50D996F17DFCB47006DDEE2 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		B50D997017DFCB47006DDEE2 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
@@ -155,7 +162,6 @@
 		F36288AB17DFACAB001799D8 /* CMSImageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMSImageDelegate.h; path = ../SDK/include/CMSImageDelegate.h; sourceTree = "<group>"; };
 		F36288AC17DFAD88001799D8 /* libCaptivaMobileSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCaptivaMobileSDK.a; path = ../SDK/libs/libCaptivaMobileSDK.a; sourceTree = "<group>"; };
 		F36288AE17DFB1F4001799D8 /* MainScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainScreen@2x.png"; sourceTree = "<group>"; };
-		F41679CB9D44BE90377FB82B /* Pods_SDKSampleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKSampleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47785AA182022786B1A7D4A0 /* Pods_SDKSampleAppTests.framework in Frameworks */,
+				64ECA85AE51B90464C997F81 /* Pods_SDKSampleAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CB79886A5AA6588B83198E6 /* Pods_SDKSampleAppUITests.framework in Frameworks */,
+				682E05548B6057445B70F7BF /* Pods_SDKSampleAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +214,7 @@
 			children = (
 				222A93111D95FB7300F33087 /* NetworkManagerTest.swift */,
 				222A93131D95FB7300F33087 /* Info.plist */,
+				22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -215,6 +222,7 @@
 		223013441D99C97A00D7BB7E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				22A50C6E1D9B1D21002970E9 /* Cookie.swift */,
 				223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */,
 				223013481D99C9B900D7BB7E /* LoginResponseObj.swift */,
 			);
@@ -302,8 +310,8 @@
 				F326401E17C7CDE90043754D /* SenTestingKit.framework */,
 				F3263FFB17C7CDE90043754D /* UIKit.framework */,
 				78E798BA95BD7A35546DCE00 /* Pods_SDKSampleApp.framework */,
-				F41679CB9D44BE90377FB82B /* Pods_SDKSampleAppTests.framework */,
-				2F104F397710D0B79046E692 /* Pods_SDKSampleAppUITests.framework */,
+				AC5A804635F97D1371BFD115 /* Pods_SDKSampleAppTests.framework */,
+				A722BC9C92C12D7C49916DA5 /* Pods_SDKSampleAppUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -332,6 +340,7 @@
 				8504CB851AD5EB2700591B99 /* CSSCustomWindow.h */,
 				8504CB861AD5EB4500591B99 /* CSSCustomWindow.mm */,
 				222A931A1D95FDB100F33087 /* NetworkManager.swift */,
+				22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */,
 				222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */,
 			);
 			name = SDKSampleApp;
@@ -687,6 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222A93121D95FB7300F33087 /* NetworkManagerTest.swift in Sources */,
+				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +712,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */,
 				222A931B1D95FDB100F33087 /* NetworkManager.swift in Sources */,
 				8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */,
 				F326400A17C7CDE90043754D /* main.m in Sources */,
@@ -709,6 +720,7 @@
 				F326401717C7CDE90043754D /* SDK_Sample_App.xcdatamodeld in Sources */,
 				F326403A17C7CFB50043754D /* CSSMainViewController.m in Sources */,
 				F31AC88017D800F0002D06EB /* CSSEnhancePictureViewController.m in Sources */,
+				22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */,
 				223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */,
 				223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */,
 				F31AC88317D80282002D06EB /* CSSUtils.m in Sources */,
