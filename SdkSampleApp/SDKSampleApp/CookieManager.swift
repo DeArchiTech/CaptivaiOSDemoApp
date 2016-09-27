@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Realm
 import RealmSwift
 
 @objc class CookieManager: NSObject{
@@ -19,9 +20,17 @@ import RealmSwift
     
     func saveCookie(cookie: Cookie) -> Bool {
         
-        try! Realm().write(){
-            try! Realm().add(cookie)
+        do{
+            print("trying to open realm")
+            let realm = try Realm()
+            try! realm.write {
+                realm.add(cookie)
+            }
+        } catch let error as NSError {
+            print("An Error Has Occured")
+            print(error)
         }
+        
         return true
     
     }

@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDKSampleAppTests/CookieManagerUnitTest.swift"
+            timestampString = "496712152.905583"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "testSaveAndLoadCookie()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDKSampleAppTests.CookieManagerUnitTest.testSaveAndLoadCookie () -&gt; ()"
+                  moduleName = "SDKSampleAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleAppTests/CookieManagerUnitTest.swift"
+                  timestampString = "496712176.731342"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1468">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDKSampleAppTests.CookieManagerUnitTest.(testSaveAndLoadCookie () -&gt; ()).(implicit closure #6)"
+                  moduleName = "SDKSampleAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleAppTests/CookieManagerUnitTest.swift"
+                  timestampString = "496712176.732934"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

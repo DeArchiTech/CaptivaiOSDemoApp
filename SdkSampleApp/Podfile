@@ -11,11 +11,11 @@ target 'SDKSampleApp' do
 end
 
 target 'SDKSampleAppTests' do
-
+    pod 'RealmSwift'
 end
 
 target 'SDKSampleAppUITests' do
-
+    pod 'RealmSwift'
 end
 
 post_install do |installer|
