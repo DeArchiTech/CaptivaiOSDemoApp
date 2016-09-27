@@ -7,11 +7,10 @@
 //
 
 import XCTest
-//@testable import SDKSampleApp
+@testable import SDKSampleApp
 
 class NetworkManagerTest: XCTestCase {
 
-    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,12 +23,30 @@ class NetworkManagerTest: XCTestCase {
     
     func testGetEndPoint() {
         
-//        var manager : NetworkManager = NetworkManager.init();
-//        var endpoint : String = "http://104.209.39.82:8090"
-//        var managerEndPt : String = self.manager.endPoint
-//        XCTAssertEqual(endpoint , managerEndPt)
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let manager : NetworkManager = NetworkManager.init()
+        let endpoint : String = "http://104.209.39.82:8090"
+        let managerEndPt : String = manager.endPoint
+        XCTAssertEqual(endpoint , managerEndPt)
+        
+    }
+    
+    func testCreateLoginObject(){
+        
+        let manager : NetworkManager = NetworkManager.init()
+        let result = manager.createLoginObj()
+        XCTAssertNotNil(result)
+        XCTAssertEqual("LICE075-D09A-64E3", result.licenseKey)
+        XCTAssertEqual("APP3075-D09A-59C8", result.applicationId)
+        XCTAssertEqual("capadmin", result.username)
+        XCTAssertEqual("Reva12#$", result.password)
+    
+    }
+    
+    func testLoginEndPt(){
+        
+        let manager : NetworkManager = NetworkManager.init()
+        let result = manager.getLoginEndpoint()
+        XCTAssertEqual(result, "http://104.209.39.82:8090/cp-rest/session" )
         
     }
     
@@ -38,14 +55,10 @@ class NetworkManagerTest: XCTestCase {
         //1)Mock Up Objects
         
         //2)Call Function
+        let manager : NetworkManager = NetworkManager.init();
+        let response = manager.login()
         //3)Assert
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
     
 }

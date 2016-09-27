@@ -11,6 +11,8 @@
 		222A93121D95FB7300F33087 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A93111D95FB7300F33087 /* NetworkManagerTest.swift */; };
 		222A931B1D95FDB100F33087 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A931A1D95FDB100F33087 /* NetworkManager.swift */; };
 		223013431D99C12B00D7BB7E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F8E4A21D99AD1F009E68F1 /* Alamofire.framework */; };
+		223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */; };
+		223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013481D99C9B900D7BB7E /* LoginResponseObj.swift */; };
 		22F8E49B1D9992BB009E68F1 /* SDKSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */; };
 		47785AA182022786B1A7D4A0 /* Pods_SDKSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F41679CB9D44BE90377FB82B /* Pods_SDKSampleAppTests.framework */; };
 		7CB79886A5AA6588B83198E6 /* Pods_SDKSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F104F397710D0B79046E692 /* Pods_SDKSampleAppUITests.framework */; };
@@ -83,6 +85,8 @@
 		222A93131D95FB7300F33087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDKSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		222A931A1D95FDB100F33087 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestObj.swift; sourceTree = "<group>"; };
+		223013481D99C9B900D7BB7E /* LoginResponseObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseObj.swift; sourceTree = "<group>"; };
 		22F8E4981D9992BB009E68F1 /* SDKSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSampleAppUITests.swift; sourceTree = "<group>"; };
 		22F8E49C1D9992BB009E68F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +212,15 @@
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
 		};
+		223013441D99C97A00D7BB7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */,
+				223013481D99C9B900D7BB7E /* LoginResponseObj.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		22F8E4991D9992BB009E68F1 /* SDKSampleAppUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +311,7 @@
 		F326400317C7CDE90043754D /* SDKSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				223013441D99C97A00D7BB7E /* Model */,
 				F36288A817DFACAB001799D8 /* SDK Include */,
 				F362886417DD09FF001799D8 /* Res */,
 				F326400C17C7CDE90043754D /* CSSAppDelegate.h */,
@@ -695,6 +709,8 @@
 				F326401717C7CDE90043754D /* SDK_Sample_App.xcdatamodeld in Sources */,
 				F326403A17C7CFB50043754D /* CSSMainViewController.m in Sources */,
 				F31AC88017D800F0002D06EB /* CSSEnhancePictureViewController.m in Sources */,
+				223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */,
+				223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */,
 				F31AC88317D80282002D06EB /* CSSUtils.m in Sources */,
 				B5516F9317DA5A7900576310 /* CSSSettings.m in Sources */,
 			);
@@ -983,7 +999,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../SDK/libs\"",
 				);
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "EMC-Captiva.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SDKSampleApp;
 				PROVISIONING_PROFILE = "";
@@ -1016,7 +1032,7 @@
 					"\"$(SRCROOT)/../SDK/libs\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "EMC-Captiva.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SDKSampleApp;
 				PROVISIONING_PROFILE = "";

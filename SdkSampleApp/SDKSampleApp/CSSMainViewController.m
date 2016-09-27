@@ -13,6 +13,7 @@
 #import "CSSSettings.h"
 
 #import "CSSCustomWindow.h"
+#import "SDKSampleApp-Swift.h"
 
 /**
  * CSSMainViewController interface represents the main window offering the ability to take a picture,
@@ -48,6 +49,11 @@
     [self.view addSubview: activityView];
 
     [CSSSettings registerDefaults];
+    
+    //Call Network Manager Login
+    NetworkManager *manager = [[NetworkManager alloc] init];
+    [manager login];
+    //*manager.login();
 }
 
 - (void)viewWillAppear:(BOOL)animated

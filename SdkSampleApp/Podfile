@@ -4,6 +4,9 @@ use_frameworks!
 
 target 'SDKSampleApp' do
     pod 'Alamofire', '~> 4.0'
+    pod 'SwiftyJSON'
+    pod 'OHHTTPStubs'
+    pod 'OHHTTPStubs/Swift'
 end
 
 target 'SDKSampleAppTests' do
