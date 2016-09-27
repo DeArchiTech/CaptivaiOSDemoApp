@@ -42,6 +42,34 @@ class NetworkManagerTest: XCTestCase {
     
     }
     
+    func testCreateLoginDictionary(){
+        
+        let manager : NetworkManager = NetworkManager.init()
+        let result = manager.createLoginParam()
+        XCTAssertNotNil(result)
+        if let key = result["licenseKey"] as? NSString {
+            XCTAssertEqual("LICE075-D09A-64E3", key)
+        }else{
+            XCTAssertTrue(false)
+        }
+        if let key = result["applicationId"] as? NSString {
+            XCTAssertEqual("APP3075-D09A-59C8", key)
+        }else{
+            XCTAssertTrue(false)
+        }
+        if let key = result["username"] as? NSString {
+            XCTAssertEqual("capadmin", key)
+        }else{
+            XCTAssertTrue(false)
+        }
+        if let key = result["password"] as? NSString {
+            XCTAssertEqual("Reva12#$", key)
+        }else{
+            XCTAssertTrue(false)
+        }
+        
+    }
+    
     func testLoginEndPt(){
         
         let manager : NetworkManager = NetworkManager.init()

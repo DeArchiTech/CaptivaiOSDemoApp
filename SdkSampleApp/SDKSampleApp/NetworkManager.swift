@@ -31,6 +31,18 @@ import Alamofire
         
     }
     
+    func createLoginParam() -> Parameters{
+        
+        let params: Parameters = [
+            "licenseKey": "LICE075-D09A-64E3",
+            "applicationId": "APP3075-D09A-59C8",
+            "username": "capadmin",
+            "password": "Reva12#$"
+        ]
+        return params
+        
+    }
+    
     func getLoginEndpoint() -> String{
         
         return endPoint + "/cp-rest/session"
