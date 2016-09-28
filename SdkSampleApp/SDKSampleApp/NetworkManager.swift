@@ -25,6 +25,8 @@ import Alamofire
         }
     }
     
+    var cookie: String?
+    
     func createLoginObj() -> LoginRequestObj{
         
         return LoginRequestObj(licenseKey: "LICE075-D09A-64E3", applicationId: "APP3075-D09A-59C8", username: "capadmin", password: "Reva12#$")
@@ -81,6 +83,12 @@ import Alamofire
     
     func uploadImage(image: UIImage, completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void {
         
+        if self.cookie != nil{
+            completion(nil, nil)
+        }else{
+            print("No cookie loaded in memory")
+            completion(nil, nil)
+        }
         
     }
     

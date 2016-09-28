@@ -16,6 +16,12 @@
 		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
 		22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */; };
 		22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */; };
+		22D1E5A41D9C3C55005483B7 /* base64Image.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A31D9C3C55005483B7 /* base64Image.txt */; };
+		22D1E5A51D9C45DA005483B7 /* base64Image.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A31D9C3C55005483B7 /* base64Image.txt */; };
+		22D1E5A71D9C56CE005483B7 /* testImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A61D9C56CE005483B7 /* testImg.jpg */; };
+		22D1E5A91D9C5731005483B7 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1E5A81D9C5731005483B7 /* Util.swift */; };
+		22D1E5AB1D9C575F005483B7 /* UtilUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1E5AA1D9C575F005483B7 /* UtilUnitTest.swift */; };
+		22D1E5AC1D9C59E6005483B7 /* testImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A61D9C56CE005483B7 /* testImg.jpg */; };
 		22F8E49B1D9992BB009E68F1 /* SDKSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */; };
 		64ECA85AE51B90464C997F81 /* Pods_SDKSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A804635F97D1371BFD115 /* Pods_SDKSampleAppTests.framework */; };
 		682E05548B6057445B70F7BF /* Pods_SDKSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A722BC9C92C12D7C49916DA5 /* Pods_SDKSampleAppUITests.framework */; };
@@ -93,6 +99,10 @@
 		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
 		22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManager.swift; sourceTree = "<group>"; };
 		22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManagerUnitTest.swift; sourceTree = "<group>"; };
+		22D1E5A31D9C3C55005483B7 /* base64Image.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = base64Image.txt; path = ../../base64Image.txt; sourceTree = "<group>"; };
+		22D1E5A61D9C56CE005483B7 /* testImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImg.jpg; sourceTree = "<group>"; };
+		22D1E5A81D9C5731005483B7 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		22D1E5AA1D9C575F005483B7 /* UtilUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilUnitTest.swift; sourceTree = "<group>"; };
 		22F8E4981D9992BB009E68F1 /* SDKSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSampleAppUITests.swift; sourceTree = "<group>"; };
 		22F8E49C1D9992BB009E68F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -215,6 +225,7 @@
 				222A93111D95FB7300F33087 /* NetworkManagerTest.swift */,
 				222A93131D95FB7300F33087 /* Info.plist */,
 				22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */,
+				22D1E5AA1D9C575F005483B7 /* UtilUnitTest.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -342,6 +353,7 @@
 				222A931A1D95FDB100F33087 /* NetworkManager.swift */,
 				22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */,
 				222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */,
+				22D1E5A81D9C5731005483B7 /* Util.swift */,
 			);
 			name = SDKSampleApp;
 			path = /Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleApp;
@@ -375,6 +387,8 @@
 		F362886517DD09FF001799D8 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				22D1E5A61D9C56CE005483B7 /* testImg.jpg */,
+				22D1E5A31D9C3C55005483B7 /* base64Image.txt */,
 				F36288AE17DFB1F4001799D8 /* MainScreen@2x.png */,
 				F362886717DD09FF001799D8 /* ic_prev.png */,
 				F362886817DD09FF001799D8 /* ic_prevsave.png */,
@@ -514,6 +528,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D1E5A51D9C45DA005483B7 /* base64Image.txt in Resources */,
+				22D1E5AC1D9C59E6005483B7 /* testImg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +553,8 @@
 				F326403717C7CED90043754D /* MainStoryboard_iPad.storyboard in Resources */,
 				F326406617C801430043754D /* MainStoryboard_iPhone.storyboard in Resources */,
 				B58AE77417D8E33B00925ABA /* Settings.bundle in Resources */,
+				22D1E5A71D9C56CE005483B7 /* testImg.jpg in Resources */,
+				22D1E5A41D9C3C55005483B7 /* base64Image.txt in Resources */,
 				858F23AA1AC4B7E5008AC2D2 /* quality.png in Resources */,
 				F362887217DD09FF001799D8 /* ic_prev.png in Resources */,
 				B5CAFD41194A7981009F5BD5 /* torch.png in Resources */,
@@ -695,6 +713,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D1E5AB1D9C575F005483B7 /* UtilUnitTest.swift in Sources */,
 				222A93121D95FB7300F33087 /* NetworkManagerTest.swift in Sources */,
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
 			);
@@ -723,6 +742,7 @@
 				22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */,
 				223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */,
 				223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */,
+				22D1E5A91D9C5731005483B7 /* Util.swift in Sources */,
 				F31AC88317D80282002D06EB /* CSSUtils.m in Sources */,
 				B5516F9317DA5A7900576310 /* CSSSettings.m in Sources */,
 			);

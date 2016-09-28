@@ -118,6 +118,13 @@ class NetworkManagerTest: XCTestCase {
         XCTAssertEqual(expected, result)
         
     }
+        
+    func testCreateImageUploadJson(){
+        
+
+        //3)Create ImageUploadJson object with key as data and value as base64ImageString
+        
+    }
     
     func testUploadImage(){
         
