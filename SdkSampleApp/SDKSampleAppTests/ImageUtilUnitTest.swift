@@ -38,7 +38,7 @@ class UtilUnitTest: XCTestCase {
         
         //2)Compute Result using Util and Mocked Up Image
 
-        let util = Util.init()
+        let util = ImageUtil.init()
         let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
         result = util.createBase64String(image : img!)
         
@@ -49,6 +49,27 @@ class UtilUnitTest: XCTestCase {
 
         //3)Assert result = expected
         XCTAssertEqual(expectedSubString, resultSubString)
+        
+    }
+    
+    func testCreateImageUploadDictionary(){
+        
+        var imgString : String?
+        //1)Get Expected String from a File
+        let testBundle = Bundle(for: type(of: self))
+        if let path = testBundle.path(forResource: "base64Image", ofType: "txt") {
+            do {
+                imgString = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
+                debugPrint(imgString)
+            } catch {
+                debugPrint("error")
+            }
+        }
+        
+        let util = ImageUtil.init()
+        let dictionary = util.createImageUploadDictionary(string: imgString!)
+        XCTAssertNotNil(dictionary)
+        XCTAssertEqual(dictionary["data"], imgString!)
         
     }
     

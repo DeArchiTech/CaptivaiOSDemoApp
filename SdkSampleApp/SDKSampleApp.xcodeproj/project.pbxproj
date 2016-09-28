@@ -19,8 +19,8 @@
 		22D1E5A41D9C3C55005483B7 /* base64Image.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A31D9C3C55005483B7 /* base64Image.txt */; };
 		22D1E5A51D9C45DA005483B7 /* base64Image.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A31D9C3C55005483B7 /* base64Image.txt */; };
 		22D1E5A71D9C56CE005483B7 /* testImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A61D9C56CE005483B7 /* testImg.jpg */; };
-		22D1E5A91D9C5731005483B7 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1E5A81D9C5731005483B7 /* Util.swift */; };
-		22D1E5AB1D9C575F005483B7 /* UtilUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1E5AA1D9C575F005483B7 /* UtilUnitTest.swift */; };
+		22D1E5A91D9C5731005483B7 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1E5A81D9C5731005483B7 /* ImageUtil.swift */; };
+		22D1E5AB1D9C575F005483B7 /* ImageUtilUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1E5AA1D9C575F005483B7 /* ImageUtilUnitTest.swift */; };
 		22D1E5AC1D9C59E6005483B7 /* testImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A61D9C56CE005483B7 /* testImg.jpg */; };
 		22F8E49B1D9992BB009E68F1 /* SDKSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */; };
 		64ECA85AE51B90464C997F81 /* Pods_SDKSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A804635F97D1371BFD115 /* Pods_SDKSampleAppTests.framework */; };
@@ -101,8 +101,8 @@
 		22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManagerUnitTest.swift; sourceTree = "<group>"; };
 		22D1E5A31D9C3C55005483B7 /* base64Image.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = base64Image.txt; path = ../../base64Image.txt; sourceTree = "<group>"; };
 		22D1E5A61D9C56CE005483B7 /* testImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImg.jpg; sourceTree = "<group>"; };
-		22D1E5A81D9C5731005483B7 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		22D1E5AA1D9C575F005483B7 /* UtilUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilUnitTest.swift; sourceTree = "<group>"; };
+		22D1E5A81D9C5731005483B7 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		22D1E5AA1D9C575F005483B7 /* ImageUtilUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtilUnitTest.swift; sourceTree = "<group>"; };
 		22F8E4981D9992BB009E68F1 /* SDKSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSampleAppUITests.swift; sourceTree = "<group>"; };
 		22F8E49C1D9992BB009E68F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 				222A93111D95FB7300F33087 /* NetworkManagerTest.swift */,
 				222A93131D95FB7300F33087 /* Info.plist */,
 				22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */,
-				22D1E5AA1D9C575F005483B7 /* UtilUnitTest.swift */,
+				22D1E5AA1D9C575F005483B7 /* ImageUtilUnitTest.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -353,7 +353,7 @@
 				222A931A1D95FDB100F33087 /* NetworkManager.swift */,
 				22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */,
 				222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */,
-				22D1E5A81D9C5731005483B7 /* Util.swift */,
+				22D1E5A81D9C5731005483B7 /* ImageUtil.swift */,
 			);
 			name = SDKSampleApp;
 			path = /Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleApp;
@@ -713,7 +713,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22D1E5AB1D9C575F005483B7 /* UtilUnitTest.swift in Sources */,
+				22D1E5AB1D9C575F005483B7 /* ImageUtilUnitTest.swift in Sources */,
 				222A93121D95FB7300F33087 /* NetworkManagerTest.swift in Sources */,
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
 			);
@@ -742,7 +742,7 @@
 				22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */,
 				223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */,
 				223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */,
-				22D1E5A91D9C5731005483B7 /* Util.swift in Sources */,
+				22D1E5A91D9C5731005483B7 /* ImageUtil.swift in Sources */,
 				F31AC88317D80282002D06EB /* CSSUtils.m in Sources */,
 				B5516F9317DA5A7900576310 /* CSSSettings.m in Sources */,
 			);

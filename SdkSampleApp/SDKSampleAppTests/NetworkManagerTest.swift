@@ -118,23 +118,16 @@ class NetworkManagerTest: XCTestCase {
         XCTAssertEqual(expected, result)
         
     }
-        
-    func testCreateImageUploadJson(){
-        
-
-        //3)Create ImageUploadJson object with key as data and value as base64ImageString
-        
-    }
     
     func testUploadImage(){
         
         let manager = NetworkManager.init()
         let image = UIImage.init()
-        manager.uploadImage(image: image) { (dictionary,error) -> () in
-            print(dictionary)
-            print(error)
-            XCTAssertNotNil(dictionary)
-        }
+//        manager.uploadImage(image: image) { (dictionary,error) -> () in
+//            print(dictionary)
+//            print(error)
+//            XCTAssertNotNil(dictionary)
+//        }
     }
     
 }

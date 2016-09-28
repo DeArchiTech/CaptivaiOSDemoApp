@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Util{
+class ImageUtil{
     
     init(){
         
@@ -19,6 +19,13 @@ class Util{
         let imageData:NSData = UIImageJPEGRepresentation(image,1.0)! as NSData
         let strBase64:String = imageData.base64EncodedString(options:.endLineWithCarriageReturn)
         return strBase64
+    }
+    
+    func createImageUploadDictionary(string: String) -> Dictionary<String,String>{
+        
+        var result = [String: String]()
+        result["data"] = string
+        return result;
     }
     
 }
