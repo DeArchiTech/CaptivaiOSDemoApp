@@ -54,6 +54,10 @@ import Alamofire
         return endPoint + "/cp-rest/session"
     }
     
+    func getUploadImageEndpoint() -> String{
+        
+        return endPoint + "/cp-rest/session/files"
+    }
 
     func login(completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void {
         
@@ -73,6 +77,11 @@ import Alamofire
                         print("Login failed")
                     }
                 }
+    }
+    
+    func uploadImage(image: UIImage, completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void {
+        
+        
     }
     
 }

@@ -50,17 +50,31 @@
 
     [CSSSettings registerDefaults];
     
+    [self login];
+}
+    
+- (void)login {
     //Call Network Manager Login
-
     NetworkManager *manager = [[NetworkManager alloc] init];
     [manager loginWithCompletion:^(NSDictionary * _Nullable param1, NSError * _Nullable param2){
-            NSLog(@"Dictionary: %@", [param1 description]);
-            NSLog(@"%@", param2.description);
-            NSString *cookie = [manager getcookieFromLoginResponseWithResponse:param1];
-            NSLog(@"%@", cookie);
+        NSLog(@"Dictionary: %@", [param1 description]);
+        NSLog(@"%@", param2.description);
+        NSString *cookieString = [manager getcookieFromLoginResponseWithResponse:param1];
+        NSLog(@"%@", cookieString);
+        
+        //Create Cookie
+        Cookie *cookie = [[Cookie alloc] init];
+        [cookie setCookie: cookieString];
+        
+        //Persist Cookie
+        CookieManager *cookieManager = [[CookieManager alloc] init];
+        [cookieManager saveCookieWithCookie: cookie];
+        
+        NSLog(@"%s", "CookiePersisted");
+        
     }];
 }
-
+    
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

@@ -92,13 +92,42 @@ class NetworkManagerTest: XCTestCase {
     func testLogin() {
         
         //1)Call Function
-        let manager : NetworkManager = NetworkManager.init();
+        let manager : NetworkManager = NetworkManager.init()
         manager.login() { (dictionary,error) -> () in
             print(dictionary)
             print(error)
-            XCTAssertTrue(true)
+            XCTAssertNotNil(dictionary)
         }
         
+    }
+    
+    func testGetLoginEndPt() {
+        
+        let expected = "http://104.209.39.82:8090/cp-rest/session"
+        let manager : NetworkManager = NetworkManager.init()
+        let result = manager.getLoginEndpoint()
+        XCTAssertEqual(expected, result)
+        
+    }
+    
+    func testGetUploadImageEndPt() {
+        
+        let expected = "http://104.209.39.82:8090/cp-rest/session/files"
+        let manager = NetworkManager.init()
+        let result = manager.getUploadImageEndpoint()
+        XCTAssertEqual(expected, result)
+        
+    }
+    
+    func testUploadImage(){
+        
+        let manager = NetworkManager.init()
+        let image = UIImage.init()
+        manager.uploadImage(image: image) { (dictionary,error) -> () in
+            print(dictionary)
+            print(error)
+            XCTAssertNotNil(dictionary)
+        }
     }
     
 }
