@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		21FC1CFC91DD058CF772832A /* Pods_SDKSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E798BA95BD7A35546DCE00 /* Pods_SDKSampleApp.framework */; };
+		22180DBD1D9DBA1B00BA73CD /* EnhanceVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22180DBC1D9DBA1B00BA73CD /* EnhanceVCHelper.swift */; };
+		22180DBF1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22180DBE1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift */; };
 		222A93121D95FB7300F33087 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A93111D95FB7300F33087 /* NetworkManagerTest.swift */; };
 		222A931B1D95FDB100F33087 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A931A1D95FDB100F33087 /* NetworkManager.swift */; };
 		223013431D99C12B00D7BB7E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F8E4A21D99AD1F009E68F1 /* Alamofire.framework */; };
@@ -93,6 +95,8 @@
 
 /* Begin PBXFileReference section */
 		14333D3F7C7E0FC783A354EA /* Pods-SDKSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKSampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKSampleApp/Pods-SDKSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		22180DBC1D9DBA1B00BA73CD /* EnhanceVCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnhanceVCHelper.swift; sourceTree = "<group>"; };
+		22180DBE1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnhanceVCHelperUnitTest.swift; sourceTree = "<group>"; };
 		222A930F1D95FB7300F33087 /* SDKSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222A93111D95FB7300F33087 /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
 		222A93131D95FB7300F33087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 				22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */,
 				22D1E5AA1D9C575F005483B7 /* ImageUtilUnitTest.swift */,
 				2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */,
+				22180DBE1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				2271D5F01D9D851A0039853B /* MainVCHelper.swift */,
+				22180DBC1D9DBA1B00BA73CD /* EnhanceVCHelper.swift */,
 			);
 			name = VChelpers;
 			sourceTree = "<group>";
@@ -734,6 +740,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D1E5AB1D9C575F005483B7 /* ImageUtilUnitTest.swift in Sources */,
+				22180DBF1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift in Sources */,
 				222A93121D95FB7300F33087 /* NetworkManagerTest.swift in Sources */,
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
 				2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */,
@@ -763,6 +770,7 @@
 				22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */,
 				223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */,
 				2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */,
+				22180DBD1D9DBA1B00BA73CD /* EnhanceVCHelper.swift in Sources */,
 				223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */,
 				22D1E5A91D9C5731005483B7 /* ImageUtil.swift in Sources */,
 				F31AC88317D80282002D06EB /* CSSUtils.m in Sources */,
@@ -906,6 +914,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.gml.io.SDKSampleAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "SDKSampleApp-Bridging-Header";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SDKSampleApp;
@@ -943,6 +952,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = org.gml.io.SDKSampleAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SDKSampleApp-Bridging-Header";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SDKSampleApp;

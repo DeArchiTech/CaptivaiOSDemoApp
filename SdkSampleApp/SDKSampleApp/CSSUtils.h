@@ -43,6 +43,7 @@ extern NSString * const CSSEnhanceItemQuadCrop;
 extern NSString * const CSSEnhanceItemGetInfo;
 extern NSString * const CSSEnhanceItemExport;
 extern NSString * const CSSEnhanceItemBarcode;
+extern NSString * const CSSUploadImage;
 
 extern const int CSSActionPickerFilterType;
 extern const int CSSActionPickerImageLocationType;

@@ -48,6 +48,9 @@ NSString * const CSSEnhanceItemExport = @"Export to Photos";
 NSString * const CSSEnhanceItemQuadCrop = @"Quadrilateral Crop";
 NSString * const CSSEnhanceItemBarcode = @"Detect barcodes";
 
+// Additional Items
+NSString * const CSSUploadImage = @"Upload Image";
+
 const int CSSActionPickerFilterType = 0;
 const int CSSActionPickerImageLocationType = 1;
 
@@ -92,6 +95,7 @@ const float CSSCropMinHeight = 100.0;
         [actionNames addObject:CSSEnhanceItemBarcode];
         [actionNames addObject:CSSEnhanceItemExport];
         [actionNames addObject:CSSEnhanceItemGetInfo];
+        [actionNames addObject:CSSUploadImage];
     }
     else if (actionType == CSSActionPickerImageLocationType) {
         // set up array of image location names

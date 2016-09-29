@@ -9,7 +9,7 @@
 #import "CMSConstants.h"
 #import "CSSEnhancePictureViewController.h"
 #import "CSSSettings.h"
-
+#import "SDKSampleApp-Swift.h"
 
 /*
  * interface CropImageView hosts a resizable rectangle showing the crop selection
@@ -695,6 +695,7 @@
                                                                             CSSEnhanceItemBarcode,
                                                                             CSSEnhanceItemExport,
                                                                             CSSEnhanceItemGetInfo,
+                                                                            CSSUploadImage,
                                                                             nil];
     filterActionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
     [filterActionSheet showFromBarButtonItem:listFiltersButton animated:YES];
@@ -979,6 +980,17 @@
     }
 }
 
+- (void)uploadImage
+{
+    //Call Network Manager Login
+    
+    EnhanceVCHelper *helper = [[EnhanceVCHelper alloc] init];
+    UIImage *image = nil;
+    [helper uploadImageWithImage: image completion:^(NSDictionary * _Nullable param1, NSError * _Nullable param2){
+        [helper displayUploadResultWithJsonResult:param1 error:param2];
+    }];
+
+}
 // zoom support
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer
 {
