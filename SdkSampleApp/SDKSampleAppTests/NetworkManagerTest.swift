@@ -79,10 +79,20 @@ class NetworkManagerTest: XCTestCase {
     
     func testGetCookieFromLoginResponse(){
         
+        var cookie : String?
+        //1)Get Expected String from a File
+        let testBundle = Bundle(for: type(of: self))
+        if let path = testBundle.path(forResource: "sampleCookie", ofType: "txt") {
+            do {
+                cookie = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
+            } catch {
+            }
+        }
+        
         let manager : NetworkManager = NetworkManager.init()
         let params: NSDictionary = [
             "returnStatus": "LICE075-D09A-64E3",
-            "ticket": "SK22>>>>*!9839908084640907461/pedn3xK0Yw7TVPt+oLguhB/TQkr9CZEOoN5F3WvKcx75JaQaZ+pnqj6V/iGCRdQ1acNZuQyMx0reNZ5BIqU0lx9s4lmwPdOmf95riSEqkz6MDJfrUYV/6XBbw0XvSqTCULNg3+YonCW+ETH+H/9ux78Ngn3TTSPGWeFW0fBN2maM4XSaJrpWMLg9zB+A7X/AL6QXeMcF7VbKoRCRYtFTJp1g51s4rB/+a8SlEbgdrRF46VLxQJvvVNs0ixV8ijPeOmXkQasrne113jXhKVvDOcAlmPpLyiGKF3XISKFV3LYnyg==*>>>>"
+            "ticket": cookie!
         ]
         let result = manager.getcookieFromLoginResponse(response: params)
         XCTAssertEqual(params["ticket"] as! String, result)
@@ -121,13 +131,32 @@ class NetworkManagerTest: XCTestCase {
     
     func testUploadImage(){
         
+        //Mock Cookie
+        var cookie : String?
+        //1)Get Expected Cookie from a File
+        let testBundle = Bundle(for: type(of: self))
+        if let path = testBundle.path(forResource: "sampleCookie", ofType: "txt") {
+            do {
+                cookie = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
+            } catch {
+            }
+        }
+
         let manager = NetworkManager.init()
-        let image = UIImage.init()
-//        manager.uploadImage(image: image) { (dictionary,error) -> () in
-//            print(dictionary)
-//            print(error)
-//            XCTAssertNotNil(dictionary)
-//        }
+        manager.cookieString = cookie
+        let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
+        
+        let readyExpectation = expectation(description: "read")
+        manager.uploadImage(image: img!) { (dictionary,error) -> () in
+            debugPrint(dictionary)
+            debugPrint(error)
+            XCTAssertNotNil(dictionary)
+            readyExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
     }
     
 }

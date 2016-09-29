@@ -30,9 +30,7 @@ class UtilUnitTest: XCTestCase {
         if let path = testBundle.path(forResource: "base64Image", ofType: "txt") {
             do {
                 expected = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
-                debugPrint(expected)
             } catch {
-                debugPrint("error")
             }
         }
         
@@ -60,9 +58,7 @@ class UtilUnitTest: XCTestCase {
         if let path = testBundle.path(forResource: "base64Image", ofType: "txt") {
             do {
                 imgString = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
-                debugPrint(imgString)
             } catch {
-                debugPrint("error")
             }
         }
         
@@ -71,6 +67,39 @@ class UtilUnitTest: XCTestCase {
         XCTAssertNotNil(dictionary)
         XCTAssertEqual(dictionary["data"], imgString!)
         
+    }
+    
+    func testCreateImageUploadParam(){
+        
+        var expected : String?
+        var result : String?
+        
+        //1)Get Expected String from a File
+        let testBundle = Bundle(for: type(of: self))
+        if let path = testBundle.path(forResource: "base64Image", ofType: "txt") {
+            do {
+                expected = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
+                debugPrint(expected)
+            } catch {
+                debugPrint("error")
+            }
+        }
+        
+        //2)Call method to create dictionary
+        
+        let util = ImageUtil.init()
+        let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
+        let dictionary = util.createImageUploadParam(image: img!)
+        XCTAssertNotNil(dictionary)
+        result = dictionary["data"]
+        
+        //3)Assert substring to be the same
+        let expectedIndex = expected?.index((expected?.startIndex)!, offsetBy: 10)
+        let resultIndex = result?.index((result?.startIndex)!, offsetBy: 10)
+        let expectedSubString = expected?.substring(to :expectedIndex!)
+        let resultSubString = result?.substring(to: resultIndex!)
+        
+        XCTAssertEqual(expectedSubString, resultSubString)
     }
     
 }

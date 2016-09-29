@@ -13,6 +13,8 @@
 		223013431D99C12B00D7BB7E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F8E4A21D99AD1F009E68F1 /* Alamofire.framework */; };
 		223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */; };
 		223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013481D99C9B900D7BB7E /* LoginResponseObj.swift */; };
+		225F60DB1D9C8EBF003B97A0 /* sampleCookie.txt in Resources */ = {isa = PBXBuildFile; fileRef = 225F60DA1D9C8EBF003B97A0 /* sampleCookie.txt */; };
+		225F60DC1D9C8ECF003B97A0 /* sampleCookie.txt in Resources */ = {isa = PBXBuildFile; fileRef = 225F60DA1D9C8EBF003B97A0 /* sampleCookie.txt */; };
 		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
 		22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */; };
 		22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */; };
@@ -96,6 +98,7 @@
 		222A931A1D95FDB100F33087 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestObj.swift; sourceTree = "<group>"; };
 		223013481D99C9B900D7BB7E /* LoginResponseObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseObj.swift; sourceTree = "<group>"; };
+		225F60DA1D9C8EBF003B97A0 /* sampleCookie.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleCookie.txt; sourceTree = "<group>"; };
 		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
 		22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManager.swift; sourceTree = "<group>"; };
 		22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManagerUnitTest.swift; sourceTree = "<group>"; };
@@ -387,6 +390,7 @@
 		F362886517DD09FF001799D8 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				225F60DA1D9C8EBF003B97A0 /* sampleCookie.txt */,
 				22D1E5A61D9C56CE005483B7 /* testImg.jpg */,
 				22D1E5A31D9C3C55005483B7 /* base64Image.txt */,
 				F36288AE17DFB1F4001799D8 /* MainScreen@2x.png */,
@@ -528,6 +532,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225F60DC1D9C8ECF003B97A0 /* sampleCookie.txt in Resources */,
 				22D1E5A51D9C45DA005483B7 /* base64Image.txt in Resources */,
 				22D1E5AC1D9C59E6005483B7 /* testImg.jpg in Resources */,
 			);
@@ -564,6 +569,7 @@
 				B50D997517DFCB47006DDEE2 /* back.png in Resources */,
 				B50D997617DFCB47006DDEE2 /* camera.png in Resources */,
 				B50D997A17DFCB47006DDEE2 /* movementred.png in Resources */,
+				225F60DB1D9C8EBF003B97A0 /* sampleCookie.txt in Resources */,
 				B57BE43F17DFE03300A748DC /* app.114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

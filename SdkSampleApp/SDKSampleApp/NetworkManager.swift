@@ -25,7 +25,7 @@ import Alamofire
         }
     }
     
-    var cookie: String?
+    var cookieString: String?
     
     func createLoginObj() -> LoginRequestObj{
         
@@ -42,6 +42,13 @@ import Alamofire
             "password": "Reva12#$"
         ]
         return params
+        
+    }
+    
+    func createUploadParam(image : UIImage) -> Dictionary<String,String>{
+        
+        let util = ImageUtil.init()
+        return util.createImageUploadParam(image: image)
         
     }
     
@@ -81,10 +88,22 @@ import Alamofire
                 }
     }
     
-    func uploadImage(image: UIImage, completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void {
+    func uploadImage(image: UIImage, completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void{
         
-        if self.cookie != nil{
-            completion(nil, nil)
+        if self.cookieString != nil{
+            Alamofire.request(getUploadImageEndpoint(), method: .post, parameters: createUploadParam(image: image), encoding: JSONEncoding.default)
+                .validate()
+                .responseJSON{ response in
+                    switch response.result{
+                    case .success(let result):
+                        if let result = response.result.value {
+                            let jsonResult = result as! NSDictionary
+                            completion(jsonResult, nil)
+                        }
+                    case .failure(let error):
+                        completion(nil, error as NSError?)
+                    }
+            }
         }else{
             print("No cookie loaded in memory")
             completion(nil, nil)
