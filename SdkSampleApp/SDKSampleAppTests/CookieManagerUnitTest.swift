@@ -50,4 +50,18 @@ class CookieManagerUnitTest: XCTestCase {
         }
     }
     
+    func testLoadCookieWhenEmpty() {
+        
+        let manager : CookieManager = CookieManager.init()
+        
+        //1)Assert cache has no cookie
+        let result : Cookie? = manager.cookieCache
+        XCTAssertNil(result)
+        
+        //2)Load cookie from database
+        let loadCookieResult : Bool = manager.loadCookie()
+        XCTAssertFalse(loadCookieResult)
+
+    }
+    
 }

@@ -40,7 +40,7 @@ import RealmSwift
            try! Realm().objects(Cookie)
         }()
         self.cookieCache = objs.first
-        return true
+        return self.cookieCache != nil
     
     }
     

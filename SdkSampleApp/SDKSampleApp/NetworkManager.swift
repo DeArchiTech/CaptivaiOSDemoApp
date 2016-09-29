@@ -52,12 +52,6 @@ import Alamofire
         
     }
     
-    func getcookieFromLoginResponse(response : NSDictionary) -> String{
-        
-        return response["ticket"] as! String
-        
-    }
-    
     func getLoginEndpoint() -> String{
         
         return endPoint + "/cp-rest/session"

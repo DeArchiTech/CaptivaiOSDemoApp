@@ -15,6 +15,8 @@
 		223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013481D99C9B900D7BB7E /* LoginResponseObj.swift */; };
 		225F60DB1D9C8EBF003B97A0 /* sampleCookie.txt in Resources */ = {isa = PBXBuildFile; fileRef = 225F60DA1D9C8EBF003B97A0 /* sampleCookie.txt */; };
 		225F60DC1D9C8ECF003B97A0 /* sampleCookie.txt in Resources */ = {isa = PBXBuildFile; fileRef = 225F60DA1D9C8EBF003B97A0 /* sampleCookie.txt */; };
+		2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F01D9D851A0039853B /* MainVCHelper.swift */; };
+		2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */; };
 		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
 		22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */; };
 		22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */; };
@@ -99,6 +101,8 @@
 		223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestObj.swift; sourceTree = "<group>"; };
 		223013481D99C9B900D7BB7E /* LoginResponseObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseObj.swift; sourceTree = "<group>"; };
 		225F60DA1D9C8EBF003B97A0 /* sampleCookie.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleCookie.txt; sourceTree = "<group>"; };
+		2271D5F01D9D851A0039853B /* MainVCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelper.swift; sourceTree = "<group>"; };
+		2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelperUnitTest.swift; sourceTree = "<group>"; };
 		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
 		22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManager.swift; sourceTree = "<group>"; };
 		22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManagerUnitTest.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 				222A93131D95FB7300F33087 /* Info.plist */,
 				22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */,
 				22D1E5AA1D9C575F005483B7 /* ImageUtilUnitTest.swift */,
+				2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -241,6 +246,14 @@
 				223013481D99C9B900D7BB7E /* LoginResponseObj.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		2271D5EF1D9D84E70039853B /* VChelpers */ = {
+			isa = PBXGroup;
+			children = (
+				2271D5F01D9D851A0039853B /* MainVCHelper.swift */,
+			);
+			name = VChelpers;
 			sourceTree = "<group>";
 		};
 		22F8E4991D9992BB009E68F1 /* SDKSampleAppUITests */ = {
@@ -333,6 +346,7 @@
 		F326400317C7CDE90043754D /* SDKSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				2271D5EF1D9D84E70039853B /* VChelpers */,
 				223013441D99C97A00D7BB7E /* Model */,
 				F36288A817DFACAB001799D8 /* SDK Include */,
 				F362886417DD09FF001799D8 /* Res */,
@@ -722,6 +736,7 @@
 				22D1E5AB1D9C575F005483B7 /* ImageUtilUnitTest.swift in Sources */,
 				222A93121D95FB7300F33087 /* NetworkManagerTest.swift in Sources */,
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
+				2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,6 +762,7 @@
 				F31AC88017D800F0002D06EB /* CSSEnhancePictureViewController.m in Sources */,
 				22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */,
 				223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */,
+				2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */,
 				223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */,
 				22D1E5A91D9C5731005483B7 /* ImageUtil.swift in Sources */,
 				F31AC88317D80282002D06EB /* CSSUtils.m in Sources */,

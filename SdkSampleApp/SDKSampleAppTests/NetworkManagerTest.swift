@@ -77,28 +77,6 @@ class NetworkManagerTest: XCTestCase {
         
     }
     
-    func testGetCookieFromLoginResponse(){
-        
-        var cookie : String?
-        //1)Get Expected String from a File
-        let testBundle = Bundle(for: type(of: self))
-        if let path = testBundle.path(forResource: "sampleCookie", ofType: "txt") {
-            do {
-                cookie = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
-            } catch {
-            }
-        }
-        
-        let manager : NetworkManager = NetworkManager.init()
-        let params: NSDictionary = [
-            "returnStatus": "LICE075-D09A-64E3",
-            "ticket": cookie!
-        ]
-        let result = manager.getcookieFromLoginResponse(response: params)
-        XCTAssertEqual(params["ticket"] as! String, result)
-        
-    }
-    
     func testLogin() {
         
         //1)Call Function
