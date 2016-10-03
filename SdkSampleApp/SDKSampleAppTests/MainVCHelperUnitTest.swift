@@ -27,11 +27,7 @@ class MainVCHelperUnitTest: XCTestCase {
 
         //1)Create Cookie Manager Object
         let cookieManager = CookieManager.init()
-        let networkManager = NetworkManager.init()
-        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), networkManager: NetworkManager.init())
-        helper.cookieManager = cookieManager
-        helper.networkManager = networkManager
-        
+        let helper = MainVCHelper.init(cookieManager: cookieManager, service: LoginService.init())
         //1.1)Put Cookie in Database
         let cookie = Cookie.init()
         cookie.cookie = "ABC"
@@ -53,10 +49,7 @@ class MainVCHelperUnitTest: XCTestCase {
         
         //1)Create Cookie Manager Object
         let cookieManager = CookieManager.init()
-        let networkManager = NetworkManager.init()
-        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), networkManager: NetworkManager.init())
-        helper.cookieManager = cookieManager
-        helper.networkManager = networkManager
+        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
         
         //2)Assert Cookie Manager has no cookie cache
         XCTAssertNil(cookieManager.cookieCache)
@@ -88,7 +81,7 @@ class MainVCHelperUnitTest: XCTestCase {
             }
         }
         
-        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), networkManager: NetworkManager.init())
+        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
         let params: NSDictionary = [
             "returnStatus": "LICE075-D09A-64E3",
             "ticket": cookie!
@@ -106,7 +99,7 @@ class MainVCHelperUnitTest: XCTestCase {
             "returnStatus": "LICE075-D09A-64E3",
             "ticket": cookie
         ]
-        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), networkManager: NetworkManager.init())
+        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
         let result = helper.persistCookie(dictionary: params)
         XCTAssertTrue(result)
     

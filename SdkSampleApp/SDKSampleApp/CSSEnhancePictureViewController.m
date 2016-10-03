@@ -893,6 +893,12 @@
     
     lastFilterError = [CMSCaptureImage lastError];
     [self updateImageViewWithZoomScale:keepZoomScale];
+    
+    //Upload Image
+    
+    if ([actionName compare:CSSUploadImage] == NSOrderedSame){
+        [self uploadImageAction];
+    }
 }
 
 - (void)setButtonsEnabled
@@ -943,7 +949,6 @@
     CGRect rect = [CSSUtils getRectForLoadedImage];
     UIImage *image = [CMSCaptureImage imageForDisplayWithWidth:0 height:0 rect:CGRectMake(0, 0, 0, 0)];
     [wipImageView setImage:image];
-    
     [self cacheZoomScaleAndSetTo1];
     [self positionWipImageViewForFrame:rect];
 
@@ -980,17 +985,20 @@
     }
 }
 
-- (void)uploadImage
+- (void)uploadImageAction
 {
-    //Call Network Manager Login
-    
-    EnhanceVCHelper *helper = [[EnhanceVCHelper alloc] init];
-    UIImage *image = nil;
-    [helper uploadImageWithImage: image completion:^(NSDictionary * _Nullable param1, NSError * _Nullable param2){
-        [helper displayUploadResultWithJsonResult:param1 error:param2];
-    }];
-
+    UIImage* image = wipImageView.image;
+    [self uploadImage:image];
 }
+
+- (void)uploadImage:(UIImage *)image
+{
+    EnhanceVCHelper *helper = [[EnhanceVCHelper alloc] init];
+    [helper uploadImageWithImage: image completion:^(NSDictionary * _Nullable param1, NSError * _Nullable param2){
+        [self displayUploadResult:param1 :param2];
+    }];
+}
+
 // zoom support
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer
 {
@@ -1171,5 +1179,26 @@
     return types;
 }
 
-@end
+- (bool)displayUploadResult:(NSDictionary*)jsonResult :(NSError*)error{
+    
+    if (jsonResult != nil){
+        return [self displayUploadSuccess:jsonResult];
+    }else if( error != nil){
+        return [self displayUploadError:error];
+    }
+    return false;
+}
 
+- (bool) displayUploadSuccess:(NSDictionary*)jsonResult{
+    
+    [CSSUtils showAlertWithMessage:@"The image was uploaded to server successfully" title:@"Upload Success"];
+    return true;
+}
+
+- (bool) displayUploadError:(NSError*)error{
+    
+    [CSSUtils showAlertOnError:error title:@"Error"];
+    return true;
+}
+
+@end

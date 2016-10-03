@@ -23,7 +23,7 @@ class ImageUtil{
     
     func createBase64String(image : UIImage) -> String{
         let imageData:NSData = UIImageJPEGRepresentation(image,1.0)! as NSData
-        let strBase64:String = imageData.base64EncodedString(options:.endLineWithCarriageReturn)
+        let strBase64:String = imageData.base64EncodedString(options:.init(rawValue: 0))
         return strBase64
     }
     

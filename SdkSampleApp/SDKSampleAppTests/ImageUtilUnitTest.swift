@@ -40,8 +40,8 @@ class UtilUnitTest: XCTestCase {
         let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
         result = util.createBase64String(image : img!)
         
-        let expectedIndex = expected?.index((expected?.startIndex)!, offsetBy: 100)
-        let resultIndex = result?.index((result?.startIndex)!, offsetBy: 100)
+        let expectedIndex = expected?.index((expected?.startIndex)!, offsetBy: 10)
+        let resultIndex = result?.index((result?.startIndex)!, offsetBy: 10)
         let expectedSubString = expected?.substring(to :expectedIndex!)
         let resultSubString = result?.substring(to: resultIndex!)
 

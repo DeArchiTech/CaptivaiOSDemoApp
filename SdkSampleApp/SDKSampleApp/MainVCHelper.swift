@@ -10,29 +10,29 @@ import Foundation
 
 @objc class MainVCHelper: NSObject{
     
-    class func newInstance() -> NetworkManager{
-        return NetworkManager()
+    class func newInstance() -> MainVCHelper{
+        return MainVCHelper()
     }
     
-    init(cookieManager : CookieManager, networkManager : NetworkManager){
+    init(cookieManager : CookieManager, service : LoginService){
         self.cookieManager = cookieManager
-        self.networkManager = networkManager
+        self.loginService = service
     }
     
     override init(){
         self.cookieManager = CookieManager.init()
-        self.networkManager = NetworkManager.init()
+        self.loginService = LoginService.init()
     }
     
     var cookieManager : CookieManager?
-    var networkManager : NetworkManager?
+    var loginService : LoginService?
     
     func getCookie(completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void {
         
         //1)Attempt to load from Database
         let result = self.cookieManager?.loadCookie()
         if result == false{
-            self.networkManager?.login(completion:completion)
+            self.loginService?.login(completion:completion)
         }
     }
     

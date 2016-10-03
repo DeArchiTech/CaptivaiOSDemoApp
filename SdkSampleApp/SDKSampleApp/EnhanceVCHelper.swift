@@ -15,46 +15,25 @@ import UIKit
         return EnhanceVCHelper()
     }
     
-    
     override init(){
+        
         self.cookieManager = CookieManager.init()
-        self.networkManager = NetworkManager.init()
+        if(self.cookieManager?.loadCookie())!{
+            let cookieString = self.cookieManager?.cookieCache?.cookie
+            self.uploadService = UploadService.init(cookie: cookieString!)
+        }else{
+            print("Error, cannot load cookie cache")
+        }
+
     }
     
     var cookieManager : CookieManager?
-    var networkManager : NetworkManager?
+    var uploadService : UploadService?
     
     func uploadImage(image: UIImage, completion: @escaping ( _: NSDictionary?, _:NSError?)-> ()) -> Void{
         
-        self.networkManager?.uploadImage(image: image, completion: completion)
-        
-    }
-    
-    func displayUploadResult(jsonResult : Dictionary<String, Any>?, error : NSError) -> Bool{
-        
-        if jsonResult != nil{
-            displayUploadSuccess(jsonResult: jsonResult!)
-            return true
-        }else if error != nil{
-            displayUploadError(error: error)
-        }
-        return false
-    }
-    
-    func displayUploadSuccess(jsonResult : Dictionary<String, Any>){
-        
-        //Todo Implement, print something to the screen
-        let alertTitle = "Upload Success"
-        let alertMessage = "Image uploaded to server successfully"
-        CSSUtils.showAlert(withMessage: alertMessage, title: alertTitle)
-        
-    }
-    
-    func displayUploadError(error : NSError){
-    
-        //Todo Implement, print something to the screenß
-        let errorTitle = "Upload Failed"
-        CSSUtils.showAlert(onError: error, title: errorTitle)
+
+        self.uploadService?.uploadImage(image: image, completion: completion)
         
     }
     

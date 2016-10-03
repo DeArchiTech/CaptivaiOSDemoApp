@@ -21,24 +21,4 @@ class EnhanceVCHelperUnitTest: XCTestCase {
         super.tearDown()
     }
     
-    func testDisplayUploadResultSuccess(){
-        
-        
-    }
-    
-    func testDisplayUploadResultFail(){
-        
-        let helper = EnhanceVChelper.init()
-        let dictionary = nil
-        let error = NSError.init()
-        let result = helper.displayUploadResult(jsonResult: dictionary, error: error)
-        XCTAssertTrue(result)
-        
-    }
-    
-    func testUploadImage() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
 }
