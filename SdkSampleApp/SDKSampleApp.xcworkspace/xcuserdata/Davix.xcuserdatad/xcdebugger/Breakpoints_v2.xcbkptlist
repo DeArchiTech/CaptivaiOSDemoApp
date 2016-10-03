@@ -33,38 +33,6 @@
             endingLineNumber = "127"
             landmarkName = "testUploadImage()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SDKSampleAppTests.NetworkManagerTest.testUploadImage () -&gt; ()"
-                  moduleName = "SDKSampleAppTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleAppTests/NetworkManagerTest.swift"
-                  timestampString = "497228188.959822"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "127"
-                  endingLineNumber = "127"
-                  offsetFromSymbolStart = "1132">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SDKSampleAppTests.NetworkManagerTest.(testUploadImage () -&gt; ()).(closure #1)"
-                  moduleName = "SDKSampleAppTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleAppTests/NetworkManagerTest.swift"
-                  timestampString = "497228188.961319"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

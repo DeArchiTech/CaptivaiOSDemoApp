@@ -10,8 +10,6 @@
 		21FC1CFC91DD058CF772832A /* Pods_SDKSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E798BA95BD7A35546DCE00 /* Pods_SDKSampleApp.framework */; };
 		22180DBD1D9DBA1B00BA73CD /* EnhanceVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22180DBC1D9DBA1B00BA73CD /* EnhanceVCHelper.swift */; };
 		22180DBF1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22180DBE1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift */; };
-		222A93121D95FB7300F33087 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A93111D95FB7300F33087 /* NetworkManagerTest.swift */; };
-		222A931B1D95FDB100F33087 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A931A1D95FDB100F33087 /* NetworkManager.swift */; };
 		223013431D99C12B00D7BB7E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F8E4A21D99AD1F009E68F1 /* Alamofire.framework */; };
 		223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */; };
 		223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013481D99C9B900D7BB7E /* LoginResponseObj.swift */; };
@@ -20,6 +18,7 @@
 		22611C451DA2EFC2003B1514 /* UploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22611C441DA2EFC2003B1514 /* UploadService.swift */; };
 		22611C471DA2EFD1003B1514 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22611C461DA2EFD1003B1514 /* LoginService.swift */; };
 		22611C491DA3067B003B1514 /* UploadServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22611C481DA3067B003B1514 /* UploadServiceTest.swift */; };
+		22611C4D1DA31B7E003B1514 /* LoginServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22611C4C1DA31B7E003B1514 /* LoginServiceTest.swift */; };
 		2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F01D9D851A0039853B /* MainVCHelper.swift */; };
 		2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */; };
 		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
@@ -101,16 +100,15 @@
 		22180DBC1D9DBA1B00BA73CD /* EnhanceVCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnhanceVCHelper.swift; sourceTree = "<group>"; };
 		22180DBE1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnhanceVCHelperUnitTest.swift; sourceTree = "<group>"; };
 		222A930F1D95FB7300F33087 /* SDKSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		222A93111D95FB7300F33087 /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
 		222A93131D95FB7300F33087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDKSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		222A931A1D95FDB100F33087 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestObj.swift; sourceTree = "<group>"; };
 		223013481D99C9B900D7BB7E /* LoginResponseObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseObj.swift; sourceTree = "<group>"; };
 		225F60DA1D9C8EBF003B97A0 /* sampleCookie.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleCookie.txt; sourceTree = "<group>"; };
 		22611C441DA2EFC2003B1514 /* UploadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadService.swift; sourceTree = "<group>"; };
 		22611C461DA2EFD1003B1514 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		22611C481DA3067B003B1514 /* UploadServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadServiceTest.swift; sourceTree = "<group>"; };
+		22611C4C1DA31B7E003B1514 /* LoginServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceTest.swift; sourceTree = "<group>"; };
 		2271D5F01D9D851A0039853B /* MainVCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelper.swift; sourceTree = "<group>"; };
 		2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelperUnitTest.swift; sourceTree = "<group>"; };
 		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
@@ -239,7 +237,7 @@
 		222A93101D95FB7300F33087 /* SDKSampleAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				222A93111D95FB7300F33087 /* NetworkManagerTest.swift */,
+				22611C4C1DA31B7E003B1514 /* LoginServiceTest.swift */,
 				222A93131D95FB7300F33087 /* Info.plist */,
 				22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */,
 				22D1E5AA1D9C575F005483B7 /* ImageUtilUnitTest.swift */,
@@ -380,7 +378,6 @@
 				F326400417C7CDE90043754D /* Supporting Files */,
 				8504CB851AD5EB2700591B99 /* CSSCustomWindow.h */,
 				8504CB861AD5EB4500591B99 /* CSSCustomWindow.mm */,
-				222A931A1D95FDB100F33087 /* NetworkManager.swift */,
 				22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */,
 				222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */,
 				22D1E5A81D9C5731005483B7 /* ImageUtil.swift */,
@@ -751,7 +748,7 @@
 				22D1E5AB1D9C575F005483B7 /* ImageUtilUnitTest.swift in Sources */,
 				22180DBF1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift in Sources */,
 				22611C491DA3067B003B1514 /* UploadServiceTest.swift in Sources */,
-				222A93121D95FB7300F33087 /* NetworkManagerTest.swift in Sources */,
+				22611C4D1DA31B7E003B1514 /* LoginServiceTest.swift in Sources */,
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
 				2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */,
 			);
@@ -771,7 +768,6 @@
 			files = (
 				22611C451DA2EFC2003B1514 /* UploadService.swift in Sources */,
 				22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */,
-				222A931B1D95FDB100F33087 /* NetworkManager.swift in Sources */,
 				8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */,
 				F326400A17C7CDE90043754D /* main.m in Sources */,
 				F326400E17C7CDE90043754D /* CSSAppDelegate.m in Sources */,
