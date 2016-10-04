@@ -21,26 +21,50 @@ import RealmSwift
     func saveCookie(cookie: Cookie) -> Bool {
         
         do{
-            print("trying to open realm")
             let realm = try Realm()
             try! realm.write {
                 realm.add(cookie)
             }
         } catch let error as NSError {
-            print("An Error Has Occured")
+            return false
             print(error)
         }
-        
         return true
     
     }
     
     func loadCookie() -> Bool {
+        
         let objs: Results<Cookie> = {
             try! Realm().objects(Cookie)
         }()
         self.cookieCache = objs.first
         return self.cookieCache != nil
+        
+    }
+    
+    func clearAllCookies() -> Bool {
+        
+        var objs: Results<Cookie> = {
+            try! Realm().objects(Cookie)
+        }()
+        if objs.count > 0 {
+            do{
+                let realm = try Realm()
+                for cookie in objs{
+                    try! realm.write {
+                        realm.delete(cookie)
+                    }
+                }
+            } catch let error as NSError {
+                return false
+                print(error)
+            }
+        }
+        objs = {
+            try! Realm().objects(Cookie)
+        }()
+        return objs.count == 0
         
     }
     

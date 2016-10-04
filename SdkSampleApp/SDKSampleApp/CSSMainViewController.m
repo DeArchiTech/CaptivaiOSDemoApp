@@ -38,7 +38,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:100.0/255.0 green:150.0/255.0 blue:200.0/255.0 alpha:1.0];
     self.navigationItem.title = CSSMainTitle;
-    self.actionsArray = [NSArray arrayWithObjects:CSSMenuTakePicture, CSSMenuContinuousCapture, CSSMenuEnhanceImage, CSSMenuDeleteDocFiles, nil];
+    self.actionsArray = [NSArray arrayWithObjects:CSSMenuTakePicture, CSSMenuContinuousCapture, CSSMenuEnhanceImage, CSSMenuDeleteDocFiles, CSSMenuRelogin, nil];
     self.tableView.tableFooterView = [UIView new];
     [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainScreen@2x.png"]]];
     self.view.backgroundColor = [UIColor clearColor];
@@ -52,7 +52,17 @@
     
     [self login];
 }
+
+- (void)relogin {
     
+    //1)Clear cookie
+    MainVCHelper *helper = [[MainVCHelper alloc] init];
+    [helper clearCookie];
+    //2)Call login again
+    [self login];
+    
+}
+
 - (void)login {
     //Call Network Manager Login
     
@@ -122,6 +132,9 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Please confirm action" message:@"Delete all files from the Documents folder?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
             [alert addButtonWithTitle:@"Yes"];
             [alert show];
+        }else if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text compare:CSSMenuRelogin] == NSOrderedSame) {
+            UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+            [self relogin];
         }
     });
 }

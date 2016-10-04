@@ -105,4 +105,12 @@ class MainVCHelperUnitTest: XCTestCase {
     
     }
     
+    func testClearCookie(){
+        
+        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
+        let result = helper.clearCookie()
+        XCTAssertTrue(result)
+        
+    }
+    
 }

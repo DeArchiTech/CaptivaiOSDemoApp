@@ -17,6 +17,7 @@ extern NSString * const CSSMenuTakePicture;
 extern NSString * const CSSMenuContinuousCapture;
 extern NSString * const CSSMenuEnhanceImage;
 extern NSString * const CSSMenuDeleteDocFiles;
+extern NSString * const CSSMenuRelogin;
 
 // SelectImage menu content
 extern NSString * const CSSSelectImageTitle;

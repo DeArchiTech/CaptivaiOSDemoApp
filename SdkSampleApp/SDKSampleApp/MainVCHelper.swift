@@ -59,4 +59,10 @@ import Foundation
         
     }
     
+    func clearCookie() -> Bool{
+        
+        return self.cookieManager!.clearAllCookies()
+        
+    }
+    
 }
