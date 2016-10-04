@@ -5,13 +5,12 @@
 //  Created by davix on 10/4/16.
 //  Copyright © 2016 EMC Captiva. All rights reserved.
 //
-
-import Foundation
 import Quick
 import Nimble
 import SDKSampleApp
 
 class DolphinSpec: QuickSpec {
+    
     override func spec() {
         describe("a dolphin") {
             describe("its click") {
