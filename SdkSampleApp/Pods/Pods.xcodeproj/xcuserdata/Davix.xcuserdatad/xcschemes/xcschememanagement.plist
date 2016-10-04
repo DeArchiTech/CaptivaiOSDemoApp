@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Nimble.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>OHHTTPStubs.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,6 +30,11 @@
 			<false/>
 		</dict>
 		<key>Pods-SDKSampleAppUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Quick.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,6 +62,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3D7373F729E17F60462A6593B6D46B84</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>40FF1C77152F384080A1A02E90A36DA9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>546D468CFE748BEE9F840C7E627DAC1A</key>
 		<dict>
 			<key>primary</key>
@@ -72,17 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>99411284C5A3BE498D0F85E342BC649B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D30EBC2C8CBBA25F3019759669469330</key>
+		<key>B430D240D8A7AB4F314A9AC1B088B562</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E8ADE11D45338628A455486CB7D2013F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0999236ADE9583BD1AE0665CE5841A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

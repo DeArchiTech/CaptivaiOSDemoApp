@@ -10,11 +10,18 @@ target 'SDKSampleApp' do
     pod 'RealmSwift'
 end
 
+def testing_pods
+    pod 'Quick'
+    pod 'Nimble'
+end
+
 target 'SDKSampleAppTests' do
+    testing_pods
     pod 'RealmSwift'
 end
 
 target 'SDKSampleAppUITests' do
+    testing_pods
     pod 'RealmSwift'
 end
 

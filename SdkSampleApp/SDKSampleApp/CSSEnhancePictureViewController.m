@@ -1207,13 +1207,13 @@
 
 - (void) displayLoadingSpinner{
 
-    indicator.startAnimating;
+    [indicator startAnimating];
 
 }
 
 - (void) removeLoadingSpinner{
     
-    indicator.stopAnimating;
+    [indicator stopAnimating];
     
 }
 

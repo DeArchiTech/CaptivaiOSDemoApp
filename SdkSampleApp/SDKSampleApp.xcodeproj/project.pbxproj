@@ -22,6 +22,7 @@
 		2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F01D9D851A0039853B /* MainVCHelper.swift */; };
 		2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */; };
 		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
+		22B652CF1DA426A700D04DA2 /* DolphinSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B652CE1DA426A700D04DA2 /* DolphinSpec.swift */; };
 		22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */; };
 		22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */; };
 		22D1E5A41D9C3C55005483B7 /* base64Image.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A31D9C3C55005483B7 /* base64Image.txt */; };
@@ -112,6 +113,7 @@
 		2271D5F01D9D851A0039853B /* MainVCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelper.swift; sourceTree = "<group>"; };
 		2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelperUnitTest.swift; sourceTree = "<group>"; };
 		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
+		22B652CE1DA426A700D04DA2 /* DolphinSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DolphinSpec.swift; sourceTree = "<group>"; };
 		22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManager.swift; sourceTree = "<group>"; };
 		22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManagerUnitTest.swift; sourceTree = "<group>"; };
 		22D1E5A31D9C3C55005483B7 /* base64Image.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = base64Image.txt; path = ../../base64Image.txt; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */,
 				22180DBE1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift */,
 				22611C481DA3067B003B1514 /* UploadServiceTest.swift */,
+				22B652CE1DA426A700D04DA2 /* DolphinSpec.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				22611C491DA3067B003B1514 /* UploadServiceTest.swift in Sources */,
 				22611C4D1DA31B7E003B1514 /* LoginServiceTest.swift in Sources */,
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
+				22B652CF1DA426A700D04DA2 /* DolphinSpec.swift in Sources */,
 				2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
