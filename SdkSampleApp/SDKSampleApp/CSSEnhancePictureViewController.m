@@ -389,7 +389,6 @@
     
     [wipCropImageView addSubview:croppingRect];
     [baseView addSubview:wipCropImageView];
-    [self initializeSpinner];
 }
 
 // The view size of the UIViewController is updated after viewDidLoad;
@@ -1078,6 +1077,7 @@
     enableButtons = YES;
     
     [CMSCaptureImage enableUndoImage:[CSSSettings boolForKey:@"UndoLast"].boolValue];
+    [self initializeSpinner];
 }
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -1207,23 +1207,24 @@
 
 - (void) displayLoadingSpinner{
 
-//    [self indicator:startAnimating];
+    indicator.startAnimating;
+
 }
 
 - (void) removeLoadingSpinner{
     
-//    [self indicator:stopAnimating];
+    indicator.stopAnimating;
     
 }
 
 - (void) initializeSpinner{
     
-    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     indicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
     indicator.center = self.view.center;
     [self.view addSubview:indicator];
     [indicator bringSubviewToFront:self.view];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
-    [self indicator: indicator]
+
 }
 @end
