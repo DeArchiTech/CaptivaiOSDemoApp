@@ -22,6 +22,7 @@
     UIImageView *selection;
     UIImageView *topHandle;
     UIImageView *bottomHandle;
+
 }
 
 - (void)setSubviewFrames;
@@ -388,6 +389,7 @@
     
     [wipCropImageView addSubview:croppingRect];
     [baseView addSubview:wipCropImageView];
+    [self initializeSpinner];
 }
 
 // The view size of the UIViewController is updated after viewDidLoad;
@@ -987,6 +989,7 @@
 
 - (void)uploadImageAction
 {
+    [self displayLoadingSpinner];
     UIImage* image = wipImageView.image;
     [self uploadImage:image];
 }
@@ -995,6 +998,7 @@
 {
     EnhanceVCHelper *helper = [[EnhanceVCHelper alloc] init];
     [helper uploadImageWithImage: image completion:^(NSDictionary * _Nullable param1, NSError * _Nullable param2){
+        [self removeLoadingSpinner];
         [self displayUploadResult:param1 :param2];
     }];
 }
@@ -1201,4 +1205,25 @@
     return true;
 }
 
+- (void) displayLoadingSpinner{
+
+//    [self indicator:startAnimating];
+}
+
+- (void) removeLoadingSpinner{
+    
+//    [self indicator:stopAnimating];
+    
+}
+
+- (void) initializeSpinner{
+    
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    indicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+    indicator.center = self.view.center;
+    [self.view addSubview:indicator];
+    [indicator bringSubviewToFront:self.view];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+    [self indicator: indicator]
+}
 @end

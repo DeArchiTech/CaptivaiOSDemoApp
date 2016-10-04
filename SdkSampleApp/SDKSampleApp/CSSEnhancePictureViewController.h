@@ -21,6 +21,7 @@
     CGPoint cachedContentOffset;
     BOOL showUndoAndSaveButtons;
     BOOL enableButtons;
+    UIActivityIndicatorView *indicator;
 }
 
 @property ActionPickerViewController *filterPicker;
