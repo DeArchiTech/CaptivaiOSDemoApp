@@ -59,4 +59,16 @@ class UploadServiceTest: XCTestCase {
         })
     }
     
+    func testGetHeaders(){
+        
+        let headerString = "testHeader"
+        let service = UploadService.init(cookie: headerString)
+        let headers = service.getHeaders()
+        XCTAssertEqual(headers["Authorization"] , headerString)
+        XCTAssertEqual(headers["Accept"] , "application/vnd.emc.captiva+json, application/json")
+        XCTAssertEqual(headers["Accept-Language"] , "en-US")
+        XCTAssertEqual(headers["Content-Type"] , "application/vnd.emc.captiva+json; charset=utf-8")
+        
+    }
+    
 }

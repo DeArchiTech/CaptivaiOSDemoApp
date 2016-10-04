@@ -45,7 +45,7 @@ class UploadService{
     func uploadImage(image: UIImage, completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void{
         
         if self.cookieString != nil{
-            Alamofire.request(getUploadImageEndpoint(), method: .post, parameters: createUploadParam(image: image), encoding: JSONEncoding.default)
+            Alamofire.request(getUploadImageEndpoint(), method: .post, parameters: createUploadParam(image: image), encoding: JSONEncoding.default, headers: self.getHeaders())
                 .validate()
                 .responseJSON{ response in
                     switch response.result{
@@ -62,6 +62,17 @@ class UploadService{
             print("No cookie loaded in memory")
             completion(nil, nil)
         }
+        
+    }
+    
+    func getHeaders() -> HTTPHeaders{
+        let headers: HTTPHeaders = [
+            "Authorization": self.cookieString!,
+            "Accept": "application/vnd.emc.captiva+json, application/json",
+            "Accept-Language": "en-US",
+            "Content-Type": "application/vnd.emc.captiva+json; charset=utf-8"
+        ]
+        return headers
         
     }
     

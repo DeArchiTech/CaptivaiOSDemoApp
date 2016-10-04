@@ -1197,7 +1197,7 @@
 
 - (bool) displayUploadError:(NSError*)error{
     
-    [CSSUtils showAlertOnError:error title:@"Error"];
+    [CSSUtils showAlertOnError:error title:@"Error, please try to log in again"];
     return true;
 }
 

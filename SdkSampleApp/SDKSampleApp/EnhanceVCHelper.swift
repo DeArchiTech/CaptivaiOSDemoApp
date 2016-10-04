@@ -32,7 +32,6 @@ import UIKit
     
     func uploadImage(image: UIImage, completion: @escaping ( _: NSDictionary?, _:NSError?)-> ()) -> Void{
         
-
         self.uploadService?.uploadImage(image: image, completion: completion)
         
     }
