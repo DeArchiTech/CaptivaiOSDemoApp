@@ -10,6 +10,7 @@
 
 @interface CSSMainViewController : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate, CMSImageDelegate, ImagePickerDelegate, ActionPickerDelegate, CMSContinuousCaptureDelegate> {
     int captureCount;
+//    UIActivityIndicatorView *indicator;
 }
 
 @property NSArray *actionsArray;

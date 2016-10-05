@@ -49,8 +49,9 @@
     [self.view addSubview: activityView];
 
     [CSSSettings registerDefaults];
-    
+//    [self initializeSpinner];
     [self login];
+    
 }
 
 - (void)relogin {
@@ -58,16 +59,19 @@
     //1)Clear cookie
     MainVCHelper *helper = [[MainVCHelper alloc] init];
     [helper clearCookie];
+    
     //2)Call login again
     [self login];
     
 }
 
 - (void)login {
-    //Call Network Manager Login
     
+    //Call Network Manager Login
+    //[self displayLoadingSpinner];
     MainVCHelper *helper = [[MainVCHelper alloc] init];
     [helper getCookieWithCompletion:^(NSDictionary * _Nullable param1, NSError * _Nullable param2){
+        //[self removeLoadingSpinner];
         [helper persistCookieWithDictionary: param1];}];
     
 }
@@ -629,6 +633,29 @@
 
 - (void)didCancel:(int)reason {
     [self imageDidCancelTakePicture:reason];
+}
+
+- (void) displayLoadingSpinner{
+    
+  //  [indicator startAnimating];
+    
+}
+
+- (void) removeLoadingSpinner{
+    
+//    [indicator stopAnimating];
+    
+}
+
+- (void) initializeSpinner{
+    
+//    indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+//    indicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+//    indicator.center = self.view.center;
+//    [self.view addSubview:indicator];
+//    [indicator bringSubviewToFront:self.view];
+//    [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
+    
 }
 
 @end

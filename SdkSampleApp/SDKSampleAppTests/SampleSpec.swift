@@ -9,7 +9,7 @@ import Quick
 import Nimble
 import SDKSampleApp
 
-class DolphinSpec: QuickSpec {
+class SampleSpec: QuickSpec {
     
     override func spec() {
         describe("a dolphin") {
