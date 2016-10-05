@@ -40,11 +40,11 @@
 		22D1E5AC1D9C59E6005483B7 /* testImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A61D9C56CE005483B7 /* testImg.jpg */; };
 		22F8E49B1D9992BB009E68F1 /* SDKSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */; };
 		64ECA85AE51B90464C997F81 /* Pods_SDKSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A804635F97D1371BFD115 /* Pods_SDKSampleAppTests.framework */; };
-		682E05548B6057445B70F7BF /* Pods_SDKSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A722BC9C92C12D7C49916DA5 /* Pods_SDKSampleAppUITests.framework */; };
 		8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8504CB861AD5EB4500591B99 /* CSSCustomWindow.mm */; };
 		85412BF41C18FA5300DB256A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85412BF31C18FA5300DB256A /* Security.framework */; };
 		85412BF61C18FB3100DB256A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F326404E17C7FCFC0043754D /* CoreVideo.framework */; };
 		858F23AA1AC4B7E5008AC2D2 /* quality.png in Resources */ = {isa = PBXBuildFile; fileRef = 858F23A91AC4B7E5008AC2D2 /* quality.png */; };
+		A9BB06095F38ACBE5475301A /* Pods_SDKSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A722BC9C92C12D7C49916DA5 /* Pods_SDKSampleAppUITests.framework */; };
 		B50D997517DFCB47006DDEE2 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B50D996F17DFCB47006DDEE2 /* back.png */; };
 		B50D997617DFCB47006DDEE2 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B50D997017DFCB47006DDEE2 /* camera.png */; };
 		B50D997A17DFCB47006DDEE2 /* movementred.png in Resources */ = {isa = PBXBuildFile; fileRef = B50D997417DFCB47006DDEE2 /* movementred.png */; };
@@ -356,7 +356,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				682E05548B6057445B70F7BF /* Pods_SDKSampleAppUITests.framework in Frameworks */,
+				A9BB06095F38ACBE5475301A /* Pods_SDKSampleAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

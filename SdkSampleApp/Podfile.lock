@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.0.1)
+  - Nimble (5.0.0)
   - OHHTTPStubs (5.2.1):
     - OHHTTPStubs/Default (= 5.2.1)
   - OHHTTPStubs/Core (5.2.1)
@@ -15,6 +16,7 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (5.2.1)
   - OHHTTPStubs/Swift (5.2.1):
     - OHHTTPStubs/Core
+  - Quick (0.10.0)
   - Realm (2.0.1):
     - Realm/Headers (= 2.0.1)
   - Realm/Headers (2.0.1)
@@ -24,18 +26,22 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Nimble
   - OHHTTPStubs
   - OHHTTPStubs/Swift
+  - Quick
   - RealmSwift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
   OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
+  Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
   Realm: 0557ee0e4ab4f0936c90e370056d1ed6265f93d6
   RealmSwift: 64e00af79bdcd7d2a7a23fdc1cb3faf22b80ae4c
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
 
-PODFILE CHECKSUM: 6765f1de6f5319088be6659c500b05833c0e8f15
+PODFILE CHECKSUM: bf58fd88fd480d9c42efb3cfa07c1a4275218d18
 
 COCOAPODS: 1.1.0.rc.2

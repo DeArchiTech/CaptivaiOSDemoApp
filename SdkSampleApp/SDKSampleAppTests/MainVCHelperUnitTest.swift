@@ -113,4 +113,20 @@ class MainVCHelperUnitTest: XCTestCase {
         
     }
     
+    func testHasCookie(){
+        
+        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
+        let cookie = "ABC"
+        let params: NSDictionary = [
+            "returnStatus": "LICE075-D09A-64E3",
+            "ticket": cookie
+        ]
+        
+        let cookiePersisted = helper.persistCookie(dictionary: params)
+        XCTAssertTrue(cookiePersisted)
+        let result = helper.hasCookie()
+        XCTAssertTrue(result)
+        
+    }
+    
 }
