@@ -27,8 +27,9 @@
 		22B652FF1DA42E2200D04DA2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FB1DA42E2200D04DA2 /* Nimble.framework */; };
 		22B653001DA42E2200D04DA2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FC1DA42E2200D04DA2 /* Quick.framework */; };
 		22B653011DA42E2200D04DA2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FD1DA42E2200D04DA2 /* Quick.framework */; };
-		22B653351DA4362700D04DA2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B6532A1DA4326700D04DA2 /* Quick.framework */; };
-		22B653391DA4362700D04DA2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B653101DA4324E00D04DA2 /* Nimble.framework */; };
+		22B845601DA58ECA00348FA4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B8455E1DA58ECA00348FA4 /* Realm.framework */; };
+		22B845611DA58ECA00348FA4 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B8455F1DA58ECA00348FA4 /* RealmSwift.framework */; };
+		22B845631DA58FD100348FA4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B845621DA58FD100348FA4 /* SwiftyJSON.framework */; };
 		22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */; };
 		22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */; };
 		22D1E5A41D9C3C55005483B7 /* base64Image.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A31D9C3C55005483B7 /* base64Image.txt */; };
@@ -258,6 +259,9 @@
 		22B652FD1DA42E2200D04DA2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Vendor/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
 		22B653021DA4324E00D04DA2 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = Vendor/Nimble/Nimble.xcodeproj; sourceTree = SOURCE_ROOT; };
 		22B653171DA4326700D04DA2 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = Vendor/Quick/Quick.xcodeproj; sourceTree = SOURCE_ROOT; };
+		22B8455E1DA58ECA00348FA4 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../Library/Developer/Xcode/DerivedData/SDKSampleApp-gdadgtpsoexxvnbejhdmmafavxoj/Build/Products/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<group>"; };
+		22B8455F1DA58ECA00348FA4 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/SDKSampleApp-gdadgtpsoexxvnbejhdmmafavxoj/Build/Products/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
+		22B845621DA58FD100348FA4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/SDKSampleApp-gdadgtpsoexxvnbejhdmmafavxoj/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManager.swift; sourceTree = "<group>"; };
 		22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManagerUnitTest.swift; sourceTree = "<group>"; };
 		22D1E5A31D9C3C55005483B7 /* base64Image.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = base64Image.txt; path = ../../base64Image.txt; sourceTree = "<group>"; };
@@ -360,6 +364,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B845631DA58FD100348FA4 /* SwiftyJSON.framework in Frameworks */,
+				22B845601DA58ECA00348FA4 /* Realm.framework in Frameworks */,
+				22B845611DA58ECA00348FA4 /* RealmSwift.framework in Frameworks */,
 				223013431D99C12B00D7BB7E /* Alamofire.framework in Frameworks */,
 				85412BF61C18FB3100DB256A /* CoreVideo.framework in Frameworks */,
 				85412BF41C18FA5300DB256A /* Security.framework in Frameworks */,
@@ -372,10 +379,8 @@
 				F326404917C7F62E0043754D /* MobileCoreServices.framework in Frameworks */,
 				F326404717C7F6150043754D /* ImageIO.framework in Frameworks */,
 				F326404517C7F5FE0043754D /* CoreImage.framework in Frameworks */,
-				22B653351DA4362700D04DA2 /* Quick.framework in Frameworks */,
 				F326404117C7F5D70043754D /* libc++.dylib in Frameworks */,
 				F3263FFC17C7CDE90043754D /* UIKit.framework in Frameworks */,
-				22B653391DA4362700D04DA2 /* Nimble.framework in Frameworks */,
 				F3263FFE17C7CDE90043754D /* Foundation.framework in Frameworks */,
 				F326400017C7CDE90043754D /* CoreGraphics.framework in Frameworks */,
 				F326400217C7CDE90043754D /* CoreData.framework in Frameworks */,
@@ -513,6 +518,9 @@
 		F3263FFA17C7CDE90043754D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22B845621DA58FD100348FA4 /* SwiftyJSON.framework */,
+				22B8455E1DA58ECA00348FA4 /* Realm.framework */,
+				22B8455F1DA58ECA00348FA4 /* RealmSwift.framework */,
 				22B652FA1DA42E2200D04DA2 /* Nimble.framework */,
 				22B652FB1DA42E2200D04DA2 /* Nimble.framework */,
 				22B652FC1DA42E2200D04DA2 /* Quick.framework */,
