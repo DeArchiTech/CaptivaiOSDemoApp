@@ -22,6 +22,7 @@ NSString * const CSSMenuContinuousCapture = @"Continuous Capture";
 NSString * const CSSMenuEnhanceImage = @"Enhance Image";
 NSString * const CSSMenuDeleteDocFiles = @"Delete All Documents";
 NSString * const CSSMenuRelogin = @"Relogin";
+NSString * const CSSCreateProfile = @"Create Filter Profile";
 
 // SelectImage menu content
 NSString * const CSSSelectImageTitle = @"Select Image";

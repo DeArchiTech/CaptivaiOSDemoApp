@@ -38,7 +38,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:100.0/255.0 green:150.0/255.0 blue:200.0/255.0 alpha:1.0];
     self.navigationItem.title = CSSMainTitle;
-    self.actionsArray = [NSArray arrayWithObjects:CSSMenuTakePicture, CSSMenuContinuousCapture, CSSMenuEnhanceImage, CSSMenuDeleteDocFiles, CSSMenuRelogin, nil];
+    self.actionsArray = [NSArray arrayWithObjects:CSSMenuTakePicture, CSSMenuContinuousCapture, CSSMenuEnhanceImage, CSSMenuDeleteDocFiles, CSSMenuRelogin, CSSCreateProfile, nil];
     self.tableView.tableFooterView = [UIView new];
     [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainScreen@2x.png"]]];
     self.view.backgroundColor = [UIColor clearColor];
@@ -50,7 +50,17 @@
 
     [CSSSettings registerDefaults];
     [self initializeSpinner];
-    [self login];
+    
+    MainVCHelper *helper = [[MainVCHelper alloc] init];
+    if( [helper hasCookie] == false){
+        [self login];
+    }
+}
+
+- (void)createProfileButtonClicked{
+    
+    //PushCreateProfileViewController
+    NSLog(@"create Profile view controller clicked");
     
 }
 
@@ -141,6 +151,8 @@
         }else if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text compare:CSSMenuRelogin] == NSOrderedSame) {
             UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
             [self relogin];
+        }else if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text compare:CSSCreateProfile] == NSOrderedSame) {
+            [self createProfileButtonClicked];
         }
     });
 }

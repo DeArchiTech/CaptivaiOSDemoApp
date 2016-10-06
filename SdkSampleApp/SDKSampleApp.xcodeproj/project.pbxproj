@@ -22,7 +22,6 @@
 		2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F01D9D851A0039853B /* MainVCHelper.swift */; };
 		2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */; };
 		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
-		22B652CF1DA426A700D04DA2 /* SampleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B652CE1DA426A700D04DA2 /* SampleSpec.swift */; };
 		22B652FE1DA42E2200D04DA2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FA1DA42E2200D04DA2 /* Nimble.framework */; };
 		22B652FF1DA42E2200D04DA2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FB1DA42E2200D04DA2 /* Nimble.framework */; };
 		22B653001DA42E2200D04DA2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FC1DA42E2200D04DA2 /* Quick.framework */; };
@@ -30,6 +29,9 @@
 		22B845601DA58ECA00348FA4 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B8455E1DA58ECA00348FA4 /* Realm.framework */; };
 		22B845611DA58ECA00348FA4 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B8455F1DA58ECA00348FA4 /* RealmSwift.framework */; };
 		22B845631DA58FD100348FA4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B845621DA58FD100348FA4 /* SwiftyJSON.framework */; };
+		22B845671DA5BA2200348FA4 /* CreateProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B845661DA5BA2200348FA4 /* CreateProfileService.swift */; };
+		22B845761DA5BA7C00348FA4 /* FilterProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B845751DA5BA7C00348FA4 /* FilterProfile.swift */; };
+		22B845781DA5BB6900348FA4 /* CreateProfileServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B845771DA5BB6900348FA4 /* CreateProfileServiceSpec.swift */; };
 		22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */; };
 		22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */; };
 		22D1E5A41D9C3C55005483B7 /* base64Image.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A31D9C3C55005483B7 /* base64Image.txt */; };
@@ -44,7 +46,6 @@
 		85412BF41C18FA5300DB256A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85412BF31C18FA5300DB256A /* Security.framework */; };
 		85412BF61C18FB3100DB256A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F326404E17C7FCFC0043754D /* CoreVideo.framework */; };
 		858F23AA1AC4B7E5008AC2D2 /* quality.png in Resources */ = {isa = PBXBuildFile; fileRef = 858F23A91AC4B7E5008AC2D2 /* quality.png */; };
-		A9BB06095F38ACBE5475301A /* Pods_SDKSampleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A722BC9C92C12D7C49916DA5 /* Pods_SDKSampleAppUITests.framework */; };
 		B50D997517DFCB47006DDEE2 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B50D996F17DFCB47006DDEE2 /* back.png */; };
 		B50D997617DFCB47006DDEE2 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B50D997017DFCB47006DDEE2 /* camera.png */; };
 		B50D997A17DFCB47006DDEE2 /* movementred.png in Resources */ = {isa = PBXBuildFile; fileRef = B50D997417DFCB47006DDEE2 /* movementred.png */; };
@@ -252,7 +253,6 @@
 		2271D5F01D9D851A0039853B /* MainVCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelper.swift; sourceTree = "<group>"; };
 		2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelperUnitTest.swift; sourceTree = "<group>"; };
 		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
-		22B652CE1DA426A700D04DA2 /* SampleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleSpec.swift; sourceTree = "<group>"; };
 		22B652FA1DA42E2200D04DA2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Vendor/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		22B652FB1DA42E2200D04DA2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Vendor/Nimble/build/Debug/Nimble.framework; sourceTree = "<group>"; };
 		22B652FC1DA42E2200D04DA2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Vendor/Quick/build/Debug/Quick.framework; sourceTree = "<group>"; };
@@ -262,6 +262,9 @@
 		22B8455E1DA58ECA00348FA4 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../Library/Developer/Xcode/DerivedData/SDKSampleApp-gdadgtpsoexxvnbejhdmmafavxoj/Build/Products/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<group>"; };
 		22B8455F1DA58ECA00348FA4 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../Library/Developer/Xcode/DerivedData/SDKSampleApp-gdadgtpsoexxvnbejhdmmafavxoj/Build/Products/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		22B845621DA58FD100348FA4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/SDKSampleApp-gdadgtpsoexxvnbejhdmmafavxoj/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		22B845661DA5BA2200348FA4 /* CreateProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileService.swift; sourceTree = "<group>"; };
+		22B845751DA5BA7C00348FA4 /* FilterProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterProfile.swift; sourceTree = "<group>"; };
+		22B845771DA5BB6900348FA4 /* CreateProfileServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileServiceSpec.swift; sourceTree = "<group>"; };
 		22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManager.swift; sourceTree = "<group>"; };
 		22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManagerUnitTest.swift; sourceTree = "<group>"; };
 		22D1E5A31D9C3C55005483B7 /* base64Image.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = base64Image.txt; path = ../../base64Image.txt; sourceTree = "<group>"; };
@@ -356,7 +359,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9BB06095F38ACBE5475301A /* Pods_SDKSampleAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +405,7 @@
 				2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */,
 				22180DBE1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift */,
 				22611C481DA3067B003B1514 /* UploadServiceTest.swift */,
-				22B652CE1DA426A700D04DA2 /* SampleSpec.swift */,
+				22B845771DA5BB6900348FA4 /* CreateProfileServiceSpec.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -414,6 +416,7 @@
 				22A50C6E1D9B1D21002970E9 /* Cookie.swift */,
 				223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */,
 				223013481D99C9B900D7BB7E /* LoginResponseObj.swift */,
+				22B845751DA5BA7C00348FA4 /* FilterProfile.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				22D1E5A81D9C5731005483B7 /* ImageUtil.swift */,
 				22611C441DA2EFC2003B1514 /* UploadService.swift */,
 				22611C461DA2EFD1003B1514 /* LoginService.swift */,
+				22B845661DA5BA2200348FA4 /* CreateProfileService.swift */,
 			);
 			name = SDKSampleApp;
 			path = /Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleApp;
@@ -1064,10 +1068,10 @@
 			files = (
 				22D1E5AB1D9C575F005483B7 /* ImageUtilUnitTest.swift in Sources */,
 				22180DBF1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift in Sources */,
+				22B845781DA5BB6900348FA4 /* CreateProfileServiceSpec.swift in Sources */,
 				22611C491DA3067B003B1514 /* UploadServiceTest.swift in Sources */,
 				22611C4D1DA31B7E003B1514 /* LoginServiceTest.swift in Sources */,
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
-				22B652CF1DA426A700D04DA2 /* SampleSpec.swift in Sources */,
 				2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1093,12 +1097,14 @@
 				F326403A17C7CFB50043754D /* CSSMainViewController.m in Sources */,
 				F31AC88017D800F0002D06EB /* CSSEnhancePictureViewController.m in Sources */,
 				22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */,
+				22B845671DA5BA2200348FA4 /* CreateProfileService.swift in Sources */,
 				223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */,
 				2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */,
 				22180DBD1D9DBA1B00BA73CD /* EnhanceVCHelper.swift in Sources */,
 				22611C471DA2EFD1003B1514 /* LoginService.swift in Sources */,
 				223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */,
 				22D1E5A91D9C5731005483B7 /* ImageUtil.swift in Sources */,
+				22B845761DA5BA7C00348FA4 /* FilterProfile.swift in Sources */,
 				F31AC88317D80282002D06EB /* CSSUtils.m in Sources */,
 				B5516F9317DA5A7900576310 /* CSSSettings.m in Sources */,
 			);

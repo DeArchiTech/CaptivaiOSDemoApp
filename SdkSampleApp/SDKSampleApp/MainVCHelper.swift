@@ -30,10 +30,8 @@ import Foundation
     func getCookie(completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void {
         
         //1)Attempt to load from Database
-        let result = self.hasCookie()
-        if result == false{
-            self.loginService?.login(completion:completion)
-        }
+        self.loginService?.login(completion:completion)
+    
     }
     
     func persistCookie(dictionary : NSDictionary?) -> Bool {
