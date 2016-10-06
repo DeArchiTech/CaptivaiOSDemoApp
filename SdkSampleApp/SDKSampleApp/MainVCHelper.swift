@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 @objc class MainVCHelper: NSObject{
     
@@ -69,5 +70,5 @@ import Foundation
         return result!
         
     }
-    
+
 }

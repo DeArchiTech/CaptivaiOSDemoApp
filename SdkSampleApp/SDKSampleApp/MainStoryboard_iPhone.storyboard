@@ -38,6 +38,9 @@
                                     <frame key="frameInset" width="308" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="HCq-8u-iGL" kind="push" trigger="accessoryAction" id="U6y-yO-KaL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,6 +53,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUq-4h-5Az" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-150" y="-358"/>
+        </scene>
+        <!--Create Profile View Controller-->
+        <scene sceneID="BXR-fV-0qS">
+            <objects>
+                <viewController storyboardIdentifier="abcd" id="HCq-8u-iGL" customClass="CreateProfileViewController" customModule="SDKSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CsW-eE-55a"/>
+                        <viewControllerLayoutGuide type="bottom" id="uD9-vz-pBi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BEL-Zg-8fp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XvG-uT-Sow"/>
+                    <connections>
+                        <outlet property="view" destination="BEL-Zg-8fp" id="mZd-ti-o3U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ENP-hI-fZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="-424"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

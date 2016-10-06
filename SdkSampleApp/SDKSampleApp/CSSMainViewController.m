@@ -62,10 +62,13 @@
     //PushCreateProfileViewController
     NSLog(@"create Profile view controller clicked");
     // Present the image for enhancements
-    CreateProfileViewController *createProfileVC = [[CreateProfileViewController alloc] init];
-    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:createProfileVC];
-    navC.navigationBar.barTintColor = [CSSUtils getNavigationBarColor];
-    [self presentViewController:navC animated:YES completion:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:
+                                @"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
+    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"abcd"];
+    //[self presentViewController:myController animated:YES completion:nil];
+    
+    CSSMainViewController *rootController =(CSSMainViewController *)[self.navigationController.viewControllers objectAtIndex: 0];
+    [rootController.navigationController pushViewController:myController animated:YES];
     
 }
 
