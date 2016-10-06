@@ -25,7 +25,7 @@ class CreateProfileServiceSpec: QuickSpec {
     }
     
     override func spec() {
-        describe("Create Profile Service") {
+        describe("Save Profile") {
             it("it saves the profile in the Realm database") {
                 
                 //1)Create a CreateProfile Service
@@ -42,6 +42,8 @@ class CreateProfileServiceSpec: QuickSpec {
                 expect(result).to(beTruthy())
                 
             }
+        }
+        describe("Load Profile") {
             it("it loads a list of profile") {
                 
                 //1)Create a CreateProfile Service
@@ -71,6 +73,36 @@ class CreateProfileServiceSpec: QuickSpec {
                 let finalResult = service.loadProfiles()
                 expect(finalResult).notTo(equal(nil))
                 expect(finalResult?.count).to(equal(3))
+                
+            }
+        }
+        
+        describe("Delete Profile") {
+            it("it deletes all profiles") {
+                
+                //1)Create a service
+                let service = CreateProfileService()
+                
+                //2)Save a profile
+                let profile = FilterProfile()
+                profile.profileName = "tempProfile"
+                let saveResult = service.saveProfile(profile: profile)
+                expect(saveResult).to(beTruthy())
+
+                //3)Attempt to load objects from database
+                let firstLoadResult = service.loadProfiles()
+                expect(firstLoadResult).notTo(equal(nil))
+                expect(firstLoadResult?.count).to(equal(1))
+                
+                //4)Attempt to delete profiles
+                let deleteResult = service.deleteAllProfiles()
+                expect(deleteResult).notTo(equal(nil))
+                expect(deleteResult).to(beTruthy())
+                
+                //5)Load objects from database and assert its zero
+                let loadResult = service.loadProfiles()
+                expect(loadResult).notTo(equal(nil))
+                expect(loadResult?.count).to(equal(0))
                 
             }
         }
