@@ -61,6 +61,11 @@
     
     //PushCreateProfileViewController
     NSLog(@"create Profile view controller clicked");
+    // Present the image for enhancements
+    CreateProfileViewController *createProfileVC = [[CreateProfileViewController alloc] init];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:createProfileVC];
+    navC.navigationBar.barTintColor = [CSSUtils getNavigationBarColor];
+    [self presentViewController:navC animated:YES completion:nil];
     
 }
 

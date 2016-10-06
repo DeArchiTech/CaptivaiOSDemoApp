@@ -1,4 +1,4 @@
-aptivaDemoApp
+CaptivaDemoApp
 
 A Captiva Android Client Used for our users to automate the processs of updating documents on the server
 

@@ -9,7 +9,11 @@
 import UIKit
 import Foundation
 
-class CreateProfileViewController: UIViewController{
+@objc class CreateProfileViewController: UIViewController{
+    
+    class func newInstance() -> CreateProfileViewController{
+        return CreateProfileViewController()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
