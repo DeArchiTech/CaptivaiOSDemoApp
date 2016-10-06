@@ -8,9 +8,21 @@
 
 import Quick
 import Nimble
+import RealmSwift
 @testable import SDKSampleApp
 
 class CreateProfileServiceSpec: QuickSpec {
+    
+    override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
+    }
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
     
     override func spec() {
         describe("Create Profile Service") {
@@ -21,6 +33,7 @@ class CreateProfileServiceSpec: QuickSpec {
                     
                 //2)Mock up a CreateProfile Object
                 let profile = FilterProfile()
+                profile.profileName = "testName"
 
                 //3)Attempt to save object in DB
                 let result = service.saveProfile(profile: profile)
@@ -39,10 +52,10 @@ class CreateProfileServiceSpec: QuickSpec {
                 profileOne.profileName = "AAA"
                 
                 let profileTwo = FilterProfile()
-                profileOne.profileName = "BBB"
+                profileTwo.profileName = "BBB"
                 
                 let profileThree = FilterProfile()
-                profileOne.profileName = "CCC"
+                profileThree.profileName = "CCC"
                 
                 //3)Attempt to save object in DB
                 let resultOne = service.saveProfile(profile: profileOne)
@@ -58,6 +71,7 @@ class CreateProfileServiceSpec: QuickSpec {
                 let finalResult = service.loadProfiles()
                 expect(finalResult).notTo(equal(nil))
                 expect(finalResult?.count).to(equal(3))
+                
             }
         }
     }
