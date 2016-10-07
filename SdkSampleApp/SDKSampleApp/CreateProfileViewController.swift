@@ -11,6 +11,10 @@ import Foundation
 
 @objc class CreateProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    @IBOutlet var createProfileButton: UIButton!
+    @IBOutlet var tableView: UITableView!
+    @IBOutlet var profileName: UITextField!
+    
     class func newInstance() -> CreateProfileViewController{
         return CreateProfileViewController()
     }
@@ -20,6 +24,7 @@ import Foundation
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        myTextField.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,6 +52,12 @@ import Foundation
         "Rotate Left","Rotate Right","Crop","Lighter","Darker","Increase Contrast",
         "Remove Noise","Get Information","Export to Photos","Quadrilateral Crop",
         "Detect barcodes"]
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
     }
     
 }

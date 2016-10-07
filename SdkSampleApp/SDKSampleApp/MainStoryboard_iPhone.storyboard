@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="86" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lht-Pe-KQB" id="e8F-Wt-XUm">
-                                    <frame key="frameInset" width="308" height="44"/>
+                                    <frame key="frameInset" width="308" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -110,7 +110,7 @@
                                     <constraint firstAttribute="height" constant="87" id="q5Q-Dz-0lO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Create Profile Button"/>
+                                <state key="normal" title="Create Profile"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97071751907904813" green="1" blue="0.98997203866827288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -133,6 +133,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="XvG-uT-Sow"/>
                     <connections>
+                        <outlet property="createProfileButton" destination="wLP-Ci-Wgn" id="tss-8Y-x3O"/>
+                        <outlet property="profileName" destination="NEq-Sm-JBS" id="lyd-bh-KD8"/>
+                        <outlet property="tableView" destination="r58-rk-Nqg" id="Tdu-RF-UjT"/>
                         <outlet property="view" destination="BEL-Zg-8fp" id="mZd-ti-o3U"/>
                     </connections>
                 </viewController>
