@@ -14,6 +14,7 @@
 		223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */; };
 		223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013481D99C9B900D7BB7E /* LoginResponseObj.swift */; };
 		224E97F31DA6C0DA0066527F /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */; };
+		22503FDA1DA84F820072FE61 /* CreateProfileViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22503FD91DA84F820072FE61 /* CreateProfileViewControllerSpec.swift */; };
 		225F60DB1D9C8EBF003B97A0 /* sampleCookie.txt in Resources */ = {isa = PBXBuildFile; fileRef = 225F60DA1D9C8EBF003B97A0 /* sampleCookie.txt */; };
 		225F60DC1D9C8ECF003B97A0 /* sampleCookie.txt in Resources */ = {isa = PBXBuildFile; fileRef = 225F60DA1D9C8EBF003B97A0 /* sampleCookie.txt */; };
 		22611C451DA2EFC2003B1514 /* UploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22611C441DA2EFC2003B1514 /* UploadService.swift */; };
@@ -247,6 +248,7 @@
 		223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestObj.swift; sourceTree = "<group>"; };
 		223013481D99C9B900D7BB7E /* LoginResponseObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseObj.swift; sourceTree = "<group>"; };
 		224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		22503FD91DA84F820072FE61 /* CreateProfileViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileViewControllerSpec.swift; sourceTree = "<group>"; };
 		225F60DA1D9C8EBF003B97A0 /* sampleCookie.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleCookie.txt; sourceTree = "<group>"; };
 		22611C441DA2EFC2003B1514 /* UploadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadService.swift; sourceTree = "<group>"; };
 		22611C461DA2EFD1003B1514 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				22180DBE1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift */,
 				22611C481DA3067B003B1514 /* UploadServiceTest.swift */,
 				22B845771DA5BB6900348FA4 /* CreateProfileServiceSpec.swift */,
+				22503FD91DA84F820072FE61 /* CreateProfileViewControllerSpec.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -1076,6 +1079,7 @@
 				22611C4D1DA31B7E003B1514 /* LoginServiceTest.swift in Sources */,
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
 				2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */,
+				22503FDA1DA84F820072FE61 /* CreateProfileViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
