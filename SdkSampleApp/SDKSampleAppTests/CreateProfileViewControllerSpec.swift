@@ -43,5 +43,16 @@ class CreateProfileViewControllerSpec: QuickSpec {
                 expect(result).to(beTruthy())
             }
         }
+        describe("Add Filter To Selected List"){
+            it("contains a filter after adding it to list"){
+                let vc = CreateProfileViewController()
+                let filter = "A Filter"
+                let result = vc.addFilterToList(filter: filter)
+                expect(result).to(beTruthy())
+                
+                let selectedList = vc.filterSelected
+                expect(selectedList.contains(filter)).to(beTruthy())
+            }
+        }
     }
 }

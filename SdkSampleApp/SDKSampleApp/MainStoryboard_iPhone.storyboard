@@ -111,6 +111,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Create Profile"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="HCq-8u-iGL" eventType="touchUpInside" id="2cC-Dg-VQ9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97071751907904813" green="1" blue="0.98997203866827288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -9,22 +9,30 @@
 import UIKit
 import Foundation
 
-@objc class CreateProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+@objc class CreateProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate{
     
     @IBOutlet var createProfileButton: UIButton!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var profileName: UITextField!
+    
+    var filterSelected : [String] = []
     
     class func newInstance() -> CreateProfileViewController{
         return CreateProfileViewController()
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        //Looks for single or multiple taps.
+        //Taping anywhere closes keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
-        myTextField.delegate = self
+        profileName.delegate = self
+        
+        //Assign tableview delegate/ datasource to self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,6 +66,25 @@ import Foundation
         
         textField.resignFirstResponder()
         return true
+    }
+    
+    func addFilterToList(filter: String) -> Bool {
+        
+        self.filterSelected.append(filter)
+        return self.filterSelected.count > 0
+        
+    }
+    
+    @objc(tableView:didSelectRowAtIndexPath:) func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let cell = tableView.cellForRow(at: indexPath)
+        let selectedItem = cell?.textLabel?.text!
+        self.addFilterToList(filter: selectedItem!)
+    }
+    
+    @IBAction func buttonClicked(_ sender: AnyObject) {
+        
+        //Persist filter profile object into Database
+    
     }
     
 }
