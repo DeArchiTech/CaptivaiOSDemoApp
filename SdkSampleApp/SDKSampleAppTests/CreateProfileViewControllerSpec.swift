@@ -54,5 +54,16 @@ class CreateProfileViewControllerSpec: QuickSpec {
                 expect(selectedList.contains(filter)).to(beTruthy())
             }
         }
+        describe("Create filter profile"){
+            it("creates a filter profile with the list of filters selected"){
+                let vc = CreateProfileViewController()
+                let filterOne = "One filter"
+                let filterTwo = "Second filter"
+                vc.addFilterToList(filter: filterOne)
+                vc.addFilterToList(filter: filterTwo)
+                let result = vc.createFilterProfile()
+                expect(result?.filters.count).to(equal(2))
+            }
+        }
     }
 }

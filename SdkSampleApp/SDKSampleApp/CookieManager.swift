@@ -35,11 +35,16 @@ import RealmSwift
     
     func loadCookie() -> Bool {
         
-        let objs: Results<Cookie> = {
-            try! Realm().objects(Cookie)
-        }()
-        self.cookieCache = objs.first
-        return self.cookieCache != nil
+        do{
+            let objs: Results<Cookie> = try {
+                try! Realm().objects(Cookie)
+            }()
+            self.cookieCache = objs.first
+            return self.cookieCache != nil
+        }catch let error as NSError {
+            return false
+            print(error)
+        }
         
     }
     

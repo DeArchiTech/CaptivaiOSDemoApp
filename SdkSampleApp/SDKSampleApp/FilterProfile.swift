@@ -12,6 +12,7 @@ import RealmSwift
 class FilterProfile: Object{
     
     dynamic var profileName = ""
+    var filters = List<FilterObject>()
     
     override static func primaryKey() -> String? {
         return "profileName"

@@ -64,4 +64,19 @@ class CreateProfileService{
         return objs.count == 0
         
     }
+    
+    func containsProfileName(name: String) -> Bool {
+        
+        let profiles = self.loadProfiles()
+        var result = false
+        if profiles != nil {
+            for profile in profiles! {
+                if profile.profileName == name{
+                    result = true
+                    break
+                }
+            }
+        }
+        return result
+    }
 }

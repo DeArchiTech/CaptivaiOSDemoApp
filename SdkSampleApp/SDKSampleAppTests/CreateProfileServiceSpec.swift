@@ -42,6 +42,26 @@ class CreateProfileServiceSpec: QuickSpec {
                 expect(result).to(beTruthy())
                 
             }
+            it("it saves a profile with a filter object") {
+                
+                //1)Create a CreateProfile Service
+                let service = CreateProfileService()
+                
+                //2)Mock up a CreateProfile Object
+                let profile = FilterProfile()
+                profile.profileName = "testName"
+                
+                let filterObject = FilterObject()
+                filterObject.filterName = "filterName"
+                profile.filters.append(filterObject)
+                
+                //3)Attempt to save object in DB
+                let result = service.saveProfile(profile: profile)
+                
+                //4)Assert that the object is save and persists
+                expect(result).to(beTruthy())
+                
+            }
         }
         describe("Load Profile") {
             it("it loads a list of profile") {
@@ -76,7 +96,6 @@ class CreateProfileServiceSpec: QuickSpec {
                 
             }
         }
-        
         describe("Delete Profile") {
             it("it deletes all profiles") {
                 
@@ -104,6 +123,26 @@ class CreateProfileServiceSpec: QuickSpec {
                 expect(loadResult).notTo(equal(nil))
                 expect(loadResult?.count).to(equal(0))
                 
+            }
+        }
+        describe("Contains Profile Name"){
+            it("it checks the database to see if such profile name exists"){
+                
+                //1)First check that profile name doesn't exist in the database
+                let service = CreateProfileService()
+                let profileName = "Some Profile Name"
+                var containsResult = service.containsProfileName(name: profileName)
+                expect(containsResult).to(beFalse())
+                
+                //2)Try to persist profile with name in the database
+                let profile = FilterProfile()
+                profile.profileName = profileName
+                let saveResult = service.saveProfile(profile: profile)
+                expect(saveResult).to(beTruthy())
+                
+                //3)Check again and profile name should be in the database
+                containsResult = service.containsProfileName(name: profileName)
+                expect(containsResult).to(beTruthy())
             }
         }
     }
