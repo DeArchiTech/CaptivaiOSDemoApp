@@ -54,6 +54,18 @@ class CreateProfileViewControllerSpec: QuickSpec {
                 expect(selectedList.contains(filter)).to(beTruthy())
             }
         }
+        describe("Remove Filter From Selected List"){
+            it("Filter is removed after function is called"){
+                //First Add A Filter
+                let vc = CreateProfileViewController()
+                let filter = "A Filter"
+                vc.addFilterToList(filter: filter)
+                expect(vc.filterSelected.contains(filter)).to(beTruthy())
+                let result = vc.removeFilterFromList(filter: filter)
+                expect(result).to(beTruthy())
+                expect(vc.filterSelected.contains(filter)).to(beFalse())
+            }
+        }
         describe("Create filter profile"){
             it("creates a filter profile with the list of filters selected"){
                 let vc = CreateProfileViewController()

@@ -38,7 +38,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:100.0/255.0 green:150.0/255.0 blue:200.0/255.0 alpha:1.0];
     self.navigationItem.title = CSSMainTitle;
-    self.actionsArray = [NSArray arrayWithObjects:CSSMenuTakePicture, CSSMenuContinuousCapture, CSSMenuEnhanceImage, CSSMenuDeleteDocFiles, CSSMenuRelogin, CSSCreateProfile, nil];
+    self.actionsArray = [NSArray arrayWithObjects:CSSMenuTakePicture, CSSMenuContinuousCapture, CSSMenuEnhanceImage, CSSMenuDeleteDocFiles, CSSMenuRelogin, CSSCreateProfile, CSSSelectFilterProfile, nil];
     self.tableView.tableFooterView = [UIView new];
     [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainScreen@2x.png"]]];
     self.view.backgroundColor = [UIColor clearColor];
@@ -57,15 +57,24 @@
     }
 }
 
-- (void)createProfileButtonClicked{
+- (void)selectFilterProfileButtonClicked{
     
-    //PushCreateProfileViewController
-    NSLog(@"create Profile view controller clicked");
     // Present the image for enhancements
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:
                                 @"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
-    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"abcd"];
-    //[self presentViewController:myController animated:YES completion:nil];
+    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"selectProfileView"];
+    
+    CSSMainViewController *rootController =(CSSMainViewController *)[self.navigationController.viewControllers objectAtIndex: 0];
+    [rootController.navigationController pushViewController:myController animated:YES];
+    
+}
+
+- (void)createProfileButtonClicked{
+    
+    // Present the image for enhancements
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:
+                                @"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
+    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"createProfileView"];
     
     CSSMainViewController *rootController =(CSSMainViewController *)[self.navigationController.viewControllers objectAtIndex: 0];
     [rootController.navigationController pushViewController:myController animated:YES];
@@ -161,6 +170,8 @@
             [self relogin];
         }else if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text compare:CSSCreateProfile] == NSOrderedSame) {
             [self createProfileButtonClicked];
+        }else if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text compare:CSSSelectFilterProfile] == NSOrderedSame) {
+            [self selectFilterProfileButtonClicked];
         }
     });
 }

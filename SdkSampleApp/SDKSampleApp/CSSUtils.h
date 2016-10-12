@@ -19,6 +19,7 @@ extern NSString * const CSSMenuEnhanceImage;
 extern NSString * const CSSMenuDeleteDocFiles;
 extern NSString * const CSSMenuRelogin;
 extern NSString * const CSSCreateProfile;
+extern NSString * const CSSSelectFilterProfile;
 
 // SelectImage menu content
 extern NSString * const CSSSelectImageTitle;

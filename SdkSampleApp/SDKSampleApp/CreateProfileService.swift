@@ -79,4 +79,19 @@ class CreateProfileService{
         }
         return result
     }
+    
+    func getAllSelectedEntry() -> [FilterProfile]{
+        
+        //1)Refactor Later With Functional Programming
+        let objs: Results<FilterProfile> = {
+            try! Realm().objects(FilterProfile.self).filter("selected == YES")
+        }()
+        var result : [FilterProfile] = []
+        for profile in objs{
+//            if profile.selected == true{
+                result.append(profile)
+//            }
+        }
+        return result
+    }
 }

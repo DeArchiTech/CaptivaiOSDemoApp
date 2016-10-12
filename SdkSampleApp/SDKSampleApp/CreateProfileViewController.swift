@@ -84,18 +84,27 @@ import Foundation
         
     }
     
+    func removeFilterFromList(filter: String) -> Bool {
+        
+        let originalCount = self.filterSelected.count
+        let index = self.filterSelected.index(of: filter)!
+        self.filterSelected.remove(at: index)
+        return (self.filterSelected.count == (originalCount - 1))
+    }
+    
     @objc(tableView:didSelectRowAtIndexPath:) func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         
         let cell = tableView.cellForRow(at: indexPath)
         let selectedItem = cell?.textLabel?.text!
         //Todo
-        let selected = true
+        let selected = (cell?.accessoryType == UITableViewCellAccessoryType.checkmark)
         if selected{
-            self.addTickToCell(cell : cell!)
+            cell?.accessoryType = UITableViewCellAccessoryType.checkmark
+            self.addFilterToList(filter: selectedItem!)
         }else{
-            self.removeTickFromCell(cell : cell!)
+            cell?.accessoryType = UITableViewCellAccessoryType.none
+            self.removeFilterFromList(filter: selectedItem!)
         }
-        self.addFilterToList(filter: selectedItem!)
         
     }
     
@@ -147,14 +156,6 @@ import Foundation
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
         self.present(alertController, animated: true, completion: nil)
         
-    }
-    
-    func addTickToCell(cell :UITableViewCell){
-        cell.accessoryType = UITableViewCellAccessoryType.checkmark
-    }
-    
-    func removeTickFromCell(cell :UITableViewCell){
-        cell.accessoryType = UITableViewCellAccessoryType.none
     }
     
 }

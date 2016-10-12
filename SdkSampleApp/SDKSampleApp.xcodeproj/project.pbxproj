@@ -24,6 +24,8 @@
 		2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F01D9D851A0039853B /* MainVCHelper.swift */; };
 		2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */; };
 		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
+		22AB4D2E1DAEEBB000FF439B /* SelectProfileViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB4D2D1DAEEBB000FF439B /* SelectProfileViewControllerSpec.swift */; };
+		22AB4D3D1DAEEBC500FF439B /* SelectProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */; };
 		22B652FE1DA42E2200D04DA2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FA1DA42E2200D04DA2 /* Nimble.framework */; };
 		22B652FF1DA42E2200D04DA2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FB1DA42E2200D04DA2 /* Nimble.framework */; };
 		22B653001DA42E2200D04DA2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FC1DA42E2200D04DA2 /* Quick.framework */; };
@@ -258,6 +260,8 @@
 		2271D5F01D9D851A0039853B /* MainVCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelper.swift; sourceTree = "<group>"; };
 		2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelperUnitTest.swift; sourceTree = "<group>"; };
 		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
+		22AB4D2D1DAEEBB000FF439B /* SelectProfileViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProfileViewControllerSpec.swift; sourceTree = "<group>"; };
+		22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProfileViewController.swift; sourceTree = "<group>"; };
 		22B652FA1DA42E2200D04DA2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Vendor/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		22B652FB1DA42E2200D04DA2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Vendor/Nimble/build/Debug/Nimble.framework; sourceTree = "<group>"; };
 		22B652FC1DA42E2200D04DA2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Vendor/Quick/build/Debug/Quick.framework; sourceTree = "<group>"; };
@@ -413,6 +417,7 @@
 				22611C481DA3067B003B1514 /* UploadServiceTest.swift */,
 				22B845771DA5BB6900348FA4 /* CreateProfileServiceSpec.swift */,
 				22503FD91DA84F820072FE61 /* CreateProfileViewControllerSpec.swift */,
+				22AB4D2D1DAEEBB000FF439B /* SelectProfileViewControllerSpec.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -589,6 +594,7 @@
 				222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */,
 				22D1E5A81D9C5731005483B7 /* ImageUtil.swift */,
 				22611C441DA2EFC2003B1514 /* UploadService.swift */,
+				22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */,
 				22611C461DA2EFD1003B1514 /* LoginService.swift */,
 				22B845661DA5BA2200348FA4 /* CreateProfileService.swift */,
 				224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */,
@@ -1083,6 +1089,7 @@
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
 				2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */,
 				22503FDA1DA84F820072FE61 /* CreateProfileViewControllerSpec.swift in Sources */,
+				22AB4D2E1DAEEBB000FF439B /* SelectProfileViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1100,6 +1107,7 @@
 			files = (
 				22611C451DA2EFC2003B1514 /* UploadService.swift in Sources */,
 				22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */,
+				22AB4D3D1DAEEBC500FF439B /* SelectProfileViewController.swift in Sources */,
 				8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */,
 				22D8B7E71DAD9BA60089E94D /* FilterObject.swift in Sources */,
 				F326400A17C7CDE90043754D /* main.m in Sources */,

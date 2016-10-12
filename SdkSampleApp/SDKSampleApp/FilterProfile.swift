@@ -13,6 +13,7 @@ class FilterProfile: Object{
     
     dynamic var profileName = ""
     var filters = List<FilterObject>()
+    var selected : Bool = false
     
     override static func primaryKey() -> String? {
         return "profileName"

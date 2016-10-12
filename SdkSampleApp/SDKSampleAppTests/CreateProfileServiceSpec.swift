@@ -145,5 +145,27 @@ class CreateProfileServiceSpec: QuickSpec {
                 expect(containsResult).to(beTruthy())
             }
         }
+        describe("Get all selected Entries"){
+            it("returns a list of selected entry"){
+                
+                //1)Create service and delete all Profiles
+                let service = CreateProfileService()
+                let deleteResult = service.deleteAllProfiles()
+                
+                let profileOne = FilterProfile()
+                profileOne.profileName = "Profile One Name"
+                profileOne.selected = true
+                service.saveProfile(profile: profileOne)
+                
+                let profileTwo = FilterProfile()
+                profileTwo.profileName = "Profile Two Name"
+                profileTwo.selected = false
+                service.saveProfile(profile: profileTwo)
+                
+                //2)
+                let selectedProfileResult = service.getAllSelectedEntry()
+                expect(selectedProfileResult.count).to(equal(1))
+            }
+        }
     }
 }
