@@ -12,7 +12,7 @@
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "F25C7E3087B93D44B8411BD93AB06FF810440FA3" : "CaptivaiOSDemoApp\/",
     "D0725CAC6FF2D66F2C83C2C48DC12106D42DAA64" : "CaptivaiOSDemoApp\/SdkSampleApp\/Vendor\/Quick\/",
-    "95438028B10BBB846574013D29F154A00556A9D1" : "CaptivaiOSDemoApp\/SdkSampleApp\/Vendor\/Quick\/Externals\/Nimble\/"
+    "95438028B10BBB846574013D29F154A00556A9D1" : "CaptivaiOSDemoApp\/SdkSampleApp\/Vendor\/Nimble\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "SDKSampleApp",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,

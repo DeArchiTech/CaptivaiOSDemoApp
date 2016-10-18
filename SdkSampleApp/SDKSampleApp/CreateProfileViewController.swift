@@ -99,11 +99,11 @@ import Foundation
         //Todo
         let selected = (cell?.accessoryType == UITableViewCellAccessoryType.checkmark)
         if selected{
-            cell?.accessoryType = UITableViewCellAccessoryType.checkmark
-            self.addFilterToList(filter: selectedItem!)
-        }else{
             cell?.accessoryType = UITableViewCellAccessoryType.none
             self.removeFilterFromList(filter: selectedItem!)
+        }else{
+            cell?.accessoryType = UITableViewCellAccessoryType.checkmark
+            self.addFilterToList(filter: selectedItem!)
         }
         
     }

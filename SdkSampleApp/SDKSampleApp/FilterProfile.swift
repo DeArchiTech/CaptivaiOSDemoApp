@@ -12,8 +12,8 @@ import RealmSwift
 class FilterProfile: Object{
     
     dynamic var profileName = ""
+    dynamic var selected : Bool = false
     var filters = List<FilterObject>()
-    var selected : Bool = false
     
     override static func primaryKey() -> String? {
         return "profileName"

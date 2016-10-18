@@ -88,10 +88,31 @@ class CreateProfileService{
         }()
         var result : [FilterProfile] = []
         for profile in objs{
-//            if profile.selected == true{
-                result.append(profile)
-//            }
+            result.append(profile)
         }
         return result
+    }
+    
+    func updateAllSelectedToFalse() -> Bool{
+        
+        //It updates all the selected column to false
+        let objs: Results<FilterProfile> = {
+            try! Realm().objects(FilterProfile.self).filter("selected == YES")
+        }()
+        if objs.count > 0 {
+            do{
+                let realm = try Realm()
+                for profile in objs{
+                    try! realm.write {
+                        profile.selected = false
+                    }
+                }
+            } catch let error as NSError {
+                print(error)
+                return false
+            }
+        }
+        return self.getAllSelectedEntry().count == 0
+    
     }
 }

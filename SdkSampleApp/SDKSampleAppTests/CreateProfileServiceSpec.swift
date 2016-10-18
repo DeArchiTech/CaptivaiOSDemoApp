@@ -167,5 +167,37 @@ class CreateProfileServiceSpec: QuickSpec {
                 expect(selectedProfileResult.count).to(equal(1))
             }
         }
+        describe("Update All Selected To False"){
+            it("Updates all the selected columns to false"){
+                
+                let service = CreateProfileService()
+                let deleteResult = service.deleteAllProfiles()
+                
+                //1)Add Some Filter profile with selected equal True
+                
+                let profileOne = FilterProfile()
+                profileOne.profileName = "Profile One Name"
+                profileOne.selected = true
+                service.saveProfile(profile: profileOne)
+                
+                let profileTwo = FilterProfile()
+                profileTwo.profileName = "Profile Two Name"
+                profileTwo.selected = true
+                service.saveProfile(profile: profileTwo)
+                
+                //2)Assert that all filter profiles in db is true
+                var selectedProfileResult = service.getAllSelectedEntry()
+                expect(selectedProfileResult.count).to(equal(2))
+                
+                //3)Call update to turn them to false
+                let result = service.updateAllSelectedToFalse()
+                expect(result).to(beTruthy())
+                
+                //4)Assert it is changed to false
+                selectedProfileResult = service.getAllSelectedEntry()
+                expect(selectedProfileResult.count).to(equal(0))
+                
+            }
+        }
     }
 }
