@@ -8,8 +8,6 @@ target 'SDKSampleApp' do
     pod 'OHHTTPStubs'
     pod 'OHHTTPStubs/Swift'
     pod 'RealmSwift'
-    pod 'Quick'
-    pod 'Nimble'
 end
 
 target 'SDKSampleAppTests' do

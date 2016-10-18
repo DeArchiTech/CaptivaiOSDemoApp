@@ -40,6 +40,19 @@ class CreateProfileService{
         
     }
     
+    func getAllProfileNames() -> [String]{
+        
+        let objs: Results<FilterProfile> = {
+            try! Realm().objects(FilterProfile)
+        }()
+        var result : [String] = []
+        for profile in objs{
+            result.append(profile.profileName)
+        }
+        return result
+        
+    }
+    
     func deleteAllProfiles() -> Bool {
         
         var objs: Results<FilterProfile> = {
