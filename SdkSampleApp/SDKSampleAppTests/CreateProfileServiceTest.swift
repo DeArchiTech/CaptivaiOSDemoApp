@@ -46,4 +46,47 @@ class CreateProfileServiceTest: XCTestCase {
         XCTAssertTrue(result)
     }
     
+    func testGetProfileWithProfileName(){
+        
+        //1)Set up a service
+        let service = CreateProfileService()
+        
+        //2)Mock up a CreateProfile Object
+        let nameOne = "profileOne"
+        let nameTwo = "profileTwo"
+        let profileOne = FilterProfile()
+        profileOne.profileName = nameOne
+        let profileTwo = FilterProfile()
+        profileTwo.profileName = nameTwo
+        
+        //3)Attempt to save object in DB
+        let saveResultOne = service.saveProfile(profile: profileOne)
+        let saveResultTwo = service.saveProfile(profile: profileTwo)
+        XCTAssertTrue(saveResultOne)
+        XCTAssertTrue(saveResultTwo)
+        
+        let result = service.getProfileWithProfileName(name: nameTwo)
+        XCTAssertNotNil(result)
+    }
+    
+    func testUpdateProfileSelectedToTrue(){
+        
+        //It updates selected to true for the desired profile name
+        let service = CreateProfileService()
+        let name = "profileMate"
+        let profile = FilterProfile()
+        profile.profileName = name
+        profile.selected = false
+        
+        let saveResultOne = service.saveProfile(profile: profile)
+        XCTAssertTrue(saveResultOne)
+        
+        let updateResult = service.updateProfileSelectedToTrue(name: name)
+        XCTAssertTrue(updateResult)
+        
+        let result = service.getProfileWithProfileName(name: name)
+        XCTAssertNotNil(result)
+        XCTAssertTrue(result!.selected)
+    }
+    
 }

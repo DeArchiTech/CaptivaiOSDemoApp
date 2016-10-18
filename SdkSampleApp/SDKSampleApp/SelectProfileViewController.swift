@@ -74,6 +74,10 @@ import Foundation
     
     func saveSelectedProfile(name : String) -> Bool{
     
+        //1)Call Service to update all selected to false
+        let service = CreateProfileService()
+        service.updateAllSelectedToFalse()
+//        service.updateProfileSelectedToTrue(name)
         return false
     
     }

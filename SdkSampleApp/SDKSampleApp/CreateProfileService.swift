@@ -115,4 +115,43 @@ class CreateProfileService{
         return self.getAllSelectedEntry().count == 0
     
     }
+    
+    func getProfileWithProfileName(name : String) -> FilterProfile?{
+        
+        let predicate = NSPredicate(format: "profileName == %@", NSString(string: name))
+        let objs: Results<FilterProfile> = {
+            try! Realm().objects(FilterProfile.self).filter(predicate)
+        }()
+        if objs.count > 0 {
+            return objs.first
+        }else{
+            return nil
+        }
+        
+    }
+    
+    func updateProfileSelectedToTrue(name : String) -> Bool{
+        
+        let predicate = NSPredicate(format: "profileName == %@", NSString(string: name))
+        let objs: Results<FilterProfile> = {
+            try! Realm().objects(FilterProfile.self).filter(predicate)
+        }()
+        if objs.count > 0 {
+            do{
+                let realm = try Realm()
+                for profile in objs{
+                    try! realm.write {
+                        profile.selected = true
+                    }
+                }
+            } catch let error as NSError {
+                print(error)
+                return false
+            }
+            return true
+        }else{
+            return false
+        }
+    }
+    
 }
