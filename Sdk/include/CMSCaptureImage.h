@@ -13,7 +13,7 @@
 
 /*!
     @abstract Captiva Mobile SDK Toolkit
-    @discussion This is the main interface to the SDK.  In general, numbers in NSDictionary parameters are retrieved as NSNumber objects.  The SDK uses categories which require additional linker flags such as "-all_load" or "-force_load".
+    @discussion This is the main interface to the SDK.  In general, numbers in NSDictionary parameters are retrieved as NSNumber objects.  The SDK uses categories which require additional linker flags such as "-all_load" or "-force_load"..0
  */
 @interface CMSCaptureImage : NSObject
 
