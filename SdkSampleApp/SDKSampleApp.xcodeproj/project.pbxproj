@@ -27,6 +27,13 @@
 		22611C4D1DA31B7E003B1514 /* LoginServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22611C4C1DA31B7E003B1514 /* LoginServiceTest.swift */; };
 		2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F01D9D851A0039853B /* MainVCHelper.swift */; };
 		2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */; };
+		22837C8E1DB94095001FED93 /* reva568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C8C1DB94095001FED93 /* reva568h.png */; };
+		22837C8F1DB94095001FED93 /* revaDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C8D1DB94095001FED93 /* revaDefault.png */; };
+		22837C911DB941D5001FED93 /* reva320480.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C901DB941D5001FED93 /* reva320480.png */; };
+		22837C931DB942C7001FED93 /* reva12422208.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C921DB942C7001FED93 /* reva12422208.png */; };
+		22837C951DB94377001FED93 /* reva640960.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C941DB94377001FED93 /* reva640960.png */; };
+		22837C971DB95EEE001FED93 /* reva6401136.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C961DB95EEE001FED93 /* reva6401136.png */; };
+		22837C991DB95FCC001FED93 /* reva7501334.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C981DB95FCC001FED93 /* reva7501334.png */; };
 		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
 		22A9E2EE1DB93A8C007FFF17 /* reva2020.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2EA1DB93A8C007FFF17 /* reva2020.png */; };
 		22A9E2EF1DB93A8C007FFF17 /* reva5858.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2EB1DB93A8C007FFF17 /* reva5858.png */; };
@@ -155,6 +162,13 @@
 		22611C4C1DA31B7E003B1514 /* LoginServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceTest.swift; sourceTree = "<group>"; };
 		2271D5F01D9D851A0039853B /* MainVCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelper.swift; sourceTree = "<group>"; };
 		2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelperUnitTest.swift; sourceTree = "<group>"; };
+		22837C8C1DB94095001FED93 /* reva568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva568h.png; sourceTree = "<group>"; };
+		22837C8D1DB94095001FED93 /* revaDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaDefault.png; sourceTree = "<group>"; };
+		22837C901DB941D5001FED93 /* reva320480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva320480.png; sourceTree = "<group>"; };
+		22837C921DB942C7001FED93 /* reva12422208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva12422208.png; sourceTree = "<group>"; };
+		22837C941DB94377001FED93 /* reva640960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva640960.png; sourceTree = "<group>"; };
+		22837C961DB95EEE001FED93 /* reva6401136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva6401136.png; sourceTree = "<group>"; };
+		22837C981DB95FCC001FED93 /* reva7501334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva7501334.png; sourceTree = "<group>"; };
 		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
 		22A9E2EA1DB93A8C007FFF17 /* reva2020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva2020.png; sourceTree = "<group>"; };
 		22A9E2EB1DB93A8C007FFF17 /* reva5858.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva5858.png; sourceTree = "<group>"; };
@@ -478,9 +492,16 @@
 		F326400417C7CDE90043754D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				22837C901DB941D5001FED93 /* reva320480.png */,
+				22837C8C1DB94095001FED93 /* reva568h.png */,
+				22837C8D1DB94095001FED93 /* revaDefault.png */,
 				22A9E2EA1DB93A8C007FFF17 /* reva2020.png */,
+				22837C921DB942C7001FED93 /* reva12422208.png */,
+				22837C961DB95EEE001FED93 /* reva6401136.png */,
 				22A9E2F21DB93B4D007FFF17 /* reva8080.png */,
 				22A9E2F31DB93B4D007FFF17 /* reva120120.png */,
+				22837C981DB95FCC001FED93 /* reva7501334.png */,
+				22837C941DB94377001FED93 /* reva640960.png */,
 				22A9E2F41DB93B4D007FFF17 /* reva180180.png */,
 				22A9E2EB1DB93A8C007FFF17 /* reva5858.png */,
 				22A9E2EC1DB93A8C007FFF17 /* reva6060.png */,
@@ -677,16 +698,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F326400817C7CDE90043754D /* InfoPlist.strings in Resources */,
+				22837C971DB95EEE001FED93 /* reva6401136.png in Resources */,
 				22A9E2EF1DB93A8C007FFF17 /* reva5858.png in Resources */,
+				22837C911DB941D5001FED93 /* reva320480.png in Resources */,
 				F326401017C7CDE90043754D /* Default.png in Resources */,
 				F326401217C7CDE90043754D /* Default@2x.png in Resources */,
 				B5265E951AFBEB54004842C1 /* quadcrop.png in Resources */,
 				22A9E2F01DB93A8C007FFF17 /* reva6060.png in Resources */,
 				B5265E941AFBEB54004842C1 /* quadback.png in Resources */,
+				22837C991DB95FCC001FED93 /* reva7501334.png in Resources */,
 				F326401417C7CDE90043754D /* Default-568h@2x.png in Resources */,
 				F326403717C7CED90043754D /* MainStoryboard_iPad.storyboard in Resources */,
 				22A9E2F61DB93B4D007FFF17 /* reva120120.png in Resources */,
 				F326406617C801430043754D /* MainStoryboard_iPhone.storyboard in Resources */,
+				22837C951DB94377001FED93 /* reva640960.png in Resources */,
 				B58AE77417D8E33B00925ABA /* Settings.bundle in Resources */,
 				22A9E2F71DB93B4D007FFF17 /* reva180180.png in Resources */,
 				22A9E2F11DB93A8C007FFF17 /* reva8787.png in Resources */,
@@ -698,8 +723,11 @@
 				F362887217DD09FF001799D8 /* ic_prev.png in Resources */,
 				B5CAFD41194A7981009F5BD5 /* torch.png in Resources */,
 				F362887317DD09FF001799D8 /* ic_prevsave.png in Resources */,
+				22837C8F1DB94095001FED93 /* revaDefault.png in Resources */,
 				F362887417DD09FF001799D8 /* menu.png in Resources */,
 				224F978A1DB92D93007229EB /* reva_solutions_banner_big.png in Resources */,
+				22837C931DB942C7001FED93 /* reva12422208.png in Resources */,
+				22837C8E1DB94095001FED93 /* reva568h.png in Resources */,
 				F36288AF17DFB1F4001799D8 /* MainScreen@2x.png in Resources */,
 				B50D997517DFCB47006DDEE2 /* back.png in Resources */,
 				B50D997617DFCB47006DDEE2 /* camera.png in Resources */,
@@ -1201,6 +1229,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1234,6 +1263,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
