@@ -193,6 +193,91 @@
             </objects>
             <point key="canvasLocation" x="342.5" y="1.5"/>
         </scene>
+        <!--Upload Image View Controller-->
+        <scene sceneID="m3g-9r-i0u">
+            <objects>
+                <viewController storyboardIdentifier="uploadImageView" id="3sL-Xy-9NU" customClass="UploadImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CCS-MP-PFD"/>
+                        <viewControllerLayoutGuide type="bottom" id="jJq-6r-LTa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aQH-hy-NBu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znK-RE-GhW">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of images to be uploaded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOn-Ji-Lc1">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4P-HF-rVk">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="CkI-2m-cLg"/>
+                                    <constraint firstAttribute="height" constant="50" id="LNq-xH-OwV"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOX-0T-G7h">
+                                <frame key="frameInset" minX="48" minY="255" width="280" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POD #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bI-aL-LOx">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nWs-Hv-mjy">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="h1y-Ap-jzo"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bh4-bP-6Lv"/>
+                                    <constraint firstAttribute="width" constant="280" id="p0B-nf-n7m"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXx-RY-eJq">
+                                <frame key="frameInset" minX="41" minY="496" width="281" height="87"/>
+                                <color key="backgroundColor" red="0.7058037144" green="0.93763296090000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sGS-LN-Iwy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Upload Now">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="aXx-RY-eJq" secondAttribute="trailing" constant="25" id="2sL-Po-SDD"/>
+                            <constraint firstItem="qOn-Ji-Lc1" firstAttribute="top" secondItem="CCS-MP-PFD" secondAttribute="bottom" constant="24" id="3kc-Qv-0je"/>
+                            <constraint firstItem="nOX-0T-G7h" firstAttribute="top" secondItem="qOn-Ji-Lc1" secondAttribute="bottom" constant="100" id="7aY-LR-Pwr"/>
+                            <constraint firstItem="aXx-RY-eJq" firstAttribute="leading" secondItem="aQH-hy-NBu" secondAttribute="leadingMargin" constant="24" id="AOf-Em-jan"/>
+                            <constraint firstItem="znK-RE-GhW" firstAttribute="leading" secondItem="aQH-hy-NBu" secondAttribute="leadingMargin" constant="25" id="Hgv-Zu-pWY"/>
+                            <constraint firstItem="qOn-Ji-Lc1" firstAttribute="leading" secondItem="aQH-hy-NBu" secondAttribute="leadingMargin" constant="25" id="Jlo-f9-Z0R"/>
+                            <constraint firstItem="aXx-RY-eJq" firstAttribute="top" secondItem="nOX-0T-G7h" secondAttribute="bottom" constant="100" id="M6O-cE-MuW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qOn-Ji-Lc1" secondAttribute="trailing" constant="48" id="XU8-wz-35B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nOX-0T-G7h" secondAttribute="trailing" constant="38" id="bsX-Nf-vtM"/>
+                            <constraint firstItem="nOX-0T-G7h" firstAttribute="leading" secondItem="aQH-hy-NBu" secondAttribute="leadingMargin" constant="25" id="pWk-Rm-BrU"/>
+                            <constraint firstItem="znK-RE-GhW" firstAttribute="top" secondItem="CCS-MP-PFD" secondAttribute="bottom" constant="24" id="vFQ-lR-mZG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="znK-RE-GhW" secondAttribute="trailing" constant="38" id="zVk-FG-dyf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5L-hG-cUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815.5" y="-509.5"/>
+        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

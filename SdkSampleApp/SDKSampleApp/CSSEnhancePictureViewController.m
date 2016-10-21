@@ -905,7 +905,7 @@
     //Upload Image
     
     if ([actionName compare:CSSUploadImage] == NSOrderedSame){
-        [self uploadImageAction];
+        [self presentUploadImageViewController];
     }
 }
 
@@ -991,6 +991,18 @@
         [_imageInfoPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)listFiltersButton
                                  permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
     }
+}
+
+-(void)presentUploadImageViewController
+{
+    // Present the image for enhancements
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:
+                                @"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
+    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"uploadImageView"];
+    
+    CSSImageInfoViewController *rootController =(CSSImageInfoViewController *)[self.navigationController.viewControllers objectAtIndex: 0];
+    [rootController.navigationController pushViewController:myController animated:YES];
+    
 }
 
 - (void)uploadImageAction

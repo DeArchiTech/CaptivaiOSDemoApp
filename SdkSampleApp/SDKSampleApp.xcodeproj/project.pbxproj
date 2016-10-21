@@ -56,6 +56,7 @@
 		22B845781DA5BB6900348FA4 /* CreateProfileServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B845771DA5BB6900348FA4 /* CreateProfileServiceSpec.swift */; };
 		22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */; };
 		22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */; };
+		22CC07241DBA8D9B00EEE3BC /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CC07231DBA8D9B00EEE3BC /* UploadImageViewController.swift */; };
 		22D1E5A41D9C3C55005483B7 /* base64Image.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A31D9C3C55005483B7 /* base64Image.txt */; };
 		22D1E5A51D9C45DA005483B7 /* base64Image.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A31D9C3C55005483B7 /* base64Image.txt */; };
 		22D1E5A71D9C56CE005483B7 /* testImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A61D9C56CE005483B7 /* testImg.jpg */; };
@@ -191,6 +192,7 @@
 		22B845771DA5BB6900348FA4 /* CreateProfileServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileServiceSpec.swift; sourceTree = "<group>"; };
 		22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManager.swift; sourceTree = "<group>"; };
 		22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookieManagerUnitTest.swift; sourceTree = "<group>"; };
+		22CC07231DBA8D9B00EEE3BC /* UploadImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageViewController.swift; sourceTree = "<group>"; };
 		22D1E5A31D9C3C55005483B7 /* base64Image.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = base64Image.txt; path = ../../base64Image.txt; sourceTree = "<group>"; };
 		22D1E5A61D9C56CE005483B7 /* testImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImg.jpg; sourceTree = "<group>"; };
 		22D1E5A81D9C5731005483B7 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 				22B845661DA5BA2200348FA4 /* CreateProfileService.swift */,
 				224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */,
 				224F97861DB92868007229EB /* Images.xcassets */,
+				22CC07231DBA8D9B00EEE3BC /* UploadImageViewController.swift */,
 			);
 			name = SDKSampleApp;
 			path = /Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleApp;
@@ -919,6 +922,7 @@
 				F326403A17C7CFB50043754D /* CSSMainViewController.m in Sources */,
 				F31AC88017D800F0002D06EB /* CSSEnhancePictureViewController.m in Sources */,
 				224E97F31DA6C0DA0066527F /* CreateProfileViewController.swift in Sources */,
+				22CC07241DBA8D9B00EEE3BC /* UploadImageViewController.swift in Sources */,
 				22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */,
 				22B845671DA5BA2200348FA4 /* CreateProfileService.swift in Sources */,
 				223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */,
