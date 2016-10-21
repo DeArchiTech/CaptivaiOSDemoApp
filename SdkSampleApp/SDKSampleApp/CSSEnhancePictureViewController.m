@@ -88,6 +88,7 @@
         
         [self addSubview:topHandle];
         [self addSubview:bottomHandle];
+
     }
     return self;
 }
@@ -678,7 +679,13 @@
 - (void)presentFilterMenuForIPhone
 {
     UIActionSheet *filterActionSheet = [[UIActionSheet alloc] initWithTitle:@"Select Filter" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil
-                                                          otherButtonTitles:CSSEnhanceItemAutoCrop,
+                                                          otherButtonTitles:
+                                        
+                                                            CSSUploadImage,
+                                        
+                                                            CSSTakeAnotherImage,
+                                        
+                                                            CSSEnhanceItemAutoCrop,
                                                                             CSSEnhanceItemBlackAndWhite,
                                                                             CSSEnhanceItemLighter,
                                                                             CSSEnhanceItemDarker,
@@ -696,8 +703,8 @@
                                                                             CSSEnhanceItemBarcode,
                                                                             CSSEnhanceItemExport,
                                                                             CSSEnhanceItemGetInfo,
-                                                                            CSSUploadImage,
-                                                                            nil];
+
+                                                               nil];
     filterActionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
     [filterActionSheet showFromBarButtonItem:listFiltersButton animated:YES];
 }
@@ -988,6 +995,7 @@
 
 - (void)uploadImageAction
 {
+    //Push Upload Image View Controller
     [self displayLoadingSpinner];
     UIImage* image = wipImageView.image;
     [self uploadImage:image];
@@ -1077,7 +1085,24 @@
     enableButtons = YES;
     
     [CMSCaptureImage enableUndoImage:[CSSSettings boolForKey:@"UndoLast"].boolValue];
+    
     [self initializeSpinner];
+    
+    //Add A Text Field at the bottom
+    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(45, 30, 200, 40)];
+    tf.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
+    tf.font = [UIFont fontWithName:@"Helvetica-Bold" size:25];
+    tf.backgroundColor=[UIColor whiteColor];
+    tf.text=@"Insert POD NUmber";
+    
+    float someY = [UIScreen mainScreen].bounds.size.height;
+    float someOtherY = tf.frame.size.height;
+    float y = [UIScreen mainScreen].bounds.size.height - tf.frame.size.height;
+    float anotherY = imageScrollView.frame.size.height - tf.frame.size.height;
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, anotherY, 400 , 400)];
+    [view addSubview:tf];
+    [self.view addSubview:view];
+    
 }
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration

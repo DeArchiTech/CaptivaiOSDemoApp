@@ -53,6 +53,7 @@ NSString * const CSSEnhanceItemBarcode = @"Detect barcodes";
 
 // Additional Items
 NSString * const CSSUploadImage = @"Upload Image";
+NSString * const CSSTakeAnotherImage =@"Take another Image";
 
 const int CSSActionPickerFilterType = 0;
 const int CSSActionPickerImageLocationType = 1;
@@ -99,6 +100,7 @@ const float CSSCropMinHeight = 100.0;
         [actionNames addObject:CSSEnhanceItemExport];
         [actionNames addObject:CSSEnhanceItemGetInfo];
         [actionNames addObject:CSSUploadImage];
+        [actionNames addObject:CSSTakeAnotherImage];
     }
     else if (actionType == CSSActionPickerImageLocationType) {
         // set up array of image location names
