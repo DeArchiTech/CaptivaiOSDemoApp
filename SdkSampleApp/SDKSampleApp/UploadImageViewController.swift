@@ -11,7 +11,6 @@ import Foundation
 
 @objc class UploadImageViewController: UIViewController{
     
-    @IBOutlet var tableView: UITableView!
     var previousSelectedInex = -1
     var profileNames : [String] = []
     
@@ -27,5 +26,17 @@ import Foundation
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
+        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        button.backgroundColor = UIColor.blue
+        button.setTitle("Test Button", for: .normal)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        
+        self.view.addSubview(button)
+        
     }
+    
+    func buttonAction(sender: UIButton!) {
+        print("Button tapped")
+    }
+    
 }

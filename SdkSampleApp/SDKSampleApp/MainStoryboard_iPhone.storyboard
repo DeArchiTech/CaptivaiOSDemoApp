@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="86" width="375" height="35"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lht-Pe-KQB" id="e8F-Wt-XUm">
-                                    <frame key="frameInset" width="308" height="34"/>
+                                    <frame key="frameInset" width="308" height="35"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -93,7 +93,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9HU-us-yDI" id="0a3-pl-3Y9">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -166,7 +166,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6xk-Md-trb" id="MQM-Hf-ngm">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -196,7 +196,7 @@
         <!--Upload Image View Controller-->
         <scene sceneID="m3g-9r-i0u">
             <objects>
-                <viewController storyboardIdentifier="uploadImageView" id="3sL-Xy-9NU" customClass="UploadImageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="uploadImageView" id="3sL-Xy-9NU" customClass="UploadImageViewController" customModule="SDKSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CCS-MP-PFD"/>
                         <viewControllerLayoutGuide type="bottom" id="jJq-6r-LTa"/>
@@ -245,34 +245,24 @@
                                     <constraint firstAttribute="width" constant="280" id="p0B-nf-n7m"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXx-RY-eJq">
-                                <frame key="frameInset" minX="41" minY="496" width="281" height="87"/>
-                                <color key="backgroundColor" red="0.7058037144" green="0.93763296090000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="sGS-LN-Iwy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Upload Now">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="aXx-RY-eJq" secondAttribute="trailing" constant="25" id="2sL-Po-SDD"/>
                             <constraint firstItem="qOn-Ji-Lc1" firstAttribute="top" secondItem="CCS-MP-PFD" secondAttribute="bottom" constant="24" id="3kc-Qv-0je"/>
                             <constraint firstItem="nOX-0T-G7h" firstAttribute="top" secondItem="qOn-Ji-Lc1" secondAttribute="bottom" constant="100" id="7aY-LR-Pwr"/>
-                            <constraint firstItem="aXx-RY-eJq" firstAttribute="leading" secondItem="aQH-hy-NBu" secondAttribute="leadingMargin" constant="24" id="AOf-Em-jan"/>
                             <constraint firstItem="znK-RE-GhW" firstAttribute="leading" secondItem="aQH-hy-NBu" secondAttribute="leadingMargin" constant="25" id="Hgv-Zu-pWY"/>
                             <constraint firstItem="qOn-Ji-Lc1" firstAttribute="leading" secondItem="aQH-hy-NBu" secondAttribute="leadingMargin" constant="25" id="Jlo-f9-Z0R"/>
-                            <constraint firstItem="aXx-RY-eJq" firstAttribute="top" secondItem="nOX-0T-G7h" secondAttribute="bottom" constant="100" id="M6O-cE-MuW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qOn-Ji-Lc1" secondAttribute="trailing" constant="48" id="XU8-wz-35B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nOX-0T-G7h" secondAttribute="trailing" constant="38" id="bsX-Nf-vtM"/>
                             <constraint firstItem="nOX-0T-G7h" firstAttribute="leading" secondItem="aQH-hy-NBu" secondAttribute="leadingMargin" constant="25" id="pWk-Rm-BrU"/>
                             <constraint firstItem="znK-RE-GhW" firstAttribute="top" secondItem="CCS-MP-PFD" secondAttribute="bottom" constant="24" id="vFQ-lR-mZG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="znK-RE-GhW" secondAttribute="trailing" constant="38" id="zVk-FG-dyf"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="36N-TS-6Oy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5L-hG-cUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

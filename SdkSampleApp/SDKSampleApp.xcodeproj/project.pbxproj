@@ -485,8 +485,8 @@
 				22611C461DA2EFD1003B1514 /* LoginService.swift */,
 				22B845661DA5BA2200348FA4 /* CreateProfileService.swift */,
 				224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */,
-				224F97861DB92868007229EB /* Images.xcassets */,
 				22CC07231DBA8D9B00EEE3BC /* UploadImageViewController.swift */,
+				224F97861DB92868007229EB /* Images.xcassets */,
 			);
 			name = SDKSampleApp;
 			path = /Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleApp;
