@@ -29,13 +29,28 @@ import Foundation
     }
 
     @IBAction func buttonPressed(_ sender: AnyObject) {
-        
-        let touched = self.podNumber.text
-        let alright = "alright"
+    
+        //Upload image file along with POD number attached
+        //To The Json
         
     }
     
-    func dismissKeyboard() {
-        view.endEditing(true)
+    func getPod() -> String{
+        
+        return self.podNumber.text!
+        
     }
+    
+    func getImage() {
+        
+    }
+    
+    func createJson() {
+        
+    }
+    
+    func uploadImage() {
+        
+    }
+    
 }

@@ -63,6 +63,7 @@
 		22D1E5A91D9C5731005483B7 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1E5A81D9C5731005483B7 /* ImageUtil.swift */; };
 		22D1E5AB1D9C575F005483B7 /* ImageUtilUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1E5AA1D9C575F005483B7 /* ImageUtilUnitTest.swift */; };
 		22D1E5AC1D9C59E6005483B7 /* testImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A61D9C56CE005483B7 /* testImg.jpg */; };
+		22D67D951DBE893D0018C521 /* UploadImageViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67D941DBE893D0018C521 /* UploadImageViewControllerTest.swift */; };
 		22D8B7E71DAD9BA60089E94D /* FilterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D8B7E61DAD9BA60089E94D /* FilterObject.swift */; };
 		22F8E49B1D9992BB009E68F1 /* SDKSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */; };
 		64ECA85AE51B90464C997F81 /* Pods_SDKSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A804635F97D1371BFD115 /* Pods_SDKSampleAppTests.framework */; };
@@ -197,6 +198,7 @@
 		22D1E5A61D9C56CE005483B7 /* testImg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImg.jpg; sourceTree = "<group>"; };
 		22D1E5A81D9C5731005483B7 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		22D1E5AA1D9C575F005483B7 /* ImageUtilUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtilUnitTest.swift; sourceTree = "<group>"; };
+		22D67D941DBE893D0018C521 /* UploadImageViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageViewControllerTest.swift; sourceTree = "<group>"; };
 		22D8B7E61DAD9BA60089E94D /* FilterObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterObject.swift; sourceTree = "<group>"; };
 		22F8E4981D9992BB009E68F1 /* SDKSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSampleAppUITests.swift; sourceTree = "<group>"; };
@@ -324,16 +326,17 @@
 			isa = PBXGroup;
 			children = (
 				22611C4C1DA31B7E003B1514 /* LoginServiceTest.swift */,
-				222A93131D95FB7300F33087 /* Info.plist */,
 				22CBBEB01D9B167E00F0FDCC /* CookieManagerUnitTest.swift */,
 				22D1E5AA1D9C575F005483B7 /* ImageUtilUnitTest.swift */,
 				2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */,
 				22180DBE1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift */,
+				222A93131D95FB7300F33087 /* Info.plist */,
 				22611C481DA3067B003B1514 /* UploadServiceTest.swift */,
 				22B845771DA5BB6900348FA4 /* CreateProfileServiceSpec.swift */,
 				22503FD91DA84F820072FE61 /* CreateProfileViewControllerSpec.swift */,
 				22AB4D2D1DAEEBB000FF439B /* SelectProfileViewControllerSpec.swift */,
 				222543AF1DB55FB4000EA556 /* CreateProfileServiceTest.swift */,
+				22D67D941DBE893D0018C521 /* UploadImageViewControllerTest.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 			files = (
 				22D1E5AB1D9C575F005483B7 /* ImageUtilUnitTest.swift in Sources */,
 				22180DBF1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift in Sources */,
+				22D67D951DBE893D0018C521 /* UploadImageViewControllerTest.swift in Sources */,
 				22B845781DA5BB6900348FA4 /* CreateProfileServiceSpec.swift in Sources */,
 				22611C491DA3067B003B1514 /* UploadServiceTest.swift in Sources */,
 				22611C4D1DA31B7E003B1514 /* LoginServiceTest.swift in Sources */,
