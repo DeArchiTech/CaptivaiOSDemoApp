@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Photos
 
 @objc class UploadImageViewController: UIViewController{
     
@@ -41,8 +42,10 @@ import Foundation
         
     }
     
-    func getImage() {
+    func loadImage() {
         
+        //Load from a database or from local disk
+        //Basically call the service to load the image
     }
     
     func createJson() {
