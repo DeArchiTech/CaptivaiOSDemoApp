@@ -14,6 +14,7 @@ import Foundation
     var previousSelectedInex = -1
     var profileNames : [String] = []
     
+    @IBOutlet var podNumber: UITextField!
     class func newInstance() -> UploadImageViewController{
         return UploadImageViewController()
     }
@@ -21,22 +22,20 @@ import Foundation
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        //Taping anywhere closes keyboard
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, 	action: "dismissKeyboard")
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        button.backgroundColor = UIColor.blue
-        button.setTitle("Test Button", for: .normal)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+    }
+
+    @IBAction func buttonPressed(_ sender: AnyObject) {
         
-        self.view.addSubview(button)
+        let touched = self.podNumber.text
+        let alright = "alright"
         
     }
     
-    func buttonAction(sender: UIButton!) {
-        print("Button tapped")
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
-    
 }
