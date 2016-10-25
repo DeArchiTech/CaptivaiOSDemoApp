@@ -111,7 +111,7 @@ import RealmSwift
         
         //Default the first batch number to be zero
         
-        let predicate = NSPredicate(format: "uploaded == YES")
+        let predicate = NSPredicate(format: "uploaded == NO")
         let objs: Results<BatchObj> = {
             try! Realm().objects(BatchObj.self)
                 .filter(predicate)

@@ -12,6 +12,8 @@
 
 #import "CSSUtils.h"
 #import "CSSSettings.h"
+#import "SDKSampleApp-Swift.h"
+
 
 // main screen title
 NSString * const CSSMainTitle = @"SDK Sample";
@@ -445,6 +447,9 @@ const float CSSCropMinHeight = 100.0;
     // save the image file
     [picture writeToFile:imageFilePath options:0 error:error];
     isLoadedFromFilePath = YES;
+    
+    EnhanceVCHelper *helper = [[EnhanceVCHelper alloc] init];
+    [helper saveImageWithImageLocation:imageFilePath]
 }
 
 /*

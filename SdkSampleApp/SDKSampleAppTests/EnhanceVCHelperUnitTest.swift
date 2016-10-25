@@ -40,6 +40,32 @@ class EnhanceVCHelperUnitTest: XCTestCase {
     
     func testGetCurrentBatchNum(){
         
+        let service = BatchService()
+        let batchOne = BatchObj()
+        
+        let expectedNumber = 3
+        batchOne.batchNumber = expectedNumber
+        let batchTwo = BatchObj()
+        batchTwo.batchNumber = 123
+        batchTwo.uploaded = true
+        
+        service.deleteAllBatches()
+        service.saveBatch(batch: batchOne)
+        service.saveBatch(batch: batchTwo)
+        
+        let helper = EnhanceVCHelper()
+        let result = helper.getCurrentBatchNum()
+        XCTAssertEqual(expectedNumber , result)
+        
+    }
+    
+    func testGetCurrentBatchNumWithNoRecord(){
+        
+        let service = BatchService()
+        service.deleteAllBatches()
+        let helper = EnhanceVCHelper()
+        let result = helper.getCurrentBatchNum()
+        XCTAssertEqual(0 , result)
     }
     
 }

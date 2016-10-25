@@ -36,6 +36,13 @@ import UIKit
         
     }
     
+    func saveImage(imageLocation: String) -> Bool{
+        
+        let num = self.getCurrentBatchNum()
+        return self.saveImage(imageLocation: imageLocation, batchNum: num)
+
+    }
+    
     func saveImage(imageLocation: String, batchNum: Int) -> Bool{
         
         let service = CaptivaLocalImageService()
@@ -44,6 +51,14 @@ import UIKit
         objc.imagePath = imageLocation
         service.saveImage(image: objc)
         return true
+        
+    }
+    
+    func getCurrentBatchNum() -> Int{
+        
+        let service = BatchService()
+        let number = service.getCurrentBatchNum()
+        return number
         
     }
     

@@ -20,8 +20,6 @@ import RealmSwift
         
         do{
             let realm = try Realm()
-            let path = image.imagePath
-            let num = image.batchNumber
             try! realm.write {
                 realm.add(image)
             }
