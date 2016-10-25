@@ -378,6 +378,28 @@
 			name = VChelpers;
 			sourceTree = "<group>";
 		};
+		22C6B7011DC00A5E005199DB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				22611C441DA2EFC2003B1514 /* UploadService.swift */,
+				22611C461DA2EFD1003B1514 /* LoginService.swift */,
+				22D67DA01DBEB6E50018C521 /* BatchService.swift */,
+				22B845661DA5BA2200348FA4 /* CreateProfileService.swift */,
+				22D67D9E1DBEB65E0018C521 /* CaptivaLocalImageService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		22C6B7031DC00A8D005199DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */,
+				224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */,
+				22CC07231DBA8D9B00EEE3BC /* UploadImageViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		22F8E4991D9992BB009E68F1 /* SDKSampleAppUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +497,8 @@
 		F326400317C7CDE90043754D /* SDKSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				22C6B7031DC00A8D005199DB /* Controller */,
+				22C6B7011DC00A5E005199DB /* Service */,
 				2271D5EF1D9D84E70039853B /* VChelpers */,
 				223013441D99C97A00D7BB7E /* Model */,
 				F36288A817DFACAB001799D8 /* SDK Include */,
@@ -499,14 +523,6 @@
 				22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */,
 				222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */,
 				22D1E5A81D9C5731005483B7 /* ImageUtil.swift */,
-				22611C441DA2EFC2003B1514 /* UploadService.swift */,
-				22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */,
-				22611C461DA2EFD1003B1514 /* LoginService.swift */,
-				22D67DA01DBEB6E50018C521 /* BatchService.swift */,
-				22B845661DA5BA2200348FA4 /* CreateProfileService.swift */,
-				224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */,
-				22D67D9E1DBEB65E0018C521 /* CaptivaLocalImageService.swift */,
-				22CC07231DBA8D9B00EEE3BC /* UploadImageViewController.swift */,
 				224F97861DB92868007229EB /* Images.xcassets */,
 			);
 			name = SDKSampleApp;

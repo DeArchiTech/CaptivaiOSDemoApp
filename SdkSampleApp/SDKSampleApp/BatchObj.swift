@@ -19,4 +19,5 @@ class BatchObj: Object{
     override static func primaryKey() -> String? {
         return "batchNumber"
     }
+    
 }

@@ -20,6 +20,8 @@ import RealmSwift
         
         do{
             let realm = try Realm()
+            let path = image.imagePath
+            let num = image.batchNumber
             try! realm.write {
                 realm.add(image)
             }
@@ -49,4 +51,29 @@ import RealmSwift
         
     }
     
+    func deleteAllImages() -> Bool {
+        
+        var objs: Results<CaptivaLocalImageObj> = {
+            try! Realm().objects(CaptivaLocalImageObj)
+        }()
+        if objs.count > 0 {
+            do{
+                let realm = try Realm()
+                for batch in objs{
+                    try! realm.write {
+                        realm.delete(batch)
+                    }
+                }
+            } catch let error as NSError {
+                return false
+                print(error)
+            }
+        }
+        objs = {
+            try! Realm().objects(CaptivaLocalImageObj)
+        }()
+        return objs.count == 0
+        
+    }
+
 }

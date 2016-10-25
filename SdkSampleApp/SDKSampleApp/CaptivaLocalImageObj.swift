@@ -12,9 +12,10 @@ import RealmSwift
 class CaptivaLocalImageObj: Object{
     
     dynamic var imagePath = ""
-    var batchNumber = 0
+    dynamic var batchNumber = 0
 
     override static func primaryKey() -> String? {
         return "imagePath"
     }
+
 }

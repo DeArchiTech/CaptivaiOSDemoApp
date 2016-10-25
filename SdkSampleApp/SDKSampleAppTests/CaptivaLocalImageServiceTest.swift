@@ -29,11 +29,11 @@ class CaptivaLocalImageServiceTest: XCTestCase {
         
         //it should persist the image from the database
         let service = CaptivaLocalImageService()
+        service.deleteAllImages()
         let obj = CaptivaLocalImageObj()
         let result = service.saveImage(image: obj)
         XCTAssertTrue(result)
-        
-    }
+    }
     
     func testLoadImagesFromBatchNumber(){
         
@@ -59,6 +59,7 @@ class CaptivaLocalImageServiceTest: XCTestCase {
         
         let result = service.loadImagesFromBatchNumber(batchNumber: rightBatchNum)
         XCTAssertEqual(result?.count, 2)
+        XCTAssertEqual(result?.first?.batchNumber, rightBatchNum)
         
     }
     
