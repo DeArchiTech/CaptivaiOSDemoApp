@@ -69,6 +69,7 @@
 		22D67DA11DBEB6E50018C521 /* BatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67DA01DBEB6E50018C521 /* BatchService.swift */; };
 		22D67DA31DBEB78D0018C521 /* BatchServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67DA21DBEB78D0018C521 /* BatchServiceSpec.swift */; };
 		22D8B7E71DAD9BA60089E94D /* FilterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D8B7E61DAD9BA60089E94D /* FilterObject.swift */; };
+		22DB3E4E1DBFC5AF006FD6FC /* CaptivaLocalImageServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB3E4D1DBFC5AF006FD6FC /* CaptivaLocalImageServiceTest.swift */; };
 		22F8E49B1D9992BB009E68F1 /* SDKSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */; };
 		64ECA85AE51B90464C997F81 /* Pods_SDKSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A804635F97D1371BFD115 /* Pods_SDKSampleAppTests.framework */; };
 		8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8504CB861AD5EB4500591B99 /* CSSCustomWindow.mm */; };
@@ -208,6 +209,7 @@
 		22D67DA01DBEB6E50018C521 /* BatchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchService.swift; sourceTree = "<group>"; };
 		22D67DA21DBEB78D0018C521 /* BatchServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchServiceSpec.swift; sourceTree = "<group>"; };
 		22D8B7E61DAD9BA60089E94D /* FilterObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterObject.swift; sourceTree = "<group>"; };
+		22DB3E4D1DBFC5AF006FD6FC /* CaptivaLocalImageServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptivaLocalImageServiceTest.swift; sourceTree = "<group>"; };
 		22F8E4981D9992BB009E68F1 /* SDKSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSampleAppUITests.swift; sourceTree = "<group>"; };
 		22F8E49C1D9992BB009E68F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				222543AF1DB55FB4000EA556 /* CreateProfileServiceTest.swift */,
 				22D67D941DBE893D0018C521 /* UploadImageViewControllerTest.swift */,
 				22D67DA21DBEB78D0018C521 /* BatchServiceSpec.swift */,
+				22DB3E4D1DBFC5AF006FD6FC /* CaptivaLocalImageServiceTest.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -905,6 +908,7 @@
 				22180DBF1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift in Sources */,
 				22D67D951DBE893D0018C521 /* UploadImageViewControllerTest.swift in Sources */,
 				22B845781DA5BB6900348FA4 /* CreateProfileServiceSpec.swift in Sources */,
+				22DB3E4E1DBFC5AF006FD6FC /* CaptivaLocalImageServiceTest.swift in Sources */,
 				22611C491DA3067B003B1514 /* UploadServiceTest.swift in Sources */,
 				22611C4D1DA31B7E003B1514 /* LoginServiceTest.swift in Sources */,
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,

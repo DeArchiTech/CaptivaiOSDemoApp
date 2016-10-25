@@ -10,18 +10,39 @@ import Foundation
 import Realm
 import RealmSwift
 
-class LocalImageService{
+class CaptivaLocalImageService{
     
     func saveImage(image: CaptivaLocalImageObj) -> Bool{
         
-        return false
+        do{
+            let realm = try Realm()
+            try! realm.write {
+                realm.add(image)
+            }
+        } catch let error as NSError {
+            return false
+            print(error)
+        }
+        return true
         
     }
     
-    func loadImage(batchNumber: String) -> [CaptivaLocalImageObj]?{
+    func loadImagesFromBatchNumber(batchNumber: String) -> [CaptivaLocalImageObj]?{
         
-        return nil
-    
+        let predicate = NSPredicate(format: "batchNumber == %@", NSString(string: batchNumber))
+        let objs: Results<CaptivaLocalImageObj> = {
+            try! Realm().objects(CaptivaLocalImageObj.self).filter(predicate)
+        }()
+        if objs.count > 0 {
+            var result : [CaptivaLocalImageObj] = []
+            for imageObj in objs {
+                result.append(imageObj)
+            }
+            return result
+        }else{
+            return nil
+        }
+        
     }
     
 }
