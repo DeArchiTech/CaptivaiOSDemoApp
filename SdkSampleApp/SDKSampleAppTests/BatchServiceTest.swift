@@ -9,6 +9,7 @@
 import Foundation
 import XCTest
 import Foundation
+import RealmSwift
 @testable import SDKSampleApp
 
 class BatchServiceTest: XCTestCase {
@@ -16,6 +17,7 @@ class BatchServiceTest: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
     }
     
     override func tearDown() {

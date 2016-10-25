@@ -31,9 +31,9 @@ import RealmSwift
         
     }
     
-    func loadImagesFromBatchNumber(batchNumber: String) -> [CaptivaLocalImageObj]?{
+    func loadImagesFromBatchNumber(batchNumber: Int) -> [CaptivaLocalImageObj]?{
         
-        let predicate = NSPredicate(format: "batchNumber == %@", NSString(string: batchNumber))
+        let predicate = NSPredicate(format: "batchNumber == %d", batchNumber)
         let objs: Results<CaptivaLocalImageObj> = {
             try! Realm().objects(CaptivaLocalImageObj.self).filter(predicate)
         }()

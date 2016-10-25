@@ -9,6 +9,7 @@
 import Foundation
 import XCTest
 import Foundation
+import RealmSwift
 @testable import SDKSampleApp
 
 class CaptivaLocalImageServiceTest: XCTestCase {
@@ -16,6 +17,7 @@ class CaptivaLocalImageServiceTest: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
     }
     
     override func tearDown() {
@@ -31,18 +33,21 @@ class CaptivaLocalImageServiceTest: XCTestCase {
         let result = service.saveImage(image: obj)
         XCTAssertTrue(result)
         
-    }
+    }
     
     func testLoadImagesFromBatchNumber(){
         
         //it loads images with the associated batch number
         let service = CaptivaLocalImageService()
-        let rightBatchNum = "123"
-        let wrongBatchNum = "XYZ"
+        let rightBatchNum = 1
+        let wrongBatchNum = 5
         
         let obj1 = CaptivaLocalImageObj()
+        obj1.imagePath = "A"
         let obj2 = CaptivaLocalImageObj()
+        obj2.imagePath = "B"
         let obj3 = CaptivaLocalImageObj()
+        obj3.imagePath = "C"
         
         obj1.batchNumber = rightBatchNum
         obj2.batchNumber = rightBatchNum

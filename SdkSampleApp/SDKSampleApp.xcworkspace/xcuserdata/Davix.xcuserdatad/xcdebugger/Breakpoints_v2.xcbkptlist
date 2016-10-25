@@ -42,7 +42,7 @@
                   moduleName = "SDKSampleAppTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleAppTests/BatchServiceSpec.swift"
-                  timestampString = "499122194.163682"
+                  timestampString = "499124486.903285"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "115"
@@ -57,7 +57,7 @@
                   moduleName = "SDKSampleAppTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleAppTests/BatchServiceSpec.swift"
-                  timestampString = "499122194.165341"
+                  timestampString = "499124486.904783"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "115"
@@ -65,22 +65,6 @@
                   offsetFromSymbolStart = "20">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SDKSampleAppTests/BatchServiceTest.swift"
-            timestampString = "499122105.881132"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "testUpdate()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
