@@ -10,7 +10,11 @@ import Foundation
 import Realm
 import RealmSwift
 
-class CaptivaLocalImageService{
+@objc class CaptivaLocalImageService: NSObject{
+    
+    class func newInsatnce() -> CaptivaLocalImageService{
+        return CaptivaLocalImageService()
+    }
     
     func saveImage(image: CaptivaLocalImageObj) -> Bool{
         

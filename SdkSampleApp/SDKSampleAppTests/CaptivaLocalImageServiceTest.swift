@@ -51,11 +51,11 @@ class CaptivaLocalImageServiceTest: XCTestCase {
         service.saveImage(image: obj1)
         service.saveImage(image: obj2)
         service.saveImage(image: obj2)
-    
+        
         let result = service.loadImagesFromBatchNumber(batchNumber: rightBatchNum)
         XCTAssertEqual(result?.count, 2)
         
     }
     
 }
-    
+

@@ -14,4 +14,7 @@ class CaptivaLocalImageObj: Object{
     dynamic var imagePath = ""
     var batchNumber = ""
 
+    override static func primaryKey() -> String? {
+        return "imagePath"
+    }
 }

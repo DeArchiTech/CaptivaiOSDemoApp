@@ -10,7 +10,11 @@ import Foundation
 import Realm
 import RealmSwift
 
-class BatchService{
+@objc class BatchService: NSObject{
+    
+    class func newInstance() -> BatchService{
+            return BatchService()
+    }
     
     func saveBatch(batch : BatchObj) -> Bool{
         
@@ -65,9 +69,9 @@ class BatchService{
         
     }
     
-    func getBatchWithBatchNum(num : String) -> BatchObj?{
+    func getBatchWithBatchNum(num : Int) -> BatchObj?{
         
-        let predicate = NSPredicate(format: "batchNumber == %@", NSString(string: num))
+        let predicate = NSPredicate(format: "batchNumber == %d", num)
         let objs: Results<BatchObj> = {
             try! Realm().objects(BatchObj.self).filter(predicate)
         }()
@@ -79,11 +83,10 @@ class BatchService{
         
     }
     
-    func updateBatchWithNum(batch :BatchObj) -> Bool{
+    func updateBatchUpdatedToTrue(num :Int) -> Bool{
         
         //Updates the uploaded field
-        let num = batch.batchNumber
-        let predicate = NSPredicate(format: "batchNumber == %@", NSString(string: num))
+        let predicate = NSPredicate(format: "batchNumber == %d", num)
         let objs: Results<BatchObj> = {
             try! Realm().objects(BatchObj.self).filter(predicate)
         }()
@@ -91,9 +94,8 @@ class BatchService{
             let updateObj = objs.first!
             do{
                 let realm = try Realm()
-                let value = batch.uploaded
                 try! realm.write {
-                    updateObj.uploaded = value
+                    updateObj.uploaded = true
                 }
                 return true
             }catch let error as NSError {
@@ -102,6 +104,29 @@ class BatchService{
             }
         }else{
             return false
+        }
+    }
+    
+    func getCurrentBatchNum() -> Int{
+        
+        //Default the first batch number to be zero
+        
+        let predicate = NSPredicate(format: "uploaded == YES")
+        let objs: Results<BatchObj> = {
+            try! Realm().objects(BatchObj.self)
+                .filter(predicate)
+                .sorted(byProperty: "batchNumber", ascending: false)
+        }()
+        if objs.count > 0{
+            return (objs.first?.batchNumber)!
+        }else{
+            let batch = BatchObj()
+            let result = self.saveBatch(batch : batch)
+            if result == true{
+                return batch.batchNumber
+            }else{
+                return -1
+            }
         }
     }
     

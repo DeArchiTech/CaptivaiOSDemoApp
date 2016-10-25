@@ -25,13 +25,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDKSampleAppTests/CreateProfileViewControllerSpec.swift"
-            timestampString = "499045933.191262"
+            filePath = "SDKSampleAppTests/BatchServiceSpec.swift"
+            timestampString = "499120297.679233"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "spec()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDKSampleAppTests.BatchServiceSpec.(spec () -&gt; ()).(closure #4).(closure #1)"
+                  moduleName = "SDKSampleAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleAppTests/BatchServiceSpec.swift"
+                  timestampString = "499122194.163682"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "1476">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDKSampleAppTests.BatchServiceSpec.(spec () -&gt; ()).(closure #4).(closure #1).(implicit closure #3)"
+                  moduleName = "SDKSampleAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Davix/Source/CaptivaiOSDemoApp/SdkSampleApp/SDKSampleAppTests/BatchServiceSpec.swift"
+                  timestampString = "499122194.165341"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDKSampleAppTests/BatchServiceTest.swift"
+            timestampString = "499122105.881132"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "testUpdate()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

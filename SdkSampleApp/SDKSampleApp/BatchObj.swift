@@ -11,9 +11,12 @@ import RealmSwift
 
 class BatchObj: Object{
     
-    dynamic var batchNumber = ""
+    dynamic var batchNumber = 0
+    dynamic var uploaded : Bool = false
     var podNumber = ""
     var createdAt = NSDate()
-    var uploaded = false
     
+    override static func primaryKey() -> String? {
+        return "batchNumber"
+    }
 }
