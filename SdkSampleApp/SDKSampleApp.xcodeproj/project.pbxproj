@@ -42,7 +42,6 @@
 		22A9E2F51DB93B4D007FFF17 /* reva8080.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2F21DB93B4D007FFF17 /* reva8080.png */; };
 		22A9E2F61DB93B4D007FFF17 /* reva120120.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2F31DB93B4D007FFF17 /* reva120120.png */; };
 		22A9E2F71DB93B4D007FFF17 /* reva180180.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2F41DB93B4D007FFF17 /* reva180180.png */; };
-		22AB4D2E1DAEEBB000FF439B /* SelectProfileViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB4D2D1DAEEBB000FF439B /* SelectProfileViewControllerSpec.swift */; };
 		22AB4D3D1DAEEBC500FF439B /* SelectProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */; };
 		22B652FE1DA42E2200D04DA2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FA1DA42E2200D04DA2 /* Nimble.framework */; };
 		22B652FF1DA42E2200D04DA2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FB1DA42E2200D04DA2 /* Nimble.framework */; };
@@ -64,9 +63,11 @@
 		22D1E5AB1D9C575F005483B7 /* ImageUtilUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D1E5AA1D9C575F005483B7 /* ImageUtilUnitTest.swift */; };
 		22D1E5AC1D9C59E6005483B7 /* testImg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 22D1E5A61D9C56CE005483B7 /* testImg.jpg */; };
 		22D67D951DBE893D0018C521 /* UploadImageViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67D941DBE893D0018C521 /* UploadImageViewControllerTest.swift */; };
-		22D67D971DBEAE490018C521 /* LocalImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67D961DBEAE490018C521 /* LocalImageService.swift */; };
-		22D67D991DBEAFE00018C521 /* UploadImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67D981DBEAFE00018C521 /* UploadImageObject.swift */; };
-		22D67D9B1DBEB0190018C521 /* BatchObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67D9A1DBEB0190018C521 /* BatchObject.swift */; };
+		22D67D991DBEAFE00018C521 /* CaptivaLocalImageObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67D981DBEAFE00018C521 /* CaptivaLocalImageObj.swift */; };
+		22D67D9B1DBEB0190018C521 /* BatchObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67D9A1DBEB0190018C521 /* BatchObj.swift */; };
+		22D67D9F1DBEB65E0018C521 /* CaptivaLocalImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67D9E1DBEB65E0018C521 /* CaptivaLocalImageService.swift */; };
+		22D67DA11DBEB6E50018C521 /* BatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67DA01DBEB6E50018C521 /* BatchService.swift */; };
+		22D67DA31DBEB78D0018C521 /* BatchServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67DA21DBEB78D0018C521 /* BatchServiceSpec.swift */; };
 		22D8B7E71DAD9BA60089E94D /* FilterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D8B7E61DAD9BA60089E94D /* FilterObject.swift */; };
 		22F8E49B1D9992BB009E68F1 /* SDKSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */; };
 		64ECA85AE51B90464C997F81 /* Pods_SDKSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A804635F97D1371BFD115 /* Pods_SDKSampleAppTests.framework */; };
@@ -182,7 +183,6 @@
 		22A9E2F21DB93B4D007FFF17 /* reva8080.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva8080.png; sourceTree = "<group>"; };
 		22A9E2F31DB93B4D007FFF17 /* reva120120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva120120.png; sourceTree = "<group>"; };
 		22A9E2F41DB93B4D007FFF17 /* reva180180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva180180.png; sourceTree = "<group>"; };
-		22AB4D2D1DAEEBB000FF439B /* SelectProfileViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProfileViewControllerSpec.swift; sourceTree = "<group>"; };
 		22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProfileViewController.swift; sourceTree = "<group>"; };
 		22B652FA1DA42E2200D04DA2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Vendor/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		22B652FB1DA42E2200D04DA2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Vendor/Nimble/build/Debug/Nimble.framework; sourceTree = "<group>"; };
@@ -202,9 +202,11 @@
 		22D1E5A81D9C5731005483B7 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		22D1E5AA1D9C575F005483B7 /* ImageUtilUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtilUnitTest.swift; sourceTree = "<group>"; };
 		22D67D941DBE893D0018C521 /* UploadImageViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageViewControllerTest.swift; sourceTree = "<group>"; };
-		22D67D961DBEAE490018C521 /* LocalImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalImageService.swift; sourceTree = "<group>"; };
-		22D67D981DBEAFE00018C521 /* UploadImageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageObject.swift; sourceTree = "<group>"; };
-		22D67D9A1DBEB0190018C521 /* BatchObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchObject.swift; sourceTree = "<group>"; };
+		22D67D981DBEAFE00018C521 /* CaptivaLocalImageObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptivaLocalImageObj.swift; sourceTree = "<group>"; };
+		22D67D9A1DBEB0190018C521 /* BatchObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchObj.swift; sourceTree = "<group>"; };
+		22D67D9E1DBEB65E0018C521 /* CaptivaLocalImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptivaLocalImageService.swift; sourceTree = "<group>"; };
+		22D67DA01DBEB6E50018C521 /* BatchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchService.swift; sourceTree = "<group>"; };
+		22D67DA21DBEB78D0018C521 /* BatchServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchServiceSpec.swift; sourceTree = "<group>"; };
 		22D8B7E61DAD9BA60089E94D /* FilterObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterObject.swift; sourceTree = "<group>"; };
 		22F8E4981D9992BB009E68F1 /* SDKSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSampleAppUITests.swift; sourceTree = "<group>"; };
@@ -340,9 +342,9 @@
 				22611C481DA3067B003B1514 /* UploadServiceTest.swift */,
 				22B845771DA5BB6900348FA4 /* CreateProfileServiceSpec.swift */,
 				22503FD91DA84F820072FE61 /* CreateProfileViewControllerSpec.swift */,
-				22AB4D2D1DAEEBB000FF439B /* SelectProfileViewControllerSpec.swift */,
 				222543AF1DB55FB4000EA556 /* CreateProfileServiceTest.swift */,
 				22D67D941DBE893D0018C521 /* UploadImageViewControllerTest.swift */,
+				22D67DA21DBEB78D0018C521 /* BatchServiceSpec.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -355,8 +357,8 @@
 				223013481D99C9B900D7BB7E /* LoginResponseObj.swift */,
 				22B845751DA5BA7C00348FA4 /* FilterProfile.swift */,
 				22D8B7E61DAD9BA60089E94D /* FilterObject.swift */,
-				22D67D981DBEAFE00018C521 /* UploadImageObject.swift */,
-				22D67D9A1DBEB0190018C521 /* BatchObject.swift */,
+				22D67D981DBEAFE00018C521 /* CaptivaLocalImageObj.swift */,
+				22D67D9A1DBEB0190018C521 /* BatchObj.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -494,9 +496,10 @@
 				22611C441DA2EFC2003B1514 /* UploadService.swift */,
 				22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */,
 				22611C461DA2EFD1003B1514 /* LoginService.swift */,
+				22D67DA01DBEB6E50018C521 /* BatchService.swift */,
 				22B845661DA5BA2200348FA4 /* CreateProfileService.swift */,
 				224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */,
-				22D67D961DBEAE490018C521 /* LocalImageService.swift */,
+				22D67D9E1DBEB65E0018C521 /* CaptivaLocalImageService.swift */,
 				22CC07231DBA8D9B00EEE3BC /* UploadImageViewController.swift */,
 				224F97861DB92868007229EB /* Images.xcassets */,
 			);
@@ -905,9 +908,9 @@
 				22611C491DA3067B003B1514 /* UploadServiceTest.swift in Sources */,
 				22611C4D1DA31B7E003B1514 /* LoginServiceTest.swift in Sources */,
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
+				22D67DA31DBEB78D0018C521 /* BatchServiceSpec.swift in Sources */,
 				2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */,
 				22503FDA1DA84F820072FE61 /* CreateProfileViewControllerSpec.swift in Sources */,
-				22AB4D2E1DAEEBB000FF439B /* SelectProfileViewControllerSpec.swift in Sources */,
 				222543B01DB55FB4000EA556 /* CreateProfileServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -926,6 +929,7 @@
 			files = (
 				22611C451DA2EFC2003B1514 /* UploadService.swift in Sources */,
 				22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */,
+				22D67DA11DBEB6E50018C521 /* BatchService.swift in Sources */,
 				22AB4D3D1DAEEBC500FF439B /* SelectProfileViewController.swift in Sources */,
 				8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */,
 				22D8B7E71DAD9BA60089E94D /* FilterObject.swift in Sources */,
@@ -933,13 +937,13 @@
 				F326400E17C7CDE90043754D /* CSSAppDelegate.m in Sources */,
 				F326401717C7CDE90043754D /* SDK_Sample_App.xcdatamodeld in Sources */,
 				F326403A17C7CFB50043754D /* CSSMainViewController.m in Sources */,
-				22D67D971DBEAE490018C521 /* LocalImageService.swift in Sources */,
 				F31AC88017D800F0002D06EB /* CSSEnhancePictureViewController.m in Sources */,
-				22D67D9B1DBEB0190018C521 /* BatchObject.swift in Sources */,
-				22D67D991DBEAFE00018C521 /* UploadImageObject.swift in Sources */,
+				22D67D9B1DBEB0190018C521 /* BatchObj.swift in Sources */,
+				22D67D991DBEAFE00018C521 /* CaptivaLocalImageObj.swift in Sources */,
 				224E97F31DA6C0DA0066527F /* CreateProfileViewController.swift in Sources */,
 				22CC07241DBA8D9B00EEE3BC /* UploadImageViewController.swift in Sources */,
 				22CBBEAF1D9B165D00F0FDCC /* CookieManager.swift in Sources */,
+				22D67D9F1DBEB65E0018C521 /* CaptivaLocalImageService.swift in Sources */,
 				22B845671DA5BA2200348FA4 /* CreateProfileService.swift in Sources */,
 				223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */,
 				2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */,

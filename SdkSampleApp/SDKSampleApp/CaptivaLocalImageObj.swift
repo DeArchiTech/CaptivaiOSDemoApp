@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class UploadImageObject: Object{
+class CaptivaLocalImageObj: Object{
     
     dynamic var imagePath = ""
     var batchNumber = ""

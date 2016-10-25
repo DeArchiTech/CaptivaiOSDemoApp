@@ -1,5 +1,5 @@
 //
-//  LocalImageService.swift
+//  CaptivaLocalImageService.swift
 //  SDKSampleApp
 //
 //  Created by davix on 10/24/16.
@@ -11,16 +11,17 @@ import Realm
 import RealmSwift
 
 class LocalImageService{
-
-    func saveImage(UIImage : Image) -> Bool{
+    
+    func saveImage(image: CaptivaLocalImageObj) -> Bool{
         
         return false
         
     }
     
-    func loadImage(UIImage : Image) -> Bool{
+    func loadImage(batchNumber: String) -> [CaptivaLocalImageObj]?{
         
+        return nil
+    
     }
     
-    func loadImages(
 }

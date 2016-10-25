@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class BatchObject: Object{
+class BatchObj: Object{
     
     dynamic var batchNumber = ""
     var podNumber = ""
