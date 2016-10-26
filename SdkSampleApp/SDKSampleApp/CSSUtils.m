@@ -449,7 +449,7 @@ const float CSSCropMinHeight = 100.0;
     isLoadedFromFilePath = YES;
     
     EnhanceVCHelper *helper = [[EnhanceVCHelper alloc] init];
-    [helper saveImageWithImageLocation:imageFilePath]
+    [helper saveImageWithImageLocation:imageFilePath];
 }
 
 /*

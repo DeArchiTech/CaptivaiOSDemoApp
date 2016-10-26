@@ -32,15 +32,71 @@ class UploadImageViewControllerTest: XCTestCase {
         
     }
     
-    func testGetImage() {
+    func testGetCurrentBatchNumber(){
+        
+        //Set Up
+        let service = BatchService()
+        let expected = 1
+        service.deleteAllBatches()
+        let batch = BatchObj()
+        batch.batchNumber = 1
+        service.saveBatch(batch: batch)
+        
+        //Test Controller
+        let vc = UploadImageViewController()
+        let result = vc.getCurrentBatchNumber()
+        XCTAssertEqual(expected,result)
         
     }
     
-    func testCreateJson() {
+    func testGetAllImageObjs() {
+        //Set up
+        let batchService = BatchService()
+        batchService.deleteAllBatches()
+        
+        let service = CaptivaLocalImageService()
+        service.deleteAllImages()
+        
+        let obj1 = CaptivaLocalImageObj()
+        obj1.imagePath = "ABC"
+        
+        let obj2 = CaptivaLocalImageObj()
+        obj2.imagePath = "DEC"
+        
+        let obj3 = CaptivaLocalImageObj()
+        obj3.imagePath = "FASD"
+        
+        service.saveImage(image: obj1)
+        service.saveImage(image: obj2)
+        service.saveImage(image: obj3)
+        
+        //Test Controller
+        let vc = UploadImageViewController()
+        let result = vc.getAllImageObjs(num: 0)
+        XCTAssertEqual(result?.count, 3)
         
     }
     
     func testUploadImage() {
+        
+        //Set up
+        let batchService = BatchService()
+        batchService.deleteAllBatches()
+        let service = CaptivaLocalImageService()
+        service.deleteAllImages()
+        
+        let testBundle = Bundle(for: type(of: self))
+        let path = testBundle.bundlePath + "/testImg.jpg"
+
+        let obj1 = CaptivaLocalImageObj()
+        obj1.imagePath = path
+        
+        service.saveImage(image: obj1)
+        
+        //Test Controller
+        let vc = UploadImageViewController()
+        vc.loadImageData()
+        XCTAssertEqual(vc.imageData.count, 1)
     
     }
 }

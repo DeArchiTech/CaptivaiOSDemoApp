@@ -37,6 +37,13 @@ class UploadService{
         
     }
     
+    func createUploadParam(data : NSData) -> Dictionary<String,String>{
+        
+        let util = ImageUtil.init()
+        return util.createImageUploadParam(data: data)
+        
+    }
+    
     func getUploadImageEndpoint() -> String{
         
         return endPoint + "/cp-rest/session/files"
@@ -64,6 +71,30 @@ class UploadService{
         }
         
     }
+    
+    func uploadImage(data: NSData, completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void{
+        
+        if self.cookieString != nil{
+            Alamofire.request(getUploadImageEndpoint(), method: .post, parameters: createUploadParam(data: data), encoding: JSONEncoding.default, headers: self.getHeaders())
+                .validate()
+                .responseJSON{ response in
+                    switch response.result{
+                    case .success(let result):
+                        if let result = response.result.value {
+                            let jsonResult = result as! NSDictionary
+                            completion(jsonResult, nil)
+                        }
+                    case .failure(let error):
+                        completion(nil, error as NSError?)
+                    }
+            }
+        }else{
+            print("No cookie loaded in memory")
+            completion(nil, nil)
+        }
+        
+    }
+
     
     func getHeaders() -> HTTPHeaders{
         let headers: HTTPHeaders = [

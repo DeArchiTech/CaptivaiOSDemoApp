@@ -12,10 +12,10 @@ import Photos
 
 @objc class UploadImageViewController: UIViewController{
     
-    var previousSelectedInex = -1
-    var profileNames : [String] = []
+    var imageData : [Data] = []
     
     @IBOutlet var podNumber: UITextField!
+    
     class func newInstance() -> UploadImageViewController{
         return UploadImageViewController()
     }
@@ -42,18 +42,42 @@ import Photos
         
     }
     
-    func loadImage() {
-        
-        //Load from a database or from local disk
-        //Basically call the service to load the image
-    }
+    func getCurrentBatchNumber() -> Int{
     
-    func createJson() {
+        let service = BatchService()
+        return service.getCurrentBatchNum()
         
     }
     
-    func uploadImage() {
+    func getAllImageObjs(num : Int) -> [CaptivaLocalImageObj]?{
         
+        let batchNum = self.getCurrentBatchNumber()
+        let service = CaptivaLocalImageService()
+        let paths = service.loadImagesFromBatchNumber(batchNumber: batchNum)
+        return paths
+        
+    }
+    
+    func loadImageData(){
+        
+        let batchNum = self.getCurrentBatchNumber()
+        let imageObjs = self.getAllImageObjs(num: batchNum)
+        if imageObjs != nil{
+            for obj in imageObjs!{
+                let path = obj.imagePath
+                if FileManager.default.fileExists(atPath: path){
+                    let url = URL(fileURLWithPath: path)
+                    let data = NSData(contentsOf: url as URL)
+                    self.imageData.append(data as! Data)
+                }
+            }
+        }
+    }
+    
+    func uploadImage(data : NSData,completion: @escaping (NSDictionary?, NSError?) -> ()){
+        
+        let service = UploadService()
+        service.uploadImage(data: data, completion: completion)
     }
     
 }
