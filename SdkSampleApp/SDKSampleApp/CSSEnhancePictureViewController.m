@@ -1010,6 +1010,12 @@
     CSSImageInfoViewController *rootController =(CSSImageInfoViewController *)[self.navigationController.viewControllers objectAtIndex: 0];
     [rootController.navigationController pushViewController:myController animated:NO];
     
+//    UIViewController *controller = [[UIViewController alloc] initWithNibName:@"PODInputVC" bundle:nil];
+//    
+//    CSSImageInfoViewController *rootController =(CSSImageInfoViewController *)[self.navigationController.viewControllers objectAtIndex: 0];
+//   
+//    [rootController.navigationController pushViewController:controller animated:NO];
+    
 }
 
 - (void)uploadImageAction
