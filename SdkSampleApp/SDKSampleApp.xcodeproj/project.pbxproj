@@ -14,6 +14,8 @@
 		223013431D99C12B00D7BB7E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F8E4A21D99AD1F009E68F1 /* Alamofire.framework */; };
 		223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */; };
 		223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013481D99C9B900D7BB7E /* LoginResponseObj.swift */; };
+		224B3B8A1DC2A9FB0046620D /* PODUploadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B3B891DC2A9FB0046620D /* PODUploadService.swift */; };
+		224B3B8C1DC2ABFF0046620D /* PODUploadServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B3B8B1DC2ABFF0046620D /* PODUploadServiceTest.swift */; };
 		224E97F31DA6C0DA0066527F /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */; };
 		224F97871DB92868007229EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224F97861DB92868007229EB /* Images.xcassets */; };
 		224F978A1DB92D93007229EB /* reva_solutions_banner_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 224F97881DB92D93007229EB /* reva_solutions_banner_big.png */; };
@@ -158,6 +160,8 @@
 		222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDKSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestObj.swift; sourceTree = "<group>"; };
 		223013481D99C9B900D7BB7E /* LoginResponseObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseObj.swift; sourceTree = "<group>"; };
+		224B3B891DC2A9FB0046620D /* PODUploadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PODUploadService.swift; sourceTree = "<group>"; };
+		224B3B8B1DC2ABFF0046620D /* PODUploadServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PODUploadServiceTest.swift; sourceTree = "<group>"; };
 		224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		224F97861DB92868007229EB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		224F97881DB92D93007229EB /* reva_solutions_banner_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva_solutions_banner_big.png; sourceTree = "<group>"; };
@@ -351,6 +355,7 @@
 				22D67DA21DBEB78D0018C521 /* BatchServiceSpec.swift */,
 				22DB3E4F1DBFD593006FD6FC /* BatchServiceTest.swift */,
 				22C6B6FD1DBFE4F5005199DB /* CaptivaLocalImageServiceTest.swift */,
+				224B3B8B1DC2ABFF0046620D /* PODUploadServiceTest.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 				22D67DA01DBEB6E50018C521 /* BatchService.swift */,
 				22B845661DA5BA2200348FA4 /* CreateProfileService.swift */,
 				22D67D9E1DBEB65E0018C521 /* CaptivaLocalImageService.swift */,
+				224B3B891DC2A9FB0046620D /* PODUploadService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -925,6 +931,7 @@
 			files = (
 				22D1E5AB1D9C575F005483B7 /* ImageUtilUnitTest.swift in Sources */,
 				22180DBF1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift in Sources */,
+				224B3B8C1DC2ABFF0046620D /* PODUploadServiceTest.swift in Sources */,
 				22DB3E501DBFD593006FD6FC /* BatchServiceTest.swift in Sources */,
 				22D67D951DBE893D0018C521 /* UploadImageViewControllerTest.swift in Sources */,
 				22B845781DA5BB6900348FA4 /* CreateProfileServiceSpec.swift in Sources */,
@@ -953,6 +960,7 @@
 			files = (
 				22611C451DA2EFC2003B1514 /* UploadService.swift in Sources */,
 				22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */,
+				224B3B8A1DC2A9FB0046620D /* PODUploadService.swift in Sources */,
 				22D67DA11DBEB6E50018C521 /* BatchService.swift in Sources */,
 				22AB4D3D1DAEEBC500FF439B /* SelectProfileViewController.swift in Sources */,
 				8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */,

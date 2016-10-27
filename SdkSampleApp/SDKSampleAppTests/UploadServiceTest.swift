@@ -22,7 +22,7 @@ class UploadServiceTest: XCTestCase {
     
     func testGetUploadImageEndPt() {
         
-        let expected = "http://104.209.39.82:8090/cp-rest/session/files"
+        let expected = "http://138.91.240.65:8090/cp-rest/session/files"
         let manager = UploadService.init()
         let result = manager.getUploadImageEndpoint()
         XCTAssertEqual(expected, result)
@@ -59,22 +59,6 @@ class UploadServiceTest: XCTestCase {
 //        waitForExpectations(timeout: 5, handler: { error in
 //            XCTAssertNil(error, "Error")
 //        })
-    }
-    
-    func testUploadImageWithPOD(){
-        
-        //1)Login To Get a Live Cookie
-        let manager : LoginService = LoginService.init()
-        let readyExpectation = expectation(description: "read")
-        manager.login() { (dictionary,error) -> () in
-            XCTAssertNotNil(dictionary)
-            readyExpectation.fulfill()
-        }
-        
-        //2)Call Upload Service to upload with POD number
-        waitForExpectations(timeout: 60, handler: { error in
-            XCTAssertNil(error, "Error")
-        })
     }
     
     func testGetHeaders(){

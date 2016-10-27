@@ -390,6 +390,7 @@
     
     [wipCropImageView addSubview:croppingRect];
     [baseView addSubview:wipCropImageView];
+
 }
 
 // The view size of the UIViewController is updated after viewDidLoad;
@@ -398,6 +399,7 @@
 {
     [super viewWillAppear:animated];
     [self positionWipCropImageView];
+    
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -451,6 +453,7 @@
 {
     wipImageView = [[UIImageView alloc] initWithImage:image];
     wipImageView.frame = [CSSUtils getRectForLoadedImage];
+    [self applyFilterForDemo];
 }
 
 - (void)setAppearance
@@ -1276,5 +1279,11 @@
     [indicator bringSubviewToFront:self.view];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
 
+}
+
+-(void) applyFilterForDemo {
+    
+    [self applyAction:@"Black-White"];
+    [self applyAction:@"Export to Photos"];
 }
 @end

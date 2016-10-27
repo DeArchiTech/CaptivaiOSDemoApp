@@ -21,6 +21,8 @@ import Photos
         return UploadImageViewController()
     }
     
+    var cookieManager : CookieManager?
+    var service : PODUploadService?
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -28,13 +30,27 @@ import Photos
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         
+        self.cookieManager = CookieManager.init()
+        if(self.cookieManager?.loadCookie())!{
+            let cookieString = self.cookieManager?.cookieCache?.cookie
+            self.service = PODUploadService.init(cookie: cookieString!)
+        }else{
+            print("Error, cannot load cookie cache")
+        }
+        
     }
 
     @IBAction func buttonPressed(_ sender: AnyObject) {
     
-        //Upload image file along with POD number attached
-        //To The Json
+        //1)Upload All The Images that hasn't been uploaded
         
+        //2)Upload a text file with the POD Number in it
+        let POD = self.podNumber.text
+        self.service?.uploadPODNumber(pod: POD!, completion: { (dictionary,error) -> () in
+            print(dictionary)
+            print(error)
+            }
+        )
     }
     
     func dismissKeyboard() {
