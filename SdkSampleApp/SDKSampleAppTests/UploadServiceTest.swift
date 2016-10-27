@@ -9,7 +9,7 @@ import XCTest
 @testable import SDKSampleApp
 
 class UploadServiceTest: XCTestCase {
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -31,8 +31,8 @@ class UploadServiceTest: XCTestCase {
     
     func testUploadImage(){
         
-        //Not Needed, need to be refactored
-        
+//        Not Needed, need to be refactored
+//        
 //        //Mock Cookie if test fail make sure you update the cookie file
 //        var cookie : String?
 //        //1)Get Expected Cookie from a File
@@ -59,6 +59,22 @@ class UploadServiceTest: XCTestCase {
 //        waitForExpectations(timeout: 5, handler: { error in
 //            XCTAssertNil(error, "Error")
 //        })
+    }
+    
+    func testUploadImageWithPOD(){
+        
+        //1)Login To Get a Live Cookie
+        let manager : LoginService = LoginService.init()
+        let readyExpectation = expectation(description: "read")
+        manager.login() { (dictionary,error) -> () in
+            XCTAssertNotNil(dictionary)
+            readyExpectation.fulfill()
+        }
+        
+        //2)Call Upload Service to upload with POD number
+        waitForExpectations(timeout: 60, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
     }
     
     func testGetHeaders(){

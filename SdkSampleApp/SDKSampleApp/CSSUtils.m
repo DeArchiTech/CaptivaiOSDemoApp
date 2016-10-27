@@ -23,7 +23,7 @@ NSString * const CSSMenuTakePicture = @"Take Picture";
 NSString * const CSSMenuContinuousCapture = @"Continuous Capture";
 NSString * const CSSMenuEnhanceImage = @"Enhance Image";
 NSString * const CSSMenuDeleteDocFiles = @"Delete All Documents";
-NSString * const CSSMenuRelogin = @"Relogin";
+NSString * const CSSMenuCreateSession = @"Create Session";
 NSString * const CSSCreateProfile = @"Create Filter Profile";
 NSString * const CSSSelectFilterProfile = @"Select Filter Profile";
 
@@ -54,8 +54,9 @@ NSString * const CSSEnhanceItemQuadCrop = @"Quadrilateral Crop";
 NSString * const CSSEnhanceItemBarcode = @"Detect barcodes";
 
 // Additional Items
-NSString * const CSSUploadImage = @"Upload Image";
+NSString * const CSSUploadImage = @"Upload Image Now";
 NSString * const CSSTakeAnotherImage =@"Take another Image";
+NSString * const CSSInsertPOD =@"Insert POD & Upload";
 
 const int CSSActionPickerFilterType = 0;
 const int CSSActionPickerImageLocationType = 1;
@@ -103,6 +104,7 @@ const float CSSCropMinHeight = 100.0;
         [actionNames addObject:CSSEnhanceItemGetInfo];
         [actionNames addObject:CSSUploadImage];
         [actionNames addObject:CSSTakeAnotherImage];
+        [actionNames addObject:CSSInsertPOD];
     }
     else if (actionType == CSSActionPickerImageLocationType) {
         // set up array of image location names

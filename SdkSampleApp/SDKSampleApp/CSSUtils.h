@@ -17,7 +17,7 @@ extern NSString * const CSSMenuTakePicture;
 extern NSString * const CSSMenuContinuousCapture;
 extern NSString * const CSSMenuEnhanceImage;
 extern NSString * const CSSMenuDeleteDocFiles;
-extern NSString * const CSSMenuRelogin;
+extern NSString * const CSSMenuCreateSession;
 extern NSString * const CSSCreateProfile;
 extern NSString * const CSSSelectFilterProfile;
 
@@ -48,6 +48,7 @@ extern NSString * const CSSEnhanceItemExport;
 extern NSString * const CSSEnhanceItemBarcode;
 extern NSString * const CSSUploadImage;
 extern NSString * const CSSTakeAnotherImage;
+extern NSString * const CSSInsertPOD;
 
 extern const int CSSActionPickerFilterType;
 extern const int CSSActionPickerImageLocationType;

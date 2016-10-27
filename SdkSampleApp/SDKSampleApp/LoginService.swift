@@ -19,7 +19,7 @@ import Alamofire
     var endPoint: String {
         
         get {
-            return "http://104.209.39.82:8090"
+            return "http://138.91.240.65:8090"
         }
         set {
         }
@@ -32,7 +32,7 @@ import Alamofire
         return LoginRequestObj(licenseKey: "LICE075-D09A-64E3", applicationId: "APP3075-D09A-59C8", username: "capadmin", password: "Reva12#$")
         
     }
-    
+     
     func createLoginParam() -> Parameters{
         
         let params: Parameters = [

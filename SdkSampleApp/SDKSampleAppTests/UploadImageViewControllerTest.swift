@@ -95,8 +95,20 @@ class UploadImageViewControllerTest: XCTestCase {
         
         //Test Controller
         let vc = UploadImageViewController()
+        vc.numberOfImages = UILabel()
         vc.loadImageData()
         XCTAssertEqual(vc.imageData.count, 1)
     
+    }
+    
+    func testIncrementNumber(){
+        
+        let vc = UploadImageViewController()
+        vc.numberOfImages = UILabel()
+        XCTAssertEqual(vc.count, 0)
+        
+        vc.incrementLabel()
+        XCTAssertEqual(vc.count, 1)
+        
     }
 }

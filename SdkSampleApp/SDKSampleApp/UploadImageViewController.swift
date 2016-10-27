@@ -13,7 +13,8 @@ import Photos
 @objc class UploadImageViewController: UIViewController{
     
     var imageData : [Data] = []
-    
+    var count = 0
+    @IBOutlet var numberOfImages: UILabel!
     @IBOutlet var podNumber: UITextField!
     
     class func newInstance() -> UploadImageViewController{
@@ -69,9 +70,17 @@ import Photos
                     let url = URL(fileURLWithPath: path)
                     let data = NSData(contentsOf: url as URL)
                     self.imageData.append(data as! Data)
+                    self.incrementLabel()
                 }
             }
         }
+    }
+    
+    func incrementLabel(){
+        
+        self.count += 1
+        self.numberOfImages.text = String(self.count)
+        
     }
     
     func uploadImage(data : NSData,completion: @escaping (NSDictionary?, NSError?) -> ()){

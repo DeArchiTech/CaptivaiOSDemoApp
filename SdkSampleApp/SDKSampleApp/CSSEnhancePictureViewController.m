@@ -683,6 +683,8 @@
                                         
                                                             CSSUploadImage,
                                         
+                                                            CSSInsertPOD,
+                                        
                                                             CSSTakeAnotherImage,
                                         
                                                             CSSEnhanceItemAutoCrop,
@@ -905,8 +907,13 @@
     //Upload Image
     
     if ([actionName compare:CSSUploadImage] == NSOrderedSame){
+        //[self presentUploadImageViewController];
+        [self uploadImageAction];
+    }else if ([actionName compare:CSSInsertPOD] == NSOrderedSame){
+        //[self presentUploadImageViewController];
         [self presentUploadImageViewController];
     }
+    
 }
 
 - (void)setButtonsEnabled
@@ -1001,7 +1008,7 @@
     UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"uploadImageView"];
     
     CSSImageInfoViewController *rootController =(CSSImageInfoViewController *)[self.navigationController.viewControllers objectAtIndex: 0];
-    [rootController.navigationController pushViewController:myController animated:YES];
+    [rootController.navigationController pushViewController:myController animated:NO];
     
 }
 
