@@ -36,19 +36,30 @@ import UIKit
         
     }
     
-    func saveImage(imageLocation: String) -> Bool{
+    func saveImageViewToDb(UIImageView: UIImageView) -> Bool{
+        
+        return false
+    }
+    
+    func getBase64Data(UIImageView: UIImageView) -> String{
+        
+        return ""
+        
+    }
+    
+    func saveImage(imageBase64Data: String) -> Bool{
         
         let num = self.getCurrentBatchNum()
-        return self.saveImage(imageLocation: imageLocation, batchNum: num)
+        return self.saveImage(imageBase64Data: imageBase64Data, batchNum: num)
 
     }
     
-    func saveImage(imageLocation: String, batchNum: Int) -> Bool{
+    func saveImage(imageBase64Data: String, batchNum: Int) -> Bool{
         
         let service = CaptivaLocalImageService()
         let objc = CaptivaLocalImageObj()
         objc.batchNumber = batchNum
-        objc.imagePath = imageLocation
+        objc.imageBase64Data = imageBase64Data
         service.saveImage(image: objc)
         return true
         

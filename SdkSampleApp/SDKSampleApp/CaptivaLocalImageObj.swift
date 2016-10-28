@@ -11,7 +11,7 @@ import RealmSwift
 
 class CaptivaLocalImageObj: Object{
     
-    dynamic var imagePath = ""
+    dynamic var imageBase64Data = ""
     dynamic var batchNumber = 0
 
     override static func primaryKey() -> String? {
