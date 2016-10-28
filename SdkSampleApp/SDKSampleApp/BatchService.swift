@@ -130,4 +130,23 @@ import RealmSwift
         }
     }
     
+    func createBatchWithHightestPrimaryKey() -> Int{
+        
+        let objs: Results<BatchObj> = {
+            try! Realm().objects(BatchObj.self)
+                .sorted(byProperty: "batchNumber", ascending: false)
+        }()
+        var batch : BatchObj = BatchObj()
+        if objs.count > 0{
+            batch.batchNumber = (objs.first?.batchNumber)!
+            batch.batchNumber += 1
+        }
+        let saveResult = self.saveBatch(batch: batch)
+        if saveResult{
+            return batch.batchNumber
+        }else{
+            return -1
+        }
+    }
+    
 }

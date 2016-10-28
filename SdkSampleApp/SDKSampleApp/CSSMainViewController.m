@@ -37,7 +37,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:100.0/255.0 green:150.0/255.0 blue:200.0/255.0 alpha:1.0];
     self.navigationItem.title = CSSMainTitle;
-    self.actionsArray = [NSArray arrayWithObjects:CSSMenuCreateSession, CSSMenuTakePicture, CSSMenuContinuousCapture, CSSMenuEnhanceImage, CSSMenuDeleteDocFiles, CSSCreateProfile, CSSSelectFilterProfile, nil];
+    self.actionsArray = [NSArray arrayWithObjects:CSSMenuCreateSession, CSSMenuTakePicture, CSSInsertPOD ,CSSMenuContinuousCapture, CSSMenuEnhanceImage, CSSMenuDeleteDocFiles, CSSCreateProfile, CSSSelectFilterProfile, nil];
     self.tableView.tableFooterView = [UIView new];
     [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainScreen@2x.png"]]];
     self.view.backgroundColor = [UIColor clearColor];
@@ -54,6 +54,18 @@
 //    if( [helper hasCookie] == false){
 //        [self login];
 //    }
+}
+
+-(void)insertPODButtonClicked{
+    
+    // Present the image for enhancements
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:
+                                @"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
+    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"uploadImageView"];
+    
+    CSSMainViewController *rootController =(CSSMainViewController *)[self.navigationController.viewControllers objectAtIndex: 0];
+    [rootController.navigationController pushViewController:myController animated:NO];
+    
 }
 
 - (void)selectFilterProfileButtonClicked{
@@ -99,7 +111,7 @@
     MainVCHelper *helper = [[MainVCHelper alloc] init];
     [helper getCookieWithCompletion:^(NSDictionary * _Nullable param1, NSError * _Nullable param2){
         [self removeLoadingSpinner];
-        [CSSUtils showAlertWithMessage:@"You are now logged in to the system" title:@"Login Success"];
+        [CSSUtils showAlertWithMessage:@"You are now ready to take pictures and scan your Documents" title:@"New POD Session Created"];
         [helper persistCookieWithDictionary: param1];}];
     
 }
@@ -171,6 +183,8 @@
             [self createProfileButtonClicked];
         }else if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text compare:CSSSelectFilterProfile] == NSOrderedSame) {
             [self selectFilterProfileButtonClicked];
+        }else if ([[tableView cellForRowAtIndexPath:indexPath].textLabel.text compare:CSSInsertPOD] == NSOrderedSame) {
+            [self insertPODButtonClicked];
         }
     });
 }

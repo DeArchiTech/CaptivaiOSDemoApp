@@ -23,7 +23,7 @@ NSString * const CSSMenuTakePicture = @"Take Picture";
 NSString * const CSSMenuContinuousCapture = @"Continuous Capture";
 NSString * const CSSMenuEnhanceImage = @"Enhance Image";
 NSString * const CSSMenuDeleteDocFiles = @"Delete All Documents";
-NSString * const CSSMenuCreateSession = @"Create Session";
+NSString * const CSSMenuCreateSession = @"New POD Session";
 NSString * const CSSCreateProfile = @"Create Filter Profile";
 NSString * const CSSSelectFilterProfile = @"Select Filter Profile";
 

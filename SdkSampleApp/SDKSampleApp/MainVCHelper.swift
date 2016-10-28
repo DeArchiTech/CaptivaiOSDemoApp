@@ -70,5 +70,11 @@ import UIKit
         return result!
         
     }
+    
+    func createNewBatch() -> Bool{
+        
+        return false
+        
+    }
 
 }

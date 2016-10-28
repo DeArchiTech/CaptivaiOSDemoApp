@@ -684,11 +684,11 @@
     UIActionSheet *filterActionSheet = [[UIActionSheet alloc] initWithTitle:@"Select Filter" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil
                                                           otherButtonTitles:
                                         
-                                                            CSSUploadImage,
+                                                            //CSSUploadImage,
                                         
-                                                            CSSInsertPOD,
+                                                            //CSSInsertPOD,
                                         
-                                                            CSSTakeAnotherImage,
+                                                            //CSSTakeAnotherImage,
                                         
                                                             CSSEnhanceItemAutoCrop,
                                                                             CSSEnhanceItemBlackAndWhite,
@@ -912,9 +912,6 @@
     if ([actionName compare:CSSUploadImage] == NSOrderedSame){
         //[self presentUploadImageViewController];
         [self uploadImageAction];
-    }else if ([actionName compare:CSSInsertPOD] == NSOrderedSame){
-        //[self presentUploadImageViewController];
-        [self presentUploadImageViewController];
     }
     
 }
@@ -1001,24 +998,6 @@
         [_imageInfoPopover presentPopoverFromBarButtonItem:(UIBarButtonItem *)listFiltersButton
                                  permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
     }
-}
-
--(void)presentUploadImageViewController
-{
-    // Present the image for enhancements
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:
-                                @"MainStoryboard_iPhone" bundle:[NSBundle mainBundle]];
-    UIViewController *myController = [storyboard instantiateViewControllerWithIdentifier:@"uploadImageView"];
-    
-    CSSImageInfoViewController *rootController =(CSSImageInfoViewController *)[self.navigationController.viewControllers objectAtIndex: 0];
-    [rootController.navigationController pushViewController:myController animated:NO];
-    
-//    UIViewController *controller = [[UIViewController alloc] initWithNibName:@"PODInputVC" bundle:nil];
-//    
-//    CSSImageInfoViewController *rootController =(CSSImageInfoViewController *)[self.navigationController.viewControllers objectAtIndex: 0];
-//   
-//    [rootController.navigationController pushViewController:controller animated:NO];
-    
 }
 
 - (void)uploadImageAction
@@ -1115,22 +1094,6 @@
     [CMSCaptureImage enableUndoImage:[CSSSettings boolForKey:@"UndoLast"].boolValue];
     
     [self initializeSpinner];
-    
-    //Add A Text Field at the bottom
-    UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(45, 30, 200, 40)];
-    tf.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
-    tf.font = [UIFont fontWithName:@"Helvetica-Bold" size:25];
-    tf.backgroundColor=[UIColor whiteColor];
-    tf.text=@"Insert POD NUmber";
-    
-    float someY = [UIScreen mainScreen].bounds.size.height;
-    float someOtherY = tf.frame.size.height;
-    float y = [UIScreen mainScreen].bounds.size.height - tf.frame.size.height;
-    float anotherY = imageScrollView.frame.size.height - tf.frame.size.height;
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, anotherY, 400 , 400)];
-    [view addSubview:tf];
-    [self.view addSubview:view];
-    
 }
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration

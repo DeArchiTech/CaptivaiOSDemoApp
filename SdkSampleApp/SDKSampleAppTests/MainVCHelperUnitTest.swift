@@ -129,4 +129,11 @@ class MainVCHelperUnitTest: XCTestCase {
         
     }
     
+    func testCreateNewBatch(){
+        
+        let helper = MainVCHelper()
+        let result = helper.createNewBatch()
+        XCTAssertTrue(result)
+    }
+    
 }
