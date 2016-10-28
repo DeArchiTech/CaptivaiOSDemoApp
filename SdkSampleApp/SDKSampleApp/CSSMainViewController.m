@@ -113,6 +113,7 @@
         [self removeLoadingSpinner];
         [CSSUtils showAlertWithMessage:@"You are now ready to take pictures and scan your Documents" title:@"New POD Session Created"];
         [helper persistCookieWithDictionary: param1];}];
+        [helper createNewBatch];
     
 }
 

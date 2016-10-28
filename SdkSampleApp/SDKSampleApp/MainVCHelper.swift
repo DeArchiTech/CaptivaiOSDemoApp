@@ -71,9 +71,10 @@ import UIKit
         
     }
     
-    func createNewBatch() -> Bool{
+    func createNewBatch() -> Int{
         
-        return false
+        let service = BatchService()
+        return service.createBatchWithHightestPrimaryKey()
         
     }
 
