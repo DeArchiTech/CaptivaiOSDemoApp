@@ -27,6 +27,11 @@ class ImageUtil{
         return dictionary
     }
     
+    func createImageUploadParam(base64Data: String) -> Dictionary<String,String>{
+        let dictionary = self.createImageUploadDictionary(string: base64Data)
+        return dictionary
+    }
+    
     func createBase64String(image : UIImage) -> String{
         let imageData:NSData = UIImageJPEGRepresentation(image,1.0)! as NSData
         return self.createBase64String(data: imageData)

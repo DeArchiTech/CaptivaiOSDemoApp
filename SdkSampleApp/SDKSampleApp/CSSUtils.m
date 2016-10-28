@@ -450,9 +450,6 @@ const float CSSCropMinHeight = 100.0;
     [picture writeToFile:imageFilePath options:0 error:error];
     isLoadedFromFilePath = YES;
     
-    CSSUtilHelper *helper = [[CSSUtilHelper alloc] init];
-    [helper saveImageWithData:picture imagePath:imageFilePath];
-
 }
 
 /*

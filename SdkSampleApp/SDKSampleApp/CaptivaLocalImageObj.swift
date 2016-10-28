@@ -16,7 +16,7 @@ class CaptivaLocalImageObj: Object{
     dynamic var batchNumber = 0
 
     override static func primaryKey() -> String? {
-        return "imagePath"
+        return "imageBase64Data"
     }
 
 }

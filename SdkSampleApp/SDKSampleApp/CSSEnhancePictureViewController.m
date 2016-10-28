@@ -1247,6 +1247,11 @@
 -(void) applyFilterForDemo {
     
     [self applyAction:@"Black-White"];
-    [self applyAction:@"Export to Photos"];
+
+    //Save the pictures
+
+    ImageSavingHelper *helper = [[ImageSavingHelper alloc] init];
+    [helper saveImageWithImage:wipImageView.image];
+
 }
 @end

@@ -23,6 +23,8 @@ import Photos
     
     var cookieManager : CookieManager?
     var service : PODUploadService?
+    var uploadService : UploadService?
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -34,6 +36,7 @@ import Photos
         if(self.cookieManager?.loadCookie())!{
             let cookieString = self.cookieManager?.cookieCache?.cookie
             self.service = PODUploadService.init(cookie: cookieString!)
+            self.uploadService = UploadService.init(cookie: cookieString!)
         }else{
             print("Error, cannot load cookie cache")
         }
@@ -42,16 +45,33 @@ import Photos
     }
 
     @IBAction func buttonPressed(_ sender: AnyObject) {
-    
-        //1)Upload All The Images that hasn't been uploaded
         
         //2)Upload a text file with the POD Number in it
         let POD = self.podNumber.text
         self.service?.uploadPODNumber(pod: POD!, completion: { (dictionary,error) -> () in
-            print(dictionary)
-            print(error)
+            if dictionary != nil {
+                self.uploadAllImages(images: self.imageData)
+            }
             }
         )
+    }
+    
+    func uploadAllImages(images : [CaptivaLocalImageObj]) -> Bool{
+        
+        let obj = self.imageData.popLast()
+        if obj != nil {
+            self.uploadService?.uploadImage(base64String: (obj?.imageBase64Data)!, completion: { (dictionary,error) -> () in
+                if dictionary != nil {
+                    self.uploadAllImages(images: self.imageData)
+                }
+            })
+        }else{
+            let alertController = UIAlertController(title: "Upload Success", message:
+                "Documents and POD Number uploaded to server successfully", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        return true
     }
     
     func dismissKeyboard() {

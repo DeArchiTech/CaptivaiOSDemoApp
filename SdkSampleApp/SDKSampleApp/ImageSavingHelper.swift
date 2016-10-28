@@ -9,10 +9,21 @@
 import Foundation
 import UIKit
 
-@objc class CSSUtilHelper: NSObject{
+@objc class ImageSavingHelper: NSObject{
     
-    class func newInstance() -> CSSUtilHelper{
-        return CSSUtilHelper()
+    class func newInstance() -> ImageSavingHelper{
+        return ImageSavingHelper()
+    }
+    
+    func saveImage(image: UIImage) -> Bool{
+        
+        let util = ImageUtil()
+        let imageBase64Data = util.createBase64String(image: image)
+        let service = CaptivaLocalImageService()
+        let objc = self.createImageObj(imageBase64Data: imageBase64Data)
+        service.saveImage(image: objc)
+        return true
+        
     }
     
     func saveImage(data: NSData, imagePath: NSString) -> Bool{
@@ -29,6 +40,16 @@ import UIKit
         
         let util = ImageUtil()
         return util.createBase64String(data: data)
+        
+    }
+    
+    func createImageObj(imageBase64Data: String) -> CaptivaLocalImageObj{
+        
+        let objc = CaptivaLocalImageObj()
+        let num = self.getCurrentBatchNum()
+        objc.batchNumber = num
+        objc.imageBase64Data = imageBase64Data
+        return objc
         
     }
     

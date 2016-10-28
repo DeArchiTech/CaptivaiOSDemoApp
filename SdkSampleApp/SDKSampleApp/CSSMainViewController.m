@@ -49,11 +49,7 @@
 
     [CSSSettings registerDefaults];
     [self initializeSpinner];
-    
-//    MainVCHelper *helper = [[MainVCHelper alloc] init];
-//    if( [helper hasCookie] == false){
-//        [self login];
-//    }
+
 }
 
 -(void)insertPODButtonClicked{

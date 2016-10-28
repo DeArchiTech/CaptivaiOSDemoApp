@@ -115,4 +115,10 @@ class UploadImageViewControllerTest: XCTestCase {
         XCTAssertEqual(vc.count, 1)
         
     }
+    
+    func testUploadAllImages(){
+        
+        let vc = UploadImageViewController()
+        let result = vc.uploadAllImages(images: <#T##[CaptivaLocalImageObj]#>)
+    }
 }

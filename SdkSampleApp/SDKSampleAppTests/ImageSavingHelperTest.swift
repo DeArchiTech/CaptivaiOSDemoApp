@@ -32,7 +32,7 @@ class CSSUtilHelperTest: XCTestCase {
         let service = CaptivaLocalImageService()
         service.deleteAllImages()
     
-        let helper = CSSUtilHelper()
+        let helper = ImageSavingHelper()
         let filePath = "ABCDE"
         let filepath2 = "ADD"
         let batchService = BatchService()
@@ -63,7 +63,7 @@ class CSSUtilHelperTest: XCTestCase {
         service.saveBatch(batch: batchOne)
         service.saveBatch(batch: batchTwo)
         
-        let helper = CSSUtilHelper()
+        let helper = ImageSavingHelper()
         let result = helper.getCurrentBatchNum()
         XCTAssertEqual(expectedNumber , result)
         
@@ -73,7 +73,7 @@ class CSSUtilHelperTest: XCTestCase {
         
         let service = BatchService()
         service.deleteAllBatches()
-        let helper = CSSUtilHelper()
+        let helper = ImageSavingHelper()
         let result = helper.getCurrentBatchNum()
         XCTAssertEqual(0 , result)
     }
