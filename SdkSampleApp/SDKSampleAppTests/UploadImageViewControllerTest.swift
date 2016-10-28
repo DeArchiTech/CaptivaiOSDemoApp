@@ -77,7 +77,7 @@ class UploadImageViewControllerTest: XCTestCase {
         
     }
     
-    func testUploadImage() {
+    func testLoadImage() {
         
         //Set up
         let batchService = BatchService()
@@ -91,13 +91,17 @@ class UploadImageViewControllerTest: XCTestCase {
         let obj1 = CaptivaLocalImageObj()
         obj1.imagePath = path
         
+        let obj2 = CaptivaLocalImageObj()
+        obj2.imagePath = path + "someting"
+        
         service.saveImage(image: obj1)
+        service.saveImage(image: obj2)
         
         //Test Controller
         let vc = UploadImageViewController()
         vc.numberOfImages = UILabel()
         vc.loadImageData()
-        XCTAssertEqual(vc.imageData.count, 1)
+        XCTAssertEqual(vc.imageData.count, 2)
     
     }
     

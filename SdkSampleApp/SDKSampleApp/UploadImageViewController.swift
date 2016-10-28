@@ -12,7 +12,7 @@ import Photos
 
 @objc class UploadImageViewController: UIViewController{
     
-    var imageData : [Data] = []
+    var imageData : [CaptivaLocalImageObj] = []
     var count = 0
     @IBOutlet var numberOfImages: UILabel!
     @IBOutlet var podNumber: UITextField!
@@ -37,6 +37,7 @@ import Photos
         }else{
             print("Error, cannot load cookie cache")
         }
+        self.loadImageData()
         
     }
 
@@ -74,9 +75,8 @@ import Photos
     
     func getAllImageObjs(num : Int) -> [CaptivaLocalImageObj]?{
         
-        let batchNum = self.getCurrentBatchNumber()
         let service = CaptivaLocalImageService()
-        let imgObjs = service.loadImagesFromBatchNumber(batchNumber: batchNum)
+        let imgObjs = service.loadImagesFromBatchNumber(batchNumber: num)
         return imgObjs
         
     }
@@ -88,6 +88,7 @@ import Photos
         if imageObjs != nil{
             for obj in imageObjs!{
                 self.incrementLabel()
+                self.imageData.append(obj)
             }
         }
     }
