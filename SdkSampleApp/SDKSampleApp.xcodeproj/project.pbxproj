@@ -73,6 +73,8 @@
 		22D67DA31DBEB78D0018C521 /* BatchServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67DA21DBEB78D0018C521 /* BatchServiceSpec.swift */; };
 		22D8B7E71DAD9BA60089E94D /* FilterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D8B7E61DAD9BA60089E94D /* FilterObject.swift */; };
 		22DB3E501DBFD593006FD6FC /* BatchServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB3E4F1DBFD593006FD6FC /* BatchServiceTest.swift */; };
+		22ED37891DC3F5C800FF4F58 /* CSSUtilHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ED37881DC3F5C800FF4F58 /* CSSUtilHelper.swift */; };
+		22ED378B1DC3F93A00FF4F58 /* CSSUtilHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ED378A1DC3F93A00FF4F58 /* CSSUtilHelperTest.swift */; };
 		22F8E49B1D9992BB009E68F1 /* SDKSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */; };
 		64ECA85AE51B90464C997F81 /* Pods_SDKSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A804635F97D1371BFD115 /* Pods_SDKSampleAppTests.framework */; };
 		8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8504CB861AD5EB4500591B99 /* CSSCustomWindow.mm */; };
@@ -216,6 +218,8 @@
 		22D67DA21DBEB78D0018C521 /* BatchServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchServiceSpec.swift; sourceTree = "<group>"; };
 		22D8B7E61DAD9BA60089E94D /* FilterObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterObject.swift; sourceTree = "<group>"; };
 		22DB3E4F1DBFD593006FD6FC /* BatchServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchServiceTest.swift; sourceTree = "<group>"; };
+		22ED37881DC3F5C800FF4F58 /* CSSUtilHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSSUtilHelper.swift; sourceTree = "<group>"; };
+		22ED378A1DC3F93A00FF4F58 /* CSSUtilHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSSUtilHelperTest.swift; sourceTree = "<group>"; };
 		22F8E4981D9992BB009E68F1 /* SDKSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSampleAppUITests.swift; sourceTree = "<group>"; };
 		22F8E49C1D9992BB009E68F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -356,6 +360,7 @@
 				22DB3E4F1DBFD593006FD6FC /* BatchServiceTest.swift */,
 				22C6B6FD1DBFE4F5005199DB /* CaptivaLocalImageServiceTest.swift */,
 				224B3B8B1DC2ABFF0046620D /* PODUploadServiceTest.swift */,
+				22ED378A1DC3F93A00FF4F58 /* CSSUtilHelperTest.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 			children = (
 				2271D5F01D9D851A0039853B /* MainVCHelper.swift */,
 				22180DBC1D9DBA1B00BA73CD /* EnhanceVCHelper.swift */,
+				22ED37881DC3F5C800FF4F58 /* CSSUtilHelper.swift */,
 			);
 			name = VChelpers;
 			sourceTree = "<group>";
@@ -937,6 +943,7 @@
 				22B845781DA5BB6900348FA4 /* CreateProfileServiceSpec.swift in Sources */,
 				22611C491DA3067B003B1514 /* UploadServiceTest.swift in Sources */,
 				22611C4D1DA31B7E003B1514 /* LoginServiceTest.swift in Sources */,
+				22ED378B1DC3F93A00FF4F58 /* CSSUtilHelperTest.swift in Sources */,
 				22CBBEB11D9B167E00F0FDCC /* CookieManagerUnitTest.swift in Sources */,
 				22C6B6FE1DBFE4F5005199DB /* CaptivaLocalImageServiceTest.swift in Sources */,
 				22D67DA31DBEB78D0018C521 /* BatchServiceSpec.swift in Sources */,
@@ -962,6 +969,7 @@
 				22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */,
 				224B3B8A1DC2A9FB0046620D /* PODUploadService.swift in Sources */,
 				22D67DA11DBEB6E50018C521 /* BatchService.swift in Sources */,
+				22ED37891DC3F5C800FF4F58 /* CSSUtilHelper.swift in Sources */,
 				22AB4D3D1DAEEBC500FF439B /* SelectProfileViewController.swift in Sources */,
 				8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */,
 				22D8B7E71DAD9BA60089E94D /* FilterObject.swift in Sources */,

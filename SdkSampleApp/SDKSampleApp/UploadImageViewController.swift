@@ -76,8 +76,8 @@ import Photos
         
         let batchNum = self.getCurrentBatchNumber()
         let service = CaptivaLocalImageService()
-        let paths = service.loadImagesFromBatchNumber(batchNumber: batchNum)
-        return paths
+        let imgObjs = service.loadImagesFromBatchNumber(batchNumber: batchNum)
+        return imgObjs
         
     }
     
@@ -87,13 +87,7 @@ import Photos
         let imageObjs = self.getAllImageObjs(num: batchNum)
         if imageObjs != nil{
             for obj in imageObjs!{
-                let path = obj.imagePath
-                if FileManager.default.fileExists(atPath: path){
-                    let url = URL(fileURLWithPath: path)
-                    let data = NSData(contentsOf: url as URL)
-                    self.imageData.append(data as! Data)
-                    self.incrementLabel()
-                }
+                self.incrementLabel()
             }
         }
     }

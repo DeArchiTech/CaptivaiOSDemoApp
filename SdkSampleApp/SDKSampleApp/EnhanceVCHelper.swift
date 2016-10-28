@@ -36,41 +36,33 @@ import UIKit
         
     }
     
-    func saveImageViewToDb(UIImageView: UIImageView) -> Bool{
-        
-        return false
-    }
+//    func getBase64Data(image : UIImage) -> String{
+//        
+//        let util = ImageUtil()
+//        return util.createBase64String(image: image)
+//        
+//    }
+//    
+//    func saveImage(image: UIImage, imagePath: String) -> Bool{
+//        
+//        let imageBase64Data = self.getBase64Data(image: image)
+//        let num = self.getCurrentBatchNum()
+//        let service = CaptivaLocalImageService()
+//        let objc = self.createImageObj(imageBase64Data: imageBase64Data, imagePath: imagePath)
+//        service.saveImage(image: objc)
+//        return true
+//    }
+//    
+//    func createImageObj(imageBase64Data: String, imagePath: String) -> CaptivaLocalImageObj{
+//    
+//        let objc = CaptivaLocalImageObj()
+//        let num = self.getCurrentBatchNum()
+//        objc.batchNumber = num
+//        objc.imageBase64Data = imageBase64Data
+//        objc.imagePath = imagePath
+//        return objc
+//    
+//    }
     
-    func getBase64Data(UIImageView: UIImageView) -> String{
-        
-        return ""
-        
-    }
-    
-    func saveImage(imageBase64Data: String) -> Bool{
-        
-        let num = self.getCurrentBatchNum()
-        return self.saveImage(imageBase64Data: imageBase64Data, batchNum: num)
 
-    }
-    
-    func saveImage(imageBase64Data: String, batchNum: Int) -> Bool{
-        
-        let service = CaptivaLocalImageService()
-        let objc = CaptivaLocalImageObj()
-        objc.batchNumber = batchNum
-        objc.imageBase64Data = imageBase64Data
-        service.saveImage(image: objc)
-        return true
-        
-    }
-    
-    func getCurrentBatchNum() -> Int{
-        
-        let service = BatchService()
-        let number = service.getCurrentBatchNum()
-        return number
-        
-    }
-    
 }
