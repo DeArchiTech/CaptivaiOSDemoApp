@@ -29,6 +29,7 @@
 		22611C4D1DA31B7E003B1514 /* LoginServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22611C4C1DA31B7E003B1514 /* LoginServiceTest.swift */; };
 		2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F01D9D851A0039853B /* MainVCHelper.swift */; };
 		2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */; };
+		227581E71DC7BDDE005180E8 /* LabattDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227581E61DC7BDDE005180E8 /* LabattDemo.storyboard */; };
 		22837C8E1DB94095001FED93 /* reva568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C8C1DB94095001FED93 /* reva568h.png */; };
 		22837C8F1DB94095001FED93 /* revaDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C8D1DB94095001FED93 /* revaDefault.png */; };
 		22837C911DB941D5001FED93 /* reva320480.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C901DB941D5001FED93 /* reva320480.png */; };
@@ -176,6 +177,7 @@
 		22611C4C1DA31B7E003B1514 /* LoginServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceTest.swift; sourceTree = "<group>"; };
 		2271D5F01D9D851A0039853B /* MainVCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelper.swift; sourceTree = "<group>"; };
 		2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelperUnitTest.swift; sourceTree = "<group>"; };
+		227581E61DC7BDDE005180E8 /* LabattDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LabattDemo.storyboard; sourceTree = "<group>"; };
 		22837C8C1DB94095001FED93 /* reva568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva568h.png; sourceTree = "<group>"; };
 		22837C8D1DB94095001FED93 /* revaDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaDefault.png; sourceTree = "<group>"; };
 		22837C901DB941D5001FED93 /* reva320480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva320480.png; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 				B5516F9217DA5A7900576310 /* CSSSettings.m */,
 				F31AC88117D80282002D06EB /* CSSUtils.h */,
 				F31AC88217D80282002D06EB /* CSSUtils.m */,
+				227581E61DC7BDDE005180E8 /* LabattDemo.storyboard */,
 				F326403617C7CED90043754D /* MainStoryboard_iPad.storyboard */,
 				F326406517C801430043754D /* MainStoryboard_iPhone.storyboard */,
 				F326401517C7CDE90043754D /* SDK_Sample_App.xcdatamodeld */,
@@ -765,6 +768,7 @@
 				F326406617C801430043754D /* MainStoryboard_iPhone.storyboard in Resources */,
 				22837C951DB94377001FED93 /* reva640960.png in Resources */,
 				B58AE77417D8E33B00925ABA /* Settings.bundle in Resources */,
+				227581E71DC7BDDE005180E8 /* LabattDemo.storyboard in Resources */,
 				22A9E2F71DB93B4D007FFF17 /* reva180180.png in Resources */,
 				22A9E2F11DB93A8C007FFF17 /* reva8787.png in Resources */,
 				224F97871DB92868007229EB /* Images.xcassets in Resources */,
