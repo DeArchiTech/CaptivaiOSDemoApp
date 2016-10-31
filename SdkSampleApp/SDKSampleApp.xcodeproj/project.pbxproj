@@ -31,6 +31,7 @@
 		2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */; };
 		227581E71DC7BDDE005180E8 /* LabattDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227581E61DC7BDDE005180E8 /* LabattDemo.storyboard */; };
 		227581E91DC7C31E005180E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227581E81DC7C31E005180E8 /* MainViewController.swift */; };
+		227581EB1DC7F5C5005180E8 /* CaptureImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227581EA1DC7F5C5005180E8 /* CaptureImageViewController.swift */; };
 		22837C8E1DB94095001FED93 /* reva568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C8C1DB94095001FED93 /* reva568h.png */; };
 		22837C8F1DB94095001FED93 /* revaDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C8D1DB94095001FED93 /* revaDefault.png */; };
 		22837C911DB941D5001FED93 /* reva320480.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C901DB941D5001FED93 /* reva320480.png */; };
@@ -180,6 +181,7 @@
 		2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelperUnitTest.swift; sourceTree = "<group>"; };
 		227581E61DC7BDDE005180E8 /* LabattDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LabattDemo.storyboard; sourceTree = "<group>"; };
 		227581E81DC7C31E005180E8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		227581EA1DC7F5C5005180E8 /* CaptureImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureImageViewController.swift; sourceTree = "<group>"; };
 		22837C8C1DB94095001FED93 /* reva568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva568h.png; sourceTree = "<group>"; };
 		22837C8D1DB94095001FED93 /* revaDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaDefault.png; sourceTree = "<group>"; };
 		22837C901DB941D5001FED93 /* reva320480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva320480.png; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 				22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */,
 				224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */,
 				22CC07231DBA8D9B00EEE3BC /* UploadImageViewController.swift */,
+				227581EA1DC7F5C5005180E8 /* CaptureImageViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -996,6 +999,7 @@
 				223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */,
 				2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */,
 				22180DBD1D9DBA1B00BA73CD /* EnhanceVCHelper.swift in Sources */,
+				227581EB1DC7F5C5005180E8 /* CaptureImageViewController.swift in Sources */,
 				22611C471DA2EFD1003B1514 /* LoginService.swift in Sources */,
 				223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */,
 				22D1E5A91D9C5731005483B7 /* ImageUtil.swift in Sources */,
