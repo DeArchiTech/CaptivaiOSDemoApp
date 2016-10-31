@@ -30,6 +30,7 @@
 		2271D5F11D9D851A0039853B /* MainVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F01D9D851A0039853B /* MainVCHelper.swift */; };
 		2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */; };
 		227581E71DC7BDDE005180E8 /* LabattDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227581E61DC7BDDE005180E8 /* LabattDemo.storyboard */; };
+		227581E91DC7C31E005180E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227581E81DC7C31E005180E8 /* MainViewController.swift */; };
 		22837C8E1DB94095001FED93 /* reva568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C8C1DB94095001FED93 /* reva568h.png */; };
 		22837C8F1DB94095001FED93 /* revaDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C8D1DB94095001FED93 /* revaDefault.png */; };
 		22837C911DB941D5001FED93 /* reva320480.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C901DB941D5001FED93 /* reva320480.png */; };
@@ -178,6 +179,7 @@
 		2271D5F01D9D851A0039853B /* MainVCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelper.swift; sourceTree = "<group>"; };
 		2271D5F21D9D8B390039853B /* MainVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVCHelperUnitTest.swift; sourceTree = "<group>"; };
 		227581E61DC7BDDE005180E8 /* LabattDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LabattDemo.storyboard; sourceTree = "<group>"; };
+		227581E81DC7C31E005180E8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		22837C8C1DB94095001FED93 /* reva568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva568h.png; sourceTree = "<group>"; };
 		22837C8D1DB94095001FED93 /* revaDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaDefault.png; sourceTree = "<group>"; };
 		22837C901DB941D5001FED93 /* reva320480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva320480.png; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 		22C6B7031DC00A8D005199DB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				227581E81DC7C31E005180E8 /* MainViewController.swift */,
 				22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */,
 				224E97F21DA6C0DA0066527F /* CreateProfileViewController.swift */,
 				22CC07231DBA8D9B00EEE3BC /* UploadImageViewController.swift */,
@@ -978,6 +981,7 @@
 				8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */,
 				22D8B7E71DAD9BA60089E94D /* FilterObject.swift in Sources */,
 				F326400A17C7CDE90043754D /* main.m in Sources */,
+				227581E91DC7C31E005180E8 /* MainViewController.swift in Sources */,
 				F326400E17C7CDE90043754D /* CSSAppDelegate.m in Sources */,
 				F326401717C7CDE90043754D /* SDK_Sample_App.xcdatamodeld in Sources */,
 				F326403A17C7CFB50043754D /* CSSMainViewController.m in Sources */,

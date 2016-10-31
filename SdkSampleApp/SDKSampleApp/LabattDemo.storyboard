@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e8E-iE-F5i">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Proof Of Delivery-->
         <scene sceneID="KXB-F9-XBA">
             <objects>
-                <viewController id="YKf-lK-wtX" sceneMemberID="viewController">
+                <viewController title="Proof Of Delivery" id="YKf-lK-wtX" customClass="MainViewController" customModule="SDKSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6SV-Js-EnB"/>
                         <viewControllerLayoutGuide type="bottom" id="9BF-Yg-GAG"/>
@@ -21,12 +22,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qj-pS-0jx">
-                                <rect key="frame" x="37" y="198" width="301" height="193"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8qj-pS-0jx">
+                                <rect key="frame" x="36" y="214" width="303" height="303"/>
+                                <color key="backgroundColor" red="1" green="0.62000434259281967" blue="0.15620933431455708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Scan New POD">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1ZH-Bj-PZ9" kind="show" id="Gdp-vZ-cYo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8qj-pS-0jx" firstAttribute="top" secondItem="6SV-Js-EnB" secondAttribute="bottom" constant="150" id="Wmo-24-0aY"/>
+                            <constraint firstItem="8qj-pS-0jx" firstAttribute="leading" secondItem="iLQ-2B-3fR" secondAttribute="leadingMargin" constant="20" id="YcV-Ld-6Vx"/>
+                            <constraint firstItem="9BF-Yg-GAG" firstAttribute="top" secondItem="8qj-pS-0jx" secondAttribute="bottom" constant="150" id="epU-Xc-wk6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8qj-pS-0jx" secondAttribute="trailing" constant="20" id="uf9-c5-KPW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Proof Of Delivery" id="2RS-TT-UAx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlW-ve-5Eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="-314"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ru1-1L-aCu">
+            <objects>
+                <viewController id="1ZH-Bj-PZ9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z8F-x6-7TP"/>
+                        <viewControllerLayoutGuide type="bottom" id="r5v-fQ-jMn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BQ2-gn-hAQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHu-h5-hAs">
+                                <rect key="frame" x="63" y="252" width="249" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33879172229999999" green="0.41753022719999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Screen New POD Document">
+                                <color key="backgroundColor" red="1" green="0.20192376500000001" blue="0.4119703622" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Capture Image Screen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="36x-EP-PRE" kind="show" id="Igy-Lq-iwv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcJ-pH-Veo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1438" y="-314"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rKR-A7-zC2">
+            <objects>
+                <viewController id="36x-EP-PRE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tP8-Ve-yfR"/>
+                        <viewControllerLayoutGuide type="bottom" id="BC6-1a-fWJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C2z-Ga-gXt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGr-R7-XtN">
+                                <rect key="frame" x="61" y="125" width="253" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Enhance Image Screen">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MNU-0B-Fkt" kind="show" id="qX1-t0-R18"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6f-8c-gc5">
+                                <rect key="frame" x="33" y="425" width="309" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.40273319829999998" blue="0.47711314510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Capture Another Image">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -34,9 +117,123 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dlW-ve-5Eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVt-YC-weB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42.399999999999999" y="-308.09595202398805"/>
+            <point key="canvasLocation" x="2148" y="-314.39280359820094"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CwN-vp-X6E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e8E-iE-F5i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZBB-XH-Igy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YKf-lK-wtX" kind="relationship" relationship="rootViewController" id="lrt-lS-9K3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVi-1T-vD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="-314.39280359820094"/>
+        </scene>
+        <!--Upload Image View Controller-->
+        <scene sceneID="bKn-vd-wkg">
+            <objects>
+                <viewController storyboardIdentifier="uploadImageView" id="MNU-0B-Fkt" customClass="UploadImageViewController" customModule="SDKSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AMd-Hu-7gJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="mHO-To-9zw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="udn-XK-oEH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Lmz-yV-DuG">
+                                <rect key="frame" x="56" y="55" width="263" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# of images to be uploaded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1F-pr-bbe">
+                                        <rect key="frame" x="9" y="0.0" width="246" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNN-eO-7Co">
+                                        <rect key="frame" x="124" y="58" width="16" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="yCU-jP-3qX"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptD-Q5-MaD">
+                                <rect key="frame" x="54" y="509" width="267" height="66"/>
+                                <color key="backgroundColor" red="0.42076308849999999" green="0.40503920599999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0bC-gm-PK9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Upload Documents">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="MNU-0B-Fkt" eventType="touchUpInside" id="boh-OW-4H9"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vxF-Ao-hGe">
+                                <rect key="frame" x="47" y="296" width="263" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="POD #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM3-fd-xoC">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1CM-jA-JsK">
+                                        <rect key="frame" x="138" y="0.0" width="125" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="fNc-8V-YNy"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Aqn-37-dLH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lmz-yV-DuG" firstAttribute="leading" secondItem="udn-XK-oEH" secondAttribute="leadingMargin" constant="40" id="1AK-EW-SJF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lmz-yV-DuG" secondAttribute="trailing" constant="40" id="FGf-6H-cQX"/>
+                            <constraint firstItem="vxF-Ao-hGe" firstAttribute="leading" secondItem="udn-XK-oEH" secondAttribute="leadingMargin" constant="40" id="Spl-7s-zhm"/>
+                            <constraint firstItem="vxF-Ao-hGe" firstAttribute="top" secondItem="S1F-pr-bbe" secondAttribute="bottom" constant="100" id="Wah-Io-RnV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ptD-Q5-MaD" secondAttribute="trailing" constant="40" id="iK0-Fd-mOq"/>
+                            <constraint firstItem="ptD-Q5-MaD" firstAttribute="leading" secondItem="udn-XK-oEH" secondAttribute="leadingMargin" constant="40" id="kfW-gW-MHA"/>
+                            <constraint firstItem="Lmz-yV-DuG" firstAttribute="top" secondItem="AMd-Hu-7gJ" secondAttribute="bottom" constant="35" id="o8v-XY-1ZU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vxF-Ao-hGe" secondAttribute="trailing" constant="40" id="x4W-w2-Uie"/>
+                            <constraint firstItem="ptD-Q5-MaD" firstAttribute="top" secondItem="vxF-Ao-hGe" secondAttribute="bottom" constant="159" id="zMd-EZ-7Vu"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Ul-Tm-Nyr"/>
+                    <connections>
+                        <outlet property="numberOfImages" destination="wNN-eO-7Co" id="rxw-9i-q4Y"/>
+                        <outlet property="podNumber" destination="1CM-jA-JsK" id="yWf-Cg-fb4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emk-yf-OAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2855" y="-314"/>
         </scene>
     </scenes>
 </document>
