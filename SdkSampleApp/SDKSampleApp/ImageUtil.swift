@@ -47,6 +47,7 @@ class ImageUtil{
         var result = [String: String]()
         result["data"] = string
         result["contentType"] = "image/jpeg"
+        result["dispatch"] = "s"
         return result;
     }
     
