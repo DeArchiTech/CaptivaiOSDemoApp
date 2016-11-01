@@ -8,6 +8,7 @@ target 'SDKSampleApp' do
     pod 'OHHTTPStubs'
     pod 'OHHTTPStubs/Swift'
     pod 'RealmSwift'
+    pod 'EZLoadingActivity'
 end
 
 target 'SDKSampleAppTests' do

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.0.1)
+  - EZLoadingActivity (0.9)
   - Nimble (5.0.0)
   - OHHTTPStubs (5.2.1):
     - OHHTTPStubs/Default (= 5.2.1)
@@ -26,6 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - EZLoadingActivity
   - Nimble
   - OHHTTPStubs
   - OHHTTPStubs/Swift
@@ -35,6 +37,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  EZLoadingActivity: 7ebb84c1f2510a62d2bc0a17cc9d75634f92606d
   Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
   OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
   Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
@@ -42,6 +45,6 @@ SPEC CHECKSUMS:
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: bf58fd88fd480d9c42efb3cfa07c1a4275218d18
+PODFILE CHECKSUM: efa5f5ca022f587570bd0e524781cbf685ff76fc
 
 COCOAPODS: 1.1.0.rc.3

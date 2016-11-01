@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B5902315466575D2FB5B490F788E4B4A'
-               BlueprintName = 'RealmSwift'
+               BlueprintIdentifier = '903A108934E1A089B76F443DC34C8E54'
+               BlueprintName = 'EZLoadingActivity'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'RealmSwift.framework'>
+               BuildableName = 'EZLoadingActivity.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

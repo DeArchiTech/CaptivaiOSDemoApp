@@ -30,7 +30,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1ZH-Bj-PZ9" kind="show" id="Gdp-vZ-cYo"/>
+                                    <action selector="scanNewPodButtonClicked:" destination="YKf-lK-wtX" eventType="touchUpInside" id="q8B-8K-52u"/>
                                 </connections>
                             </button>
                         </subviews>

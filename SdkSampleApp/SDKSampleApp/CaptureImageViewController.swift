@@ -7,6 +7,7 @@
 //
 import UIKit
 import Foundation
+import EZLoadingActivity
 
 @objc class CaptureImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
