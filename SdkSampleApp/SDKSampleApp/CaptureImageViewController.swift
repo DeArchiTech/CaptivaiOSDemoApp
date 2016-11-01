@@ -55,5 +55,8 @@ import Foundation
         
     }
     
+    func applyFilterForDemo(){
+        
+    }
 }
 
