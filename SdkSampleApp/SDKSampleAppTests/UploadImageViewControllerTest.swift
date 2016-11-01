@@ -117,8 +117,9 @@ class UploadImageViewControllerTest: XCTestCase {
     }
     
     func testUploadAllImages(){
-        
+
         let vc = UploadImageViewController()
-        let result = vc.uploadAllImages(images: <#T##[CaptivaLocalImageObj]#>)
+        let array : [CaptivaLocalImageObj] = []
+        let result = vc.uploadAllImages(images: array)
     }
 }

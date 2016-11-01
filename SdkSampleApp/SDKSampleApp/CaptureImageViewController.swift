@@ -55,8 +55,23 @@ import Foundation
         
     }
     
-    func applyFilterForDemo(){
+    func applyFilterForDemo(imgData : Data){
         
+        var errorPtr : NSError?
+        let imageHelper = CSSImageHelper.init()
+        imageHelper.load(fromBytes: imgData, error: &errorPtr)
+        let filterNames : [Any] = [CMSFilterAdaptiveBinary]
+        let parameters : [AnyHashable : Any] = [CMSFilterParamAdaptiveBinaryForce: CSSSettings.bool(forKey: "FilterForce"),CMSFilterParamAdaptiveBinaryBlackness: CSSSettings.integer(forKey: "FilterBlackness")]
+        let cmsCaptureImage = CMSCaptureImage.applyFilters(filterNames, parameters: parameters)
+        
+    }
+    
+    func getImageData() -> Data {
+        
+        let img = self.imageView.image
+        let data = UIImageJPEGRepresentation(img!, 1.0)
+        return data!
+
     }
 }
 
