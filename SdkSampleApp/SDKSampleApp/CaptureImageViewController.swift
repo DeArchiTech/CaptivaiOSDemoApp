@@ -42,7 +42,20 @@ import EZLoadingActivity
     func imagePickerController(_ picker: UIImagePickerController, pickedImage: UIImage?) {
         self.imageView.image = pickedImage
         self.applyFilterForDemo(imgData: self.getImageData())
+        self.imageView.image = self.getImgFromSDK()!
+        self.persistImgToDisk(image: self.imageView.image!)
         dismiss(animated: true, completion: nil)
+    }
+    
+    func persistImgToDisk(image : UIImage){
+        let service = CaptivaLocalImageService()
+        let obj = CaptivaLocalImageObj()
+        let util = ImageUtil()
+        let base64String = util.createBase64String(image: image)
+        obj.imageBase64Data = base64String
+        let batchNum = BatchService().getCurrentBatchNum()
+        obj.batchNumber = batchNum
+        service.saveImage(image: obj)
     }
     
     func presentCamera(){
@@ -65,15 +78,20 @@ import EZLoadingActivity
         let filterNames : [Any] = [CMSFilterAdaptiveBinary]
         let parameters : [AnyHashable : Any] = [CMSFilterParamAdaptiveBinaryForce: CSSSettings.bool(forKey: "FilterForce"),CMSFilterParamAdaptiveBinaryBlackness: CSSSettings.integer(forKey: "FilterBlackness")]
         CMSCaptureImage.applyFilters(filterNames, parameters: parameters)
+        
+    }
+    
+    func getImgFromSDK() -> UIImage? {
+        
+        var sdkImg : UIImage? = nil
         do{
             let imageData = try CMSCaptureImage.encode(forFormat: CMSSaveJpg, parameters: nil)
-            let filteredImg = UIImage.init(data: imageData)
-            self.imageView.image = filteredImg
+            sdkImg = UIImage.init(data: imageData)
         }
         catch{
             
         }
-
+        return sdkImg
     }
     
     func getImageData() -> Data {

@@ -35,8 +35,17 @@ import EZLoadingActivity
             let batchService = BatchService.init()
             batchService.createBatchWithHightestPrimaryKey()
             EZLoadingActivity.hide(true, animated: true)
+            self.pushViewController()
         }
         EZLoadingActivity.show("Connecting to server...", disableUI: true)
+        
+    }
+    
+    func pushViewController(){
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "captureImageView") as! CaptureImageViewController
+        let navigationController = self.navigationController
+        navigationController?.pushViewController(vc, animated: true)
         
     }
 

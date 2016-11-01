@@ -54,4 +54,23 @@ class CaptureImageVCTest: XCTestCase {
         vc.applyFilterForDemo(imgData: vc.getImageData())
         
     }
+    
+    func testPersistImgToDisk(){
+        
+        //1)Delete everything in DB
+        let service = CaptivaLocalImageService()
+        service.deleteAllImages()
+        
+        //2)Set up Controller Code
+        let vc = CaptureImageViewController()
+        let testBundle = Bundle(for: type(of: self))
+        let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
+        
+        //3)Call Code
+        vc.persistImgToDisk(image: img!)
+        let bs = BatchService()
+        let result = service.loadImagesFromBatchNumber(batchNumber: bs.getCurrentBatchNum())
+        XCTAssert((result?.count)! > 0)
+        
+    }
 }

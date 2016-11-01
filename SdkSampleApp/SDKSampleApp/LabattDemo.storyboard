@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8qj-pS-0jx">
-                                <rect key="frame" x="36" y="214" width="303" height="303"/>
+                                <rect key="frame" x="40" y="214" width="520" height="236"/>
                                 <color key="backgroundColor" red="1" green="0.62000434259281967" blue="0.15620933431455708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Scan New POD">
@@ -46,12 +46,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlW-ve-5Eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="626" y="-314"/>
+            <point key="canvasLocation" x="1498" y="-321"/>
         </scene>
-        <!--Capture Image View Controller-->
+        <!--Capture Documents-->
         <scene sceneID="ru1-1L-aCu">
             <objects>
-                <viewController id="1ZH-Bj-PZ9" customClass="CaptureImageViewController" customModule="SDKSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="captureImageView" id="1ZH-Bj-PZ9" customClass="CaptureImageViewController" customModule="SDKSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z8F-x6-7TP"/>
                         <viewControllerLayoutGuide type="bottom" id="r5v-fQ-jMn"/>
@@ -107,13 +107,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="pma-vp-2L8" secondAttribute="trailing" constant="10" id="w2Q-RB-I2L"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Capture Documents" id="qhm-dk-YIj"/>
                     <connections>
                         <outlet property="imageView" destination="9n0-sL-pNC" id="Zdd-IM-tuY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcJ-pH-Veo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288.8" y="-314.39280359820094"/>
+            <point key="canvasLocation" x="2954" y="-314"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CwN-vp-X6E">
@@ -131,9 +132,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVi-1T-vD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84" y="-314.39280359820094"/>
+            <point key="canvasLocation" x="790" y="-321"/>
         </scene>
-        <!--Upload Image View Controller-->
+        <!--Insert POD Number-->
         <scene sceneID="bKn-vd-wkg">
             <objects>
                 <viewController storyboardIdentifier="uploadImageView" id="MNU-0B-Fkt" customClass="UploadImageViewController" customModule="SDKSampleApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,13 +150,13 @@
                                 <rect key="frame" x="56" y="99" width="263" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="# of images to be uploaded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1F-pr-bbe">
-                                        <rect key="frame" x="9" y="0.0" width="245.5" height="44"/>
+                                        <rect key="frame" x="9" y="0.0" width="246" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNN-eO-7Co">
-                                        <rect key="frame" x="120.5" y="58" width="22" height="42"/>
+                                        <rect key="frame" x="121" y="58" width="22" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -219,7 +220,7 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="4Ul-Tm-Nyr"/>
+                    <navigationItem key="navigationItem" title="Insert POD Number" id="4Ul-Tm-Nyr"/>
                     <connections>
                         <outlet property="numberOfImages" destination="wNN-eO-7Co" id="rxw-9i-q4Y"/>
                         <outlet property="podNumber" destination="1CM-jA-JsK" id="yWf-Cg-fb4"/>
@@ -227,7 +228,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emk-yf-OAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="-314"/>
+            <point key="canvasLocation" x="3671" y="-314"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Z5-0v-p1S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0LH-AR-z3d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="23B-5R-6XC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1ZH-Bj-PZ9" kind="relationship" relationship="rootViewController" id="cu7-Kd-3Wh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RoP-YA-4Vf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="-314.39280359820094"/>
         </scene>
     </scenes>
 </document>
