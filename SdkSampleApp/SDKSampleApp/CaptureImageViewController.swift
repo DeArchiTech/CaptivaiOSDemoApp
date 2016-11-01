@@ -40,6 +40,7 @@ import Foundation
     
     func imagePickerController(_ picker: UIImagePickerController, pickedImage: UIImage?) {
         self.imageView.image = pickedImage
+        self.applyFilterForDemo(imgData: self.getImageData())
         dismiss(animated: true, completion: nil)
     }
     
@@ -62,8 +63,16 @@ import Foundation
         imageHelper.load(fromBytes: imgData, error: &errorPtr)
         let filterNames : [Any] = [CMSFilterAdaptiveBinary]
         let parameters : [AnyHashable : Any] = [CMSFilterParamAdaptiveBinaryForce: CSSSettings.bool(forKey: "FilterForce"),CMSFilterParamAdaptiveBinaryBlackness: CSSSettings.integer(forKey: "FilterBlackness")]
-        let cmsCaptureImage = CMSCaptureImage.applyFilters(filterNames, parameters: parameters)
-        
+        CMSCaptureImage.applyFilters(filterNames, parameters: parameters)
+        do{
+            let imageData = try CMSCaptureImage.encode(forFormat: CMSSaveJpg, parameters: nil)
+            let filteredImg = UIImage.init(data: imageData)
+            self.imageView.image = filteredImg
+        }
+        catch{
+            
+        }
+
     }
     
     func getImageData() -> Data {

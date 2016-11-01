@@ -39,4 +39,19 @@ class CaptureImageVCTest: XCTestCase {
         //3)Assert result same as expected
         XCTAssertEqual(result, expected as Data)
     }
+    
+    func testApplyFilterForDemo(){
+        
+        let vc = CaptureImageViewController()
+        //1)Load Test Image into Image View
+        let testBundle = Bundle(for: type(of: self))
+        let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
+        let expected: Data = UIImageJPEGRepresentation(img!,1.0)! as Data
+        let imgView = UIImageView.init(image: img)
+        vc.imageView = imgView
+        
+        //2)Call Method
+        vc.applyFilterForDemo(imgData: vc.getImageData())
+        
+    }
 }
