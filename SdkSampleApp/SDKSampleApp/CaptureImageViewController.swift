@@ -69,6 +69,19 @@ import EZLoadingActivity
         var errorPtr : NSError?
         let imageHelper = CSSImageHelper.init()
         imageHelper.load(fromBytes: imgData, error: &errorPtr)
+        self.applyDarkerFilter()
+        self.applyBlackAndWhiteFilter()
+    }
+    
+    func applyDarkerFilter(){
+        
+        let filterNames : [Any] = [CMSFilterBrightness]
+        let parameters : [AnyHashable : Any] = [NSNumber.init(value: -16) : CMSFilterParamBrightnessScale]
+        CMSCaptureImage.applyFilters(filterNames, parameters: parameters)
+    }
+    
+    func applyBlackAndWhiteFilter(){
+        
         let filterNames : [Any] = [CMSFilterAdaptiveBinary]
         let parameters : [AnyHashable : Any] = [CMSFilterParamAdaptiveBinaryForce: CSSSettings.bool(forKey: "FilterForce"),CMSFilterParamAdaptiveBinaryBlackness: CSSSettings.integer(forKey: "FilterBlackness")]
         CMSCaptureImage.applyFilters(filterNames, parameters: parameters)
