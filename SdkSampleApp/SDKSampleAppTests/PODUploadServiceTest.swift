@@ -35,14 +35,5 @@ class PODUploadServiceTest: XCTestCase {
             XCTAssertNil(error, "Error")
         })
     }
-    
-    func testGetEncodedTxtFileFromPod(){
-        
-        let pod = "1234"
-        let service = PODUploadService()
-        let result = service.getEncodedTxtFileFromPod(pod: pod)
-        XCTAssertNotNil(result)
-        
-    }
-    
+
 }

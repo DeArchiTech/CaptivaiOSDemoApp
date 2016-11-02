@@ -17,6 +17,7 @@ import EZLoadingActivity
     }
     
     var indicator : UIActivityIndicatorView!
+    var connected : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,10 @@ import EZLoadingActivity
         
     }
     
+    @IBAction func uploadPreviousBtnClicked(_ sender: Any) {
+        
+    }
+    
     func loginCallCompletion(){
         
         let batchService = BatchService.init()
@@ -48,7 +53,10 @@ import EZLoadingActivity
 
         let helper = MainVCHelper()
         helper.getCookie(){ dictionary,error in
-            helper.persistCookie(dictionary: dictionary)
+            if dictionary != nil{
+                self.connected = true
+                helper.persistCookie(dictionary: dictionary)
+            }
             completion()}
 
     }
@@ -56,6 +64,7 @@ import EZLoadingActivity
     func pushViewController(){
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "captureImageView") as! CaptureImageViewController
+        vc.connected = self.connected
         let navigationController = self.navigationController
         navigationController?.pushViewController(vc, animated: true)
         

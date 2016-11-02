@@ -7,12 +7,14 @@
 //
 import XCTest
 import Foundation
+import RealmSwift
 @testable import SDKSampleApp
 
 class UploadImageViewControllerTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -58,13 +60,13 @@ class UploadImageViewControllerTest: XCTestCase {
         service.deleteAllImages()
         
         let obj1 = CaptivaLocalImageObj()
-        obj1.imagePath = "ABC"
+        obj1.imageBase64Data = "ABC"
         
         let obj2 = CaptivaLocalImageObj()
-        obj2.imagePath = "DEC"
+        obj2.imageBase64Data = "DEC"
         
         let obj3 = CaptivaLocalImageObj()
-        obj3.imagePath = "FASD"
+        obj3.imageBase64Data = "FASD"
         
         service.saveImage(image: obj1)
         service.saveImage(image: obj2)
@@ -89,10 +91,10 @@ class UploadImageViewControllerTest: XCTestCase {
         let path = testBundle.bundlePath + "/testImg.jpg"
 
         let obj1 = CaptivaLocalImageObj()
-        obj1.imagePath = path
+        obj1.imageBase64Data = path
         
         let obj2 = CaptivaLocalImageObj()
-        obj2.imagePath = path + "someting"
+        obj2.imageBase64Data = path + "someting"
         
         service.saveImage(image: obj1)
         service.saveImage(image: obj2)
@@ -121,5 +123,25 @@ class UploadImageViewControllerTest: XCTestCase {
         let vc = UploadImageViewController()
         let array : [CaptivaLocalImageObj] = []
         let result = vc.uploadAllImages(images: array)
+    }
+    
+    func testPodNumberIsValid(){
+        
+        let vc = UploadImageViewController()
+        vc.podNumber = UITextField.init()
+        vc.podNumber.text = "ABCDE"
+        let result = vc.podNumberIsValid()
+        XCTAssertTrue(result)
+        
+    }
+    
+    func testCheckPodNumberIsValid(){
+        
+        let vc = UploadImageViewController()
+        vc.podNumber = UITextField.init()
+        vc.podNumber.text = "ABCDE"
+        let result = vc.checkPodNumberIsValid()
+        XCTAssertTrue(result)
+        
     }
 }

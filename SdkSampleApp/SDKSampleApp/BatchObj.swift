@@ -13,7 +13,7 @@ class BatchObj: Object{
     
     dynamic var batchNumber = 0
     dynamic var uploaded : Bool = false
-    var podNumber = ""
+    dynamic var podNumber = ""
     var createdAt = NSDate()
     
     override static func primaryKey() -> String? {

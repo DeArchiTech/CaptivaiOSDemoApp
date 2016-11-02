@@ -15,6 +15,8 @@ import EZLoadingActivity
     
     var imageData : [CaptivaLocalImageObj] = []
     var count = 0
+    var connected : Bool = false
+    
     @IBOutlet var numberOfImages: UILabel!
     @IBOutlet var podNumber: UITextField!
     
@@ -44,17 +46,34 @@ import EZLoadingActivity
         self.loadImageData()
         
     }
-
-    @IBAction func buttonPressed(_ sender: AnyObject) {
+    
+    @IBAction func uploadPodBtnPressed(_ sender: Any) {
         
-        //2)Upload a text file with the POD Number in it
-        let POD = self.podNumber.text
-        self.service?.uploadPODNumber(pod: POD!, completion: { (dictionary,error) -> () in
-            if dictionary != nil {
-                self.uploadAllImages(images: self.imageData)
-            }
-        })
-        EZLoadingActivity.show("Uploading Documents To Server", disableUI: true)
+        if checkPodNumberIsValid(){
+            //Upload a text file with the POD Number in it
+            let POD = self.podNumber.text
+            self.service?.uploadPODNumber(pod: POD!, completion: { (dictionary,error) -> () in
+                if dictionary != nil {
+                    self.uploadAllImages(images: self.imageData)
+                }
+            })
+            EZLoadingActivity.show("Uploading Documents To Server", disableUI: true)
+        }
+        
+    }
+    
+    @IBAction func savePodBtnPressed(_ sender: Any) {
+
+        if checkPodNumberIsValid(){
+            //Upload a text file with the POD Number in it
+            let POD = self.podNumber.text
+            let batch = BatchService()
+            let alertController = UIAlertController(title: "POD Number Saved", message:
+                "POD Number and Documents saved and can be uploaded later", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
     }
     
     func uploadAllImages(images : [CaptivaLocalImageObj]) -> Bool{
@@ -126,6 +145,26 @@ import EZLoadingActivity
         
         let service = UploadService()
         service.uploadImage(data: data, completion: completion)
+    }
+    
+    func checkPodNumberIsValid() -> Bool{
+        
+        if !podNumberIsValid(){
+            let alertController = UIAlertController(title: "POD Number Error", message:
+                "Please insert a valid POD Number", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return false
+        }else{
+            return true
+        }
+    }
+    
+    func podNumberIsValid() -> Bool{
+        
+        let pod = getPod()
+        return pod.characters.count > 0
+    
     }
     
 }

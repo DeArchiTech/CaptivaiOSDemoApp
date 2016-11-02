@@ -12,6 +12,9 @@ import EZLoadingActivity
 @objc class CaptureImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet var imageView: UIImageView!
+    
+    var connected : Bool = false
+    
     class func newInstance() -> CaptureImageViewController{
         return CaptureImageViewController()
     }
@@ -108,5 +111,14 @@ import EZLoadingActivity
         return data!
 
     }
+
+    @IBAction func uploadPodBtnClicked(_ sender: Any) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "uploadImageView") as! UploadImageViewController
+        vc.connected = self.connected
+        let navigationController = self.navigationController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 

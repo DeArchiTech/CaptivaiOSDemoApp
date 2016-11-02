@@ -8,7 +8,6 @@
 
 import Foundation
 import XCTest
-import Foundation
 import RealmSwift
 @testable import SDKSampleApp
 
@@ -56,4 +55,19 @@ class BatchServiceTest: XCTestCase {
         XCTAssert(result > -1)
         XCTAssertEqual(batchNum+1, result)
     }
+    
+    func testUpdateCurrentBatchPODNUmber(){
+        
+        let pod = "1234"
+        let service = BatchService()
+        service.deleteAllBatches()
+        let batchNum = service.createBatchWithHightestPrimaryKey()
+        let result = service.updateBatchPODNUmber(pod: pod, batchNum: batchNum)
+        XCTAssertTrue(result)
+        
+        let loadResult = service.getBatchWithBatchNum(num: batchNum)
+        XCTAssertEqual(loadResult?.podNumber, pod)
+        
+    }
+
 }
