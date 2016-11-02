@@ -77,6 +77,7 @@
 		22D67DA31DBEB78D0018C521 /* BatchServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D67DA21DBEB78D0018C521 /* BatchServiceSpec.swift */; };
 		22D8B7E71DAD9BA60089E94D /* FilterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D8B7E61DAD9BA60089E94D /* FilterObject.swift */; };
 		22DB3E501DBFD593006FD6FC /* BatchServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB3E4F1DBFD593006FD6FC /* BatchServiceTest.swift */; };
+		22DBFC171DCA5EE4005D5F41 /* MainViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBFC161DCA5EE4005D5F41 /* MainViewControllerTest.swift */; };
 		22ED37891DC3F5C800FF4F58 /* ImageSavingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ED37881DC3F5C800FF4F58 /* ImageSavingHelper.swift */; };
 		22ED378B1DC3F93A00FF4F58 /* ImageSavingHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ED378A1DC3F93A00FF4F58 /* ImageSavingHelperTest.swift */; };
 		22F8E49B1D9992BB009E68F1 /* SDKSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */; };
@@ -226,6 +227,7 @@
 		22D67DA21DBEB78D0018C521 /* BatchServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchServiceSpec.swift; sourceTree = "<group>"; };
 		22D8B7E61DAD9BA60089E94D /* FilterObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterObject.swift; sourceTree = "<group>"; };
 		22DB3E4F1DBFD593006FD6FC /* BatchServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatchServiceTest.swift; sourceTree = "<group>"; };
+		22DBFC161DCA5EE4005D5F41 /* MainViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerTest.swift; sourceTree = "<group>"; };
 		22ED37881DC3F5C800FF4F58 /* ImageSavingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSavingHelper.swift; sourceTree = "<group>"; };
 		22ED378A1DC3F93A00FF4F58 /* ImageSavingHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSavingHelperTest.swift; sourceTree = "<group>"; };
 		22F8E4981D9992BB009E68F1 /* SDKSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -370,6 +372,7 @@
 				224B3B8B1DC2ABFF0046620D /* PODUploadServiceTest.swift */,
 				22ED378A1DC3F93A00FF4F58 /* ImageSavingHelperTest.swift */,
 				228F3B971DC91667000B74C5 /* CaptureImageVCTest.swift */,
+				22DBFC161DCA5EE4005D5F41 /* MainViewControllerTest.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -964,6 +967,7 @@
 				2271D5F31D9D8B390039853B /* MainVCHelperUnitTest.swift in Sources */,
 				22503FDA1DA84F820072FE61 /* CreateProfileViewControllerSpec.swift in Sources */,
 				222543B01DB55FB4000EA556 /* CreateProfileServiceTest.swift in Sources */,
+				22DBFC171DCA5EE4005D5F41 /* MainViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

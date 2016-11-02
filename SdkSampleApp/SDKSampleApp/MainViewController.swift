@@ -30,15 +30,27 @@ import EZLoadingActivity
     
     @IBAction func scanNewPodButtonClicked(_ sender: Any) {
         
-        let service = LoginService.init()
-        service.login(){ (dictionary,error) -> () in
-            let batchService = BatchService.init()
-            batchService.createBatchWithHightestPrimaryKey()
-            EZLoadingActivity.hide(true, animated: true)
-            self.pushViewController()
-        }
+        self.getAndPersistCookie(){self.loginCallCompletion()}
         EZLoadingActivity.show("Connecting to server...", disableUI: true)
         
+    }
+    
+    func loginCallCompletion(){
+        
+        let batchService = BatchService.init()
+        batchService.createBatchWithHightestPrimaryKey()
+        EZLoadingActivity.hide(true, animated: true)
+        self.pushViewController()
+        
+    }
+    
+    func getAndPersistCookie(completion: @escaping () -> Void){
+
+        let helper = MainVCHelper()
+        helper.getCookie(){ dictionary,error in
+            helper.persistCookie(dictionary: dictionary)
+            completion()}
+
     }
     
     func pushViewController(){

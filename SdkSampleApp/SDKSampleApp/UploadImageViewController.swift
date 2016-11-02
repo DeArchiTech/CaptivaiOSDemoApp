@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import Photos
+import EZLoadingActivity
 
 @objc class UploadImageViewController: UIViewController{
     
@@ -52,8 +53,8 @@ import Photos
             if dictionary != nil {
                 self.uploadAllImages(images: self.imageData)
             }
-            }
-        )
+        })
+        EZLoadingActivity.show("Uploading Documents To Server", disableUI: true)
     }
     
     func uploadAllImages(images : [CaptivaLocalImageObj]) -> Bool{
@@ -66,6 +67,7 @@ import Photos
                 }
             })
         }else{
+            EZLoadingActivity.hide(true, animated: true)
             let alertController = UIAlertController(title: "Upload Success", message:
                 "Documents and POD Number uploaded to server successfully", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
