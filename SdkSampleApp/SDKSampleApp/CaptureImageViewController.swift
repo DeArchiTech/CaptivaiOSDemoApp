@@ -48,14 +48,8 @@ import EZLoadingActivity
     }
     
     func persistImgToDisk(image : UIImage){
-        let service = CaptivaLocalImageService()
-        let obj = CaptivaLocalImageObj()
-        let util = ImageUtil()
-        let base64String = util.createBase64String(image: image)
-        obj.imageBase64Data = base64String
-        let batchNum = BatchService().getCurrentBatchNum()
-        obj.batchNumber = batchNum
-        service.saveImage(image: obj)
+        let helper = ImageSavingHelper()
+        helper.saveImage(image: image)
     }
     
     func presentCamera(){
