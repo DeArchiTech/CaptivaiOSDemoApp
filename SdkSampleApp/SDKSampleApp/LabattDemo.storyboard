@@ -47,7 +47,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="scanNewPodButtonClicked:" destination="YKf-lK-wtX" eventType="touchUpInside" id="C7L-40-TfK"/>
                                     <action selector="uploadPreviousBtnClicked:" destination="YKf-lK-wtX" eventType="touchUpInside" id="XP0-b8-RLu"/>
                                 </connections>
                             </button>
@@ -66,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlW-ve-5Eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1496.8" y="-321.58920539730138"/>
+            <point key="canvasLocation" x="1473" y="37"/>
         </scene>
         <!--Capture Documents-->
         <scene sceneID="ru1-1L-aCu">
@@ -136,6 +135,35 @@
             </objects>
             <point key="canvasLocation" x="2954" y="-314"/>
         </scene>
+        <!--Upload Saved POD Documents-->
+        <scene sceneID="Jfg-pt-6ng">
+            <objects>
+                <viewController storyboardIdentifier="uploadPreviousPOD" id="OE5-ZA-6Lr" customClass="UploadPreviousPODViewController" customModule="SDKSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Iu-0o-iUF"/>
+                        <viewControllerLayoutGuide type="bottom" id="0N5-fF-voC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VVl-80-1FY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcd-J6-hfs">
+                                <rect key="frame" x="109" y="306" width="173" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.62000434260000004" blue="0.1562093343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Upload Previous">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upload Saved POD Documents" id="JTn-Lq-mNv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11e-0Z-vlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2952.8000000000002" y="383.65817091454278"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="CwN-vp-X6E">
             <objects>
@@ -152,7 +180,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVi-1T-vD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="-321"/>
+            <point key="canvasLocation" x="766" y="37"/>
         </scene>
         <!--Insert POD Number-->
         <scene sceneID="bKn-vd-wkg">
@@ -285,6 +313,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RoP-YA-4Vf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2228" y="-314.39280359820094"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YJV-o6-luu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UZG-Mu-zzJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aEg-xv-MrG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OE5-ZA-6Lr" kind="relationship" relationship="rootViewController" id="eO2-uQ-rou"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIe-8g-L1j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="384"/>
         </scene>
     </scenes>
 </document>
