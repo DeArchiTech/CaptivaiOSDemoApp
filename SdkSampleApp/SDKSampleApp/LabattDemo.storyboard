@@ -147,18 +147,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcd-J6-hfs">
-                                <rect key="frame" x="109" y="306" width="173" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcd-J6-hfs">
+                                <rect key="frame" x="37" y="476" width="300" height="136"/>
                                 <color key="backgroundColor" red="1" green="0.62000434260000004" blue="0.1562093343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Upload Previous">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GAl-9Y-5Vd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Upload All POD Documents Now">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="uploadAllPodBtnClicked:" destination="OE5-ZA-6Lr" eventType="touchUpInside" id="TMp-oe-kFe"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="# of PODs to be uploaded" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQV-4U-eo4">
+                                <rect key="frame" x="62" y="112" width="250" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ar-NW-WJj">
+                                <rect key="frame" x="167" y="311" width="40" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Ar-NW-WJj" firstAttribute="centerX" secondItem="VVl-80-1FY" secondAttribute="centerX" id="15o-yR-phx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AQV-4U-eo4" secondAttribute="trailing" constant="20" id="KHj-nd-kB5"/>
+                            <constraint firstItem="AQV-4U-eo4" firstAttribute="leading" secondItem="VVl-80-1FY" secondAttribute="leadingMargin" constant="20" id="UwY-7e-9dL"/>
+                            <constraint firstItem="9Ar-NW-WJj" firstAttribute="centerY" secondItem="VVl-80-1FY" secondAttribute="centerY" id="bSL-bs-oy7"/>
+                            <constraint firstItem="Fcd-J6-hfs" firstAttribute="leading" secondItem="VVl-80-1FY" secondAttribute="leadingMargin" constant="20" id="gUy-Ov-WAE"/>
+                            <constraint firstItem="0N5-fF-voC" firstAttribute="top" secondItem="Fcd-J6-hfs" secondAttribute="bottom" constant="20" id="hE6-o4-E87"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fcd-J6-hfs" secondAttribute="trailing" constant="20" id="r3N-OD-wPq"/>
+                            <constraint firstItem="AQV-4U-eo4" firstAttribute="top" secondItem="4Iu-0o-iUF" secondAttribute="bottom" constant="20" id="yfN-RZ-Xs8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Upload Saved POD Documents" id="JTn-Lq-mNv"/>
+                    <connections>
+                        <outlet property="podNumberLabel" destination="9Ar-NW-WJj" id="oH7-Vo-emg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11e-0Z-vlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,8 +279,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="MNU-0B-Fkt" eventType="touchUpInside" id="YbP-ve-hAV"/>
-                                    <action selector="savePodBtnPressed:" destination="MNU-0B-Fkt" eventType="touchUpInside" id="hhj-8K-NaE"/>
+                                    <action selector="savePodButtonPressed:" destination="MNU-0B-Fkt" eventType="touchUpInside" id="NNI-eJ-JB8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptD-Q5-MaD">

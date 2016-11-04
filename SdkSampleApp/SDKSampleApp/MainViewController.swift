@@ -31,12 +31,11 @@ import EZLoadingActivity
     
     @IBAction func scanNewPodButtonClicked(_ sender: Any) {
         
-        let helper = MainVCHelper()
+        let helper = SessionHelper()
         helper.getCookie(){ dictionary,error in
             EZLoadingActivity.hide(true, animated: true)
             
             self.connected = dictionary != nil
-            helper.persistCookie(dictionary: dictionary)
             self.scanPodBtnCompletion()
         }
         EZLoadingActivity.show("Connecting to server...", disableUI: true)
@@ -52,13 +51,10 @@ import EZLoadingActivity
     
     @IBAction func uploadPreviousBtnClicked(_ sender: Any) {
         
-        let helper = MainVCHelper()
+        let helper = SessionHelper()
         helper.getCookie(){ dictionary,error in
             EZLoadingActivity.hide(true, animated: true)
-            
             self.connected = dictionary != nil
-            helper.persistCookie(dictionary: dictionary)
-            
             self.uploadPreviousBtnCompletion(connected: self.connected)
         }
         EZLoadingActivity.show("Connecting to server...", disableUI: true)

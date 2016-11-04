@@ -91,7 +91,7 @@
 - (void)relogin {
     
     //1)Clear cookie
-    MainVCHelper *helper = [[MainVCHelper alloc] init];
+    SessionHelper *helper = [[SessionHelper alloc] init];
     [helper clearCookie];
     
     //2)Call login again
@@ -104,7 +104,7 @@
     //Call Network Manager Login
 
     [self displayLoadingSpinner];
-    MainVCHelper *helper = [[MainVCHelper alloc] init];
+    SessionHelper *helper = [[SessionHelper alloc] init];
     [helper getCookieWithCompletion:^(NSDictionary * _Nullable param1, NSError * _Nullable param2){
         [self removeLoadingSpinner];
         [CSSUtils showAlertWithMessage:@"You are now ready to take pictures and scan your Documents" title:@"New POD Session Created"];

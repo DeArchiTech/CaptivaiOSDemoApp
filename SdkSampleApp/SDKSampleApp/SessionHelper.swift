@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-@objc class MainVCHelper: NSObject{
+@objc class SessionHelper: NSObject{
     
-    class func newInstance() -> MainVCHelper{
-        return MainVCHelper()
+    class func newInstance() -> SessionHelper{
+        return SessionHelper()
     }
     
     init(cookieManager : CookieManager, service : LoginService){
@@ -31,8 +31,17 @@ import UIKit
     func getCookie(completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void {
         
         //1)Attempt to load from Database
-        self.loginService?.login(completion:completion)
+        self.loginService?.login(){dictionary, error in
+            self.persistCookie(dictionary: dictionary)
+            completion(dictionary,error)
+        }
+        
+    }
     
+    func getCookieFromManager() -> Cookie?{
+        
+        return self.cookieManager?.cookieCache
+        
     }
     
     func persistCookie(dictionary : NSDictionary?) -> Bool {

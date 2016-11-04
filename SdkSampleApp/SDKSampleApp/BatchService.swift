@@ -173,4 +173,24 @@ import RealmSwift
         
     }
     
+    func loadNonUploadedBatches() -> [BatchObj]{
+        
+        //Default the first batch number to be zero
+        
+        let predicate = NSPredicate(format: "uploaded == NO")
+        let objs: Results<BatchObj> = {
+            try! Realm().objects(BatchObj.self)
+                .filter(predicate)
+                .sorted(byProperty: "batchNumber", ascending: false)
+        }()
+        var result : [BatchObj] = []
+        if objs.count > 0{
+            for batchObj in objs{
+                result.append(batchObj)
+            }
+        }
+        return result
+    
+    }
+    
 }

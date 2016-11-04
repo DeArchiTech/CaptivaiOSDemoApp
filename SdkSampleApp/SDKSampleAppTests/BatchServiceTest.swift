@@ -69,5 +69,25 @@ class BatchServiceTest: XCTestCase {
         XCTAssertEqual(loadResult?.podNumber, pod)
         
     }
+    
+    func testLoadNonUploadedBatches(){
+        
+        let service = BatchService()
+        service.deleteAllBatches()
+        
+        let obj1 = BatchObj()
+        obj1.batchNumber = 1
+        obj1.uploaded = true
+        
+        let obj2 = BatchObj()
+        obj2.batchNumber = 2
+        obj2.uploaded = false
+        
+        service.saveBatch(batch: obj1)
+        service.saveBatch(batch: obj2)
+        
+        let loadResult = service.loadNonUploadedBatches()
+        XCTAssertEqual(1, loadResult.count)
 
+    }
 }

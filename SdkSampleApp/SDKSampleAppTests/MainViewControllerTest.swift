@@ -24,17 +24,4 @@ class MainViewControllerTest: XCTestCase {
         super.tearDown()
     }
     
-    func testGetAndPersistCookie(){
-    
-        let vc = MainViewController()
-        let readyExpectation = expectation(description: "read")
-        
-        vc.getAndPersistCookie {
-            readyExpectation.fulfill()
-        }
-        
-        waitForExpectations(timeout: 60, handler: { error in
-            XCTAssertNil(error, "Error")
-        })        
-    }
 }

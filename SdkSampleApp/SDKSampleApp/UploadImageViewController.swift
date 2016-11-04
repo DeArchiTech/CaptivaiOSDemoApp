@@ -62,8 +62,8 @@ import EZLoadingActivity
         
     }
     
-    @IBAction func savePodBtnPressed(_ sender: Any) {
-
+    @IBAction func savePodButtonPressed(_ sender: Any) {
+        
         if checkPodNumberIsValid(){
             //Upload a text file with the POD Number in it
             let POD = self.podNumber.text
@@ -78,7 +78,8 @@ import EZLoadingActivity
     
     func uploadAllImages(images : [CaptivaLocalImageObj]) -> Bool{
         
-        let obj = self.imageData.popLast()
+        var data = images
+        let obj = data.popLast()
         if obj != nil {
             self.uploadService?.uploadImage(base64String: (obj?.imageBase64Data)!, completion: { (dictionary,error) -> () in
                 if dictionary != nil {

@@ -10,7 +10,7 @@ import XCTest
 import RealmSwift
 @testable import SDKSampleApp
 
-class MainVCHelperUnitTest: XCTestCase {
+class SessionHelperUnitTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -27,7 +27,7 @@ class MainVCHelperUnitTest: XCTestCase {
 
         //1)Create Cookie Manager Object
         let cookieManager = CookieManager.init()
-        let helper = MainVCHelper.init(cookieManager: cookieManager, service: LoginService.init())
+        let helper = SessionHelper.init(cookieManager: cookieManager, service: LoginService.init())
         //1.1)Put Cookie in Database
         let cookie = Cookie.init()
         cookie.cookie = "ABC"
@@ -53,7 +53,7 @@ class MainVCHelperUnitTest: XCTestCase {
         
         //1)Create Cookie Manager Object
         let cookieManager = CookieManager.init()
-        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
+        let helper = SessionHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
         
         //2)Assert Cookie Manager has no cookie cache
         XCTAssertNil(cookieManager.cookieCache)
@@ -85,7 +85,7 @@ class MainVCHelperUnitTest: XCTestCase {
             }
         }
         
-        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
+        let helper = SessionHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
         let params: NSDictionary = [
             "returnStatus": "LICE075-D09A-64E3",
             "ticket": cookie!
@@ -103,7 +103,7 @@ class MainVCHelperUnitTest: XCTestCase {
             "returnStatus": "LICE075-D09A-64E3",
             "ticket": cookie
         ]
-        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
+        let helper = SessionHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
         let result = helper.persistCookie(dictionary: params)
         XCTAssertTrue(result)
     
@@ -111,7 +111,7 @@ class MainVCHelperUnitTest: XCTestCase {
     
     func testClearCookie(){
         
-        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
+        let helper = SessionHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
         let result = helper.clearCookie()
         XCTAssertTrue(result)
         
@@ -119,7 +119,7 @@ class MainVCHelperUnitTest: XCTestCase {
     
     func testHasCookie(){
         
-        let helper = MainVCHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
+        let helper = SessionHelper.init(cookieManager: CookieManager.init(), service: LoginService.init())
         let cookie = "ABC"
         let params: NSDictionary = [
             "returnStatus": "LICE075-D09A-64E3",
@@ -135,7 +135,7 @@ class MainVCHelperUnitTest: XCTestCase {
     
     func testCreateNewBatchWithThingsInDb(){
         
-        let helper = MainVCHelper()
+        let helper = SessionHelper()
         let service = BatchService()
         service.deleteAllBatches()
         
@@ -152,7 +152,7 @@ class MainVCHelperUnitTest: XCTestCase {
     
     func testCreateNewBatchNothingInDb(){
         
-        let helper = MainVCHelper()
+        let helper = SessionHelper()
         let service = BatchService()
         service.deleteAllBatches()
         

@@ -12,9 +12,10 @@ import RealmSwift
 class Cookie: Object{
     
     dynamic var cookie = ""
-
+    var createdAt = String(describing: Date())
+    
     override static func primaryKey() -> String? {
-        return "cookie"
+        return "createdAt"
     }
     
 }
