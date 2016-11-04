@@ -32,7 +32,10 @@ import UIKit
         
         //1)Attempt to load from Database
         self.loginService?.login(){dictionary, error in
-            self.persistCookie(dictionary: dictionary)
+            let cookieString = self.getcookieFromLoginResponse(response: dictionary!)
+            let cookie = Cookie.init()
+            cookie.cookie = cookieString
+            self.cookieManager?.cookieCache = cookie
             completion(dictionary,error)
         }
         
@@ -47,15 +50,11 @@ import UIKit
     func persistCookie(dictionary : NSDictionary?) -> Bool {
         
         if dictionary != nil {
-            
-            //Get Cookie String
+            //Save Cookie to Database'
+            var cookie = Cookie.init()
             let cookieString = self.getcookieFromLoginResponse(response: dictionary!)
-            let cookie = Cookie.init()
             cookie.cookie = cookieString
-            
-            //Save Cookie to Database
             self.cookieManager?.saveCookie(cookie: cookie)
-            self.cookieManager?.cookieCache = cookie
             return true
         }
         return false

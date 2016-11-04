@@ -90,4 +90,20 @@ class BatchServiceTest: XCTestCase {
         XCTAssertEqual(1, loadResult.count)
 
     }
+    
+    func testCreateAndUpdatePODNum(){
+        
+        let service = BatchService()
+        service.deleteAllBatches()
+        
+        service.createBatchWithHightestPrimaryKey()
+        let num = service.createBatchWithHightestPrimaryKey()
+        let expected = "BLAHBLAHTxt"
+        let result = service.updateBatchPODNUmber(pod: expected, batchNum: num)
+        let batches = service.loadNonUploadedBatches()
+        let batch = batches.first
+        XCTAssertEqual(2, batches.count)
+        XCTAssertEqual(expected, batch?.podNumber)
+        
+    }
 }

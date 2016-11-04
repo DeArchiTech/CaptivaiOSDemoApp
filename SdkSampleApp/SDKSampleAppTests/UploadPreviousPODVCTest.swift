@@ -39,24 +39,11 @@ class UploadPreviousPODVCTest: XCTestCase {
         XCTAssertTrue(vc.batches.count > 0)
         
     }
-    
-    func testIncrementNumOfPODLabel(){
-        
-        let vc = UploadPreviousPODViewController()
-        vc.podNumberLabel = UILabel.init()
-        vc.podNumberLabel.text = "0"
-        XCTAssertTrue(vc.incrementNumOfPODLabel())
-        let expected = "1"
-        let actural = vc.podNumberLabel.text
-        XCTAssertEqual(expected, actural)
-        
-    }
 
     func testUploadAllBatches(){
         
         //Set up View Controller
         let vc = UploadPreviousPODViewController()
-        vc.uploadHelper = UploadHelper.init()
         let exp = expectation(description: "read")
         
         //Set up batch

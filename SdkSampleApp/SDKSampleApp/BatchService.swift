@@ -151,6 +151,7 @@ import RealmSwift
     
     func updateBatchPODNUmber(pod : String , batchNum : Int) -> Bool {
         
+        //let predicate = NSPredicate(format: "batchNumber == %d", batchNum)
         let predicate = NSPredicate(format: "batchNumber == %d", batchNum)
         let objs: Results<BatchObj> = {
             try! Realm().objects(BatchObj.self).filter(predicate)

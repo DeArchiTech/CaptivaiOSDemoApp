@@ -14,8 +14,8 @@ import EZLoadingActivity
 @objc class UploadImageViewController: UIViewController{
     
     var imageData : [CaptivaLocalImageObj] = []
+    var batchNum : Int = 0
     var count = 0
-    var connected : Bool = false
     
     @IBOutlet var numberOfImages: UILabel!
     @IBOutlet var podNumber: UITextField!
@@ -24,25 +24,12 @@ import EZLoadingActivity
         return UploadImageViewController()
     }
     
-    var cookieManager : CookieManager?
-    var service : PODUploadService?
-    var uploadService : UploadService?
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, 	action: "dismissKeyboard")
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
-        
-        self.cookieManager = CookieManager.init()
-        if(self.cookieManager?.loadCookie())!{
-            let cookieString = self.cookieManager?.cookieCache?.cookie
-            self.service = PODUploadService.init(cookie: cookieString!)
-            self.uploadService = UploadService.init(cookie: cookieString!)
-        }else{
-            print("Error, cannot load cookie cache")
-        }
         self.loadImageData()
         
     }
@@ -51,12 +38,20 @@ import EZLoadingActivity
         
         if checkPodNumberIsValid(){
             //Upload a text file with the POD Number in it
-            let POD = self.podNumber.text
-            self.service?.uploadPODNumber(pod: POD!, completion: { (dictionary,error) -> () in
-                if dictionary != nil {
-                    self.uploadAllImages(images: self.imageData)
-                }
-            })
+            let sessionHelper = SessionHelper()
+            sessionHelper.getCookie(){
+                dictionary, error in
+    
+                let cookieString = sessionHelper.getCookieFromManager()?.cookie
+                let POD = self.podNumber.text
+                let podService = PODUploadService.init(cookie: cookieString!)
+                podService.uploadPODNumber(pod: POD!, completion: { (dictionary,error) -> () in
+                    if dictionary != nil {
+                        self.uploadAllImages(images: self.imageData, cookieString: cookieString!)
+                    }
+                })
+            }
+
             EZLoadingActivity.show("Uploading Documents To Server", disableUI: true)
         }
         
@@ -65,9 +60,9 @@ import EZLoadingActivity
     @IBAction func savePodButtonPressed(_ sender: Any) {
         
         if checkPodNumberIsValid(){
-            //Upload a text file with the POD Number in it
             let POD = self.podNumber.text
             let batch = BatchService()
+            batch.updateBatchPODNUmber(pod: POD!, batchNum: self.batchNum)
             let alertController = UIAlertController(title: "POD Number Saved", message:
                 "POD Number and Documents saved and can be uploaded later", preferredStyle: UIAlertControllerStyle.alert)
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
@@ -76,14 +71,15 @@ import EZLoadingActivity
         
     }
     
-    func uploadAllImages(images : [CaptivaLocalImageObj]) -> Bool{
+    func uploadAllImages(images : [CaptivaLocalImageObj], cookieString : String) -> Bool{
         
         var data = images
         let obj = data.popLast()
         if obj != nil {
-            self.uploadService?.uploadImage(base64String: (obj?.imageBase64Data)!, completion: { (dictionary,error) -> () in
+            let uploadService = UploadService.init(cookie: cookieString)
+            uploadService.uploadImage(base64String: (obj?.imageBase64Data)!, completion: { (dictionary,error) -> () in
                 if dictionary != nil {
-                    self.uploadAllImages(images: self.imageData)
+                    self.uploadAllImages(images: self.imageData, cookieString: cookieString)
                 }
             })
         }else{
@@ -109,9 +105,8 @@ import EZLoadingActivity
     }
     
     func getCurrentBatchNumber() -> Int{
-    
-        let service = BatchService()
-        return service.getCurrentBatchNum()
+        
+        return self.batchNum
         
     }
     

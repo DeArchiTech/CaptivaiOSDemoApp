@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="200" id="MRF-mU-prJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Upload Previous">
+                                <state key="normal" title="Sync POD">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -98,7 +98,7 @@
                                 <rect key="frame" x="25" y="89" width="328" height="411"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="pma-vp-2L8">
-                                <rect key="frame" x="199" y="528" width="140" height="119"/>
+                                <rect key="frame" x="199" y="528" width="154" height="119"/>
                                 <color key="backgroundColor" red="1" green="0.20192376500000001" blue="0.4119703622" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Lgw-T0-HNU"/>
@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcJ-pH-Veo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2954" y="-314"/>
+            <point key="canvasLocation" x="2952.8000000000002" y="-314.39280359820094"/>
         </scene>
         <!--Upload Saved POD Documents-->
         <scene sceneID="Jfg-pt-6ng">
@@ -147,48 +147,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="SSn-ST-oAD">
+                                <rect key="frame" x="45" y="81" width="303" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of PODs to be uploaded" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQV-4U-eo4">
+                                        <rect key="frame" x="0.0" y="0.0" width="231.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ar-NW-WJj">
+                                        <rect key="frame" x="290.5" y="0.0" width="12.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Gbc-w0-l9H"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcd-J6-hfs">
-                                <rect key="frame" x="37" y="476" width="300" height="136"/>
+                                <rect key="frame" x="37" y="499" width="300" height="136"/>
                                 <color key="backgroundColor" red="1" green="0.62000434260000004" blue="0.1562093343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="GAl-9Y-5Vd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Upload All POD Documents Now">
+                                <state key="normal" title="Upload POD Now">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="uploadAllPodBtnClicked:" destination="OE5-ZA-6Lr" eventType="touchUpInside" id="TMp-oe-kFe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="# of PODs to be uploaded" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQV-4U-eo4">
-                                <rect key="frame" x="62" y="112" width="250" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ar-NW-WJj">
-                                <rect key="frame" x="167" y="311" width="40" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M88-hR-RxJ">
+                                <rect key="frame" x="45" y="160" width="292" height="279"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customcell" id="PHq-84-vUJ">
+                                        <rect key="frame" x="0.0" y="28" width="292" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PHq-84-vUJ" id="yFD-OF-dn1">
+                                            <rect key="frame" x="0.0" y="0.0" width="292" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="OE5-ZA-6Lr" id="HGJ-OR-cXt"/>
+                                    <outlet property="delegate" destination="OE5-ZA-6Lr" id="rEs-ny-DdH"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9Ar-NW-WJj" firstAttribute="centerX" secondItem="VVl-80-1FY" secondAttribute="centerX" id="15o-yR-phx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AQV-4U-eo4" secondAttribute="trailing" constant="20" id="KHj-nd-kB5"/>
-                            <constraint firstItem="AQV-4U-eo4" firstAttribute="leading" secondItem="VVl-80-1FY" secondAttribute="leadingMargin" constant="20" id="UwY-7e-9dL"/>
-                            <constraint firstItem="9Ar-NW-WJj" firstAttribute="centerY" secondItem="VVl-80-1FY" secondAttribute="centerY" id="bSL-bs-oy7"/>
+                            <constraint firstItem="SSn-ST-oAD" firstAttribute="top" secondItem="4Iu-0o-iUF" secondAttribute="bottom" constant="20" id="FQg-lM-UR7"/>
+                            <constraint firstItem="Fcd-J6-hfs" firstAttribute="top" secondItem="M88-hR-RxJ" secondAttribute="bottom" constant="20" id="Uao-f4-vp2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M88-hR-RxJ" secondAttribute="trailing" id="VTl-QP-oLx"/>
+                            <constraint firstItem="SSn-ST-oAD" firstAttribute="leading" secondItem="VVl-80-1FY" secondAttribute="leadingMargin" constant="20" id="VwE-pQ-E9Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SSn-ST-oAD" secondAttribute="trailing" constant="20" id="cAb-tX-yDh"/>
                             <constraint firstItem="Fcd-J6-hfs" firstAttribute="leading" secondItem="VVl-80-1FY" secondAttribute="leadingMargin" constant="20" id="gUy-Ov-WAE"/>
                             <constraint firstItem="0N5-fF-voC" firstAttribute="top" secondItem="Fcd-J6-hfs" secondAttribute="bottom" constant="20" id="hE6-o4-E87"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="M88-hR-RxJ" secondAttribute="leading" id="jym-xo-N76"/>
+                            <constraint firstItem="M88-hR-RxJ" firstAttribute="top" secondItem="SSn-ST-oAD" secondAttribute="bottom" constant="20" id="kTX-LE-KY8"/>
+                            <constraint firstItem="M88-hR-RxJ" firstAttribute="centerY" secondItem="VVl-80-1FY" secondAttribute="centerY" id="kvV-oK-ABN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Fcd-J6-hfs" secondAttribute="trailing" constant="20" id="r3N-OD-wPq"/>
-                            <constraint firstItem="AQV-4U-eo4" firstAttribute="top" secondItem="4Iu-0o-iUF" secondAttribute="bottom" constant="20" id="yfN-RZ-Xs8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Upload Saved POD Documents" id="JTn-Lq-mNv"/>
                     <connections>
                         <outlet property="podNumberLabel" destination="9Ar-NW-WJj" id="oH7-Vo-emg"/>
+                        <outlet property="tableView" destination="M88-hR-RxJ" id="6z8-d0-F71"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11e-0Z-vlF" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -34,23 +34,6 @@ class UploadImageViewControllerTest: XCTestCase {
         
     }
     
-    func testGetCurrentBatchNumber(){
-        
-        //Set Up
-        let service = BatchService()
-        let expected = 1
-        service.deleteAllBatches()
-        let batch = BatchObj()
-        batch.batchNumber = 1
-        service.saveBatch(batch: batch)
-        
-        //Test Controller
-        let vc = UploadImageViewController()
-        let result = vc.getCurrentBatchNumber()
-        XCTAssertEqual(expected,result)
-        
-    }
-    
     func testGetAllImageObjs() {
         //Set up
         let batchService = BatchService()
@@ -122,7 +105,20 @@ class UploadImageViewControllerTest: XCTestCase {
 
         let vc = UploadImageViewController()
         let array : [CaptivaLocalImageObj] = []
-        let result = vc.uploadAllImages(images: array)
+        let exp = expectation(description: "read")
+        
+        //2)Call Upload Service to upload with POD number
+
+        let sessionHelper = SessionHelper()
+        sessionHelper.getCookie(){
+            dictionary, error in
+            let cookie = sessionHelper.getCookieFromManager()?.cookie
+            let result = vc.uploadAllImages(images: array, cookieString: cookie!)
+            exp.fulfill()
+        }
+        waitForExpectations(timeout: 60, handler: { error in
+        XCTAssertNil(error, "Error")
+        })
     }
     
     func testPodNumberIsValid(){

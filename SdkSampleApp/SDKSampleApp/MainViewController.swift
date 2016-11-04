@@ -12,12 +12,13 @@ import EZLoadingActivity
 
 @objc class MainViewController: UIViewController{
     
+    var batchNum : Int = 0
+    
     class func newInstance() -> MainViewController{
         return MainViewController()
     }
     
     var indicator : UIActivityIndicatorView!
-    var connected : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,46 +32,15 @@ import EZLoadingActivity
     
     @IBAction func scanNewPodButtonClicked(_ sender: Any) {
         
-        let helper = SessionHelper()
-        helper.getCookie(){ dictionary,error in
-            EZLoadingActivity.hide(true, animated: true)
-            
-            self.connected = dictionary != nil
-            self.scanPodBtnCompletion()
-        }
-        EZLoadingActivity.show("Connecting to server...", disableUI: true)
-        
-    }
-    
-    func scanPodBtnCompletion(){
         let batchService = BatchService.init()
-        batchService.createBatchWithHightestPrimaryKey()
-        EZLoadingActivity.hide(true, animated: true)
+        self.batchNum = batchService.createBatchWithHightestPrimaryKey()
         self.pushCaptureViewController()
+        
     }
     
     @IBAction func uploadPreviousBtnClicked(_ sender: Any) {
         
-        let helper = SessionHelper()
-        helper.getCookie(){ dictionary,error in
-            EZLoadingActivity.hide(true, animated: true)
-            self.connected = dictionary != nil
-            self.uploadPreviousBtnCompletion(connected: self.connected)
-        }
-        EZLoadingActivity.show("Connecting to server...", disableUI: true)
-        
-    }
-    
-    func uploadPreviousBtnCompletion(connected : Bool){
-        
-        if connected {
-            let batchService = BatchService.init()
-            batchService.createBatchWithHightestPrimaryKey()
-            EZLoadingActivity.hide(true, animated: true)
-            self.pushUploadPreviousViewController()
-        }else{
-            self.presentFailureAlertController()
-        }
+        self.pushUploadPreviousViewController()
         
     }
     
@@ -84,7 +54,7 @@ import EZLoadingActivity
     func pushCaptureViewController(){
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "captureImageView") as! CaptureImageViewController
-        vc.connected = self.connected
+        vc.batchNum = self.batchNum
         let navigationController = self.navigationController
         navigationController?.pushViewController(vc, animated: true)
         
@@ -93,7 +63,6 @@ import EZLoadingActivity
     func pushUploadPreviousViewController(){
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "uploadPreviousPOD") as! UploadPreviousPODViewController
-        vc.connected = self.connected
         let navigationController = self.navigationController
         navigationController?.pushViewController(vc, animated: true)
         

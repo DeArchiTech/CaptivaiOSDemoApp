@@ -23,31 +23,6 @@ class CSSUtilHelperTest: XCTestCase {
         super.tearDown()
     }
     
-    func testSaveImage(){
-    
-        let testBundle = Bundle(for: type(of: self))
-        let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
-        let data:NSData = UIImageJPEGRepresentation(img!,1.0)! as NSData
-        
-        let service = CaptivaLocalImageService()
-        service.deleteAllImages()
-    
-        let helper = ImageSavingHelper()
-        let filePath = "ABCDE"
-        let filepath2 = "ADD"
-        let batchService = BatchService()
-        let batchNum = batchService.getCurrentBatchNum()
-        let result = helper.saveImage(data: data, imagePath: filePath as NSString)
-        let result2 = helper.saveImage(data: data, imagePath: filepath2 as NSString)
-    
-        XCTAssertTrue(result)
-    
-        let loadResult = service.loadImagesFromBatchNumber(batchNumber: batchNum)
-        XCTAssertEqual(loadResult?.first?.batchNumber, batchNum)
-        XCTAssertEqual(loadResult?.first?.imagePath, filePath)
-    
-    }
-    
     func testGetCurrentBatchNum(){
         
         let service = BatchService()

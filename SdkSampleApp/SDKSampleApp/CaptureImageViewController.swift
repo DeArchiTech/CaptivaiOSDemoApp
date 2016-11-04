@@ -11,8 +11,7 @@ import Foundation
 @objc class CaptureImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet var imageView: UIImageView!
-    
-    var connected : Bool = false
+    var batchNum : Int = 0
     
     class func newInstance() -> CaptureImageViewController{
         return CaptureImageViewController()
@@ -51,7 +50,7 @@ import Foundation
     
     func persistImgToDisk(image : UIImage){
         let helper = ImageSavingHelper()
-        helper.saveImage(image: image)
+        helper.saveImage(image: image, batchNum: self.batchNum)
     }
     
     func presentCamera(){
@@ -114,7 +113,7 @@ import Foundation
     @IBAction func uploadPodBtnClicked(_ sender: Any) {
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "uploadImageView") as! UploadImageViewController
-        vc.connected = self.connected
+        vc.batchNum = self.batchNum
         let navigationController = self.navigationController
         navigationController?.pushViewController(vc, animated: true)
     }

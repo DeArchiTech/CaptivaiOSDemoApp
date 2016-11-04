@@ -43,11 +43,11 @@ class CaptivaLocalImageServiceTest: XCTestCase {
         let wrongBatchNum = 5
         
         let obj1 = CaptivaLocalImageObj()
-        obj1.imagePath = "A"
+        obj1.imageBase64Data = "A"
         let obj2 = CaptivaLocalImageObj()
-        obj2.imagePath = "B"
+        obj2.imageBase64Data = "B"
         let obj3 = CaptivaLocalImageObj()
-        obj3.imagePath = "C"
+        obj3.imageBase64Data = "C"
         
         obj1.batchNumber = rightBatchNum
         obj2.batchNumber = rightBatchNum
@@ -59,7 +59,9 @@ class CaptivaLocalImageServiceTest: XCTestCase {
         
         let result = service.loadImagesFromBatchNumber(batchNumber: rightBatchNum)
         XCTAssertEqual(result?.count, 2)
-        XCTAssertEqual(result?.first?.batchNumber, rightBatchNum)
+        let checkResult = result?.first?.batchNumber
+        let actural = rightBatchNum
+        XCTAssertEqual(checkResult, actural)
         
     }
     

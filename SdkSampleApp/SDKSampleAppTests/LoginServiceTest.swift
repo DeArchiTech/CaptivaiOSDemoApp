@@ -23,7 +23,7 @@ class LoginServiceTest: XCTestCase {
     func testGetEndPoint() {
         
         let manager : LoginService = LoginService.init()
-        let endpoint : String = "http://104.209.39.82:8090"
+        let endpoint : String = "http://138.91.240.65:8090"
         let managerEndPt : String = manager.endPoint
         XCTAssertEqual(endpoint , managerEndPt)
         
@@ -72,7 +72,7 @@ class LoginServiceTest: XCTestCase {
         
         let manager : LoginService = LoginService.init()
         let result = manager.getLoginEndpoint()
-        XCTAssertEqual(result, "http://104.209.39.82:8090/cp-rest/session" )
+        XCTAssertEqual(result, "http://138.91.240.65:8090/cp-rest/session" )
         
     }
     
@@ -90,7 +90,7 @@ class LoginServiceTest: XCTestCase {
     
     func testGetLoginEndPt() {
         
-        let expected = "http://104.209.39.82:8090/cp-rest/session"
+        let expected = "http://138.91.240.65:8090/cp-rest/session"
         let manager : LoginService = LoginService.init()
         let result = manager.getLoginEndpoint()
         XCTAssertEqual(expected, result)

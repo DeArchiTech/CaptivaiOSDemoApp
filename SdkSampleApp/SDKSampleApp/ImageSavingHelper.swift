@@ -15,6 +15,17 @@ import UIKit
         return ImageSavingHelper()
     }
     
+    func saveImage(image: UIImage, batchNum: Int) -> Bool{
+        
+        let util = ImageUtil()
+        let imageBase64Data = util.createBase64String(image: image)
+        let service = CaptivaLocalImageService()
+        let objc = self.createImageObj(imageBase64Data: imageBase64Data, batchNum: batchNum)
+        service.saveImage(image: objc)
+        return true
+        
+    }
+    
     func saveImage(image: UIImage) -> Bool{
         
         let util = ImageUtil()
@@ -40,6 +51,15 @@ import UIKit
         
         let util = ImageUtil()
         return util.createBase64String(data: data)
+        
+    }
+    
+    func createImageObj(imageBase64Data: String, batchNum: Int) -> CaptivaLocalImageObj{
+        
+        let objc = CaptivaLocalImageObj()
+        objc.batchNumber = batchNum
+        objc.imageBase64Data = imageBase64Data
+        return objc
         
     }
     
