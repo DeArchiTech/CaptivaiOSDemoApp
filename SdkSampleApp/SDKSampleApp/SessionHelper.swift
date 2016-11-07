@@ -28,6 +28,19 @@ import UIKit
     var cookieManager : CookieManager?
     var loginService : LoginService?
     
+    func getCookieExpress(completion: @escaping ( _: String?) -> ()) ->Void {
+     
+        //1)Attempt to load from Database
+        self.loginService?.login(){dictionary, error in
+            let cookieString = self.getcookieFromLoginResponse(response: dictionary!)
+            let cookie = Cookie.init()
+            cookie.cookie = cookieString
+            self.cookieManager?.cookieCache = cookie
+            completion(cookie.cookie)
+        }
+        
+    }
+    
     func getCookie(completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void {
         
         //1)Attempt to load from Database
@@ -38,6 +51,12 @@ import UIKit
             self.cookieManager?.cookieCache = cookie
             completion(dictionary,error)
         }
+        
+    }
+    
+    func getCookieStringFromManager() -> String?{
+        
+        return self.cookieManager?.cookieCache?.cookie
         
     }
     

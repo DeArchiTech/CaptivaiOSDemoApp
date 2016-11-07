@@ -43,6 +43,8 @@
 		22837C971DB95EEE001FED93 /* reva6401136.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C961DB95EEE001FED93 /* reva6401136.png */; };
 		22837C991DB95FCC001FED93 /* reva7501334.png in Resources */ = {isa = PBXBuildFile; fileRef = 22837C981DB95FCC001FED93 /* reva7501334.png */; };
 		228F3B981DC91667000B74C5 /* CaptureImageVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F3B971DC91667000B74C5 /* CaptureImageVCTest.swift */; };
+		22A15B1F1DD11238009D3D81 /* NetworkBatchServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A15B1E1DD11238009D3D81 /* NetworkBatchServiceTest.swift */; };
+		22A15B211DD1129F009D3D81 /* NetworkBatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A15B201DD1129F009D3D81 /* NetworkBatchService.swift */; };
 		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
 		22A9E2EE1DB93A8C007FFF17 /* reva2020.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2EA1DB93A8C007FFF17 /* reva2020.png */; };
 		22A9E2EF1DB93A8C007FFF17 /* reva5858.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2EB1DB93A8C007FFF17 /* reva5858.png */; };
@@ -199,6 +201,8 @@
 		22837C961DB95EEE001FED93 /* reva6401136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva6401136.png; sourceTree = "<group>"; };
 		22837C981DB95FCC001FED93 /* reva7501334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva7501334.png; sourceTree = "<group>"; };
 		228F3B971DC91667000B74C5 /* CaptureImageVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureImageVCTest.swift; sourceTree = "<group>"; };
+		22A15B1E1DD11238009D3D81 /* NetworkBatchServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkBatchServiceTest.swift; sourceTree = "<group>"; };
+		22A15B201DD1129F009D3D81 /* NetworkBatchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkBatchService.swift; sourceTree = "<group>"; };
 		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
 		22A9E2EA1DB93A8C007FFF17 /* reva2020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva2020.png; sourceTree = "<group>"; };
 		22A9E2EB1DB93A8C007FFF17 /* reva5858.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva5858.png; sourceTree = "<group>"; };
@@ -383,6 +387,7 @@
 				22DBFC161DCA5EE4005D5F41 /* MainViewControllerTest.swift */,
 				2228456B1DCBAB5D0083C23E /* UploadPreviousPODVCTest.swift */,
 				22126B8A1DCBE4A200B603F7 /* UploadHelperTest.swift */,
+				22A15B1E1DD11238009D3D81 /* NetworkBatchServiceTest.swift */,
 			);
 			path = SDKSampleAppTests;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 				22B845661DA5BA2200348FA4 /* CreateProfileService.swift */,
 				22D67D9E1DBEB65E0018C521 /* CaptivaLocalImageService.swift */,
 				224B3B891DC2A9FB0046620D /* PODUploadService.swift */,
+				22A15B201DD1129F009D3D81 /* NetworkBatchService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -968,6 +974,7 @@
 				22180DBF1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift in Sources */,
 				224B3B8C1DC2ABFF0046620D /* PODUploadServiceTest.swift in Sources */,
 				228F3B981DC91667000B74C5 /* CaptureImageVCTest.swift in Sources */,
+				22A15B1F1DD11238009D3D81 /* NetworkBatchServiceTest.swift in Sources */,
 				22DB3E501DBFD593006FD6FC /* BatchServiceTest.swift in Sources */,
 				22D67D951DBE893D0018C521 /* UploadImageViewControllerTest.swift in Sources */,
 				22B845781DA5BB6900348FA4 /* CreateProfileServiceSpec.swift in Sources */,
@@ -1010,6 +1017,7 @@
 				227581E91DC7C31E005180E8 /* MainViewController.swift in Sources */,
 				F326400E17C7CDE90043754D /* CSSAppDelegate.m in Sources */,
 				F326401717C7CDE90043754D /* SDK_Sample_App.xcdatamodeld in Sources */,
+				22A15B211DD1129F009D3D81 /* NetworkBatchService.swift in Sources */,
 				F326403A17C7CFB50043754D /* CSSMainViewController.m in Sources */,
 				F31AC88017D800F0002D06EB /* CSSEnhancePictureViewController.m in Sources */,
 				22D67D9B1DBEB0190018C521 /* BatchObj.swift in Sources */,
