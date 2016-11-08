@@ -3,7 +3,7 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "reva2020.png",
+      "filename" : "revaIcon40.png",
       "scale" : "2x"
     },
     {
@@ -15,7 +15,13 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "reva5858.png",
+      "filename" : "revaIcon29.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "reva5858-1.png",
       "scale" : "2x"
     },
     {
@@ -33,13 +39,25 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "reva120120.png",
+      "filename" : "reva120120-1.png",
       "scale" : "3x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "reva5858.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "revaIcon57X2.png",
+      "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "reva120120-1.png",
+      "filename" : "reva120120.png",
       "scale" : "2x"
     },
     {
@@ -49,48 +67,81 @@
       "scale" : "3x"
     },
     {
-      "idiom" : "ipad",
       "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "revaIconIpad20.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "ipad",
       "size" : "20x20",
+      "idiom" : "ipad",
+      "filename" : "revaIconIpad40.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "ipad",
       "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "revaIconIpad29.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "ipad",
       "size" : "29x29",
+      "idiom" : "ipad",
+      "filename" : "revaIconIpad58.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "ipad",
       "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "revaIconIpad40-1.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "ipad",
       "size" : "40x40",
+      "idiom" : "ipad",
+      "filename" : "revaIconIpad80.png",
       "scale" : "2x"
     },
     {
+      "size" : "50x50",
       "idiom" : "ipad",
-      "size" : "76x76",
+      "filename" : "revaIcon50.png",
       "scale" : "1x"
     },
     {
+      "size" : "50x50",
       "idiom" : "ipad",
-      "size" : "76x76",
+      "filename" : "revaIcon50X2.png",
       "scale" : "2x"
     },
     {
+      "size" : "72x72",
       "idiom" : "ipad",
+      "filename" : "revaIcon72.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "72x72",
+      "idiom" : "ipad",
+      "filename" : "revaIcon72X2.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "revaIconIpad76.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "revaIconIpad152.png",
+      "scale" : "2x"
+    },
+    {
       "size" : "83.5x83.5",
+      "idiom" : "ipad",
+      "filename" : "revaIconIpad167.png",
       "scale" : "2x"
     }
   ],
