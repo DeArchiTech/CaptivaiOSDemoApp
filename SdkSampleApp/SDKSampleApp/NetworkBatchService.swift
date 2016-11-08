@@ -116,6 +116,42 @@ class NetworkBatchService{
         
     }
     
+    func updateBatch(batchId :String, completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void{
+        
+        if self.cookieString != nil{
+            Alamofire.request(getBatchEndPoint(batchId: batchId), method: .post, parameters: createUpdatePayload(), encoding: JSONEncoding.default, headers: self.getHeaders())
+                .validate()
+                .responseJSON{ response in
+                    switch response.result{
+                    case .success(let result):
+                        if let result = response.result.value {
+                            let jsonResult = result as! NSDictionary
+                            completion(jsonResult, nil)
+                        }
+                    case .failure(let error):
+                        completion(nil, error as NSError?)
+                    }
+            }
+        }else{
+            //Throw Error!
+            do {
+                try ErrorUtil.throwError(message: "No cookie loaded in memory")
+            } catch MyError.RuntimeError(let errorMessage) {
+                print(errorMessage)
+            } catch {
+                
+            }
+            completion(nil, nil)
+        }
+        
+    }
+    
+    func createUpdatePayload() -> [String : String]{
+        
+        return ["dispatch":"S"]
+        
+    }
+    
     func createJsonPayload() -> [String : String]{
         
         var payload = [String : String]()

@@ -44,6 +44,9 @@ import EZLoadingActivity
     
                 let cookieString = sessionHelper.getCookieFromManager()?.cookie
                 let POD = self.podNumber.text
+                
+                //Todo Implement: Add In Create Batch Code Here
+                
                 let podService = PODUploadService.init(cookie: cookieString!)
                 podService.uploadPODNumber(pod: POD!, completion: { (dictionary,error) -> () in
                     if dictionary != nil {
