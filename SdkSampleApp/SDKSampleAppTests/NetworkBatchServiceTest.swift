@@ -22,6 +22,27 @@ class NetworkBatchServiceTest: XCTestCase {
         super.tearDown()
     }
     
+    func testCreateJsonPayload(){
+        
+        let service = NetworkBatchService.init(cookie: "")
+        let payload = service.createJsonPayload()
+        XCTAssertEqual(payload["captureFlow"], "RevaApp")
+        XCTAssertEqual(payload["batchName"], "Batch_{NextId}")
+        XCTAssertEqual(payload["batchRootLevel"], "1")
+
+    }
+    
+    func testParseID() {
+        
+        let expected = "expectedID"
+        let input : NSDictionary = ["content" : [ "id" : expected]]
+        let batchService = NetworkBatchService.init(cookie : "")
+        let result = batchService.parseID(dictionary: input)
+        XCTAssertNotNil(result)
+        XCTAssertEqual(expected, result)
+        
+    }
+    
     func testCreateAndGetBatch() {
 
         let exp = expectation(description: "read")
@@ -31,21 +52,22 @@ class NetworkBatchServiceTest: XCTestCase {
             var batchService = NetworkBatchService.init(cookie: cookie!)
             //Create a batch fullfil expectation in call back
             batchService.createBatch(){
-                dictionary, errror in
+                dict, errror in
                 
                 //Test Get Batch
-                XCTAssertNotNil(dictionary)
-                let batchID : String = batchService.parseID(dictionary)
-                batchService.getBatch(string: batchID){
-                    dict2, error2 in
+                XCTAssertNotNil(dict)
+                let batchID : String = batchService.parseID(dictionary: dict!)
+                XCTAssertNotNil(batchID)
+                batchService.getBatch(batchId: batchID){
+                dict2, error2 in
+                
                     //Expect expectations to be fulfilled
                     exp.fulfill()
                     XCTAssertNotNil(dict2)
-                }
+              }
             }
         }
         waitForExpectations(timeout: 60, handler: {error in
-            XCTAssertNotNil(error, "Error")
         })
     }
     

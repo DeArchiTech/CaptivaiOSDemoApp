@@ -45,6 +45,8 @@
 		228F3B981DC91667000B74C5 /* CaptureImageVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F3B971DC91667000B74C5 /* CaptureImageVCTest.swift */; };
 		22A15B1F1DD11238009D3D81 /* NetworkBatchServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A15B1E1DD11238009D3D81 /* NetworkBatchServiceTest.swift */; };
 		22A15B211DD1129F009D3D81 /* NetworkBatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A15B201DD1129F009D3D81 /* NetworkBatchService.swift */; };
+		22A15B231DD13083009D3D81 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A15B221DD13083009D3D81 /* MyError.swift */; };
+		22A15B261DD1334B009D3D81 /* ErrorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A15B251DD1334B009D3D81 /* ErrorUtil.swift */; };
 		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
 		22A9E2EE1DB93A8C007FFF17 /* reva2020.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2EA1DB93A8C007FFF17 /* reva2020.png */; };
 		22A9E2EF1DB93A8C007FFF17 /* reva5858.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2EB1DB93A8C007FFF17 /* reva5858.png */; };
@@ -203,6 +205,8 @@
 		228F3B971DC91667000B74C5 /* CaptureImageVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureImageVCTest.swift; sourceTree = "<group>"; };
 		22A15B1E1DD11238009D3D81 /* NetworkBatchServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkBatchServiceTest.swift; sourceTree = "<group>"; };
 		22A15B201DD1129F009D3D81 /* NetworkBatchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkBatchService.swift; sourceTree = "<group>"; };
+		22A15B221DD13083009D3D81 /* MyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
+		22A15B251DD1334B009D3D81 /* ErrorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorUtil.swift; sourceTree = "<group>"; };
 		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
 		22A9E2EA1DB93A8C007FFF17 /* reva2020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva2020.png; sourceTree = "<group>"; };
 		22A9E2EB1DB93A8C007FFF17 /* reva5858.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva5858.png; sourceTree = "<group>"; };
@@ -402,6 +406,7 @@
 				22D8B7E61DAD9BA60089E94D /* FilterObject.swift */,
 				22D67D981DBEAFE00018C521 /* CaptivaLocalImageObj.swift */,
 				22D67D9A1DBEB0190018C521 /* BatchObj.swift */,
+				22A15B221DD13083009D3D81 /* MyError.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -415,6 +420,15 @@
 				22126B881DCBE22100B603F7 /* UploadHelper.swift */,
 			);
 			name = VChelpers;
+			sourceTree = "<group>";
+		};
+		22A15B241DD130C0009D3D81 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				22D1E5A81D9C5731005483B7 /* ImageUtil.swift */,
+				22A15B251DD1334B009D3D81 /* ErrorUtil.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		22C6B7011DC00A5E005199DB /* Service */ = {
@@ -541,6 +555,7 @@
 		F326400317C7CDE90043754D /* SDKSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				22A15B241DD130C0009D3D81 /* Util */,
 				22C6B7031DC00A8D005199DB /* Controller */,
 				22C6B7011DC00A5E005199DB /* Service */,
 				2271D5EF1D9D84E70039853B /* VChelpers */,
@@ -567,7 +582,6 @@
 				8504CB861AD5EB4500591B99 /* CSSCustomWindow.mm */,
 				22CBBEAE1D9B165D00F0FDCC /* CookieManager.swift */,
 				222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */,
-				22D1E5A81D9C5731005483B7 /* ImageUtil.swift */,
 				224F97861DB92868007229EB /* Images.xcassets */,
 			);
 			name = SDKSampleApp;
@@ -1012,6 +1026,7 @@
 				22ED37891DC3F5C800FF4F58 /* ImageSavingHelper.swift in Sources */,
 				22AB4D3D1DAEEBC500FF439B /* SelectProfileViewController.swift in Sources */,
 				8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */,
+				22A15B231DD13083009D3D81 /* MyError.swift in Sources */,
 				22D8B7E71DAD9BA60089E94D /* FilterObject.swift in Sources */,
 				F326400A17C7CDE90043754D /* main.m in Sources */,
 				227581E91DC7C31E005180E8 /* MainViewController.swift in Sources */,
@@ -1033,6 +1048,7 @@
 				227581EB1DC7F5C5005180E8 /* CaptureImageViewController.swift in Sources */,
 				22611C471DA2EFD1003B1514 /* LoginService.swift in Sources */,
 				223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */,
+				22A15B261DD1334B009D3D81 /* ErrorUtil.swift in Sources */,
 				22D1E5A91D9C5731005483B7 /* ImageUtil.swift in Sources */,
 				22B845761DA5BA7C00348FA4 /* FilterProfile.swift in Sources */,
 				22126B891DCBE22100B603F7 /* UploadHelper.swift in Sources */,
