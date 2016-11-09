@@ -3,145 +3,145 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "revaIcon40.png",
+      "filename" : "AppIcon20x20@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "reva6060.png",
+      "filename" : "AppIcon60x60.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "revaIcon29.png",
+      "filename" : "AppIcon29x29.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "reva5858-1.png",
+      "filename" : "AppIcon29x29@2x~ipad-1.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "reva8787.png",
+      "filename" : "AppIcon87x87.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "reva8080.png",
+      "filename" : "AppIcon80x80.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "reva120120-1.png",
+      "filename" : "AppIcon120x120-1.png",
       "scale" : "3x"
     },
     {
       "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "reva5858.png",
+      "filename" : "AppIcon58x58.png",
       "scale" : "1x"
     },
     {
       "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "revaIcon57X2.png",
+      "filename" : "AppIcon57x57~2x.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "reva120120.png",
+      "filename" : "AppIcon120x120.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "reva180180.png",
+      "filename" : "AppIcon180x180.png",
       "scale" : "3x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "revaIconIpad20.png",
+      "filename" : "AppIcon20x20~ipad.png",
       "scale" : "1x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "revaIconIpad40.png",
+      "filename" : "AppIcon20x20@2x~ipad.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "revaIconIpad29.png",
+      "filename" : "AppIcon29x29~ipad.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "revaIconIpad58.png",
+      "filename" : "AppIcon29x29@2x~ipad.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "revaIconIpad40-1.png",
+      "filename" : "AppIcon40x40~ipad.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "revaIconIpad80.png",
+      "filename" : "AppIcon80x80~ipad.png",
       "scale" : "2x"
     },
     {
       "size" : "50x50",
       "idiom" : "ipad",
-      "filename" : "revaIcon50.png",
+      "filename" : "AppIcon50x50.png",
       "scale" : "1x"
     },
     {
       "size" : "50x50",
       "idiom" : "ipad",
-      "filename" : "revaIcon50X2.png",
+      "filename" : "AppIcon50x50@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "72x72",
       "idiom" : "ipad",
-      "filename" : "revaIcon72.png",
+      "filename" : "AppIcon72x72.png",
       "scale" : "1x"
     },
     {
       "size" : "72x72",
       "idiom" : "ipad",
-      "filename" : "revaIcon72X2.png",
+      "filename" : "AppIcon72x72@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "revaIconIpad76.png",
+      "filename" : "AppIcon76x76~ipad.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "revaIconIpad152.png",
+      "filename" : "AppIcon76x76@2x~ipad.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "revaIconIpad167.png",
+      "filename" : "AppIcon83.5x83.5@2x~ipad.png",
       "scale" : "2x"
     }
   ],

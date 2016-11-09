@@ -15,23 +15,33 @@
 		222543B01DB55FB4000EA556 /* CreateProfileServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222543AF1DB55FB4000EA556 /* CreateProfileServiceTest.swift */; };
 		2228456C1DCBAB5D0083C23E /* UploadPreviousPODVCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2228456B1DCBAB5D0083C23E /* UploadPreviousPODVCTest.swift */; };
 		222A09191DD286D5007F5D73 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224F97861DB92868007229EB /* Images.xcassets */; };
-		222A09241DD28884007F5D73 /* revaIconIpad20.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A091A1DD28884007F5D73 /* revaIconIpad20.png */; };
-		222A09251DD28884007F5D73 /* revaIconIpad29.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A091B1DD28884007F5D73 /* revaIconIpad29.png */; };
-		222A09261DD28884007F5D73 /* revaIconIpad40.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A091C1DD28884007F5D73 /* revaIconIpad40.png */; };
-		222A09271DD28884007F5D73 /* revaIconIpad58.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A091D1DD28884007F5D73 /* revaIconIpad58.png */; };
-		222A09281DD28884007F5D73 /* revaIconIpad76.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A091E1DD28884007F5D73 /* revaIconIpad76.png */; };
-		222A09291DD28884007F5D73 /* revaIconIpad80.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A091F1DD28884007F5D73 /* revaIconIpad80.png */; };
-		222A092A1DD28884007F5D73 /* revaIconIpad152.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09201DD28884007F5D73 /* revaIconIpad152.png */; };
-		222A092B1DD28884007F5D73 /* revaIconIpad167.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09211DD28884007F5D73 /* revaIconIpad167.png */; };
-		222A092C1DD28884007F5D73 /* revaIconIpad202x.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09221DD28884007F5D73 /* revaIconIpad202x.png */; };
-		222A092D1DD28884007F5D73 /* revaIconIpad292x.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09231DD28884007F5D73 /* revaIconIpad292x.png */; };
-		222A09351DD28B0A007F5D73 /* revaIcon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A092E1DD28B0A007F5D73 /* revaIcon29.png */; };
-		222A09361DD28B0A007F5D73 /* revaIcon40.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A092F1DD28B0A007F5D73 /* revaIcon40.png */; };
-		222A09371DD28B0A007F5D73 /* revaIcon50.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09301DD28B0A007F5D73 /* revaIcon50.png */; };
-		222A09381DD28B0A007F5D73 /* revaIcon50X2.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09311DD28B0A007F5D73 /* revaIcon50X2.png */; };
-		222A09391DD28B0A007F5D73 /* revaIcon57X2.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09321DD28B0A007F5D73 /* revaIcon57X2.png */; };
-		222A093A1DD28B0A007F5D73 /* revaIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09331DD28B0A007F5D73 /* revaIcon72.png */; };
-		222A093B1DD28B0A007F5D73 /* revaIcon72X2.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09341DD28B0A007F5D73 /* revaIcon72X2.png */; };
+		222A095D1DD2AC5A007F5D73 /* AppIcon20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09441DD2AC5A007F5D73 /* AppIcon20x20@2x.png */; };
+		222A095E1DD2AC5A007F5D73 /* AppIcon20x20@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09451DD2AC5A007F5D73 /* AppIcon20x20@2x~ipad.png */; };
+		222A095F1DD2AC5A007F5D73 /* AppIcon20x20~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09461DD2AC5A007F5D73 /* AppIcon20x20~ipad.png */; };
+		222A09601DD2AC5A007F5D73 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09471DD2AC5A007F5D73 /* AppIcon29x29.png */; };
+		222A09611DD2AC5A007F5D73 /* AppIcon29x29@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09481DD2AC5A007F5D73 /* AppIcon29x29@2x~ipad.png */; };
+		222A09621DD2AC5A007F5D73 /* AppIcon29x29~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09491DD2AC5A007F5D73 /* AppIcon29x29~ipad.png */; };
+		222A09631DD2AC5A007F5D73 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A094A1DD2AC5A007F5D73 /* AppIcon40x40.png */; };
+		222A09641DD2AC5A007F5D73 /* AppIcon40x40~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A094B1DD2AC5A007F5D73 /* AppIcon40x40~ipad.png */; };
+		222A09651DD2AC5A007F5D73 /* AppIcon50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A094C1DD2AC5A007F5D73 /* AppIcon50x50.png */; };
+		222A09661DD2AC5A007F5D73 /* AppIcon50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A094D1DD2AC5A007F5D73 /* AppIcon50x50@2x.png */; };
+		222A09671DD2AC5A007F5D73 /* AppIcon57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A094E1DD2AC5A007F5D73 /* AppIcon57x57@2x.png */; };
+		222A09681DD2AC5A007F5D73 /* AppIcon58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A094F1DD2AC5A007F5D73 /* AppIcon58x58.png */; };
+		222A09691DD2AC5A007F5D73 /* AppIcon58x58~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09501DD2AC5A007F5D73 /* AppIcon58x58~ipad.png */; };
+		222A096A1DD2AC5A007F5D73 /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09511DD2AC5A007F5D73 /* AppIcon60x60.png */; };
+		222A096B1DD2AC5A007F5D73 /* AppIcon72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09521DD2AC5A007F5D73 /* AppIcon72x72.png */; };
+		222A096C1DD2AC5A007F5D73 /* AppIcon72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09531DD2AC5A007F5D73 /* AppIcon72x72@2x.png */; };
+		222A096D1DD2AC5A007F5D73 /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09541DD2AC5A007F5D73 /* AppIcon76x76.png */; };
+		222A096E1DD2AC5A007F5D73 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09551DD2AC5A007F5D73 /* AppIcon76x76@2x.png */; };
+		222A096F1DD2AC5A007F5D73 /* AppIcon76x76@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09561DD2AC5A007F5D73 /* AppIcon76x76@2x~ipad.png */; };
+		222A09701DD2AC5A007F5D73 /* AppIcon76x76~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09571DD2AC5A007F5D73 /* AppIcon76x76~ipad.png */; };
+		222A09711DD2AC5A007F5D73 /* AppIcon80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09581DD2AC5A007F5D73 /* AppIcon80x80.png */; };
+		222A09721DD2AC5A007F5D73 /* AppIcon80x80~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09591DD2AC5A007F5D73 /* AppIcon80x80~ipad.png */; };
+		222A09731DD2AC5A007F5D73 /* AppIcon87x87.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A095A1DD2AC5A007F5D73 /* AppIcon87x87.png */; };
+		222A09741DD2AC5A007F5D73 /* AppIcon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A095B1DD2AC5A007F5D73 /* AppIcon120x120.png */; };
+		222A09751DD2AC5A007F5D73 /* AppIcon180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A095C1DD2AC5A007F5D73 /* AppIcon180x180.png */; };
+		222A09771DD2AD64007F5D73 /* AppIcon83.5x83.5@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09761DD2AD64007F5D73 /* AppIcon83.5x83.5@2x~ipad.png */; };
+		222A09791DD2ADBA007F5D73 /* AppIcon57x57~2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 222A09781DD2ADBA007F5D73 /* AppIcon57x57~2x.png */; };
 		223013431D99C12B00D7BB7E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F8E4A21D99AD1F009E68F1 /* Alamofire.framework */; };
 		223013471D99C9AC00D7BB7E /* LoginRequestObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013461D99C9AC00D7BB7E /* LoginRequestObj.swift */; };
 		223013491D99C9B900D7BB7E /* LoginResponseObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223013481D99C9B900D7BB7E /* LoginResponseObj.swift */; };
@@ -65,13 +75,6 @@
 		22A15B231DD13083009D3D81 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A15B221DD13083009D3D81 /* MyError.swift */; };
 		22A15B261DD1334B009D3D81 /* ErrorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A15B251DD1334B009D3D81 /* ErrorUtil.swift */; };
 		22A50C6F1D9B1D21002970E9 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A50C6E1D9B1D21002970E9 /* Cookie.swift */; };
-		22A9E2EE1DB93A8C007FFF17 /* reva2020.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2EA1DB93A8C007FFF17 /* reva2020.png */; };
-		22A9E2EF1DB93A8C007FFF17 /* reva5858.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2EB1DB93A8C007FFF17 /* reva5858.png */; };
-		22A9E2F01DB93A8C007FFF17 /* reva6060.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2EC1DB93A8C007FFF17 /* reva6060.png */; };
-		22A9E2F11DB93A8C007FFF17 /* reva8787.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2ED1DB93A8C007FFF17 /* reva8787.png */; };
-		22A9E2F51DB93B4D007FFF17 /* reva8080.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2F21DB93B4D007FFF17 /* reva8080.png */; };
-		22A9E2F61DB93B4D007FFF17 /* reva120120.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2F31DB93B4D007FFF17 /* reva120120.png */; };
-		22A9E2F71DB93B4D007FFF17 /* reva180180.png in Resources */ = {isa = PBXBuildFile; fileRef = 22A9E2F41DB93B4D007FFF17 /* reva180180.png */; };
 		22AB4D3D1DAEEBC500FF439B /* SelectProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */; };
 		22B652FE1DA42E2200D04DA2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FA1DA42E2200D04DA2 /* Nimble.framework */; };
 		22B652FF1DA42E2200D04DA2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B652FB1DA42E2200D04DA2 /* Nimble.framework */; };
@@ -190,23 +193,33 @@
 		22180DBE1D9DC7CA00BA73CD /* EnhanceVCHelperUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnhanceVCHelperUnitTest.swift; sourceTree = "<group>"; };
 		222543AF1DB55FB4000EA556 /* CreateProfileServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileServiceTest.swift; sourceTree = "<group>"; };
 		2228456B1DCBAB5D0083C23E /* UploadPreviousPODVCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadPreviousPODVCTest.swift; sourceTree = "<group>"; };
-		222A091A1DD28884007F5D73 /* revaIconIpad20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIconIpad20.png; sourceTree = "<group>"; };
-		222A091B1DD28884007F5D73 /* revaIconIpad29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIconIpad29.png; sourceTree = "<group>"; };
-		222A091C1DD28884007F5D73 /* revaIconIpad40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIconIpad40.png; sourceTree = "<group>"; };
-		222A091D1DD28884007F5D73 /* revaIconIpad58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIconIpad58.png; sourceTree = "<group>"; };
-		222A091E1DD28884007F5D73 /* revaIconIpad76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIconIpad76.png; sourceTree = "<group>"; };
-		222A091F1DD28884007F5D73 /* revaIconIpad80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIconIpad80.png; sourceTree = "<group>"; };
-		222A09201DD28884007F5D73 /* revaIconIpad152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIconIpad152.png; sourceTree = "<group>"; };
-		222A09211DD28884007F5D73 /* revaIconIpad167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIconIpad167.png; sourceTree = "<group>"; };
-		222A09221DD28884007F5D73 /* revaIconIpad202x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIconIpad202x.png; sourceTree = "<group>"; };
-		222A09231DD28884007F5D73 /* revaIconIpad292x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIconIpad292x.png; sourceTree = "<group>"; };
-		222A092E1DD28B0A007F5D73 /* revaIcon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIcon29.png; sourceTree = "<group>"; };
-		222A092F1DD28B0A007F5D73 /* revaIcon40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIcon40.png; sourceTree = "<group>"; };
-		222A09301DD28B0A007F5D73 /* revaIcon50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIcon50.png; sourceTree = "<group>"; };
-		222A09311DD28B0A007F5D73 /* revaIcon50X2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIcon50X2.png; sourceTree = "<group>"; };
-		222A09321DD28B0A007F5D73 /* revaIcon57X2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIcon57X2.png; sourceTree = "<group>"; };
-		222A09331DD28B0A007F5D73 /* revaIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIcon72.png; sourceTree = "<group>"; };
-		222A09341DD28B0A007F5D73 /* revaIcon72X2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revaIcon72X2.png; sourceTree = "<group>"; };
+		222A09441DD2AC5A007F5D73 /* AppIcon20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon20x20@2x.png"; sourceTree = "<group>"; };
+		222A09451DD2AC5A007F5D73 /* AppIcon20x20@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon20x20@2x~ipad.png"; sourceTree = "<group>"; };
+		222A09461DD2AC5A007F5D73 /* AppIcon20x20~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon20x20~ipad.png"; sourceTree = "<group>"; };
+		222A09471DD2AC5A007F5D73 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		222A09481DD2AC5A007F5D73 /* AppIcon29x29@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x~ipad.png"; sourceTree = "<group>"; };
+		222A09491DD2AC5A007F5D73 /* AppIcon29x29~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29~ipad.png"; sourceTree = "<group>"; };
+		222A094A1DD2AC5A007F5D73 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
+		222A094B1DD2AC5A007F5D73 /* AppIcon40x40~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40~ipad.png"; sourceTree = "<group>"; };
+		222A094C1DD2AC5A007F5D73 /* AppIcon50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon50x50.png; sourceTree = "<group>"; };
+		222A094D1DD2AC5A007F5D73 /* AppIcon50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon50x50@2x.png"; sourceTree = "<group>"; };
+		222A094E1DD2AC5A007F5D73 /* AppIcon57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon57x57@2x.png"; sourceTree = "<group>"; };
+		222A094F1DD2AC5A007F5D73 /* AppIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon58x58.png; sourceTree = "<group>"; };
+		222A09501DD2AC5A007F5D73 /* AppIcon58x58~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon58x58~ipad.png"; sourceTree = "<group>"; };
+		222A09511DD2AC5A007F5D73 /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon60x60.png; sourceTree = "<group>"; };
+		222A09521DD2AC5A007F5D73 /* AppIcon72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon72x72.png; sourceTree = "<group>"; };
+		222A09531DD2AC5A007F5D73 /* AppIcon72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon72x72@2x.png"; sourceTree = "<group>"; };
+		222A09541DD2AC5A007F5D73 /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
+		222A09551DD2AC5A007F5D73 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
+		222A09561DD2AC5A007F5D73 /* AppIcon76x76@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x~ipad.png"; sourceTree = "<group>"; };
+		222A09571DD2AC5A007F5D73 /* AppIcon76x76~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76~ipad.png"; sourceTree = "<group>"; };
+		222A09581DD2AC5A007F5D73 /* AppIcon80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon80x80.png; sourceTree = "<group>"; };
+		222A09591DD2AC5A007F5D73 /* AppIcon80x80~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon80x80~ipad.png"; sourceTree = "<group>"; };
+		222A095A1DD2AC5A007F5D73 /* AppIcon87x87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon87x87.png; sourceTree = "<group>"; };
+		222A095B1DD2AC5A007F5D73 /* AppIcon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon120x120.png; sourceTree = "<group>"; };
+		222A095C1DD2AC5A007F5D73 /* AppIcon180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon180x180.png; sourceTree = "<group>"; };
+		222A09761DD2AD64007F5D73 /* AppIcon83.5x83.5@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon83.5x83.5@2x~ipad.png"; sourceTree = "<group>"; };
+		222A09781DD2ADBA007F5D73 /* AppIcon57x57~2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon57x57~2x.png"; sourceTree = "<group>"; };
 		222A930F1D95FB7300F33087 /* SDKSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222A93131D95FB7300F33087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222A93191D95FDB000F33087 /* SDKSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDKSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -242,13 +255,6 @@
 		22A15B221DD13083009D3D81 /* MyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		22A15B251DD1334B009D3D81 /* ErrorUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorUtil.swift; sourceTree = "<group>"; };
 		22A50C6E1D9B1D21002970E9 /* Cookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
-		22A9E2EA1DB93A8C007FFF17 /* reva2020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva2020.png; sourceTree = "<group>"; };
-		22A9E2EB1DB93A8C007FFF17 /* reva5858.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva5858.png; sourceTree = "<group>"; };
-		22A9E2EC1DB93A8C007FFF17 /* reva6060.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva6060.png; sourceTree = "<group>"; };
-		22A9E2ED1DB93A8C007FFF17 /* reva8787.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva8787.png; sourceTree = "<group>"; };
-		22A9E2F21DB93B4D007FFF17 /* reva8080.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva8080.png; sourceTree = "<group>"; };
-		22A9E2F31DB93B4D007FFF17 /* reva120120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva120120.png; sourceTree = "<group>"; };
-		22A9E2F41DB93B4D007FFF17 /* reva180180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reva180180.png; sourceTree = "<group>"; };
 		22AB4D3C1DAEEBC500FF439B /* SelectProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectProfileViewController.swift; sourceTree = "<group>"; };
 		22B652FA1DA42E2200D04DA2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Vendor/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		22B652FB1DA42E2200D04DA2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Vendor/Nimble/build/Debug/Nimble.framework; sourceTree = "<group>"; };
@@ -625,37 +631,40 @@
 		F326400417C7CDE90043754D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				222A092E1DD28B0A007F5D73 /* revaIcon29.png */,
-				222A092F1DD28B0A007F5D73 /* revaIcon40.png */,
-				222A09301DD28B0A007F5D73 /* revaIcon50.png */,
-				222A09311DD28B0A007F5D73 /* revaIcon50X2.png */,
-				222A09321DD28B0A007F5D73 /* revaIcon57X2.png */,
-				222A09331DD28B0A007F5D73 /* revaIcon72.png */,
-				222A09341DD28B0A007F5D73 /* revaIcon72X2.png */,
-				222A091A1DD28884007F5D73 /* revaIconIpad20.png */,
-				222A091B1DD28884007F5D73 /* revaIconIpad29.png */,
-				222A091C1DD28884007F5D73 /* revaIconIpad40.png */,
-				222A091D1DD28884007F5D73 /* revaIconIpad58.png */,
-				222A091E1DD28884007F5D73 /* revaIconIpad76.png */,
-				222A091F1DD28884007F5D73 /* revaIconIpad80.png */,
-				222A09201DD28884007F5D73 /* revaIconIpad152.png */,
-				222A09211DD28884007F5D73 /* revaIconIpad167.png */,
-				222A09221DD28884007F5D73 /* revaIconIpad202x.png */,
-				222A09231DD28884007F5D73 /* revaIconIpad292x.png */,
+				222A09781DD2ADBA007F5D73 /* AppIcon57x57~2x.png */,
+				222A09761DD2AD64007F5D73 /* AppIcon83.5x83.5@2x~ipad.png */,
+				222A09441DD2AC5A007F5D73 /* AppIcon20x20@2x.png */,
+				222A09451DD2AC5A007F5D73 /* AppIcon20x20@2x~ipad.png */,
+				222A09461DD2AC5A007F5D73 /* AppIcon20x20~ipad.png */,
+				222A09471DD2AC5A007F5D73 /* AppIcon29x29.png */,
+				222A09481DD2AC5A007F5D73 /* AppIcon29x29@2x~ipad.png */,
+				222A09491DD2AC5A007F5D73 /* AppIcon29x29~ipad.png */,
+				222A094A1DD2AC5A007F5D73 /* AppIcon40x40.png */,
+				222A094B1DD2AC5A007F5D73 /* AppIcon40x40~ipad.png */,
+				222A094C1DD2AC5A007F5D73 /* AppIcon50x50.png */,
+				222A094D1DD2AC5A007F5D73 /* AppIcon50x50@2x.png */,
+				222A094E1DD2AC5A007F5D73 /* AppIcon57x57@2x.png */,
+				222A094F1DD2AC5A007F5D73 /* AppIcon58x58.png */,
+				222A09501DD2AC5A007F5D73 /* AppIcon58x58~ipad.png */,
+				222A09511DD2AC5A007F5D73 /* AppIcon60x60.png */,
+				222A09521DD2AC5A007F5D73 /* AppIcon72x72.png */,
+				222A09531DD2AC5A007F5D73 /* AppIcon72x72@2x.png */,
+				222A09541DD2AC5A007F5D73 /* AppIcon76x76.png */,
+				222A09551DD2AC5A007F5D73 /* AppIcon76x76@2x.png */,
+				222A09561DD2AC5A007F5D73 /* AppIcon76x76@2x~ipad.png */,
+				222A09571DD2AC5A007F5D73 /* AppIcon76x76~ipad.png */,
+				222A09581DD2AC5A007F5D73 /* AppIcon80x80.png */,
+				222A09591DD2AC5A007F5D73 /* AppIcon80x80~ipad.png */,
+				222A095A1DD2AC5A007F5D73 /* AppIcon87x87.png */,
+				222A095B1DD2AC5A007F5D73 /* AppIcon120x120.png */,
+				222A095C1DD2AC5A007F5D73 /* AppIcon180x180.png */,
 				22837C901DB941D5001FED93 /* reva320480.png */,
 				22837C8C1DB94095001FED93 /* reva568h.png */,
 				22837C8D1DB94095001FED93 /* revaDefault.png */,
-				22A9E2EA1DB93A8C007FFF17 /* reva2020.png */,
 				22837C921DB942C7001FED93 /* reva12422208.png */,
 				22837C961DB95EEE001FED93 /* reva6401136.png */,
-				22A9E2F21DB93B4D007FFF17 /* reva8080.png */,
-				22A9E2F31DB93B4D007FFF17 /* reva120120.png */,
 				22837C981DB95FCC001FED93 /* reva7501334.png */,
 				22837C941DB94377001FED93 /* reva640960.png */,
-				22A9E2F41DB93B4D007FFF17 /* reva180180.png */,
-				22A9E2EB1DB93A8C007FFF17 /* reva5858.png */,
-				22A9E2EC1DB93A8C007FFF17 /* reva6060.png */,
-				22A9E2ED1DB93A8C007FFF17 /* reva8787.png */,
 				224F97881DB92D93007229EB /* reva_solutions_banner_big.png */,
 				224F97891DB92D93007229EB /* revaIcon.png */,
 				F326400517C7CDE90043754D /* SDKSampleApp-Info.plist */,
@@ -849,58 +858,61 @@
 			files = (
 				F326400817C7CDE90043754D /* InfoPlist.strings in Resources */,
 				22837C971DB95EEE001FED93 /* reva6401136.png in Resources */,
-				222A09391DD28B0A007F5D73 /* revaIcon57X2.png in Resources */,
-				22A9E2EF1DB93A8C007FFF17 /* reva5858.png in Resources */,
 				222A09191DD286D5007F5D73 /* Images.xcassets in Resources */,
-				222A093B1DD28B0A007F5D73 /* revaIcon72X2.png in Resources */,
-				222A09241DD28884007F5D73 /* revaIconIpad20.png in Resources */,
 				22837C911DB941D5001FED93 /* reva320480.png in Resources */,
+				222A09721DD2AC5A007F5D73 /* AppIcon80x80~ipad.png in Resources */,
 				F326401017C7CDE90043754D /* Default.png in Resources */,
 				F326401217C7CDE90043754D /* Default@2x.png in Resources */,
+				222A096F1DD2AC5A007F5D73 /* AppIcon76x76@2x~ipad.png in Resources */,
+				222A09641DD2AC5A007F5D73 /* AppIcon40x40~ipad.png in Resources */,
+				222A09681DD2AC5A007F5D73 /* AppIcon58x58.png in Resources */,
 				B5265E951AFBEB54004842C1 /* quadcrop.png in Resources */,
-				22A9E2F01DB93A8C007FFF17 /* reva6060.png in Resources */,
-				222A09381DD28B0A007F5D73 /* revaIcon50X2.png in Resources */,
 				B5265E941AFBEB54004842C1 /* quadback.png in Resources */,
 				22837C991DB95FCC001FED93 /* reva7501334.png in Resources */,
 				F326401417C7CDE90043754D /* Default-568h@2x.png in Resources */,
+				222A09791DD2ADBA007F5D73 /* AppIcon57x57~2x.png in Resources */,
 				F326403717C7CED90043754D /* MainStoryboard_iPad.storyboard in Resources */,
-				22A9E2F61DB93B4D007FFF17 /* reva120120.png in Resources */,
+				222A09601DD2AC5A007F5D73 /* AppIcon29x29.png in Resources */,
 				F326406617C801430043754D /* MainStoryboard_iPhone.storyboard in Resources */,
-				222A093A1DD28B0A007F5D73 /* revaIcon72.png in Resources */,
+				222A09701DD2AC5A007F5D73 /* AppIcon76x76~ipad.png in Resources */,
 				22837C951DB94377001FED93 /* reva640960.png in Resources */,
 				B58AE77417D8E33B00925ABA /* Settings.bundle in Resources */,
 				227581E71DC7BDDE005180E8 /* LabattDemo.storyboard in Resources */,
-				222A09291DD28884007F5D73 /* revaIconIpad80.png in Resources */,
-				222A09281DD28884007F5D73 /* revaIconIpad76.png in Resources */,
-				222A092A1DD28884007F5D73 /* revaIconIpad152.png in Resources */,
-				22A9E2F71DB93B4D007FFF17 /* reva180180.png in Resources */,
-				22A9E2F11DB93A8C007FFF17 /* reva8787.png in Resources */,
-				222A092C1DD28884007F5D73 /* revaIconIpad202x.png in Resources */,
-				22A9E2F51DB93B4D007FFF17 /* reva8080.png in Resources */,
+				222A09631DD2AC5A007F5D73 /* AppIcon40x40.png in Resources */,
+				222A095D1DD2AC5A007F5D73 /* AppIcon20x20@2x.png in Resources */,
+				222A09731DD2AC5A007F5D73 /* AppIcon87x87.png in Resources */,
+				222A096C1DD2AC5A007F5D73 /* AppIcon72x72@2x.png in Resources */,
+				222A095F1DD2AC5A007F5D73 /* AppIcon20x20~ipad.png in Resources */,
+				222A096E1DD2AC5A007F5D73 /* AppIcon76x76@2x.png in Resources */,
+				222A09661DD2AC5A007F5D73 /* AppIcon50x50@2x.png in Resources */,
 				22D1E5A71D9C56CE005483B7 /* testImg.jpg in Resources */,
+				222A09751DD2AC5A007F5D73 /* AppIcon180x180.png in Resources */,
+				222A095E1DD2AC5A007F5D73 /* AppIcon20x20@2x~ipad.png in Resources */,
+				222A09651DD2AC5A007F5D73 /* AppIcon50x50.png in Resources */,
 				22D1E5A41D9C3C55005483B7 /* base64Image.txt in Resources */,
 				858F23AA1AC4B7E5008AC2D2 /* quality.png in Resources */,
-				222A09251DD28884007F5D73 /* revaIconIpad29.png in Resources */,
+				222A09621DD2AC5A007F5D73 /* AppIcon29x29~ipad.png in Resources */,
 				F362887217DD09FF001799D8 /* ic_prev.png in Resources */,
-				222A09361DD28B0A007F5D73 /* revaIcon40.png in Resources */,
 				B5CAFD41194A7981009F5BD5 /* torch.png in Resources */,
-				222A092B1DD28884007F5D73 /* revaIconIpad167.png in Resources */,
-				222A09351DD28B0A007F5D73 /* revaIcon29.png in Resources */,
+				222A09691DD2AC5A007F5D73 /* AppIcon58x58~ipad.png in Resources */,
 				F362887317DD09FF001799D8 /* ic_prevsave.png in Resources */,
+				222A096B1DD2AC5A007F5D73 /* AppIcon72x72.png in Resources */,
 				22837C8F1DB94095001FED93 /* revaDefault.png in Resources */,
-				222A09371DD28B0A007F5D73 /* revaIcon50.png in Resources */,
-				222A09261DD28884007F5D73 /* revaIconIpad40.png in Resources */,
 				F362887417DD09FF001799D8 /* menu.png in Resources */,
+				222A09611DD2AC5A007F5D73 /* AppIcon29x29@2x~ipad.png in Resources */,
+				222A096D1DD2AC5A007F5D73 /* AppIcon76x76.png in Resources */,
+				222A096A1DD2AC5A007F5D73 /* AppIcon60x60.png in Resources */,
+				222A09671DD2AC5A007F5D73 /* AppIcon57x57@2x.png in Resources */,
+				222A09741DD2AC5A007F5D73 /* AppIcon120x120.png in Resources */,
 				224F978A1DB92D93007229EB /* reva_solutions_banner_big.png in Resources */,
-				222A092D1DD28884007F5D73 /* revaIconIpad292x.png in Resources */,
 				22837C931DB942C7001FED93 /* reva12422208.png in Resources */,
+				222A09771DD2AD64007F5D73 /* AppIcon83.5x83.5@2x~ipad.png in Resources */,
 				22837C8E1DB94095001FED93 /* reva568h.png in Resources */,
 				F36288AF17DFB1F4001799D8 /* MainScreen@2x.png in Resources */,
 				B50D997517DFCB47006DDEE2 /* back.png in Resources */,
 				B50D997617DFCB47006DDEE2 /* camera.png in Resources */,
-				22A9E2EE1DB93A8C007FFF17 /* reva2020.png in Resources */,
 				B50D997A17DFCB47006DDEE2 /* movementred.png in Resources */,
-				222A09271DD28884007F5D73 /* revaIconIpad58.png in Resources */,
+				222A09711DD2AC5A007F5D73 /* AppIcon80x80.png in Resources */,
 				224F978B1DB92D93007229EB /* revaIcon.png in Resources */,
 				225F60DB1D9C8EBF003B97A0 /* sampleCookie.txt in Resources */,
 			);
