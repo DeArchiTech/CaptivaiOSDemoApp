@@ -101,26 +101,6 @@ class UploadImageViewControllerTest: XCTestCase {
         
     }
     
-    func testUploadAllImages(){
-
-        let vc = UploadImageViewController()
-        let array : [CaptivaLocalImageObj] = []
-        let exp = expectation(description: "read")
-        
-        //2)Call Upload Service to upload with POD number
-
-        let sessionHelper = SessionHelper()
-        sessionHelper.getCookie(){
-            dictionary, error in
-            let cookie = sessionHelper.getCookieFromManager()?.cookie
-            let result = vc.uploadAllImages(images: array, cookieString: cookie!)
-            exp.fulfill()
-        }
-        waitForExpectations(timeout: 60, handler: { error in
-        XCTAssertNil(error, "Error")
-        })
-    }
-    
     func testPodNumberIsValid(){
         
         let vc = UploadImageViewController()
@@ -138,6 +118,42 @@ class UploadImageViewControllerTest: XCTestCase {
         vc.podNumber.text = "ABCDE"
         let result = vc.checkPodNumberIsValid()
         XCTAssertTrue(result)
+        
+    }
+    
+    func testChainedNetworkCall(){
+        
+        //1)Set Up Code
+        let vc = UploadImageViewController()
+        vc.podNumber = UITextField()
+        vc.podNumber.text = "ABC"
+        var array : [CaptivaLocalImageObj] = []
+        
+        let testBundle = Bundle(for: type(of: self))
+        let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
+        let data = ImageUtil().createBase64String(image: img!)
+        
+        let obj1 = CaptivaLocalImageObj()
+        obj1.imageBase64Data = data
+        array.append(obj1)
+        
+        let obj2 = CaptivaLocalImageObj()
+        obj2.imageBase64Data = data
+        array.append(obj2)
+        
+        let exp = expectation(description: "read")
+        
+        //2)Call function
+        vc.chainedUploadNetworkCall(){
+            dict, error in
+            //3)validate
+            let result = dict! as NSDictionary
+            XCTAssertEqual(result["returnStatus.code"] as! String, "OK0000")
+            exp.fulfill()
+        }
+        waitForExpectations(timeout: 60, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
         
     }
 }

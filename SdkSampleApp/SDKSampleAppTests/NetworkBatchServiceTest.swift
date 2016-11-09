@@ -90,7 +90,7 @@ class NetworkBatchServiceTest: XCTestCase {
             batchService.createBatch(){
                 dict, errror in
                 
-                //Test Get Batch
+                //Test Update Batch
                 XCTAssertNotNil(dict)
                 let batchID : String = batchService.parseID(dictionary: dict!)
                 XCTAssertNotNil(batchID)
@@ -99,11 +99,13 @@ class NetworkBatchServiceTest: XCTestCase {
                     
                     //Expect expectations to be fulfilled
                     exp.fulfill()
-                    XCTAssertNotNil(dict2)
+                    let result = dict2! as NSDictionary
+                    XCTAssertNotNil(result)
                 }
             }
         }
         waitForExpectations(timeout: 60, handler: {error in
         })
     }
+    
 }
