@@ -68,9 +68,9 @@ class UploadHelperTest: XCTestCase {
         
     }
     
-    func testUploadOnePodBatch(){
+    func testUploadBatch(){
         
-        //Set up Helper
+        //Set up helper
         let helper = UploadHelper.init()
         let exp = expectation(description: "read")
         
@@ -84,6 +84,7 @@ class UploadHelperTest: XCTestCase {
         
         //Set up img and service
         let imageService = CaptivaLocalImageService()
+        imageService.deleteAllImages()
         let testBundle = Bundle(for: type(of: self))
         let util = ImageUtil.init()
         let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
@@ -91,19 +92,18 @@ class UploadHelperTest: XCTestCase {
         imageObj.imageBase64Data = util.createBase64String(image : img!)
         imageService.saveImage(image: imageObj)
         
-        helper.createSession(){
-            (dictionary,error) -> ()in
-            //Upload the Pod Patch
-            helper.uploadPODBatch(batchObj: obj1){
-                dictionary, error in
-                exp.fulfill()
-            }
+        //2)Call function
+        helper.uploadPODBatch(batchObj: obj1){
+            //3)validate
+            dict, error in
+            let result = dict! as NSDictionary
+            let result2 = result["returnStatus"] as! NSDictionary
+            XCTAssertEqual(result2["code"] as! String, "OK0000")
+            exp.fulfill()
         }
-        
         waitForExpectations(timeout: 60, handler: { error in
             XCTAssertNil(error, "Error")
         })
-        
+
     }
-    
 }

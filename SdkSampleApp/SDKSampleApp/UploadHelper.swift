@@ -25,19 +25,52 @@ class UploadHelper: NSObject{
         //1)Creat a session
         self.createSession(){
             dictionary1, error1 in
-            //2)Upload POD Number
-            self.uploadPODNumber(podNumber: batchObj.podNumber){
-                dictionary2, error2 in
-                //3)Upload all Images associated with the POD
-                let service = CaptivaLocalImageService()
-                let num = batchObj.batchNumber
-                let images = service.loadImagesFromBatchNumber(batchNumber: num)
-                self.uploadAllImages(images: images!){
-                    dictionary3, error3 in
-                    completion(dictionary3, error3)
+            //1.1)Create a batch
+            let cookie = self.sessionHelper.getCookieStringFromManager()!
+            self.createBatch(cookie: cookie){
+                dict, error in
+                let service = NetworkBatchService.init(cookie: cookie)
+                let batchID = service.parseID(dictionary: dict!)
+                //2)Upload POD Number
+                self.uploadPODNumber(podNumber: batchObj.podNumber){
+                    dict2, error2 in
+                    //3)Upload all Images associated with the POD
+                    let service = CaptivaLocalImageService()
+                    let num = batchObj.batchNumber
+                    let images = service.loadImagesFromBatchNumber(batchNumber: num)
+                    self.uploadAllImages(images: images!){
+                        dict3, error3 in
+                        //3.1 Update The Batch
+                        self.updateBatch(batchID: batchID, cookie: cookie){
+                            dict4, error4 in
+                            completion(dict4, error4)
+                        }
+                    }
                 }
             }
         }
+    }
+    
+    func createBatch(cookie: String, completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
+        
+        let cookie = self.sessionHelper.getCookieStringFromManager()
+        let service = NetworkBatchService.init(cookie: cookie!)
+        service.createBatch(){
+            dictionary, error in
+            completion(dictionary, error)
+        }
+        
+    }
+    
+    func updateBatch(batchID: String,cookie: String,completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
+        
+        let cookie = self.sessionHelper.getCookieStringFromManager()
+        let service = NetworkBatchService.init(cookie: cookie!)
+        service.updateBatch(batchId: batchID){
+            dictionary, error in
+            completion(dictionary, error)
+        }
+        
     }
     
     func createSession(completion: @escaping ( _: NSDictionary?, _: NSError?)->()){

@@ -70,10 +70,17 @@ import Foundation
         var errorPtr : NSError?
         let imageHelper = CSSImageHelper.init()
         imageHelper.load(fromBytes: imgData, error: &errorPtr)
+        let applicationID = Constants.applicationID
+        var license = Constants.license
+        self.addLisenceKey(applicationId: applicationID, license: license)
         self.applyDarkerFilter()
         self.applyBlackAndWhiteFilter()
     }
     
+    func addLisenceKey(applicationId : String, license: String){
+        CMSCaptureImage.addLicenseKey(applicationId, license: license)
+    }
+
     func applyDarkerFilter(){
         
         let filterNames : [Any] = [CMSFilterBrightness]

@@ -37,7 +37,10 @@ import EZLoadingActivity
         
         if checkPodNumberIsValid(){
 
-            self.chainedUploadNetworkCall(){
+            let service = BatchService()
+            let batchObj = service.getBatchWithBatchNum(num: self.batchNum)
+            service.updateBatchPODNUmber(pod: self.getPod(), batchNum: self.batchNum)
+            self.chainedUploadNetworkCall(batchObj: batchObj!){
                 _,_ in
                 self.uploadCompletionCode()
             }
@@ -47,40 +50,14 @@ import EZLoadingActivity
         
     }
     
-    func chainedUploadNetworkCall(completion: @escaping (NSDictionary?, NSError?) -> ()){
+    func chainedUploadNetworkCall(batchObj : BatchObj, completion: @escaping (NSDictionary?, NSError?) -> ()){
         
-        //1)Create Session
-        let sessionHelper = SessionHelper()
-        sessionHelper.getCookie(){
+        let uploadHelper = UploadHelper.init()
+        uploadHelper.uploadPODBatch(batchObj: batchObj){
             dictionary, error in
-            
-            //2)Create Batch
-            let cookieString = sessionHelper.getCookieFromManager()?.cookie
-            let networkBatchService = NetworkBatchService.init(cookie: cookieString!)
-            networkBatchService.createBatch(){
-                dict, error in
-                
-                let POD = self.podNumber.text
-                let podService = PODUploadService.init(cookie: cookieString!)
-                let batchID : String = networkBatchService.parseID(dictionary: dict!)
-                
-                //3)Upload POD NUmber
-                podService.uploadPODNumber(pod: POD!, completion: { (dictionary,error) -> () in
-                    if dictionary != nil {
-                        
-                        //4)Uplaod All The Images
-                        self.uploadImagesWithCallBack(images: self.imageData, cookieString: cookieString!){
-                            _,_ in
-                            
-                            //5)Update Batch
-                            networkBatchService.updateBatch(batchId: batchID){
-                                dict2,error2 in
-                                completion(dict2,error2)
-                            }
-                        }
-                    }
-                })
-            }
+            let service = BatchService()
+            service.updateBatchUpdatedToTrue(num: batchObj.batchNumber)
+            completion(dictionary, error)
         }
     }
     
@@ -96,22 +73,6 @@ import EZLoadingActivity
             self.present(alertController, animated: true, completion: nil)
         }
         
-    }
-    
-    func uploadImagesWithCallBack(images : [CaptivaLocalImageObj], cookieString : String,completion: @escaping (NSDictionary?, NSError?) -> ()){
-
-        var data = images
-        let obj = data.popLast()
-        if obj != nil {
-            let uploadService = UploadService.init(cookie: cookieString)
-            uploadService.uploadImage(base64String: (obj?.imageBase64Data)!, completion: { (dictionary,error) -> () in
-                if dictionary != nil {
-                    self.uploadImagesWithCallBack(images: self.imageData, cookieString: cookieString, completion: completion)
-                }
-            })
-        }else{
-            completion(nil,nil)
-        }
     }
     
     func uploadCompletionCode() {
@@ -165,12 +126,6 @@ import EZLoadingActivity
         self.count += 1
         self.numberOfImages.text = String(self.count)
         
-    }
-    
-    func uploadImage(data : NSData,completion: @escaping (NSDictionary?, NSError?) -> ()){
-        
-        let service = UploadService()
-        service.uploadImage(data: data, completion: completion)
     }
     
     func checkPodNumberIsValid() -> Bool{

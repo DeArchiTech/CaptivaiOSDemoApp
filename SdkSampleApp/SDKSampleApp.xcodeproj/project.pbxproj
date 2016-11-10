@@ -108,6 +108,7 @@
 		22DBFC191DCAB1D2005D5F41 /* UploadPreviousPODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBFC181DCAB1D2005D5F41 /* UploadPreviousPODViewController.swift */; };
 		22ED37891DC3F5C800FF4F58 /* ImageSavingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ED37881DC3F5C800FF4F58 /* ImageSavingHelper.swift */; };
 		22ED378B1DC3F93A00FF4F58 /* ImageSavingHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ED378A1DC3F93A00FF4F58 /* ImageSavingHelperTest.swift */; };
+		22EEB5531DD3FAD0006D8629 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EEB5521DD3FAD0006D8629 /* Constants.swift */; };
 		22F8E49B1D9992BB009E68F1 /* SDKSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */; };
 		64ECA85AE51B90464C997F81 /* Pods_SDKSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5A804635F97D1371BFD115 /* Pods_SDKSampleAppTests.framework */; };
 		8504CB871AD5EB4500591B99 /* CSSCustomWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8504CB861AD5EB4500591B99 /* CSSCustomWindow.mm */; };
@@ -286,6 +287,7 @@
 		22DBFC181DCAB1D2005D5F41 /* UploadPreviousPODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadPreviousPODViewController.swift; sourceTree = "<group>"; };
 		22ED37881DC3F5C800FF4F58 /* ImageSavingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSavingHelper.swift; sourceTree = "<group>"; };
 		22ED378A1DC3F93A00FF4F58 /* ImageSavingHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSavingHelperTest.swift; sourceTree = "<group>"; };
+		22EEB5521DD3FAD0006D8629 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22F8E4981D9992BB009E68F1 /* SDKSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8E49A1D9992BB009E68F1 /* SDKSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKSampleAppUITests.swift; sourceTree = "<group>"; };
 		22F8E49C1D9992BB009E68F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -467,6 +469,7 @@
 			children = (
 				22D1E5A81D9C5731005483B7 /* ImageUtil.swift */,
 				22A15B251DD1334B009D3D81 /* ErrorUtil.swift */,
+				22EEB5521DD3FAD0006D8629 /* Constants.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -1133,6 +1136,7 @@
 				22B845761DA5BA7C00348FA4 /* FilterProfile.swift in Sources */,
 				22126B891DCBE22100B603F7 /* UploadHelper.swift in Sources */,
 				F31AC88317D80282002D06EB /* CSSUtils.m in Sources */,
+				22EEB5531DD3FAD0006D8629 /* Constants.swift in Sources */,
 				B5516F9317DA5A7900576310 /* CSSSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

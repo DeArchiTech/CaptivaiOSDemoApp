@@ -127,7 +127,8 @@ class UploadImageViewControllerTest: XCTestCase {
         let vc = UploadImageViewController()
         vc.podNumber = UITextField()
         vc.podNumber.text = "ABC"
-        var array : [CaptivaLocalImageObj] = []
+        let batchService = BatchService()
+        vc.batchNum = batchService.createBatchWithHightestPrimaryKey()
         
         let testBundle = Bundle(for: type(of: self))
         let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
@@ -135,25 +136,30 @@ class UploadImageViewControllerTest: XCTestCase {
         
         let obj1 = CaptivaLocalImageObj()
         obj1.imageBase64Data = data
-        array.append(obj1)
+        obj1.batchNumber = vc.batchNum
         
         let obj2 = CaptivaLocalImageObj()
-        obj2.imageBase64Data = data
-        array.append(obj2)
-        
+        obj2.imageBase64Data = data + data
+        obj2.batchNumber = vc.batchNum
+
+        let imageService = CaptivaLocalImageService()
+        imageService.deleteAllImages()
+        imageService.saveImage(image: obj1)
+        imageService.saveImage(image: obj2)
         let exp = expectation(description: "read")
         
-        //2)Call function
-        vc.chainedUploadNetworkCall(){
+        let batchObj = batchService.getBatchWithBatchNum(num: vc.batchNum)
+        vc.chainedUploadNetworkCall(batchObj: batchObj!){
             dict, error in
             //3)validate
             let result = dict! as NSDictionary
-            XCTAssertEqual(result["returnStatus.code"] as! String, "OK0000")
+            let result2 = result["returnStatus"] as! NSDictionary
+            XCTAssertEqual(result2["code"] as! String, "OK0000")
             exp.fulfill()
         }
         waitForExpectations(timeout: 60, handler: { error in
             XCTAssertNil(error, "Error")
         })
-        
+    
     }
 }
