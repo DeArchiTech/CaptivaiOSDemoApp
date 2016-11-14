@@ -5,7 +5,6 @@
 //  Created by davix on 11/7/16.
 //  Copyright © 2016 EMC Captiva. All rights reserved.
 //
-
 import Foundation
 import Alamofire
 
@@ -116,10 +115,10 @@ class NetworkBatchService{
         
     }
     
-    func updateBatch(batchId :String, completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void{
-        
+    func updateBatch(batchId :String, value: [String], completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void{
+    
         if self.cookieString != nil{
-            Alamofire.request(getBatchEndPoint(batchId: batchId), method: .post, parameters: createUpdatePayload(), encoding: JSONEncoding.default, headers: self.getHeaders())
+            Alamofire.request(getBatchEndPoint(batchId: batchId), method: .post, parameters: createUpdatePayload(value: value), encoding: JSONEncoding.default, headers: self.getHeaders())
                 .validate()
                 .responseJSON{ response in
                     switch response.result{
@@ -146,9 +145,58 @@ class NetworkBatchService{
         
     }
     
-    func createUpdatePayload() -> [String : String]{
+    func createUpdatePayload(value : [String]) -> Dictionary<String,Any>{
         
-        return ["dispatch":"S"]
+        var result = [String: Any]()
+        let nodeId = "1"
+        result["dispatch"] = "S"
+        result["nodes"] = self.createNodesArray(nodeId: nodeId)
+        if value.count > 0{
+            result["values"] = self.createValuesArray(nodeId: nodeId, value: value)
+        }
+        return result
+        
+    }
+    
+    func createNodesArray(nodeId : String) -> [[String:Any]]{
+        
+        var result : [[String:Any]] = []
+        var dictionary = ["nodeId":nodeId,"parentId":0] as [String : Any]
+        result.append(dictionary)
+        return result
+        
+    }
+
+    func createValuesArray(nodeId : String, value : [String]) -> [[String:Any]]{
+        
+        var result : [[String:Any]] = []
+
+        for item in value {
+            let valueName = "valueName"
+            var dict = self.createValuesDictionary(nodeId: nodeId, valueName: valueName, value: item)
+            result.append(dict)
+        }
+        return result
+        
+    }
+    
+    func createNodesDictionary(nodeId : String) -> NSDictionary{
+        
+        return ["nodeId":nodeId,"parentId":0]
+    
+    }
+    
+    func createValuesDictionary(nodeId : String, valueName : String ,value : String) -> [String :String]{
+        
+        var result = [String : String]()
+        result["nodeId"] = nodeId
+        result["valueName"] = valueName
+        result["value"] = value
+        result["valueType"] = "file"
+        result["file"] = "valueType"
+        result["0"] = "offset"
+        result["jpg"] = "fileExtension"
+        return result
         
     }
     

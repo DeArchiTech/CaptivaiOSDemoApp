@@ -106,4 +106,15 @@ class UploadHelperTest: XCTestCase {
         })
 
     }
+    
+    func testParseFileId(){
+        
+        let expected = "f_128b1931b51643979a2580f5820dec4ftif"
+        let input = ["id": expected] as NSDictionary
+        let helper = UploadHelper.init()
+        let result = helper.parseID(dictionary: input)
+        XCTAssertEqual(expected, result)
+        
+    }
+    
 }

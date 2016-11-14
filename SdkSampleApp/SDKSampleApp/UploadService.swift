@@ -124,7 +124,6 @@ class UploadService{
         }
         
     }
-
     
     func getHeaders() -> HTTPHeaders{
         let headers: HTTPHeaders = [

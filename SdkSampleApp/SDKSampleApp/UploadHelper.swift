@@ -11,6 +11,7 @@ import Foundation
 class UploadHelper: NSObject{
     
     var sessionHelper : SessionHelper
+    var filesID : [String] = []
     
     override init(){
         self.sessionHelper = SessionHelper.init()
@@ -41,7 +42,7 @@ class UploadHelper: NSObject{
                     self.uploadAllImages(images: images!){
                         dict3, error3 in
                         //3.1 Update The Batch
-                        self.updateBatch(batchID: batchID, cookie: cookie){
+                        self.updateBatch(batchID: batchID, cookie: cookie, value: self.filesID){
                             dict4, error4 in
                             completion(dict4, error4)
                         }
@@ -62,11 +63,11 @@ class UploadHelper: NSObject{
         
     }
     
-    func updateBatch(batchID: String,cookie: String,completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
+    func updateBatch(batchID: String,cookie: String,value:[String],completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
         
         let cookie = self.sessionHelper.getCookieStringFromManager()
         let service = NetworkBatchService.init(cookie: cookie!)
-        service.updateBatch(batchId: batchID){
+        service.updateBatch(batchId: batchID, value: value){
             dictionary, error in
             completion(dictionary, error)
         }
@@ -114,8 +115,17 @@ class UploadHelper: NSObject{
         let service = UploadService.init(cookie: (cookieString?.cookie)!)
         service.uploadImage(base64String: image.imageBase64Data){
             dictionary, error in
+            let dict = dictionary! as NSDictionary
+            let id = self.parseID(dictionary: dict)
+            self.filesID.append(id)
             completion(dictionary,error)
         }
+        
+    }
+    
+    func parseID(dictionary : NSDictionary) -> String{
+        
+        return dictionary["id"] as! String
         
     }
     

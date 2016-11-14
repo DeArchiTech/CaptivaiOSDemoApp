@@ -74,9 +74,29 @@ class NetworkBatchServiceTest: XCTestCase {
     func testCreateUpdatePayload() {
         
         let service = NetworkBatchService.init(cookie: "")
-        let payload = service.createUpdatePayload()
-        XCTAssertEqual(payload["dispatch"], "S")
+        let nodeId = "0"
+        let valueName = "valueName"
+        let value = "value"
         
+        let expectedNodesArray = service.createNodesArray(nodeId: nodeId)
+        let values : [String] = ["aaa" , "bbb", "ccc"]
+
+        //Test Dispatch
+        let payload = service.createUpdatePayload(value: values)
+        XCTAssertEqual(payload["dispatch"]! as! String, "S")
+        
+        //Test Nodes
+        let acturalNodeArrayResult = payload["nodes"]! as! [[String:Any]]
+        let expectedCount = expectedNodesArray.count
+        let resultCount = acturalNodeArrayResult.count
+        XCTAssertEqual(resultCount, expectedCount)
+        
+        //Test Values
+        let acturalValuesArrayResult = payload["values"]! as! [[String:Any]]
+        let expValuesArray = service.createValuesArray(nodeId: nodeId, value: values)
+        let acturalValuesCount = acturalValuesArrayResult.count
+        let expectedValuesCount = expValuesArray.count
+        XCTAssertEqual(acturalValuesCount, expectedValuesCount)
     }
     
     func testCreateAndUpdateBatch() {
@@ -94,7 +114,8 @@ class NetworkBatchServiceTest: XCTestCase {
                 XCTAssertNotNil(dict)
                 let batchID : String = batchService.parseID(dictionary: dict!)
                 XCTAssertNotNil(batchID)
-                batchService.updateBatch(batchId: batchID){
+                let values : [String] = []
+                batchService.updateBatch(batchId: batchID, value: values){
                     dict2, error2 in
                     
                     //Expect expectations to be fulfilled
@@ -106,6 +127,40 @@ class NetworkBatchServiceTest: XCTestCase {
         }
         waitForExpectations(timeout: 60, handler: {error in
         })
+    }
+    
+    func testCreateNodesDictionary(){
+        
+        let nodeId : String = "Expected"
+        var expected = ["nodeId":nodeId ,"parentId":0] as NSDictionary
+        let service = NetworkBatchService.init(cookie: "")
+        let result = service.createNodesDictionary(nodeId: nodeId)
+        XCTAssertEqual(expected, result)
+        
+    }
+    
+    func testCreateValuesDictionary(){
+        
+        let nodeId = "nodeId"
+        let valueName = "valueName"
+        let value = "value"
+        var expected : [String:String] = ["nodeId":nodeId,"valueName":valueName,"value":value,"valueType":"file","offset":"0","fileExtension":"jpg"]
+        let service = NetworkBatchService.init(cookie: "")
+        let result : [String:String] = service.createValuesDictionary(nodeId: nodeId, valueName: valueName, value: value) as! [String : String]
+        XCTAssertEqual(expected["nodeId"], result["nodeId"])
+        XCTAssertEqual(expected["valueName"], result["valueName"])
+        XCTAssertEqual(expected["value"], result["value"])
+    
+    }
+    
+    func testCreateNodesArray(){
+        
+        let service = NetworkBatchService.init(cookie: "")
+        let acturalID = "nodeId"
+        let result : [[String: Any]] = service.createNodesArray(nodeId : acturalID)
+        let resultId = result[0]["nodeId"]! as! String
+        XCTAssertEqual(acturalID, resultId)
+        
     }
     
 }
