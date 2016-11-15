@@ -11,7 +11,7 @@ import Foundation
 class UploadHelper: NSObject{
     
     var sessionHelper : SessionHelper
-    var filesID : [String] = []
+    var filesID : [String : String] = [:]
     
     override init(){
         self.sessionHelper = SessionHelper.init()
@@ -39,14 +39,19 @@ class UploadHelper: NSObject{
                     let service = CaptivaLocalImageService()
                     let num = batchObj.batchNumber
                     let images = service.loadImagesFromBatchNumber(batchNumber: num)
-                    self.uploadAllImages(images: images!){
-                        dict3, error3 in
-                        //3.1 Update The Batch
-                        self.updateBatch(batchID: batchID, cookie: cookie, value: self.filesID){
-                            dict4, error4 in
-                            completion(dict4, error4)
+                    if images != nil{
+                        self.uploadAllImages(images: images!){
+                            dict3, error3 in
+                            //3.1 Update The Batch
+                            self.updateBatch(batchID: batchID, cookie: cookie, value: self.filesID){
+                                dict4, error4 in
+                                completion(dict4, error4)
+                            }
                         }
+                    }else{
+                        completion(dict2,error2)
                     }
+                    
                 }
             }
         }
@@ -63,7 +68,7 @@ class UploadHelper: NSObject{
         
     }
     
-    func updateBatch(batchID: String,cookie: String,value:[String],completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
+    func updateBatch(batchID: String,cookie: String,value:[String:String],completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
         
         let cookie = self.sessionHelper.getCookieStringFromManager()
         let service = NetworkBatchService.init(cookie: cookie!)
@@ -89,6 +94,8 @@ class UploadHelper: NSObject{
         let service = PODUploadService.init(cookie: (cookieString?.cookie)!)
         service.uploadPODNumber(pod: podNumber){
             dictionary, error in
+            let dict = dictionary! as NSDictionary
+            self.filesID["text/plain"] = self.parseID(dictionary: dict)
             completion(dictionary,error)
         }
         
@@ -116,8 +123,9 @@ class UploadHelper: NSObject{
         service.uploadImage(base64String: image.imageBase64Data){
             dictionary, error in
             let dict = dictionary! as NSDictionary
-            let id = self.parseID(dictionary: dict)
-            self.filesID.append(id)
+            let index = self.filesID.count
+            let key = "OutputImage " + String(index)
+            self.filesID[key] = self.parseID(dictionary: dict)
             completion(dictionary,error)
         }
         

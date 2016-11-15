@@ -115,7 +115,7 @@ class NetworkBatchService{
         
     }
     
-    func updateBatch(batchId :String, value: [String], completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void{
+    func updateBatch(batchId :String, value: [String:String], completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void{
     
         if self.cookieString != nil{
             Alamofire.request(getBatchEndPoint(batchId: batchId), method: .post, parameters: createUpdatePayload(value: value), encoding: JSONEncoding.default, headers: self.getHeaders())
@@ -145,36 +145,41 @@ class NetworkBatchService{
         
     }
     
-    func createUpdatePayload(value : [String]) -> Dictionary<String,Any>{
+    func createUpdatePayload(value : [String:String]) -> Dictionary<String,Any>{
         
         var result = [String: Any]()
-        let nodeId = "1"
         result["dispatch"] = "S"
-        result["nodes"] = self.createNodesArray(nodeId: nodeId)
         if value.count > 0{
-            result["values"] = self.createValuesArray(nodeId: nodeId, value: value)
+            result["nodes"] = self.createNodesArray(value: value)
+            result["values"] = self.createValuesArray(value: value)
         }
         return result
         
     }
     
-    func createNodesArray(nodeId : String) -> [[String:Any]]{
+    func createNodesArray(value : [String: String]) -> [[String:Any]]{
         
         var result : [[String:Any]] = []
-        var dictionary = ["nodeId":nodeId,"parentId":0] as [String : Any]
-        result.append(dictionary)
+        var nodeId = 1
+        
+        for item in value {
+            var dict = ["nodeId":nodeId,"parentId":0] as [String : Any]
+            result.append(dict)
+            nodeId += 1
+        }
         return result
         
     }
 
-    func createValuesArray(nodeId : String, value : [String]) -> [[String:Any]]{
+    func createValuesArray(value : [String: String]) -> [[String:Any]]{
         
         var result : [[String:Any]] = []
-
+        var nodeId = 1
+        
         for item in value {
-            let valueName = "valueName"
-            var dict = self.createValuesDictionary(nodeId: nodeId, valueName: valueName, value: item)
+            var dict = self.createValuesDictionary(nodeId: String(nodeId), valueName: item.key, value: item.value)
             result.append(dict)
+            nodeId += 1
         }
         return result
         
@@ -193,9 +198,8 @@ class NetworkBatchService{
         result["valueName"] = valueName
         result["value"] = value
         result["valueType"] = "file"
-        result["file"] = "valueType"
-        result["0"] = "offset"
-        result["jpg"] = "fileExtension"
+        result["offset"] = "0"
+        result["fileExtension"] = self.getFileExention(valueName: valueName)
         return result
         
     }
@@ -207,6 +211,17 @@ class NetworkBatchService{
         payload["batchName"] = "Batch_{NextId}"
         payload["batchRootLevel"] = "1"
         return payload
+        
+    }
+    
+    func getFileExention(valueName : String) -> String{
+        
+        if valueName == "text/plain"{
+            return "text/plain"
+        }
+        else{
+            return "jpg"
+        }
         
     }
     

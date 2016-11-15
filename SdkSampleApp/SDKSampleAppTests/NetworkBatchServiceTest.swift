@@ -78,9 +78,9 @@ class NetworkBatchServiceTest: XCTestCase {
         let valueName = "valueName"
         let value = "value"
         
-        let expectedNodesArray = service.createNodesArray(nodeId: nodeId)
-        let values : [String] = ["aaa" , "bbb", "ccc"]
-
+        let values : [String:String] = ["aaa":"aaa" , "bbb":"bbb", "ccc":"ccc"]
+        let expectedNodesArray = service.createNodesArray(value: values)
+        
         //Test Dispatch
         let payload = service.createUpdatePayload(value: values)
         XCTAssertEqual(payload["dispatch"]! as! String, "S")
@@ -93,7 +93,7 @@ class NetworkBatchServiceTest: XCTestCase {
         
         //Test Values
         let acturalValuesArrayResult = payload["values"]! as! [[String:Any]]
-        let expValuesArray = service.createValuesArray(nodeId: nodeId, value: values)
+        let expValuesArray = service.createValuesArray(value: values)
         let acturalValuesCount = acturalValuesArrayResult.count
         let expectedValuesCount = expValuesArray.count
         XCTAssertEqual(acturalValuesCount, expectedValuesCount)
@@ -114,7 +114,7 @@ class NetworkBatchServiceTest: XCTestCase {
                 XCTAssertNotNil(dict)
                 let batchID : String = batchService.parseID(dictionary: dict!)
                 XCTAssertNotNil(batchID)
-                let values : [String] = []
+                let values : [String:String] = [:]
                 batchService.updateBatch(batchId: batchID, value: values){
                     dict2, error2 in
                     
@@ -157,7 +157,7 @@ class NetworkBatchServiceTest: XCTestCase {
         
         let service = NetworkBatchService.init(cookie: "")
         let acturalID = "nodeId"
-        let result : [[String: Any]] = service.createNodesArray(nodeId : acturalID)
+        let result : [[String: Any]] = service.createNodesArray(value: [:])
         let resultId = result[0]["nodeId"]! as! String
         XCTAssertEqual(acturalID, resultId)
         
