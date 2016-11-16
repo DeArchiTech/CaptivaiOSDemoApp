@@ -24,47 +24,47 @@ class UploadHelperTest: XCTestCase {
     }
     
     func testUploadImageAndCreateSession(){
-        
-        let helper = UploadHelper.init()
-        let exp = expectation(description: "read")
-        
-        helper.createSession(){
-            (dictionary,error) -> ()in
-            
-            let testBundle = Bundle(for: type(of: self))
-            let util = ImageUtil.init()
-            let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
-            let imageObj = CaptivaLocalImageObj()
-            imageObj.imageBase64Data = util.createBase64String(image : img!)
-            helper.uploadImage(image: imageObj){
-                (dictionary2,error2) -> () in
-                XCTAssertNotNil(dictionary2)
-                exp.fulfill()
-            }
-        }
-        waitForExpectations(timeout: 60, handler: { error in
-            XCTAssertNil(error, "Error")
-        })
+//        
+//        let helper = UploadHelper.init()
+//        let exp = expectation(description: "read")
+//        
+//        helper.createSession(){
+//            (dictionary,error) -> ()in
+//            
+//            let testBundle = Bundle(for: type(of: self))
+//            let util = ImageUtil.init()
+//            let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
+//            let imageObj = CaptivaLocalImageObj()
+//            imageObj.imageBase64Data = util.createBase64String(image : img!)
+//            helper.uploadImage(image: imageObj){
+//                (dictionary2,error2) -> () in
+//                XCTAssertNotNil(dictionary2)
+//                exp.fulfill()
+//            }
+//        }
+//        waitForExpectations(timeout: 60, handler: { error in
+//            XCTAssertNil(error, "Error")
+//        })
         
     }
     func testUploadPODNumberAndCreateSession(){
-        
-        let helper = UploadHelper.init()
-        let exp = expectation(description: "read")
-        
-        helper.createSession(){
-            (dictionary,error) -> ()in
-            
-            let text = "ABC123"
-            helper.uploadPODNumber(podNumber: text){
-                (dictionary2,error2) -> () in
-                XCTAssertNotNil(dictionary2)
-                exp.fulfill()
-            }
-        }
-        waitForExpectations(timeout: 60, handler: { error in
-            XCTAssertNil(error, "Error")
-        })
+//        
+//        let helper = UploadHelper.init()
+//        let exp = expectation(description: "read")
+//        
+//        helper.createSession(){
+//            (dictionary,error) -> ()in
+//            
+//            let text = "ABC123"
+//            helper.uploadPODNumber(podNumber: text){
+//                (dictionary2,error2) -> () in
+//                XCTAssertNotNil(dictionary2)
+//                exp.fulfill()
+//            }
+//        }
+//        waitForExpectations(timeout: 60, handler: { error in
+//            XCTAssertNil(error, "Error")
+//        })
         
     }
     

@@ -10,6 +10,9 @@ import Alamofire
 
 class NetworkBatchService{
 
+    var nodeId = 1
+    var parentNodeId = 0
+    var offset = 0
     init(cookie: String){
         self.cookieString = cookie
     }
@@ -160,10 +163,10 @@ class NetworkBatchService{
     func createNodesArray(value : [String: String]) -> [[String:Any]]{
         
         var result : [[String:Any]] = []
-        var nodeId = 1
+        var nodeId = self.nodeId
         
         for item in value {
-            var dict = ["nodeId":nodeId,"parentId":0] as [String : Any]
+            var dict = ["nodeId":nodeId,"parentId":self.parentNodeId] as [String : Any]
             result.append(dict)
             nodeId += 1
         }
@@ -174,10 +177,10 @@ class NetworkBatchService{
     func createValuesArray(value : [String: String]) -> [[String:Any]]{
         
         var result : [[String:Any]] = []
-        var nodeId = 1
+        var nodeId = self.nodeId
         
         for item in value {
-            var dict = self.createValuesDictionary(nodeId: String(nodeId), valueName: item.key, value: item.value)
+            var dict = self.createValuesDictionary(nodeId: String(nodeId), valueName: item.value, value: item.key)
             result.append(dict)
             nodeId += 1
         }
@@ -187,7 +190,7 @@ class NetworkBatchService{
     
     func createNodesDictionary(nodeId : String) -> NSDictionary{
         
-        return ["nodeId":nodeId,"parentId":0]
+        return ["nodeId":nodeId,"parentId":self.parentNodeId]
     
     }
     
@@ -198,7 +201,7 @@ class NetworkBatchService{
         result["valueName"] = valueName
         result["value"] = value
         result["valueType"] = "file"
-        result["offset"] = "0"
+        result["offset"] = String(self.offset)
         result["fileExtension"] = self.getFileExention(valueName: valueName)
         return result
         
@@ -216,8 +219,8 @@ class NetworkBatchService{
     
     func getFileExention(valueName : String) -> String{
         
-        if valueName == "text/plain"{
-            return "text/plain"
+        if valueName == "OcrDataCache"{
+            return "txt"
         }
         else{
             return "jpg"

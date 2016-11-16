@@ -95,7 +95,7 @@ class UploadHelper: NSObject{
         service.uploadPODNumber(pod: podNumber){
             dictionary, error in
             let dict = dictionary! as NSDictionary
-            self.filesID["text/plain"] = self.parseID(dictionary: dict)
+            self.filesID[self.parseID(dictionary: dict)] = "OcrDataCache" 
             completion(dictionary,error)
         }
         
@@ -124,8 +124,8 @@ class UploadHelper: NSObject{
             dictionary, error in
             let dict = dictionary! as NSDictionary
             let index = self.filesID.count
-            let key = "OutputImage " + String(index)
-            self.filesID[key] = self.parseID(dictionary: dict)
+            let key = self.parseID(dictionary: dict)
+            self.filesID[key] = "OutputImage"
             completion(dictionary,error)
         }
         
