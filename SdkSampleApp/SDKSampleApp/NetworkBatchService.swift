@@ -180,7 +180,7 @@ class NetworkBatchService{
         var nodeId = self.nodeId
         
         for item in value {
-            let dict = self.createValuesDictionary(nodeId: String(nodeId), valueName: item.value, value: item.key)
+            let dict = self.createValuesDictionary(nodeId: String(nodeId), fileExtension: item.value, value: item.key)
             result.append(dict)
             nodeId += 1
         }
@@ -194,15 +194,15 @@ class NetworkBatchService{
     
     }
     
-    func createValuesDictionary(nodeId : String, valueName : String ,value : String) -> [String :String]{
+    func createValuesDictionary(nodeId : String, fileExtension : String , value : String) -> [String :String]{
         
         var result = [String : String]()
         result["nodeId"] = nodeId
-        result["valueName"] = valueName
+        result["valueName"] = "OutputImage"
         result["value"] = value
         result["valueType"] = "file"
         result["offset"] = String(self.offset)
-        result["fileExtension"] = self.getFileExention(valueName: valueName)
+        result["fileExtension"] = fileExtension
         return result
         
     }
@@ -214,17 +214,6 @@ class NetworkBatchService{
         payload["batchName"] = "Batch_{NextId}"
         payload["batchRootLevel"] = "1"
         return payload
-        
-    }
-    
-    func getFileExention(valueName : String) -> String{
-        
-        if valueName == "OcrDataCache"{
-            return "txt"
-        }
-        else{
-            return "jpg"
-        }
         
     }
     
