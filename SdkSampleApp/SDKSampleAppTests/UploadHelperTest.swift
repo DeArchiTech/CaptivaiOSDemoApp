@@ -76,16 +76,16 @@ class UploadHelperTest: XCTestCase {
         
         //Set up batch
         let bs = BatchService()
-        bs.deleteAllBatches()
+        XCTAssertTrue(bs.deleteAllBatches())
         
         let obj1 = BatchObj()
         obj1.uploaded = false
         obj1.podNumber = "ABCD"
-        bs.saveBatch(batch: obj1)
+        XCTAssertTrue(bs.saveBatch(batch: obj1))
         
         //Set up img and service
         let imageService = CaptivaLocalImageService()
-        imageService.deleteAllImages()
+        XCTAssertTrue(imageService.deleteAllImages())
         let testBundle = Bundle(for: type(of: self))
         let util = ImageUtil.init()
         
@@ -93,13 +93,13 @@ class UploadHelperTest: XCTestCase {
         let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
         let imageObj = CaptivaLocalImageObj()
         imageObj.imageBase64Data = util.createBase64String(image : img!)
-        imageService.saveImage(image: imageObj)
+        XCTAssertTrue(imageService.saveImage(image: imageObj))
         
         //2)Save another Image
         let img2 = UIImage(named: "testImg2.jpg", in: testBundle, compatibleWith: nil)
         let imageObj2 = CaptivaLocalImageObj()
         imageObj2.imageBase64Data = util.createBase64String(image : img2!)
-        imageService.saveImage(image: imageObj2)
+        XCTAssertTrue(imageService.saveImage(image: imageObj2))
         
         //3)Call function
         helper.uploadPODBatch(batchObj: obj1){

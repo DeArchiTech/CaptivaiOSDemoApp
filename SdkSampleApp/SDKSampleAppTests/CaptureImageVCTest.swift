@@ -46,7 +46,6 @@ class CaptureImageVCTest: XCTestCase {
         //1)Load Test Image into Image View
         let testBundle = Bundle(for: type(of: self))
         let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
-        let expected: Data = UIImageJPEGRepresentation(img!,1.0)! as Data
         let imgView = UIImageView.init(image: img)
         vc.imageView = imgView
         
@@ -59,7 +58,7 @@ class CaptureImageVCTest: XCTestCase {
         
         //1)Delete everything in DB
         let service = CaptivaLocalImageService()
-        service.deleteAllImages()
+        XCTAssertTrue(service.deleteAllImages())
         
         //2)Set up Controller Code
         let vc = CaptureImageViewController()

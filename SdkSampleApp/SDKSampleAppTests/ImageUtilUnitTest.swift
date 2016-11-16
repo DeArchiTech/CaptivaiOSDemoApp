@@ -80,7 +80,6 @@ class UtilUnitTest: XCTestCase {
             do {
                 expected = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
             } catch {
-                debugPrint("error")
             }
         }
         

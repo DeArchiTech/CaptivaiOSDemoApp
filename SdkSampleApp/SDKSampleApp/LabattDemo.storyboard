@@ -24,9 +24,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8qj-pS-0jx">
                                 <rect key="frame" x="36" y="90" width="303" height="239"/>
-                                <color key="backgroundColor" red="1" green="0.62000434259281967" blue="0.15620933431455708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Kuy-up-cZZ"/>
+                                    <constraint firstAttribute="height" constant="225" id="Kuy-up-cZZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Scan New POD">
@@ -38,9 +38,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="552-Sf-SX0">
                                 <rect key="frame" x="36" y="383" width="303" height="235"/>
-                                <color key="backgroundColor" red="0.46364794539999998" green="0.20212283319999999" blue="0.89086186889999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.71833419675935961" green="0.55310641264078175" blue="0.9230273962020874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="MRF-mU-prJ"/>
+                                    <constraint firstAttribute="height" constant="225" id="MRF-mU-prJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Sync POD">
@@ -53,12 +53,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="552-Sf-SX0" firstAttribute="leading" secondItem="iLQ-2B-3fR" secondAttribute="leadingMargin" constant="20" id="1df-Nu-4Aq"/>
-                            <constraint firstItem="9BF-Yg-GAG" firstAttribute="top" secondItem="552-Sf-SX0" secondAttribute="bottom" constant="20" id="L6W-Ap-En2"/>
-                            <constraint firstItem="8qj-pS-0jx" firstAttribute="top" secondItem="6SV-Js-EnB" secondAttribute="bottom" constant="20" id="Wmo-24-0aY"/>
-                            <constraint firstItem="8qj-pS-0jx" firstAttribute="leading" secondItem="iLQ-2B-3fR" secondAttribute="leadingMargin" constant="20" id="YcV-Ld-6Vx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="552-Sf-SX0" secondAttribute="trailing" constant="20" id="dqi-G3-vf5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8qj-pS-0jx" secondAttribute="trailing" constant="20" id="uf9-c5-KPW"/>
+                            <constraint firstItem="552-Sf-SX0" firstAttribute="leading" secondItem="iLQ-2B-3fR" secondAttribute="leadingMargin" constant="10" id="1df-Nu-4Aq"/>
+                            <constraint firstItem="9BF-Yg-GAG" firstAttribute="top" secondItem="552-Sf-SX0" secondAttribute="bottom" constant="10" id="L6W-Ap-En2"/>
+                            <constraint firstItem="8qj-pS-0jx" firstAttribute="top" secondItem="6SV-Js-EnB" secondAttribute="bottom" constant="10" id="Wmo-24-0aY"/>
+                            <constraint firstItem="8qj-pS-0jx" firstAttribute="leading" secondItem="iLQ-2B-3fR" secondAttribute="leadingMargin" constant="10" id="YcV-Ld-6Vx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="552-Sf-SX0" secondAttribute="trailing" constant="10" id="dqi-G3-vf5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8qj-pS-0jx" secondAttribute="trailing" constant="10" id="uf9-c5-KPW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Proof Of Delivery" id="2RS-TT-UAx"/>
@@ -169,9 +169,9 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcd-J6-hfs">
                                 <rect key="frame" x="37" y="499" width="300" height="136"/>
-                                <color key="backgroundColor" red="1" green="0.62000434260000004" blue="0.1562093343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.46364794539999998" green="0.20212283319999999" blue="0.89086186889999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="GAl-9Y-5Vd"/>
+                                    <constraint firstAttribute="height" constant="150" id="GAl-9Y-5Vd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Upload POD Now">
@@ -189,7 +189,7 @@
                                         <rect key="frame" x="0.0" y="28" width="292" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PHq-84-vUJ" id="yFD-OF-dn1">
-                                            <rect key="frame" x="0.0" y="0.0" width="292" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="292" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -202,17 +202,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SSn-ST-oAD" firstAttribute="top" secondItem="4Iu-0o-iUF" secondAttribute="bottom" constant="20" id="FQg-lM-UR7"/>
-                            <constraint firstItem="Fcd-J6-hfs" firstAttribute="top" secondItem="M88-hR-RxJ" secondAttribute="bottom" constant="20" id="Uao-f4-vp2"/>
+                            <constraint firstItem="SSn-ST-oAD" firstAttribute="top" secondItem="4Iu-0o-iUF" secondAttribute="bottom" constant="10" id="FQg-lM-UR7"/>
+                            <constraint firstItem="Fcd-J6-hfs" firstAttribute="top" secondItem="M88-hR-RxJ" secondAttribute="bottom" constant="10" id="Uao-f4-vp2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="M88-hR-RxJ" secondAttribute="trailing" id="VTl-QP-oLx"/>
                             <constraint firstItem="SSn-ST-oAD" firstAttribute="leading" secondItem="VVl-80-1FY" secondAttribute="leadingMargin" constant="20" id="VwE-pQ-E9Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SSn-ST-oAD" secondAttribute="trailing" constant="20" id="cAb-tX-yDh"/>
-                            <constraint firstItem="Fcd-J6-hfs" firstAttribute="leading" secondItem="VVl-80-1FY" secondAttribute="leadingMargin" constant="20" id="gUy-Ov-WAE"/>
-                            <constraint firstItem="0N5-fF-voC" firstAttribute="top" secondItem="Fcd-J6-hfs" secondAttribute="bottom" constant="20" id="hE6-o4-E87"/>
+                            <constraint firstItem="Fcd-J6-hfs" firstAttribute="leading" secondItem="VVl-80-1FY" secondAttribute="leadingMargin" constant="10" id="gUy-Ov-WAE"/>
+                            <constraint firstItem="0N5-fF-voC" firstAttribute="top" secondItem="Fcd-J6-hfs" secondAttribute="bottom" constant="10" id="hE6-o4-E87"/>
                             <constraint firstAttribute="leadingMargin" secondItem="M88-hR-RxJ" secondAttribute="leading" id="jym-xo-N76"/>
-                            <constraint firstItem="M88-hR-RxJ" firstAttribute="top" secondItem="SSn-ST-oAD" secondAttribute="bottom" constant="20" id="kTX-LE-KY8"/>
+                            <constraint firstItem="M88-hR-RxJ" firstAttribute="top" secondItem="SSn-ST-oAD" secondAttribute="bottom" constant="10" id="kTX-LE-KY8"/>
                             <constraint firstItem="M88-hR-RxJ" firstAttribute="centerY" secondItem="VVl-80-1FY" secondAttribute="centerY" id="kvV-oK-ABN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Fcd-J6-hfs" secondAttribute="trailing" constant="20" id="r3N-OD-wPq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fcd-J6-hfs" secondAttribute="trailing" constant="10" id="r3N-OD-wPq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Upload Saved POD Documents" id="JTn-Lq-mNv"/>
@@ -302,7 +302,7 @@
                                 <rect key="frame" x="54" y="422" width="267" height="66"/>
                                 <color key="backgroundColor" red="1" green="0.31507004599999999" blue="0.69328071270000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="jas-Gt-J29"/>
+                                    <constraint firstAttribute="height" constant="75" id="jas-Gt-J29"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Save POD # &amp; Upload Later">
@@ -316,7 +316,7 @@
                                 <rect key="frame" x="54" y="509" width="267" height="66"/>
                                 <color key="backgroundColor" red="0.42076308849999999" green="0.40503920599999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="0bC-gm-PK9"/>
+                                    <constraint firstAttribute="height" constant="75" id="0bC-gm-PK9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Upload POD Now">

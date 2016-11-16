@@ -19,9 +19,8 @@ class CreateProfileService{
             try! realm.write {
                 realm.add(profile)
             }
-        } catch let error as NSError {
+        } catch _ as NSError {
             return false
-            print(error)
         }
         return true
         
@@ -30,7 +29,7 @@ class CreateProfileService{
     func loadProfiles() -> [FilterProfile]?{
 
         let objs: Results<FilterProfile> = {
-            try! Realm().objects(FilterProfile)
+            try! Realm().objects(FilterProfile.self)
         }()
         var result : [FilterProfile] = []
         for profile in objs{
@@ -43,7 +42,7 @@ class CreateProfileService{
     func getAllProfileNames() -> [String]{
         
         let objs: Results<FilterProfile> = {
-            try! Realm().objects(FilterProfile)
+            try! Realm().objects(FilterProfile.self)
         }()
         var result : [String] = []
         for profile in objs{
@@ -56,7 +55,7 @@ class CreateProfileService{
     func deleteAllProfiles() -> Bool {
         
         var objs: Results<FilterProfile> = {
-            try! Realm().objects(FilterProfile)
+            try! Realm().objects(FilterProfile.self)
         }()
         if objs.count > 0 {
             do{
@@ -66,13 +65,12 @@ class CreateProfileService{
                         realm.delete(profile)
                     }
                 }
-            } catch let error as NSError {
+            } catch _ as NSError {
                 return false
-                print(error)
             }
         }
         objs = {
-            try! Realm().objects(FilterProfile)
+            try! Realm().objects(FilterProfile.self)
         }()
         return objs.count == 0
         

@@ -165,8 +165,8 @@ class NetworkBatchService{
         var result : [[String:Any]] = []
         var nodeId = self.nodeId
         
-        for item in value {
-            var dict = ["nodeId":nodeId,"parentId":self.parentNodeId] as [String : Any]
+        for _ in value {
+            let dict = ["nodeId":nodeId,"parentId":self.parentNodeId] as [String : Any]
             result.append(dict)
             nodeId += 1
         }
@@ -180,7 +180,7 @@ class NetworkBatchService{
         var nodeId = self.nodeId
         
         for item in value {
-            var dict = self.createValuesDictionary(nodeId: String(nodeId), valueName: item.value, value: item.key)
+            let dict = self.createValuesDictionary(nodeId: String(nodeId), valueName: item.value, value: item.key)
             result.append(dict)
             nodeId += 1
         }

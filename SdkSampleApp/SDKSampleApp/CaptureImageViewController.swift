@@ -50,13 +50,13 @@ import Foundation
     
     func persistImgToDisk(image : UIImage){
         let helper = ImageSavingHelper()
-        helper.saveImage(image: image, batchNum: self.batchNum)
+        assert(helper.saveImage(image: image, batchNum: self.batchNum))
     }
     
     func presentCamera(){
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
-            var imagePicker = UIImagePickerController()
+            let imagePicker = UIImagePickerController()
             imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
             imagePicker.allowsEditing = false
             imagePicker.delegate = self
@@ -71,7 +71,7 @@ import Foundation
         let imageHelper = CSSImageHelper.init()
         imageHelper.load(fromBytes: imgData, error: &errorPtr)
         let applicationID = Constants.applicationID
-        var license = Constants.license
+        let license = Constants.license
         self.addLisenceKey(applicationId: applicationID, license: license)
         self.applyDarkerFilter()
         self.applyBlackAndWhiteFilter()

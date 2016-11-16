@@ -95,18 +95,17 @@ class PODUploadService{
     
     func savePODAsTextFile(pod : String) -> String?{
         
-        if let dirs : [String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true){
-            let file = pod + ".txt"
-            let dir = dirs[0]//documents directory
-            let path = (dir as NSString).appendingPathComponent(file);
+        let dirs : [String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true)
+        let file = pod + ".txt"
+        let dir = dirs[0]//documents directory
+        let path = (dir as NSString).appendingPathComponent(file);
             //writing
-            do{
-                try pod.write(toFile: path, atomically: false, encoding: String.Encoding.utf8);
-            }catch{
+        do{
+            try pod.write(toFile: path, atomically: false, encoding: String.Encoding.utf8);
+        }catch{
                 
-            }
-            return path
         }
+        return path
         
     }
     

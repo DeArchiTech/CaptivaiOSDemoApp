@@ -104,7 +104,7 @@ class UploadHelper: NSObject{
     func uploadAllImages(images : [CaptivaLocalImageObj], completion: @escaping (_: NSDictionary?, _:NSError?)->()){
         
         var imgData = images
-        var img = imgData.popLast()
+        let img = imgData.popLast()
         if img != nil {
             self.uploadImage(image: img!){
                 dictionary, error in
@@ -123,7 +123,6 @@ class UploadHelper: NSObject{
         service.uploadImage(base64String: image.imageBase64Data){
             dictionary, error in
             let dict = dictionary! as NSDictionary
-            let index = self.filesID.count
             let key = self.parseID(dictionary: dict)
             self.filesID[key] = "OutputImage"
             completion(dictionary,error)

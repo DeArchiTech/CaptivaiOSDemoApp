@@ -49,7 +49,7 @@ class NetworkBatchServiceTest: XCTestCase {
         let sessionHelper = SessionHelper()
         sessionHelper.getCookieExpress(){
             cookie in
-            var batchService = NetworkBatchService.init(cookie: cookie!)
+            let batchService = NetworkBatchService.init(cookie: cookie!)
             //Create a batch fullfil expectation in call back
             batchService.createBatch(){
                 dict, errror in
@@ -74,10 +74,7 @@ class NetworkBatchServiceTest: XCTestCase {
     func testCreateUpdatePayload() {
         
         let service = NetworkBatchService.init(cookie: "")
-        let nodeId = "0"
-        let valueName = "valueName"
-        let value = "value"
-        
+
         let values : [String:String] = ["aaa":"aaa" , "bbb":"bbb", "ccc":"ccc"]
         let expectedNodesArray = service.createNodesArray(value: values)
         
@@ -105,7 +102,7 @@ class NetworkBatchServiceTest: XCTestCase {
         let sessionHelper = SessionHelper()
         sessionHelper.getCookieExpress(){
             cookie in
-            var batchService = NetworkBatchService.init(cookie: cookie!)
+            let batchService = NetworkBatchService.init(cookie: cookie!)
             //Create a batch fullfil expectation in call back
             batchService.createBatch(){
                 dict, errror in
@@ -132,7 +129,7 @@ class NetworkBatchServiceTest: XCTestCase {
     func testCreateNodesDictionary(){
         
         let nodeId : String = "Expected"
-        var expected = ["nodeId":nodeId ,"parentId":0] as NSDictionary
+        let expected = ["nodeId":nodeId ,"parentId":0] as NSDictionary
         let service = NetworkBatchService.init(cookie: "")
         let result = service.createNodesDictionary(nodeId: nodeId)
         XCTAssertEqual(expected, result)
@@ -146,7 +143,7 @@ class NetworkBatchServiceTest: XCTestCase {
         let value = "value"
         var expected : [String:String] = ["nodeId":nodeId,"valueName":valueName,"value":value,"valueType":"file","offset":"0","fileExtension":"jpg"]
         let service = NetworkBatchService.init(cookie: "")
-        let result : [String:String] = service.createValuesDictionary(nodeId: nodeId, valueName: valueName, value: value) as! [String : String]
+        let result : [String:String] = service.createValuesDictionary(nodeId: nodeId, valueName: valueName, value: value) 
         XCTAssertEqual(expected["nodeId"], result["nodeId"])
         XCTAssertEqual(expected["valueName"], result["valueName"])
         XCTAssertEqual(expected["value"], result["value"])

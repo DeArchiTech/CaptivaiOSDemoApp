@@ -70,7 +70,7 @@ import UIKit
         
         if dictionary != nil {
             //Save Cookie to Database'
-            var cookie = Cookie.init()
+            let cookie = Cookie.init()
             let cookieString = self.getcookieFromLoginResponse(response: dictionary!)
             cookie.cookie = cookieString
             self.cookieManager?.saveCookie(cookie: cookie)
