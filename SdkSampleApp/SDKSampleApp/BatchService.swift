@@ -23,9 +23,8 @@ import RealmSwift
             try! realm.write {
                 realm.add(batch)
             }
-        } catch let error as NSError {
+        } catch _ as NSError {
             return false
-            print(error)
         }
         return true
         
@@ -34,7 +33,7 @@ import RealmSwift
     func loadNewestBatch() -> BatchObj?{
         
         let objs: Results<BatchObj> = {
-            try! Realm().objects(BatchObj).sorted(byProperty: "createdAt")
+            try! Realm().objects(BatchObj.self).sorted(byProperty: "createdAt")
         }()
         if objs.count > 0 {
             return objs.first
@@ -47,7 +46,7 @@ import RealmSwift
     func deleteAllBatches() -> Bool {
         
         var objs: Results<BatchObj> = {
-            try! Realm().objects(BatchObj)
+            try! Realm().objects(BatchObj.self)
         }()
         if objs.count > 0 {
             do{
@@ -57,13 +56,12 @@ import RealmSwift
                         realm.delete(batch)
                     }
                 }
-            } catch let error as NSError {
+            } catch _ as NSError {
                 return false
-                print(error)
             }
         }
         objs = {
-            try! Realm().objects(BatchObj)
+            try! Realm().objects(BatchObj.self)
         }()
         return objs.count == 0
         
@@ -136,7 +134,7 @@ import RealmSwift
             try! Realm().objects(BatchObj.self)
                 .sorted(byProperty: "batchNumber", ascending: false)
         }()
-        var batch : BatchObj = BatchObj()
+        let batch : BatchObj = BatchObj()
         if objs.count > 0{
             batch.batchNumber = (objs.first?.batchNumber)!
             batch.batchNumber += 1

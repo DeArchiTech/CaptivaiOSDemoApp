@@ -51,7 +51,7 @@ class PODUploadService{
                 .validate()
                 .responseJSON{ response in
                     switch response.result{
-                    case .success(let result):
+                    case .success(let _):
                         if let result = response.result.value {
                             let jsonResult = result as! NSDictionary
                             completion(jsonResult, nil)
@@ -95,7 +95,7 @@ class PODUploadService{
     
     func savePODAsTextFile(pod : String) -> String?{
         
-        if let dirs : [String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true) as? [String] {
+        if let dirs : [String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true){
             let file = pod + ".txt"
             let dir = dirs[0]//documents directory
             let path = (dir as NSString).appendingPathComponent(file);

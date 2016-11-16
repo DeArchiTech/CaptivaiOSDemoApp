@@ -21,7 +21,7 @@ import UIKit
         let imageBase64Data = util.createBase64String(image: image)
         let service = CaptivaLocalImageService()
         let objc = self.createImageObj(imageBase64Data: imageBase64Data, batchNum: batchNum)
-        service.saveImage(image: objc)
+        assert(service.saveImage(image: objc))
         return true
         
     }
@@ -32,7 +32,7 @@ import UIKit
         let imageBase64Data = util.createBase64String(image: image)
         let service = CaptivaLocalImageService()
         let objc = self.createImageObj(imageBase64Data: imageBase64Data)
-        service.saveImage(image: objc)
+        assert(service.saveImage(image: objc))
         return true
         
     }
@@ -42,7 +42,7 @@ import UIKit
         let imageBase64Data = self.getBase64Data(data: data)
         let service = CaptivaLocalImageService()
         let objc = self.createImageObj(imageBase64Data: imageBase64Data, imagePath: imagePath as String)
-        service.saveImage(image: objc)
+        assert(service.saveImage(image: objc))
         return true
         
     }

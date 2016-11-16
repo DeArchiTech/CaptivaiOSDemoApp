@@ -25,7 +25,7 @@ import EZLoadingActivity
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadInAllBatches()
+        assert(self.loadInAllBatches())
         self.setUpLabel()
     }
     
@@ -41,11 +41,11 @@ import EZLoadingActivity
     
     @IBAction func uploadAllPodBtnClicked(_ sender: Any) {
         
-        EZLoadingActivity.show("Uploading Documents To Server", disableUI: true)
+        assert(EZLoadingActivity.show("Uploading Documents To Server", disableUI: true))
         self.uploadAllPODBatches(batches: self.batches   ){
             dictionary, error in
-            EZLoadingActivity.hide(true, animated: true)
-            self.loadInAllBatches()
+            assert(EZLoadingActivity.hide(true, animated: true))
+            assert(self.loadInAllBatches())
             self.setUpLabel()
             self.tableView.reloadData()
             self.presentUploadSuccessController()
@@ -65,7 +65,7 @@ import EZLoadingActivity
         
         //1)Pop array
         var dataArray = batches
-        var batchObj = dataArray.popLast()
+        let batchObj = dataArray.popLast()
         //2)If nil we are done
         if batchObj == nil {
             completion(nil,nil)
@@ -75,7 +75,7 @@ import EZLoadingActivity
             uploadHelper.uploadPODBatch(batchObj: batchObj!){
                 dictionary, error in
                 let batchService = BatchService()
-                batchService.updateBatchUpdatedToTrue(num: (batchObj?.batchNumber)!)
+                assert(batchService.updateBatchUpdatedToTrue(num: (batchObj?.batchNumber)!))
                 self.uploadAllPODBatches(batches: dataArray, completion: completion)
             }
         }

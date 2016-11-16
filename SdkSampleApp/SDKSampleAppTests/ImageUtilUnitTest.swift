@@ -79,7 +79,6 @@ class UtilUnitTest: XCTestCase {
         if let path = testBundle.path(forResource: "base64Image", ofType: "txt") {
             do {
                 expected = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
-                debugPrint(expected)
             } catch {
                 debugPrint("error")
             }

@@ -59,11 +59,11 @@ import Foundation
         let selected = (cell?.accessoryType == UITableViewCellAccessoryType.checkmark)
         if selected{
             cell?.accessoryType = UITableViewCellAccessoryType.checkmark
-            self.saveSelectedProfile(name: selectedItem!)
+            assert(self.saveSelectedProfile(name: selectedItem!))
         }else{
             cell?.accessoryType = UITableViewCellAccessoryType.none
             let service = CreateProfileService()
-            service.updateAllSelectedToFalse()
+            assert(service.updateAllSelectedToFalse())
             
         }
 
@@ -80,8 +80,8 @@ import Foundation
     
         //1)Call Service to update all selected to false
         let service = CreateProfileService()
-        service.updateAllSelectedToFalse()
-        service.updateProfileSelectedToTrue(name: name)
+        assert(service.updateAllSelectedToFalse())
+        assert(service.updateProfileSelectedToTrue(name: name))
         return false
     
     }
