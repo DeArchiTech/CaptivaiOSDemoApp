@@ -139,11 +139,11 @@ class NetworkBatchServiceTest: XCTestCase {
     func testCreateValuesDictionary(){
         
         let nodeId = "nodeId"
-        let valueName = "valueName"
+        let valueName = "OutputImage"
         let value = "value"
         var expected : [String:String] = ["nodeId":nodeId,"valueName":valueName,"value":value,"valueType":"file","offset":"0","fileExtension":"jpg"]
         let service = NetworkBatchService.init(cookie: "")
-        let result : [String:String] = service.createValuesDictionary(nodeId: nodeId, valueName: valueName, value: value) 
+        let result : [String:String] = service.createValuesDictionary(nodeId: nodeId, fileExtension: valueName, value: value)
         XCTAssertEqual(expected["nodeId"], result["nodeId"])
         XCTAssertEqual(expected["valueName"], result["valueName"])
         XCTAssertEqual(expected["value"], result["value"])
@@ -153,10 +153,8 @@ class NetworkBatchServiceTest: XCTestCase {
     func testCreateNodesArray(){
         
         let service = NetworkBatchService.init(cookie: "")
-        let acturalID = "nodeId"
         let result : [[String: Any]] = service.createNodesArray(value: [:])
-        let resultId = result[0]["nodeId"]! as! String
-        XCTAssertEqual(acturalID, resultId)
+        XCTAssertEqual(0 , result.count)
         
     }
     

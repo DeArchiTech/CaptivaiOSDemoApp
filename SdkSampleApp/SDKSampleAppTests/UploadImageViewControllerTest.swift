@@ -134,12 +134,15 @@ class UploadImageViewControllerTest: XCTestCase {
         let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
         let data = ImageUtil().createBase64String(image: img!)
         
+        let img2 = UIImage(named: "testImg2.jpg", in: testBundle, compatibleWith: nil)
+        let data2 = ImageUtil().createBase64String(image: img2!)
+        
         let obj1 = CaptivaLocalImageObj()
         obj1.imageBase64Data = data
         obj1.batchNumber = vc.batchNum
         
         let obj2 = CaptivaLocalImageObj()
-        obj2.imageBase64Data = data + data
+        obj2.imageBase64Data = data2
         obj2.batchNumber = vc.batchNum
 
         let imageService = CaptivaLocalImageService()

@@ -81,8 +81,8 @@ class LoginServiceTest: XCTestCase {
         //1)Call Function
         let manager : LoginService = LoginService.init()
         manager.login() { (dictionary,error) -> () in
-            print(dictionary)
-            print(error)
+            print(dictionary as Any)
+            print(error as Any)
             XCTAssertNotNil(dictionary)
         }
         

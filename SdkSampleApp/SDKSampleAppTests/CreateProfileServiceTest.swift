@@ -28,8 +28,8 @@ class CreateProfileServiceTest: XCTestCase {
         let vc = CreateProfileViewController()
         let filterOne = "One filter"
         let filterTwo = "Second filter"
-        vc.addFilterToList(filter: filterOne)
-        vc.addFilterToList(filter: filterTwo)
+        assert(vc.addFilterToList(filter: filterOne))
+        assert(vc.addFilterToList(filter: filterTwo))
         let result = vc.createFilterProfile()
         
         XCTAssertNotNil(result)

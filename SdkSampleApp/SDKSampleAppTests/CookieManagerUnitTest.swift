@@ -72,7 +72,7 @@ class CookieManagerUnitTest: XCTestCase {
         //2)Save cookie
         let cookie = Cookie()
         cookie.cookie = "123asd"
-        let saveCookieResult : Bool = manager.saveCookie(cookie: cookie)
+        XCTAssertTrue(manager.saveCookie(cookie: cookie))
         
         //3)Load cookie from database
         let loadCookieSuccessResult : Bool = manager.loadCookie()

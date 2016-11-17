@@ -59,7 +59,7 @@ class CreateProfileViewControllerSpec: QuickSpec {
                 //First Add A Filter
                 let vc = CreateProfileViewController()
                 let filter = "A Filter"
-                vc.addFilterToList(filter: filter)
+                expect(vc.addFilterToList(filter: filter)).to(beTruthy())
                 expect(vc.filterSelected.contains(filter)).to(beTruthy())
                 let result = vc.removeFilterFromList(filter: filter)
                 expect(result).to(beTruthy())
@@ -71,8 +71,8 @@ class CreateProfileViewControllerSpec: QuickSpec {
                 let vc = CreateProfileViewController()
                 let filterOne = "One filter"
                 let filterTwo = "Second filter"
-                vc.addFilterToList(filter: filterOne)
-                vc.addFilterToList(filter: filterTwo)
+                expect(vc.addFilterToList(filter: filterOne)).to(beTruthy())
+                expect(vc.addFilterToList(filter: filterTwo)).to(beTruthy())
                 let result = vc.createFilterProfile()
                 expect(result?.filters.count).to(equal(2))
             }

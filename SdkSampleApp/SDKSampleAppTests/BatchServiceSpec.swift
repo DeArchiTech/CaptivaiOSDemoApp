@@ -31,8 +31,8 @@ class BatchServiceSpec: QuickSpec {
                 batch.batchNumber = batchNum
                 
                 let service = BatchService()
-                service.deleteAllBatches()
-                service.saveBatch(batch: batch)
+                expect(service.deleteAllBatches()).to(beTruthy())
+                expect(service.saveBatch(batch: batch)).to(beTruthy())
                 
                 let result = service.loadNewestBatch()
                 expect(result?.batchNumber).to(equal(batchNum))
@@ -41,13 +41,13 @@ class BatchServiceSpec: QuickSpec {
         describe("#loadNewestBatch"){
             it("returns nil if there is nothing in the database"){
                 let service = BatchService()
-                service.deleteAllBatches()
+                expect(service.deleteAllBatches()).to(beTruthy())
                 let result = service.loadNewestBatch()
                 expect(result).to(beNil())
             }
             it("returns the batch with the newest creation date"){
                 let service = BatchService()
-                service.deleteAllBatches()
+                expect(service.deleteAllBatches()).to(beTruthy())
                 
                 let batchOneNumber = 11
                 let batchTwoNumber = 22
@@ -58,8 +58,8 @@ class BatchServiceSpec: QuickSpec {
                 let batchTwo = BatchObj()
                 batchTwo.batchNumber = batchTwoNumber
                 
-                service.saveBatch(batch: batchOne)
-                service.saveBatch(batch: batchTwo)
+                expect(service.saveBatch(batch: batchOne)).to(beTruthy())
+                expect(service.saveBatch(batch: batchTwo)).to(beTruthy())
                 
                 let result = service.loadNewestBatch()
                 expect(result?.batchNumber).to(equal(batchOneNumber))
@@ -69,7 +69,7 @@ class BatchServiceSpec: QuickSpec {
         describe("#getBatchWithBatchNum"){
             it("returns nil if the batch can not be found"){
                 let service = BatchService()
-                service.deleteAllBatches()
+                expect(service.deleteAllBatches()).to(beTruthy())
                 
                 let result = service.getBatchWithBatchNum(num: 234)
                 expect(result).to(beNil())

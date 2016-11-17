@@ -28,11 +28,11 @@ class UploadPreviousPODVCTest: XCTestCase {
         
         let vc = UploadPreviousPODViewController()
         let bs = BatchService()
-        bs.deleteAllBatches()
+        assert(bs.deleteAllBatches())
         
         let obj1 = BatchObj()
         obj1.uploaded = false
-        bs.saveBatch(batch: obj1)
+        assert(bs.saveBatch(batch: obj1))
         
         let result = vc.loadInAllBatches()
         XCTAssertTrue(result)
@@ -48,33 +48,34 @@ class UploadPreviousPODVCTest: XCTestCase {
         
         //Set up batch
         let bs = BatchService()
-        bs.deleteAllBatches()
+        assert(bs.deleteAllBatches())
         
         let obj1 = BatchObj()
         obj1.uploaded = false
         obj1.podNumber = "ABCDE"
-        bs.saveBatch(batch: obj1)
+        assert(bs.saveBatch(batch: obj1))
         
         let obj2 = BatchObj()
         obj2.uploaded = false
         obj2.podNumber = "ASDA"
         obj2.batchNumber = 2
-        bs.saveBatch(batch: obj2)
+        assert(bs.saveBatch(batch: obj2))
         
         //Set up img and service
         let imageService = CaptivaLocalImageService()
-        imageService.deleteAllImages()
+        assert(imageService.deleteAllImages())
         let testBundle = Bundle(for: type(of: self))
         let util = ImageUtil.init()
         let img = UIImage(named: "testImg.jpg", in: testBundle, compatibleWith: nil)
+        let img2 = UIImage(named: "testImg2.jpg", in: testBundle, compatibleWith: nil)
         let imageObj = CaptivaLocalImageObj()
         imageObj.batchNumber = obj1.batchNumber
         imageObj.imageBase64Data = util.createBase64String(image : img!)
-        imageService.saveImage(image: imageObj)
+        assert(imageService.saveImage(image: imageObj))
         let imageObj2 = CaptivaLocalImageObj()
         imageObj2.batchNumber = obj2.batchNumber
-        imageObj2.imageBase64Data = imageObj.imageBase64Data + imageObj.imageBase64Data
-        imageService.saveImage(image: imageObj2)
+        imageObj2.imageBase64Data = util.createBase64String(image : img2!)
+        assert(imageService.saveImage(image: imageObj2))
         
         XCTAssertTrue(vc.loadInAllBatches())
         //Call Upload Code

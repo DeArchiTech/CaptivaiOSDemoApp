@@ -34,9 +34,9 @@ class CSSUtilHelperTest: XCTestCase {
         batchTwo.batchNumber = 123
         batchTwo.uploaded = true
         
-        service.deleteAllBatches()
-        service.saveBatch(batch: batchOne)
-        service.saveBatch(batch: batchTwo)
+        assert(service.deleteAllBatches())
+        assert(service.saveBatch(batch: batchOne))
+        assert(service.saveBatch(batch: batchTwo))
         
         let helper = ImageSavingHelper()
         let result = helper.getCurrentBatchNum()
@@ -47,7 +47,7 @@ class CSSUtilHelperTest: XCTestCase {
     func testGetCurrentBatchNumWithNoRecord(){
         
         let service = BatchService()
-        service.deleteAllBatches()
+        assert(service.deleteAllBatches())
         let helper = ImageSavingHelper()
         let result = helper.getCurrentBatchNum()
         XCTAssertEqual(0 , result)

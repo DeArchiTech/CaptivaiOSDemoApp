@@ -31,7 +31,7 @@ class SessionHelperUnitTest: XCTestCase {
         //1.1)Put Cookie in Database
         let cookie = Cookie.init()
         cookie.cookie = "ABC"
-        cookieManager.saveCookie(cookie: cookie)
+        XCTAssertTrue(cookieManager.saveCookie(cookie: cookie))
         
         //2)Assert Cookie Manager has no cookie cache
         XCTAssertNil(cookieManager.cookieCache)
@@ -137,11 +137,11 @@ class SessionHelperUnitTest: XCTestCase {
         
         let helper = SessionHelper()
         let service = BatchService()
-        service.deleteAllBatches()
+        XCTAssertTrue(service.deleteAllBatches())
         
         let batch = BatchObj()
         batch.batchNumber = 12
-        service.saveBatch(batch: batch)
+        XCTAssertTrue(service.saveBatch(batch: batch))
         
         let result = helper.createNewBatch()
         XCTAssertEqual(batch.batchNumber+1 , result)
@@ -154,7 +154,7 @@ class SessionHelperUnitTest: XCTestCase {
         
         let helper = SessionHelper()
         let service = BatchService()
-        service.deleteAllBatches()
+        XCTAssertTrue(service.deleteAllBatches())
         
         let result = helper.createNewBatch()
         XCTAssertEqual(0, result)
