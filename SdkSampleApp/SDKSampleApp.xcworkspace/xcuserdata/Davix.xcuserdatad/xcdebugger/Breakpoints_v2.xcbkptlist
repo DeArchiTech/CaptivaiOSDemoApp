@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SDKSampleApp/UploadImageViewController.swift"
-            timestampString = "501122910.35766"
+            filePath = "SDKSampleApp/LoginService.swift"
+            timestampString = "501200600.144062"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "savePodButtonPressed(_:)"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "loginWithTimeout(timeout:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

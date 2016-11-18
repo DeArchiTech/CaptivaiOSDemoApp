@@ -20,20 +20,25 @@ class PODUploadServiceTest: XCTestCase {
         super.tearDown()
     }
     
-    func testUploadPODNumber(){
-        
-        //1)Login To Get a Live Cookie
-        let manager : LoginService = LoginService.init()
-        let readyExpectation = expectation(description: "read")
-        manager.login() { (dictionary,error) -> () in
-            XCTAssertNotNil(dictionary)
-            readyExpectation.fulfill()
+    func testUploadPodNumberWithTimeout(){
+     
+        let exp = expectation(description: "read")
+        let sessionHelper = SessionHelper()
+        sessionHelper.getCookieExpress(){
+            cookie in
+            
+            let podUploadService = PODUploadService.init(cookie: cookie!)
+            podUploadService.uploadPODNumber(timeout: 1, pod: "ABCD"){
+                dict, error in
+                XCTAssertNil(dict)
+                XCTAssertNotNil(error)
+                exp.fulfill()
+            }
+            
         }
-        
-        //2)Call Upload Service to upload with POD number
-        waitForExpectations(timeout: 60, handler: { error in
-            XCTAssertNil(error, "Error")
+        waitForExpectations(timeout: 60, handler: {error in
         })
+        
     }
-
+    
 }

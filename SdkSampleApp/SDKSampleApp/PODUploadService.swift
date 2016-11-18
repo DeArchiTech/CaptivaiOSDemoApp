@@ -11,6 +11,8 @@ import Alamofire
 
 class PODUploadService{
     
+    var manager : SessionManager?
+    
     init(){
         
     }
@@ -41,6 +43,34 @@ class PODUploadService{
         result["data"] = self.getEncodedTxtFileFromPod(pod: pod)
         result["contentType"] = "text/plain"
         return result;
+        
+    }
+
+    func uploadPODNumber(timeout: Int, pod: String, completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void{
+        
+        if self.cookieString != nil{
+            
+            let configuration = URLSessionConfiguration.default
+            configuration.timeoutIntervalForRequest = TimeInterval.init(timeout)
+            
+            self.manager = Alamofire.SessionManager(configuration: configuration)
+            self.manager?.request(getUploadEndpoint(), method: .post, parameters: createUploadParam(pod: pod), encoding: JSONEncoding.default, headers: self.getHeaders())
+                .validate()
+                .responseJSON{ response in
+                    switch response.result{
+                    case .success( _):
+                        if let result = response.result.value {
+                            let jsonResult = result as! NSDictionary
+                            completion(jsonResult, nil)
+                        }
+                    case .failure(let error):
+                        completion(nil, error as NSError?)
+                    }
+            }
+        }else{
+            print("No cookie loaded in memory")
+            completion(nil, nil)
+        }
         
     }
     

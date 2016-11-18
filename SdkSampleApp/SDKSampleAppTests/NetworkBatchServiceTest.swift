@@ -158,4 +158,48 @@ class NetworkBatchServiceTest: XCTestCase {
         
     }
     
+    func testCreateBatchWithTimeOut(){
+        
+        let exp = expectation(description: "read")
+        let sessionHelper = SessionHelper()
+        sessionHelper.getCookieExpress(){
+            cookie in
+            let batchService = NetworkBatchService.init(cookie: cookie!)
+            //Create a batch fullfil expectation in call back
+            batchService.createBatchWithTimeOut(timeout: 1){
+                dict, error in
+                XCTAssertNil(dict)
+                XCTAssertNotNil(error)
+                exp.fulfill()
+                }
+        }
+        waitForExpectations(timeout: 60, handler: {error in
+        })
+
+    }
+    
+    func testUpdateBatchWithTimeout(){
+        
+        let exp = expectation(description: "read")
+        let sessionHelper = SessionHelper()
+        sessionHelper.getCookieExpress(){
+            cookie in
+            let batchService = NetworkBatchService.init(cookie: cookie!)
+            //Create a batch fullfil expectation in call back
+            batchService.createBatch(){
+                dict, error in
+                let id = batchService.parseID(dictionary: dict!)
+                batchService.updateBatchWithTimeOut(timeout: 1, batchId: id, value: [:]){
+                    dict, error in
+                    XCTAssertNil(dict)
+                    XCTAssertNotNil(error)
+                    exp.fulfill()
+                }
+            }
+        }
+        waitForExpectations(timeout: 60, handler: {error in
+        })
+        
+    }
+    
 }

@@ -80,12 +80,16 @@ class LoginServiceTest: XCTestCase {
         
         //1)Call Function
         let manager : LoginService = LoginService.init()
+        let readyExpectation = expectation(description: "read")
         manager.login() { (dictionary,error) -> () in
             print(dictionary as Any)
             print(error as Any)
             XCTAssertNotNil(dictionary)
+            readyExpectation.fulfill()
         }
-        
+        waitForExpectations(timeout: 60, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
     }
     
     func testGetLoginEndPt() {
@@ -94,6 +98,25 @@ class LoginServiceTest: XCTestCase {
         let manager : LoginService = LoginService.init()
         let result = manager.getLoginEndpoint()
         XCTAssertEqual(expected, result)
+        
+    }
+    
+    func testLoginWithTimeout() {
+        
+        //1)Call Function
+        let manager : LoginService = LoginService.init()
+        let readyExpectation = expectation(description: "read")
+        let timeoutInterval = 1
+        manager.loginWithTimeout(timeout: timeoutInterval){ (dictionary,error) -> () in
+            print(dictionary as Any)
+            print(error as Any)
+            XCTAssertNil(dictionary)
+            XCTAssertNotNil(error)
+            readyExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 60, handler: { error in
+            XCTAssertNil(error, "Error")
+        })
         
     }
 

@@ -29,7 +29,7 @@ class CaptivaLocalImageServiceTest: XCTestCase {
         
         //it should persist the image from the database
         let service = CaptivaLocalImageService()
-        service.deleteAllImages()
+        XCTAssertTrue(service.deleteAllImages())
         let obj = CaptivaLocalImageObj()
         let result = service.saveImage(image: obj)
         XCTAssertTrue(result)
@@ -53,9 +53,9 @@ class CaptivaLocalImageServiceTest: XCTestCase {
         obj2.batchNumber = rightBatchNum
         obj3.batchNumber = wrongBatchNum
         
-        service.saveImage(image: obj1)
-        service.saveImage(image: obj2)
-        service.saveImage(image: obj2)
+        XCTAssertTrue(service.saveImage(image: obj1))
+        XCTAssertTrue(service.saveImage(image: obj2))
+        XCTAssertTrue(service.saveImage(image: obj2))
         
         let result = service.loadImagesFromBatchNumber(batchNumber: rightBatchNum)
         XCTAssertEqual(result?.count, 2)

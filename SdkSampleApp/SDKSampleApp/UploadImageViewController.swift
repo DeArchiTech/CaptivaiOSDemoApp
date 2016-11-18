@@ -9,13 +9,14 @@ import UIKit
 import Foundation
 import Photos
 import EZLoadingActivity
-import YLProgressBar
+//import YLProgressBar
 
 @objc class UploadImageViewController: UIViewController{
     
     var imageData : [CaptivaLocalImageObj] = []
     var batchNum : Int = 0
     var count = 0
+//    var progress : YLProgressBar?
     
     @IBOutlet var numberOfImages: UILabel!
     @IBOutlet var podNumber: UITextField!
@@ -31,6 +32,13 @@ import YLProgressBar
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
         self.loadImageData()
+//        YLProgressBar.initialize()
+//        self.progress = YLProgressBar.init()
+//        self.progress?.type = YLProgressBarType.flat
+//        self.progress?.indicatorTextDisplayMode = YLProgressBarIndicatorTextDisplayMode.progress
+//        self.progress?.behavior = YLProgressBarBehavior.indeterminate
+//        self.progress?.stripesOrientation = YLProgressBarStripesOrientation.vertical
+//        self.view.addSubview(self.progress!)
         
     }
     
@@ -62,18 +70,15 @@ import YLProgressBar
     
     @IBAction func savePodButtonPressed(_ sender: Any) {
         
-        let progress = YLProgressBar.init()
-        progress.setProgress(0.5, animated: true)
-        
-//        if checkPodNumberIsValid(){
-//            let POD = self.podNumber.text
-//            let batch = BatchService()
-//            batch.updateBatchPODNUmber(pod: POD!, batchNum: self.batchNum)
-//            let alertController = UIAlertController(title: "POD Number Saved", message:
-//                "POD Number and Documents saved and can be uploaded later", preferredStyle: UIAlertControllerStyle.alert)
-//            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
-//            self.present(alertController, animated: true, completion: nil)
-//        }
+        if checkPodNumberIsValid(){
+            let POD = self.podNumber.text
+            let batch = BatchService()
+            batch.updateBatchPODNUmber(pod: POD!, batchNum: self.batchNum)
+            let alertController = UIAlertController(title: "POD Number Saved", message:
+                "POD Number and Documents saved and can be uploaded later", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
         
     }
     

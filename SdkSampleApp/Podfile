@@ -9,7 +9,6 @@ target 'SDKSampleApp' do
     pod 'OHHTTPStubs/Swift'
     pod 'RealmSwift'
     pod 'EZLoadingActivity'
-    pod 'YLProgressBar', '~> 3.10.0'
 end
 
 target 'SDKSampleAppTests' do

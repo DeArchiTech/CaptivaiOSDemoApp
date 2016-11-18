@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		21FC1CFC91DD058CF772832A /* Pods_SDKSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E798BA95BD7A35546DCE00 /* Pods_SDKSampleApp.framework */; };
-		2205DCD51DDE85FF006B6770 /* YLProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2205DCD41DDE85FF006B6770 /* YLProgressBar.framework */; };
 		22126B891DCBE22100B603F7 /* UploadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22126B881DCBE22100B603F7 /* UploadHelper.swift */; };
 		22126B8B1DCBE4A200B603F7 /* UploadHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22126B8A1DCBE4A200B603F7 /* UploadHelperTest.swift */; };
 		22180DBD1D9DBA1B00BA73CD /* EnhanceVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22180DBC1D9DBA1B00BA73CD /* EnhanceVCHelper.swift */; };
@@ -388,7 +387,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2205DCD51DDE85FF006B6770 /* YLProgressBar.framework in Frameworks */,
 				22B845631DA58FD100348FA4 /* SwiftyJSON.framework in Frameworks */,
 				22B845601DA58ECA00348FA4 /* Realm.framework in Frameworks */,
 				22B845611DA58ECA00348FA4 /* RealmSwift.framework in Frameworks */,

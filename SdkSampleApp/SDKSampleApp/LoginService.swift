@@ -27,6 +27,8 @@ import Alamofire
     
     var cookieString: String?
     
+    var manager: SessionManager?
+    
     func createLoginObj() -> LoginRequestObj{
         
         return LoginRequestObj(licenseKey: "LICE075-D09A-64E3", applicationId: "APP3075-D09A-59C8", username: "capadmin", password: "Reva12#$")
@@ -68,6 +70,31 @@ import Alamofire
                     print("Login failed")
                 }
         }
+    }
+    
+    func loginWithTimeout(timeout : Int, completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void {
+        
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = TimeInterval.init(timeout)
+        
+        self.manager = Alamofire.SessionManager(configuration: configuration)
+        self.manager?.request(getLoginEndpoint(), method: .post, parameters: createLoginParam(), encoding: JSONEncoding.default)
+            .validate()
+            .responseJSON{ response in
+                switch response.result{
+                case .success(_):
+                    if let result = response.result.value {
+                        let json = result as! NSDictionary
+                        print(json)
+                        completion(json, nil)
+                    }
+                    print("Login success")
+                case .failure(let error):
+                    completion(nil, error as NSError?)
+                    print("Login failed")
+                }
+        }
+    
     }
     
 }

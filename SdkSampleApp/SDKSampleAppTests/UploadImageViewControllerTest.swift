@@ -37,10 +37,10 @@ class UploadImageViewControllerTest: XCTestCase {
     func testGetAllImageObjs() {
         //Set up
         let batchService = BatchService()
-        batchService.deleteAllBatches()
+        XCTAssertTrue(batchService.deleteAllBatches())
         
         let service = CaptivaLocalImageService()
-        service.deleteAllImages()
+        XCTAssertTrue(service.deleteAllImages())
         
         let obj1 = CaptivaLocalImageObj()
         obj1.imageBase64Data = "ABC"
@@ -51,9 +51,9 @@ class UploadImageViewControllerTest: XCTestCase {
         let obj3 = CaptivaLocalImageObj()
         obj3.imageBase64Data = "FASD"
         
-        service.saveImage(image: obj1)
-        service.saveImage(image: obj2)
-        service.saveImage(image: obj3)
+        XCTAssertTrue(service.saveImage(image: obj1))
+        XCTAssertTrue(service.saveImage(image: obj2))
+        XCTAssertTrue(service.saveImage(image: obj3))
         
         //Test Controller
         let vc = UploadImageViewController()
@@ -66,9 +66,9 @@ class UploadImageViewControllerTest: XCTestCase {
         
         //Set up
         let batchService = BatchService()
-        batchService.deleteAllBatches()
+        XCTAssertTrue(batchService.deleteAllBatches())
         let service = CaptivaLocalImageService()
-        service.deleteAllImages()
+        XCTAssertTrue(service.deleteAllImages())
         
         let testBundle = Bundle(for: type(of: self))
         let path = testBundle.bundlePath + "/testImg.jpg"
@@ -79,8 +79,8 @@ class UploadImageViewControllerTest: XCTestCase {
         let obj2 = CaptivaLocalImageObj()
         obj2.imageBase64Data = path + "someting"
         
-        service.saveImage(image: obj1)
-        service.saveImage(image: obj2)
+        XCTAssertTrue(service.saveImage(image: obj1))
+        XCTAssertTrue(service.saveImage(image: obj2))
         
         //Test Controller
         let vc = UploadImageViewController()
@@ -146,9 +146,9 @@ class UploadImageViewControllerTest: XCTestCase {
         obj2.batchNumber = vc.batchNum
 
         let imageService = CaptivaLocalImageService()
-        imageService.deleteAllImages()
-        imageService.saveImage(image: obj1)
-        imageService.saveImage(image: obj2)
+        XCTAssertTrue(imageService.deleteAllImages())
+        XCTAssertTrue(imageService.saveImage(image: obj1))
+        XCTAssertTrue(imageService.saveImage(image: obj2))
         let exp = expectation(description: "read")
         
         let batchObj = batchService.getBatchWithBatchNum(num: vc.batchNum)
