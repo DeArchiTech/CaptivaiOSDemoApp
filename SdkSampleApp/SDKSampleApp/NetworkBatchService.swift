@@ -65,7 +65,7 @@ class NetworkBatchService{
                 .validate()
                 .responseJSON{ response in
                     switch response.result{
-                    case .success(let result):
+                    case .success( _):
                         if let result = response.result.value {
                             let jsonResult = result as! NSDictionary
                             completion(jsonResult, nil)
@@ -95,7 +95,7 @@ class NetworkBatchService{
                 .validate()
                 .responseJSON{ response in
                     switch response.result{
-                    case .success(let result):
+                    case .success(_):
                         if let result = response.result.value {
                             let jsonResult = result as! NSDictionary
                             completion(jsonResult, nil)
@@ -125,7 +125,7 @@ class NetworkBatchService{
                 .validate()
                 .responseJSON{ response in
                     switch response.result{
-                    case .success(let _):
+                    case .success(_):
                         if let result = response.result.value {
                             let jsonResult = result as! NSDictionary
                             completion(jsonResult, nil)

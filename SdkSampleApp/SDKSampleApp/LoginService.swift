@@ -56,7 +56,7 @@ import Alamofire
             .validate()
             .responseJSON{ response in
                 switch response.result{
-                case .success(let result):
+                case .success(_):
                     if let result = response.result.value {
                         let json = result as! NSDictionary
                         print(json)

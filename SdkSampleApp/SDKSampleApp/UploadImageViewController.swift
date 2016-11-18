@@ -9,6 +9,7 @@ import UIKit
 import Foundation
 import Photos
 import EZLoadingActivity
+import YLProgressBar
 
 @objc class UploadImageViewController: UIViewController{
     
@@ -39,10 +40,10 @@ import EZLoadingActivity
 
             let service = BatchService()
             let batchObj = service.getBatchWithBatchNum(num: self.batchNum)
-            service.updateBatchPODNUmber(pod: self.getPod(), batchNum: self.batchNum)
+            assert(service.updateBatchPODNUmber(pod: self.getPod(), batchNum: self.batchNum))
             self.chainedUploadNetworkCall(batchObj: batchObj!){
-                _,_ in
-                self.uploadCompletionCode()
+                _,error in
+                self.uploadCompletionCode(batchObj: batchObj!, error: error)
             }
             EZLoadingActivity.show("Uploading Documents To Server", disableUI: true)
         
@@ -55,30 +56,52 @@ import EZLoadingActivity
         let uploadHelper = UploadHelper.init()
         uploadHelper.uploadPODBatch(batchObj: batchObj){
             dictionary, error in
-            let service = BatchService()
-            service.updateBatchUpdatedToTrue(num: batchObj.batchNumber)
             completion(dictionary, error)
         }
     }
     
     @IBAction func savePodButtonPressed(_ sender: Any) {
         
-        if checkPodNumberIsValid(){
-            let POD = self.podNumber.text
-            let batch = BatchService()
-            batch.updateBatchPODNUmber(pod: POD!, batchNum: self.batchNum)
-            let alertController = UIAlertController(title: "POD Number Saved", message:
-                "POD Number and Documents saved and can be uploaded later", preferredStyle: UIAlertControllerStyle.alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
-            self.present(alertController, animated: true, completion: nil)
-        }
+        let progress = YLProgressBar.init()
+        progress.setProgress(0.5, animated: true)
+        
+//        if checkPodNumberIsValid(){
+//            let POD = self.podNumber.text
+//            let batch = BatchService()
+//            batch.updateBatchPODNUmber(pod: POD!, batchNum: self.batchNum)
+//            let alertController = UIAlertController(title: "POD Number Saved", message:
+//                "POD Number and Documents saved and can be uploaded later", preferredStyle: UIAlertControllerStyle.alert)
+//            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+//            self.present(alertController, animated: true, completion: nil)
+//        }
         
     }
     
-    func uploadCompletionCode() {
+    func uploadCompletionCode(batchObj: BatchObj, error: NSError?) {
+        let service = BatchService()
+        assert(service.updateBatchUpdatedToTrue(num: batchObj.batchNumber))
+        if error == nil{
+            self.uploadSuccessCode()
+        }else{
+            self.uploadFailureCode()
+        }
+
+    }
+    
+    func uploadSuccessCode() {
         EZLoadingActivity.hide(true, animated: true)
+        let message = "Documents and POD Number uploaded to server successfully"
         let alertController = UIAlertController(title: "Upload Success", message:
-            "Documents and POD Number uploaded to server successfully", preferredStyle: UIAlertControllerStyle.alert)
+            message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func uploadFailureCode() {
+        EZLoadingActivity.hide(true, animated: true)
+        let message = "Upload has failed, your documents has been saved on your device and can be uploaded later"
+        let alertController = UIAlertController(title: "Upload Failed", message:
+            message, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
@@ -86,7 +109,6 @@ import EZLoadingActivity
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
-        
     }
     
     func getPod() -> String{

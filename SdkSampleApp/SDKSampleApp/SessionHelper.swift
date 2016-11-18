@@ -73,7 +73,7 @@ import UIKit
             let cookie = Cookie.init()
             let cookieString = self.getcookieFromLoginResponse(response: dictionary!)
             cookie.cookie = cookieString
-            self.cookieManager?.saveCookie(cookie: cookie)
+            assert((self.cookieManager?.saveCookie(cookie: cookie))!)
             return true
         }
         return false

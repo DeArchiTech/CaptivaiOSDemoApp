@@ -25,33 +25,25 @@ import RealmSwift
             try! realm.write {
                 realm.add(cookie)
             }
-        } catch let error as NSError {
+        } catch _ as NSError {
             return false
-            print(error)
         }
         return true
     
     }
     
     func loadCookie() -> Bool {
-        
-        do{
-            let objs: Results<Cookie> = try {
-                try! Realm().objects(Cookie)
-            }()
-            self.cookieCache = objs.first
-            return self.cookieCache != nil
-        }catch let error as NSError {
-            return false
-            print(error)
-        }
+
+        let objs: Results<Cookie> = try! Realm().objects(Cookie.self)
+        self.cookieCache = objs.first
+        return self.cookieCache != nil
         
     }
     
     func clearAllCookies() -> Bool {
         
         var objs: Results<Cookie> = {
-            try! Realm().objects(Cookie)
+            try! Realm().objects(Cookie.self)
         }()
         if objs.count > 0 {
             do{
@@ -61,13 +53,12 @@ import RealmSwift
                         realm.delete(cookie)
                     }
                 }
-            } catch let error as NSError {
+            } catch _ as NSError {
                 return false
-                print(error)
             }
         }
         objs = {
-            try! Realm().objects(Cookie)
+            try! Realm().objects(Cookie.self)
         }()
         return objs.count == 0
         

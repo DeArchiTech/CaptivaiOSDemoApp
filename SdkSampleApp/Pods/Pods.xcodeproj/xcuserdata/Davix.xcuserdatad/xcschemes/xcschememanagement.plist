@@ -59,15 +59,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YLProgressBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E2AA89BDA1F45644E536130258888AA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1DAF855902AD92BAAF24CB1BF9CC0BEA</key>
+		<key>0AA5679456D75CD845CAB9F6E0564B4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,17 +82,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>546D468CFE748BEE9F840C7E627DAC1A</key>
+		<key>51480B3E3FF57300E1CA30656FB4C13E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>705382C461CCBEA45B7DBAD917E7CD56</key>
+		<key>6540A9946E0DD84D397BEEB087BE1F3F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DF2092F74E9E4748D9A76D2F5470756</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,27 +112,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B18710CF46079E4C03983736CAA3A6D0</key>
+		<key>91A0101D9BD2269272FB36EED528A1F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B430D240D8A7AB4F314A9AC1B088B562</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B5902315466575D2FB5B490F788E4B4A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D204869C88DC2668D175296059AFD461</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E8ADE11D45338628A455486CB7D2013F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

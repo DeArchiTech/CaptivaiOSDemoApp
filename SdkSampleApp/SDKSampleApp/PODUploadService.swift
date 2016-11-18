@@ -51,7 +51,7 @@ class PODUploadService{
                 .validate()
                 .responseJSON{ response in
                     switch response.result{
-                    case .success(let _):
+                    case .success( _):
                         if let result = response.result.value {
                             let jsonResult = result as! NSDictionary
                             completion(jsonResult, nil)

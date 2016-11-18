@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		21FC1CFC91DD058CF772832A /* Pods_SDKSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78E798BA95BD7A35546DCE00 /* Pods_SDKSampleApp.framework */; };
+		2205DCD51DDE85FF006B6770 /* YLProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2205DCD41DDE85FF006B6770 /* YLProgressBar.framework */; };
 		22126B891DCBE22100B603F7 /* UploadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22126B881DCBE22100B603F7 /* UploadHelper.swift */; };
 		22126B8B1DCBE4A200B603F7 /* UploadHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22126B8A1DCBE4A200B603F7 /* UploadHelperTest.swift */; };
 		22180DBD1D9DBA1B00BA73CD /* EnhanceVCHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22180DBC1D9DBA1B00BA73CD /* EnhanceVCHelper.swift */; };
@@ -190,6 +191,7 @@
 
 /* Begin PBXFileReference section */
 		14333D3F7C7E0FC783A354EA /* Pods-SDKSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKSampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKSampleApp/Pods-SDKSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2205DCD41DDE85FF006B6770 /* YLProgressBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YLProgressBar.framework; path = "../../../Library/Developer/Xcode/DerivedData/SDKSampleApp-gdadgtpsoexxvnbejhdmmafavxoj/Build/Products/Debug-iphoneos/YLProgressBar/YLProgressBar.framework"; sourceTree = "<group>"; };
 		22126B881DCBE22100B603F7 /* UploadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadHelper.swift; sourceTree = "<group>"; };
 		22126B8A1DCBE4A200B603F7 /* UploadHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadHelperTest.swift; sourceTree = "<group>"; };
 		22180DBC1D9DBA1B00BA73CD /* EnhanceVCHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnhanceVCHelper.swift; path = ../EnhanceVCHelper.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2205DCD51DDE85FF006B6770 /* YLProgressBar.framework in Frameworks */,
 				22B845631DA58FD100348FA4 /* SwiftyJSON.framework in Frameworks */,
 				22B845601DA58ECA00348FA4 /* Realm.framework in Frameworks */,
 				22B845611DA58ECA00348FA4 /* RealmSwift.framework in Frameworks */,
@@ -565,6 +568,7 @@
 		F3263FFA17C7CDE90043754D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2205DCD41DDE85FF006B6770 /* YLProgressBar.framework */,
 				22B845621DA58FD100348FA4 /* SwiftyJSON.framework */,
 				22B8455E1DA58ECA00348FA4 /* Realm.framework */,
 				22B8455F1DA58ECA00348FA4 /* RealmSwift.framework */,

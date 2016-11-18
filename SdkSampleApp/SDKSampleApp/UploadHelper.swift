@@ -26,15 +26,21 @@ class UploadHelper: NSObject{
         //1)Creat a session
         self.createSession(){
             dictionary1, error1 in
+            self.checkForError(error: error1, completion: completion)
+            
             //1.1)Create a batch
             let cookie = self.sessionHelper.getCookieStringFromManager()!
             self.createBatch(cookie: cookie){
                 dict, error in
+                self.checkForError(error: error, completion: completion)
                 let service = NetworkBatchService.init(cookie: cookie)
                 let batchID = service.parseID(dictionary: dict!)
+                
                 //2)Upload POD Number
                 self.uploadPODNumber(podNumber: batchObj.podNumber){
                     dict2, error2 in
+                    self.checkForError(error: error2, completion: completion)
+                    
                     //3)Upload all Images associated with the POD
                     let service = CaptivaLocalImageService()
                     let num = batchObj.batchNumber
@@ -42,16 +48,18 @@ class UploadHelper: NSObject{
                     if images != nil{
                         self.uploadAllImages(images: images!){
                             dict3, error3 in
+                            self.checkForError(error: error3, completion: completion)
+                            
                             //3.1 Update The Batch
                             self.updateBatch(batchID: batchID, cookie: cookie, value: self.filesID){
                                 dict4, error4 in
+                                self.checkForError(error: error3, completion: completion)
                                 completion(dict4, error4)
                             }
                         }
                     }else{
-                        completion(dict2,error2)
+                        completion(dict2,NSError.init())
                     }
-                    
                 }
             }
         }
@@ -134,6 +142,16 @@ class UploadHelper: NSObject{
         
         return dictionary["id"] as! String
         
+    }
+    
+    func checkForError(error : NSError?, completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
+        if hasError(error: error){
+            completion(nil, error)
+        }
+    }
+    
+    func hasError(error : NSError?) -> Bool{
+        return error != nil
     }
     
 }

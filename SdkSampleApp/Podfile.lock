@@ -24,6 +24,7 @@ PODS:
   - RealmSwift (2.0.2):
     - Realm (= 2.0.2)
   - SwiftyJSON (3.1.1)
+  - YLProgressBar (3.10.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - Quick
   - RealmSwift
   - SwiftyJSON
+  - YLProgressBar (~> 3.10.0)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
@@ -44,7 +46,8 @@ SPEC CHECKSUMS:
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+  YLProgressBar: 40a0627522dc1b536e02bf082a1b1ce3085b4668
 
-PODFILE CHECKSUM: efa5f5ca022f587570bd0e524781cbf685ff76fc
+PODFILE CHECKSUM: 2d7bebb4680e69e2909b7cd5e754c717be960bb9
 
 COCOAPODS: 1.1.0.rc.3
