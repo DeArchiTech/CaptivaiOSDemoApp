@@ -12,6 +12,8 @@ import Foundation
 
 class NetworkBatchServiceTest: XCTestCase {
     
+    var bs : NetworkBatchService?
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -158,6 +160,26 @@ class NetworkBatchServiceTest: XCTestCase {
         
     }
     
+    func testCreateBatchWithTimeOutTwo(){
+        
+        let exp = expectation(description: "read")
+        let sessionHelper = SessionHelper()
+        sessionHelper.getCookieExpress(){
+            cookie in
+            self.bs = NetworkBatchService.init(cookie: cookie!)
+            //Create a batch fullfil expectation in call back
+            self.bs?.createBatchWithTimeOut(timeout: 10000){
+                dict, error in
+                XCTAssertNil(error)
+                XCTAssertNotNil(dict)
+                exp.fulfill()
+                }
+        }
+        waitForExpectations(timeout: 60, handler: {error in
+        })
+
+    }
+    
     func testCreateBatchWithTimeOut(){
         
         let exp = expectation(description: "read")
@@ -171,11 +193,11 @@ class NetworkBatchServiceTest: XCTestCase {
                 XCTAssertNil(dict)
                 XCTAssertNotNil(error)
                 exp.fulfill()
-                }
+            }
         }
         waitForExpectations(timeout: 60, handler: {error in
         })
-
+        
     }
     
     func testUpdateBatchWithTimeout(){

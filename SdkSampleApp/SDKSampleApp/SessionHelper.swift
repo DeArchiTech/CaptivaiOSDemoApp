@@ -27,6 +27,7 @@ import UIKit
     
     var cookieManager : CookieManager?
     var loginService : LoginService?
+    var timeout : Int = Constants.timeout
     
     func getCookieExpress(completion: @escaping ( _: String?) -> ()) ->Void {
      
@@ -44,7 +45,8 @@ import UIKit
     func getCookie(completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Void {
         
         //1)Attempt to load from Database
-        self.loginService?.login(){dictionary, error in
+        self.loginService?.loginWithTimeout(timeout: self.timeout){
+            dictionary, error in
             let cookieString = self.getcookieFromLoginResponse(response: dictionary!)
             let cookie = Cookie.init()
             cookie.cookie = cookieString

@@ -64,7 +64,8 @@ class NetworkBatchService{
         if self.cookieString != nil{
             
             let configuration = URLSessionConfiguration.default
-            configuration.timeoutIntervalForRequest = TimeInterval.init(timeout)
+            configuration.timeoutIntervalForResource = TimeInterval(timeout)
+            configuration.timeoutIntervalForRequest = TimeInterval(timeout)
             
             self.manager = Alamofire.SessionManager(configuration: configuration)
             self.manager?.request(getBatchUploadEndPoint(), method: .post, parameters: createJsonPayload(), encoding: JSONEncoding.default, headers: self.getHeaders())

@@ -11,7 +11,12 @@ import Foundation
 class UploadHelper: NSObject{
     
     var sessionHelper : SessionHelper
+    var podUploadService : PODUploadService?
+    var uploadService : UploadService?
+    var batchService : NetworkBatchService?
+    
     var filesID : [String : String] = [:]
+    var timeout : Int = Constants.timeout
     
     override init(){
         self.sessionHelper = SessionHelper.init()
@@ -68,8 +73,8 @@ class UploadHelper: NSObject{
     func createBatch(cookie: String, completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
         
         let cookie = self.sessionHelper.getCookieStringFromManager()
-        let service = NetworkBatchService.init(cookie: cookie!)
-        service.createBatch(){
+        self.batchService = NetworkBatchService.init(cookie: cookie!)
+        self.batchService?.createBatchWithTimeOut(timeout: self.timeout){
             dictionary, error in
             completion(dictionary, error)
         }
@@ -79,8 +84,8 @@ class UploadHelper: NSObject{
     func updateBatch(batchID: String,cookie: String,value:[String:String],completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
         
         let cookie = self.sessionHelper.getCookieStringFromManager()
-        let service = NetworkBatchService.init(cookie: cookie!)
-        service.updateBatch(batchId: batchID, value: value){
+        self.batchService = NetworkBatchService.init(cookie: cookie!)
+        self.batchService?.updateBatchWithTimeOut(timeout: self.timeout, batchId: batchID, value: value){
             dictionary, error in
             completion(dictionary, error)
         }
@@ -99,8 +104,8 @@ class UploadHelper: NSObject{
     func uploadPODNumber(podNumber: String, completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
         
         let cookieString = self.sessionHelper.getCookieFromManager()
-        let service = PODUploadService.init(cookie: (cookieString?.cookie)!)
-        service.uploadPODNumber(pod: podNumber){
+        self.podUploadService = PODUploadService.init(cookie: (cookieString?.cookie)!)
+        self.podUploadService?.uploadPODNumber(timeout: self.timeout, pod: podNumber){
             dictionary, error in
             let dict = dictionary! as NSDictionary
             self.filesID[self.parseID(dictionary: dict)] = "txt"
@@ -127,8 +132,8 @@ class UploadHelper: NSObject{
     func uploadImage(image : CaptivaLocalImageObj, completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
         
         let cookieString = self.sessionHelper.getCookieFromManager()
-        let service = UploadService.init(cookie: (cookieString?.cookie)!)
-        service.uploadImage(base64String: image.imageBase64Data){
+        self.uploadService = UploadService.init(cookie: (cookieString?.cookie)!)
+        self.uploadService?.uploadImage(timeout: self.timeout, base64String: image.imageBase64Data){
             dictionary, error in
             let dict = dictionary! as NSDictionary
             let key = self.parseID(dictionary: dict)
