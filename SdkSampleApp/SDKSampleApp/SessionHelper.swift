@@ -33,11 +33,16 @@ import UIKit
      
         //1)Attempt to load from Database
         self.loginService?.login(){dictionary, error in
-            let cookieString = self.getcookieFromLoginResponse(response: dictionary!)
-            let cookie = Cookie.init()
-            cookie.cookie = cookieString
-            self.cookieManager?.cookieCache = cookie
-            completion(cookie.cookie)
+            if error == nil{
+                let cookieString = self.getcookieFromLoginResponse(response: dictionary!)
+                let cookie = Cookie.init()
+                cookie.cookie = cookieString
+                self.cookieManager?.cookieCache = cookie
+                completion(cookie.cookie)
+            }else{
+                completion("")
+            }
+
         }
         
     }
@@ -47,10 +52,12 @@ import UIKit
         //1)Attempt to load from Database
         self.loginService?.loginWithTimeout(timeout: self.timeout){
             dictionary, error in
-            let cookieString = self.getcookieFromLoginResponse(response: dictionary!)
-            let cookie = Cookie.init()
-            cookie.cookie = cookieString
-            self.cookieManager?.cookieCache = cookie
+            if error == nil{
+                let cookieString = self.getcookieFromLoginResponse(response: dictionary!)
+                let cookie = Cookie.init()
+                cookie.cookie = cookieString
+                self.cookieManager?.cookieCache = cookie
+            }
             completion(dictionary,error)
         }
         

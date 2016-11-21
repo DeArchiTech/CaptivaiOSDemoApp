@@ -149,7 +149,7 @@ class UploadHelperTest: XCTestCase {
         let imageObj2 = CaptivaLocalImageObj()
         imageObj2.imageBase64Data = util.createBase64String(image : img2!)
         XCTAssertTrue(imageService.saveImage(image: imageObj2))
-        
+              
         //3)Call function
         helper.uploadPODBatch(batchObj: obj1){
             //3)validate

@@ -31,39 +31,38 @@ class UploadHelper: NSObject{
         //1)Creat a session
         self.createSession(){
             dictionary1, error1 in
-            self.checkForError(error: error1, completion: completion)
-            
-            //1.1)Create a batch
-            let cookie = self.sessionHelper.getCookieStringFromManager()!
-            self.createBatch(cookie: cookie){
-                dict, error in
-                self.checkForError(error: error, completion: completion)
-                let service = NetworkBatchService.init(cookie: cookie)
-                let batchID = service.parseID(dictionary: dict!)
-                
-                //2)Upload POD Number
-                self.uploadPODNumber(podNumber: batchObj.podNumber){
-                    dict2, error2 in
-                    self.checkForError(error: error2, completion: completion)
-                    
-                    //3)Upload all Images associated with the POD
-                    let service = CaptivaLocalImageService()
-                    let num = batchObj.batchNumber
-                    let images = service.loadImagesFromBatchNumber(batchNumber: num)
-                    if images != nil{
-                        self.uploadAllImages(images: images!){
-                            dict3, error3 in
-                            self.checkForError(error: error3, completion: completion)
-                            
-                            //3.1 Update The Batch
-                            self.updateBatch(batchID: batchID, cookie: cookie, value: self.filesID){
-                                dict4, error4 in
-                                self.checkForError(error: error3, completion: completion)
-                                completion(dict4, error4)
+            if self.checkForError(error: error1, completion: completion) == false{
+                //1.1)Create a batch
+                let cookie = self.sessionHelper.getCookieStringFromManager()!
+                self.createBatch(cookie: cookie){
+                    dict, error in
+                    if self.checkForError(error: error1, completion: completion) == false{
+                    let service = NetworkBatchService.init(cookie: cookie)
+                    let batchID = service.parseID(dictionary: dict!)
+                        //2)Upload POD Number
+                        self.uploadPODNumber(podNumber: batchObj.podNumber){
+                            dict2, error2 in
+                            if self.checkForError(error: error1, completion: completion) == false{
+                                //3)Upload all Images associated with the POD
+                                let service = CaptivaLocalImageService()
+                                let num = batchObj.batchNumber
+                                let images = service.loadImagesFromBatchNumber(batchNumber: num)
+                                if images != nil{
+                                    self.uploadAllImages(images: images!){
+                                        dict3, error3 in
+                                        if self.checkForError(error: error1, completion: completion) == false{
+                                            //3.1 Update The Batch
+                                            self.updateBatch(batchID: batchID, cookie: cookie, value: self.filesID){
+                                                dict4, error4 in
+                                                completion(dict4, error4)
+                                            }
+                                        }
+                                    }
+                                }else{
+                                    completion(dict2,NSError.init())
+                                }
                             }
                         }
-                    }else{
-                        completion(dict2,NSError.init())
                     }
                 }
             }
@@ -107,8 +106,10 @@ class UploadHelper: NSObject{
         self.podUploadService = PODUploadService.init(cookie: (cookieString?.cookie)!)
         self.podUploadService?.uploadPODNumber(timeout: self.timeout, pod: podNumber){
             dictionary, error in
-            let dict = dictionary! as NSDictionary
-            self.filesID[self.parseID(dictionary: dict)] = "txt"
+            if error == nil{
+                let dict = dictionary! as NSDictionary
+                self.filesID[self.parseID(dictionary: dict)] = "txt"
+            }
             completion(dictionary,error)
         }
         
@@ -135,9 +136,11 @@ class UploadHelper: NSObject{
         self.uploadService = UploadService.init(cookie: (cookieString?.cookie)!)
         self.uploadService?.uploadImage(timeout: self.timeout, base64String: image.imageBase64Data){
             dictionary, error in
-            let dict = dictionary! as NSDictionary
-            let key = self.parseID(dictionary: dict)
-            self.filesID[key] = "jpg"
+            if error == nil{
+                let dict = dictionary! as NSDictionary
+                let key = self.parseID(dictionary: dict)
+                self.filesID[key] = "jpg"
+            }
             completion(dictionary,error)
         }
         
@@ -149,10 +152,12 @@ class UploadHelper: NSObject{
         
     }
     
-    func checkForError(error : NSError?, completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
+    func checkForError(error : NSError?, completion: @escaping ( _: NSDictionary?, _: NSError?)->()) -> Bool{
         if hasError(error: error){
             completion(nil, error)
+            return true
         }
+        return false
     }
     
     func hasError(error : NSError?) -> Bool{

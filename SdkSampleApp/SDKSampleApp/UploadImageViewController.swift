@@ -83,9 +83,10 @@ import EZLoadingActivity
     }
     
     func uploadCompletionCode(batchObj: BatchObj, error: NSError?) {
-        let service = BatchService()
-        assert(service.updateBatchUpdatedToTrue(num: batchObj.batchNumber))
+
         if error == nil{
+            let service = BatchService()
+            assert(service.updateBatchUpdatedToTrue(num: batchObj.batchNumber))
             self.uploadSuccessCode()
         }else{
             self.uploadFailureCode()
