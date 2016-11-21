@@ -47,7 +47,9 @@ class UploadHelper: NSObject{
                                 let service = CaptivaLocalImageService()
                                 let num = batchObj.batchNumber
                                 let images = service.loadImagesFromBatchNumber(batchNumber: num)
-                                if images != nil{
+                                if images == nil{
+                                    completion(dict2,NSError.init())
+                                }else{
                                     self.uploadAllImages(images: images!){
                                         dict3, error3 in
                                         if self.checkForError(error: error1, completion: completion) == false{
@@ -58,8 +60,6 @@ class UploadHelper: NSObject{
                                             }
                                         }
                                     }
-                                }else{
-                                    completion(dict2,NSError.init())
                                 }
                             }
                         }
@@ -82,8 +82,7 @@ class UploadHelper: NSObject{
     
     func updateBatch(batchID: String,cookie: String,value:[String:String],completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
         
-        let cookie = self.sessionHelper.getCookieStringFromManager()
-        self.batchService = NetworkBatchService.init(cookie: cookie!)
+        self.batchService = NetworkBatchService.init(cookie: cookie)
         self.batchService?.updateBatchWithTimeOut(timeout: self.timeout, batchId: batchID, value: value){
             dictionary, error in
             completion(dictionary, error)

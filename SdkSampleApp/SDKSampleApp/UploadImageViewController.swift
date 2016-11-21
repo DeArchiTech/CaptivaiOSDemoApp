@@ -16,6 +16,7 @@ import EZLoadingActivity
     var imageData : [CaptivaLocalImageObj] = []
     var batchNum : Int = 0
     var count = 0
+    var uploadHelper : UploadHelper?
 //    var progress : YLProgressBar?
     
     @IBOutlet var numberOfImages: UILabel!
@@ -61,8 +62,8 @@ import EZLoadingActivity
     
     func chainedUploadNetworkCall(batchObj : BatchObj, completion: @escaping (NSDictionary?, NSError?) -> ()){
         
-        let uploadHelper = UploadHelper.init()
-        uploadHelper.uploadPODBatch(batchObj: batchObj){
+        self.uploadHelper = UploadHelper.init()
+        self.uploadHelper?.uploadPODBatch(batchObj: batchObj){
             dictionary, error in
             completion(dictionary, error)
         }
@@ -89,6 +90,7 @@ import EZLoadingActivity
             assert(service.updateBatchUpdatedToTrue(num: batchObj.batchNumber))
             self.uploadSuccessCode()
         }else{
+            debugPrint(error!)
             self.uploadFailureCode()
         }
 
