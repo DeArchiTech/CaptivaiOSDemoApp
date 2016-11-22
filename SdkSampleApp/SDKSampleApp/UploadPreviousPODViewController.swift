@@ -82,8 +82,6 @@ import EZLoadingActivity
             self.helper?.uploadPODBatch(batchObj: batchObj!){
                 dictionary, error in
                 if error == nil{
-                    self.service = BatchService()
-                    assert((self.service?.updateBatchUpdatedToTrue(num: (batchObj?.batchNumber)!))!)
                     self.uploadAllPODBatches(batches: dataArray, completion: completion)
                 }else{
                     completion(dictionary, error)

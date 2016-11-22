@@ -56,7 +56,9 @@ class UploadHelper: NSObject{
                                             //3.1 Update The Batch
                                             self.updateBatch(batchID: batchID, cookie: cookie, value: self.filesID){
                                                 dict4, error4 in
-                                                completion(dict4, error4)
+                                                if self.checkForError(error: error4, completion: completion) == false{
+                                                    self.updateUploadParamToTrue(batchNum: batchObj.batchNumber, completion: completion)
+                                                }
                                             }
                                         }
                                     }
@@ -67,6 +69,13 @@ class UploadHelper: NSObject{
                 }
             }
         }
+    }
+    
+    func updateUploadParamToTrue(batchNum: Int, completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
+        
+        let service = BatchService()
+        assert(service.updateBatchUpdatedToTrue(num: batchNum))
+        completion(nil, nil)
     }
     
     func createBatch(cookie: String, completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
