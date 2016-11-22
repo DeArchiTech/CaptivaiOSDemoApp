@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-//import SwiftyJson
 
 @objc class LoginService: NSObject{
     
@@ -61,13 +60,10 @@ import Alamofire
                 case .success(_):
                     if let result = response.result.value {
                         let json = result as! NSDictionary
-                        print(json)
                         completion(json, nil)
                     }
-                    print("Login success")
                 case .failure(let error):
                     completion(nil, error as NSError?)
-                    print("Login failed")
                 }
         }
     }
@@ -85,13 +81,10 @@ import Alamofire
                 case .success(_):
                     if let result = response.result.value {
                         let json = result as! NSDictionary
-                        print(json)
                         completion(json, nil)
                     }
-                    print("Login success")
                 case .failure(let error):
                     completion(nil, error as NSError?)
-                    print("Login failed")
                 }
         }
     

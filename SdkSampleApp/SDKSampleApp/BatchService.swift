@@ -162,8 +162,7 @@ import RealmSwift
                     updateObj.podNumber = pod
                 }
                 return true
-            }catch let error as NSError {
-                print(error)
+            }catch _ as NSError {
                 return false
             }
         }else{

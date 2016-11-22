@@ -68,7 +68,6 @@ class PODUploadService{
                     }
             }
         }else{
-            print("No cookie loaded in memory")
             completion(nil, nil)
         }
         
@@ -91,7 +90,6 @@ class PODUploadService{
                     }
             }
         }else{
-            print("No cookie loaded in memory")
             completion(nil, nil)
         }
         

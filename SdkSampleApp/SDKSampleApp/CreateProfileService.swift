@@ -118,8 +118,7 @@ class CreateProfileService{
                         profile.selected = false
                     }
                 }
-            } catch let error as NSError {
-                print(error)
+            } catch _ as NSError {
                 return false
             }
         }
@@ -155,8 +154,7 @@ class CreateProfileService{
                         profile.selected = true
                     }
                 }
-            } catch let error as NSError {
-                print(error)
+            } catch _ as NSError {
                 return false
             }
             return true

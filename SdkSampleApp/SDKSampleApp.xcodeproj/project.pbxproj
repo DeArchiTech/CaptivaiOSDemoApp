@@ -816,6 +816,7 @@
 					F3263FF717C7CDE90043754D = {
 						DevelopmentTeam = J9T57DG7T3;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;

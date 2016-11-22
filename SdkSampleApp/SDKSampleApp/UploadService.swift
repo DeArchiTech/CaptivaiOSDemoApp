@@ -79,7 +79,6 @@ class UploadService{
                     }
             }
         }else{
-            print("No cookie loaded in memory")
             completion(nil, nil)
         }
         
@@ -102,7 +101,6 @@ class UploadService{
                     }
             }
         }else{
-            print("No cookie loaded in memory")
             completion(nil, nil)
         }
         
@@ -125,7 +123,6 @@ class UploadService{
                     }
             }
         }else{
-            print("No cookie loaded in memory")
             completion(nil, nil)
         }
         
@@ -148,7 +145,6 @@ class UploadService{
                     }
             }
         }else{
-            print("No cookie loaded in memory")
             completion(nil, nil)
         }
         

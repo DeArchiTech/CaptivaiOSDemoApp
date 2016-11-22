@@ -85,8 +85,7 @@ class NetworkBatchService{
             //Throw Error!
             do {
                 try ErrorUtil.throwError(message: "No cookie loaded in memory")
-            } catch MyError.RuntimeError(let errorMessage) {
-                print(errorMessage)
+            } catch MyError.RuntimeError( _) {
             } catch {
                 
             }
@@ -115,10 +114,8 @@ class NetworkBatchService{
             //Throw Error!
             do {
                 try ErrorUtil.throwError(message: "No cookie loaded in memory")
-            } catch MyError.RuntimeError(let errorMessage) {
-                print(errorMessage)
+            } catch MyError.RuntimeError(_) {
             } catch {
-                
             }
             completion(nil, nil)
         }
@@ -145,8 +142,7 @@ class NetworkBatchService{
             //Throw Error!
             do {
                 try ErrorUtil.throwError(message: "No cookie loaded in memory")
-            } catch MyError.RuntimeError(let errorMessage) {
-                print(errorMessage)
+            } catch MyError.RuntimeError(_) {
             } catch {
                 
             }
@@ -180,10 +176,8 @@ class NetworkBatchService{
             //Throw Error!
             do {
                 try ErrorUtil.throwError(message: "No cookie loaded in memory")
-            } catch MyError.RuntimeError(let errorMessage) {
-                print(errorMessage)
+            } catch MyError.RuntimeError(_) {
             } catch {
-                
             }
             completion(nil, nil)
         }
@@ -210,8 +204,7 @@ class NetworkBatchService{
             //Throw Error!
             do {
                 try ErrorUtil.throwError(message: "No cookie loaded in memory")
-            } catch MyError.RuntimeError(let errorMessage) {
-                print(errorMessage)
+            } catch MyError.RuntimeError(_) {
             } catch {
                 
             }
