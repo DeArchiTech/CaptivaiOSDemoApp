@@ -15,6 +15,8 @@ import EZLoadingActivity
     var connected : Bool = false
     var batches : [BatchObj] = []
     var count = 0
+    var helper : UploadHelper?
+    var service : BatchService?
     
     @IBOutlet var podNumberLabel: UILabel!
     @IBOutlet var tableView: UITableView!
@@ -45,10 +47,15 @@ import EZLoadingActivity
         self.uploadAllPODBatches(batches: self.batches   ){
             dictionary, error in
             assert(EZLoadingActivity.hide(true, animated: true))
-            assert(self.loadInAllBatches())
-            self.setUpLabel()
-            self.tableView.reloadData()
-            self.presentUploadSuccessController()
+            if error == nil{
+                assert(self.loadInAllBatches())
+                self.setUpLabel()
+                self.tableView.reloadData()
+                self.presentUploadSuccessController()
+            }else{
+                self.presentUploadFailureController()
+            }
+
         }
 
     }
@@ -71,12 +78,17 @@ import EZLoadingActivity
             completion(nil,nil)
         }else{
             //3)If not nil, call helper to upload and pass self as a call back
-            let uploadHelper = UploadHelper.init()
-            uploadHelper.uploadPODBatch(batchObj: batchObj!){
+            self.helper = UploadHelper.init()
+            self.helper?.uploadPODBatch(batchObj: batchObj!){
                 dictionary, error in
-                let batchService = BatchService()
-                assert(batchService.updateBatchUpdatedToTrue(num: (batchObj?.batchNumber)!))
-                self.uploadAllPODBatches(batches: dataArray, completion: completion)
+                if error == nil{
+                    self.service = BatchService()
+                    assert((self.service?.updateBatchUpdatedToTrue(num: (batchObj?.batchNumber)!))!)
+                    self.uploadAllPODBatches(batches: dataArray, completion: completion)
+                }else{
+                    completion(dictionary, error)
+                }
+
             }
         }
     }
@@ -85,6 +97,16 @@ import EZLoadingActivity
         
         let alertController = UIAlertController(title: "Upload Success", message:
             "Documents and POD Number uploaded to server successfully", preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    func presentUploadFailureController(){
+        
+        let message = "Upload has failed, please try again with a more stable internet connection"
+        let alertController = UIAlertController(title: "Upload Failed", message:
+            message, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
         self.present(alertController, animated: true, completion: nil)
         
