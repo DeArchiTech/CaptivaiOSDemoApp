@@ -100,10 +100,10 @@ import Foundation
         let selected = (cell?.accessoryType == UITableViewCellAccessoryType.checkmark)
         if selected{
             cell?.accessoryType = UITableViewCellAccessoryType.none
-            assert(self.removeFilterFromList(filter: selectedItem!))
+            self.removeFilterFromList(filter: selectedItem!)
         }else{
             cell?.accessoryType = UITableViewCellAccessoryType.checkmark
-            assert(self.addFilterToList(filter: selectedItem!))
+            self.addFilterToList(filter: selectedItem!)
         }
         
     }

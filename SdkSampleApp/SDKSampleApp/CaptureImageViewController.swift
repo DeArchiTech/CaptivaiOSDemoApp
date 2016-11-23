@@ -50,7 +50,7 @@ import Foundation
     
     func persistImgToDisk(image : UIImage){
         let helper = ImageSavingHelper()
-        assert(helper.saveImage(image: image, batchNum: self.batchNum))
+        helper.saveImage(image: image, batchNum: self.batchNum)
     }
     
     func presentCamera(){
@@ -103,8 +103,8 @@ import Foundation
             let imageData = try CMSCaptureImage.encode(forFormat: CMSSaveJpg, parameters: nil)
             sdkImg = UIImage.init(data: imageData)
         }
-        catch{
-            
+        catch let exception{
+            print(exception)
         }
         return sdkImg
     }

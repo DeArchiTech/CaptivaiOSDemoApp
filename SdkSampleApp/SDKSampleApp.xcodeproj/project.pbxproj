@@ -814,7 +814,7 @@
 						TestTargetID = F3263FF717C7CDE90043754D;
 					};
 					F3263FF717C7CDE90043754D = {
-						DevelopmentTeam = J9T57DG7T3;
+						DevelopmentTeam = 9GB27LE5A2;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1460,7 +1460,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = J9T57DG7T3;
+				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1474,7 +1474,7 @@
 					"\"$(SRCROOT)/../SDK/libs\"",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = revaAppDave;
+				PRODUCT_BUNDLE_IDENTIFIER = revaApp;
 				PRODUCT_NAME = SDKSampleApp;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SDKSampleApp/SDKSampleApp-Bridging-Header.h";
@@ -1494,7 +1494,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = J9T57DG7T3;
+				DEVELOPMENT_TEAM = 9GB27LE5A2;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1509,7 +1509,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = revaAppDave;
+				PRODUCT_BUNDLE_IDENTIFIER = revaApp;
 				PRODUCT_NAME = SDKSampleApp;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SDKSampleApp/SDKSampleApp-Bridging-Header.h";

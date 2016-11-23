@@ -155,9 +155,8 @@ class UploadImageViewControllerTest: XCTestCase {
         vc.chainedUploadNetworkCall(batchObj: batchObj!){
             dict, error in
             //3)validate
-            let result = dict! as NSDictionary
-            let result2 = result["returnStatus"] as! NSDictionary
-            XCTAssertEqual(result2["code"] as! String, "OK0000")
+            XCTAssertNil(dict)
+            XCTAssertNil(error)
             exp.fulfill()
         }
         waitForExpectations(timeout: 60, handler: { error in

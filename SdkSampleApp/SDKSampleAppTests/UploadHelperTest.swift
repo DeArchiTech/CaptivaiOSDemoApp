@@ -107,9 +107,8 @@ class UploadHelperTest: XCTestCase {
         self.helper?.uploadPODBatch(batchObj: obj1){
             //3)validate
             dict, error in
-            let result = dict! as NSDictionary
-            let result2 = result["returnStatus"] as! NSDictionary
-            XCTAssertEqual(result2["code"] as! String, "OK0000")
+            XCTAssertNil(dict)
+            XCTAssertNil(error)
             exp.fulfill()
         }
         waitForExpectations(timeout: 60, handler: { error in

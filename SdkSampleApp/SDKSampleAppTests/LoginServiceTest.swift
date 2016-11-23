@@ -101,12 +101,13 @@ class LoginServiceTest: XCTestCase {
         
     }
     
+    //Will fail unless you slow down the internet speed
     func testLoginWithTimeout() {
         
         //1)Call Function
         let manager : LoginService = LoginService.init()
         let readyExpectation = expectation(description: "read")
-        let timeoutInterval = 1
+        let timeoutInterval = 150
         manager.loginWithTimeout(timeout: timeoutInterval){ (dictionary,error) -> () in
             print(dictionary as Any)
             print(error as Any)

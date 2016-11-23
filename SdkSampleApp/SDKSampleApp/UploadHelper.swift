@@ -74,7 +74,7 @@ class UploadHelper: NSObject{
     func updateUploadParamToTrue(batchNum: Int, completion: @escaping ( _: NSDictionary?, _: NSError?)->()){
         
         let service = BatchService()
-        assert(service.updateBatchUpdatedToTrue(num: batchNum))
+        service.updateBatchUpdatedToTrue(num: batchNum)
         completion(nil, nil)
     }
     

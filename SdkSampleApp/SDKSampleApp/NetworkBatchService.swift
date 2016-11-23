@@ -21,7 +21,7 @@ class NetworkBatchService{
     
     var cookieString: String?
     
-    let endpoint = "http://138.91.240.65:8090"
+    let endpoint = Constants.url
  
     func getBatchUploadEndPoint() -> String{
         

@@ -47,14 +47,18 @@ import EZLoadingActivity
         
         if checkPodNumberIsValid(){
 
-            let service = BatchService()
-            let batchObj = service.getBatchWithBatchNum(num: self.batchNum)
-            assert(service.updateBatchPODNUmber(pod: self.getPod(), batchNum: self.batchNum))
-            self.chainedUploadNetworkCall(batchObj: batchObj!){
-                _,error in
-                self.uploadCompletionCode(batchObj: batchObj!, error: error)
+            if hasPodToBeUploaded(){
+                let service = BatchService()
+                let batchObj = service.getBatchWithBatchNum(num: self.batchNum)
+                service.updateBatchPODNUmber(pod: self.getPod(), batchNum: self.batchNum)
+                self.chainedUploadNetworkCall(batchObj: batchObj!){
+                    _,error in
+                    self.uploadCompletionCode(batchObj: batchObj!, error: error)
+                }
+                EZLoadingActivity.show("Uploading Documents To Server", disableUI: true)
+            }else{
+                self.presentNoPodToBeUploadedController()
             }
-            EZLoadingActivity.show("Uploading Documents To Server", disableUI: true)
         
         }
         
@@ -87,7 +91,7 @@ import EZLoadingActivity
 
         if error == nil{
             let service = BatchService()
-            assert(service.updateBatchUpdatedToTrue(num: batchObj.batchNumber))
+            service.updateBatchUpdatedToTrue(num: batchObj.batchNumber)
             self.uploadSuccessCode()
         }else{
             self.uploadFailureCode()
@@ -111,6 +115,19 @@ import EZLoadingActivity
             message, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func presentNoPodToBeUploadedController(){
+        
+        let message = "An Error have occured, please try again"
+        let alertController = UIAlertController(title: "No Pod Loaded", message:
+            message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func hasPodToBeUploaded() -> Bool{
+        return self.count > 0
     }
     
     func dismissKeyboard() {

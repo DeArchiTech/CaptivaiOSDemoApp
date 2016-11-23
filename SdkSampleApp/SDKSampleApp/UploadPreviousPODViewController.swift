@@ -27,7 +27,7 @@ import EZLoadingActivity
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        assert(self.loadInAllBatches())
+        self.loadInAllBatches()
         self.setUpLabel()
     }
     
@@ -43,19 +43,23 @@ import EZLoadingActivity
     
     @IBAction func uploadAllPodBtnClicked(_ sender: Any) {
         
-        assert(EZLoadingActivity.show("Uploading Documents To Server", disableUI: true))
-        self.uploadAllPODBatches(batches: self.batches   ){
-            dictionary, error in
-            assert(EZLoadingActivity.hide(true, animated: true))
-            if error == nil{
-                assert(self.loadInAllBatches())
-                self.setUpLabel()
-                self.tableView.reloadData()
-                self.presentUploadSuccessController()
-            }else{
-                self.presentUploadFailureController()
+        if self.hasPodToBeUploaded(){
+            EZLoadingActivity.show("Uploading Documents To Server", disableUI: true)
+            self.uploadAllPODBatches(batches: self.batches   ){
+                dictionary, error in
+                EZLoadingActivity.hide(true, animated: true)
+                if error == nil{
+                    self.loadInAllBatches()
+                    self.setUpLabel()
+                    self.tableView.reloadData()
+                    self.presentUploadSuccessController()
+                }else{
+                    self.presentUploadFailureController()
+                }
+                
             }
-
+        }else{
+            self.presentNoPodToBeUploadedController()
         }
 
     }
@@ -110,6 +114,15 @@ import EZLoadingActivity
         
     }
     
+    func presentNoPodToBeUploadedController(){
+        
+        let message = "There is no pending PODs to be Uploaded"
+        let alertController = UIAlertController(title: "No Pod Loaded", message:
+            message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return self.batches.count + 1
@@ -130,6 +143,10 @@ import EZLoadingActivity
         }
         return cell
         
+    }
+    
+    func hasPodToBeUploaded() -> Bool{
+        return self.batches.count > 0
     }
     
     @objc(tableView:didSelectRowAtIndexPath:) func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){

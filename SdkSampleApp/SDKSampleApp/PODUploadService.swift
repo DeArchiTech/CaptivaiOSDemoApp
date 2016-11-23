@@ -24,7 +24,7 @@ class PODUploadService{
     var endPoint: String {
         
         get {
-            return "http://138.91.240.65:8090"
+            return Constants.url
         }
         set {
         }
